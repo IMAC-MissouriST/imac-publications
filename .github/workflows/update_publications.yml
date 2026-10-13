@@ -1,6 +1,9 @@
 name: Update ORCID Publications
 
-# Run daily or manually
+# ==================================================
+# Run automatically every day or manually
+# ==================================================
+
 on:
   workflow_dispatch:
   schedule:
@@ -13,9 +16,9 @@ concurrency:
 
 jobs:
 
-  # ==========================================
-  # Job 1: Retrieve and prepare publications
-  # ==========================================
+  # ==================================================
+  # JOB 1: Update publications and generate CSV files
+  # ==================================================
 
   update-publications:
     runs-on: ubuntu-latest
@@ -26,20 +29,54 @@ jobs:
 
     steps:
 
+      # ----------------------------------------------
+      # Step 1: Download the GitHub repository
+      # ----------------------------------------------
+
       - name: Checkout repository
         uses: actions/checkout@v6
+
+      # ----------------------------------------------
+      # Step 2: Set up Python
+      # ----------------------------------------------
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-      # Retrieve ORCID publications and ADS citations.
-      # ADS_API_TOKEN is stored securely in GitHub Secrets.
-      - name: Retrieve publications from ORCID and ADS
+      # ----------------------------------------------
+      # Step 3: Update individual researcher publications
+      #
+      # Fetch publications from ORCID.
+      # Retrieve citation counts from NASA ADS.
+      #
+      # Each researcher gets a separate CSV file.
+      # ----------------------------------------------
+
+      - name: Retrieve individual publications from ORCID and ADS
         env:
           ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
         run: python scripts/update_publications.py
+
+      # ----------------------------------------------
+      # Step 4: Generate institute-wide publication lists
+      #
+      # Combine all configured IMAC researchers.
+      # Remove duplicate publications.
+      # Retrieve first-author information from ADS.
+      # Generate one CSV per year.
+      # Generate a separate recent preprints CSV.
+      # ----------------------------------------------
+
+      - name: Build IMAC yearly publication tables
+        env:
+          ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
+        run: python scripts/build_imac_publications.py
+
+      # ----------------------------------------------
+      # Step 5: Create GitHub Pages homepage
+      # ----------------------------------------------
 
       - name: Create GitHub Pages index
         run: |
@@ -48,6 +85,7 @@ jobs:
           <html lang="en">
           <head>
             <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>IMAC Publications</title>
           </head>
           <body>
@@ -56,6 +94,16 @@ jobs:
           </body>
           </html>
           HTML
+
+      # ----------------------------------------------
+      # Step 6: Save all updated CSV files to GitHub
+      #
+      # Includes:
+      #
+      # docs/publications/*.csv
+      # docs/imac/publications_*.csv
+      # docs/imac/recent_preprints.csv
+      # ----------------------------------------------
 
       - name: Commit updated publication files
         run: |
@@ -67,21 +115,29 @@ jobs:
           if git diff --cached --quiet; then
             echo "No publication changes detected."
           else
-            git commit -m "Update ORCID publication CSV files with ADS citations"
+            git commit -m "Update individual and IMAC yearly publications"
             git push
           fi
 
+      # ----------------------------------------------
+      # Step 7: Configure GitHub Pages
+      # ----------------------------------------------
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+
+      # ----------------------------------------------
+      # Step 8: Upload publication files
+      # ----------------------------------------------
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./docs
 
-  # ==========================================
-  # Job 2: Publish files to GitHub Pages
-  # ==========================================
+  # ==================================================
+  # JOB 2: Deploy updated publications to GitHub Pages
+  # ==================================================
 
   deploy:
     needs: update-publications
