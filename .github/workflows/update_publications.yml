@@ -1,8 +1,10 @@
 name: Update ORCID Publications
 
-# For now, we will run it manually to test.
+# Run automatically every day and allow manual execution.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "17 12 * * *"
 
 # Allow the workflow to save updated CSV files.
 permissions:
