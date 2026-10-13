@@ -34,7 +34,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Retrieve publications from ORCID
+      # Retrieve ORCID publications and ADS citations.
+      # ADS_API_TOKEN is stored securely in GitHub Secrets.
+      - name: Retrieve publications from ORCID and ADS
+        env:
+          ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
         run: python scripts/update_publications.py
 
       - name: Create GitHub Pages index
@@ -48,7 +52,7 @@ jobs:
           </head>
           <body>
             <h1>IMAC Publications</h1>
-            <p>Automatically updated publication data from ORCID.</p>
+            <p>Automatically updated publication data from ORCID and NASA ADS.</p>
           </body>
           </html>
           HTML
@@ -63,7 +67,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No publication changes detected."
           else
-            git commit -m "Update ORCID publication CSV files"
+            git commit -m "Update ORCID publication CSV files with ADS citations"
             git push
           fi
 
