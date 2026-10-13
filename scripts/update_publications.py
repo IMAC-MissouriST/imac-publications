@@ -30,7 +30,7 @@ COLUMNS = [
     "Year",
     "Title",
     "Journal",
-    "Citations",
+    "Citation (ADS)",
     "DOI URL",
     "ADS URL"
 ]
@@ -465,7 +465,7 @@ def process_researcher(researcher, token):
             "Year": year,
             "Title": html.escape(title, quote=False),
             "Journal": html.escape(journal, quote=False),
-            "Citations": citation_count,
+            "Citation (ADS)": citation_count,
             "DOI URL": doi_url,
             "ADS URL": ads_url
         })
@@ -519,7 +519,7 @@ def process_researcher(researcher, token):
     os.replace(temporary_file, output_file)
 
     matched_count = sum(
-        publication["Citations"] != ""
+        publication["Citation (ADS)"] != ""
         for publication in publications
     )
 
