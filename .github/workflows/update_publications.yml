@@ -1,41 +1,64 @@
 name: Update ORCID Publications
 
-# Run automatically every day and allow manual execution.
+# Run daily or manually
 on:
   workflow_dispatch:
   schedule:
     - cron: "17 12 * * *"
 
-# Allow the workflow to save updated CSV files.
-permissions:
-  contents: write
+# Prevent overlapping publication updates
+concurrency:
+  group: imac-publications
+  cancel-in-progress: false
 
 jobs:
+
+  # ==========================================
+  # Job 1: Retrieve and prepare publications
+  # ==========================================
+
   update-publications:
     runs-on: ubuntu-latest
 
-    steps:
-      # Step 1: Download our repository
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    permissions:
+      contents: write
+      pages: write
 
-      # Step 2: Prepare Python
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-      # Step 3: Retrieve publications from ORCID
-      - name: Update publication CSV files
+      - name: Retrieve publications from ORCID
         run: python scripts/update_publications.py
 
-      # Step 4: Save updated files to GitHub
-      - name: Commit and push updated publications
+      - name: Create GitHub Pages index
+        run: |
+          cat > docs/index.html <<'HTML'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <title>IMAC Publications</title>
+          </head>
+          <body>
+            <h1>IMAC Publications</h1>
+            <p>Automatically updated publication data from ORCID.</p>
+          </body>
+          </html>
+          HTML
+
+      - name: Commit updated publication files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add docs/publications/
+          git add docs/
 
           if git diff --cached --quiet; then
             echo "No publication changes detected."
@@ -43,3 +66,34 @@ jobs:
             git commit -m "Update ORCID publication CSV files"
             git push
           fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./docs
+
+  # ==========================================
+  # Job 2: Publish files to GitHub Pages
+  # ==========================================
+
+  deploy:
+    needs: update-publications
+    runs-on: ubuntu-latest
+
+    permissions:
+      actions: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
