@@ -1,0 +1,43 @@
+name: Update ORCID Publications
+
+# For now, we will run it manually to test.
+on:
+  workflow_dispatch:
+
+# Allow the workflow to save updated CSV files.
+permissions:
+  contents: write
+
+jobs:
+  update-publications:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Download our repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Prepare Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Step 3: Retrieve publications from ORCID
+      - name: Update publication CSV files
+        run: python scripts/update_publications.py
+
+      # Step 4: Save updated files to GitHub
+      - name: Commit and push updated publications
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add docs/publications/
+
+          if git diff --cached --quiet; then
+            echo "No publication changes detected."
+          else
+            git commit -m "Update ORCID publication CSV files"
+            git push
+          fi
