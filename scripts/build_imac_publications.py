@@ -143,16 +143,24 @@ def read_records():
                 "Year",
                 "Title",
                 "Journal",
-                "Citation (ADS)",
                 "DOI URL",
                 "ADS URL"
             }
 
-            if not required.issubset(
-                reader.fieldnames or []
-            ):
+            available = set(reader.fieldnames or [])
+
+            if not required.issubset(available):
                 raise ValueError(
                     f"Unexpected CSV columns: {file.name}"
+                )
+
+            # Support both old and new citation headers.
+            if not (
+                "Citation (ADS)" in available
+                or "Citations" in available
+            ):
+                raise ValueError(
+                    f"Missing citation column: {file.name}"
                 )
 
             for row in reader:
@@ -168,6 +176,16 @@ def read_records():
                     and len(year) == 4
                 ):
                     continue
+
+                # Normalize the citation column name.
+                citation = row.get("Citation (ADS)")
+
+                if citation is None or not str(citation).strip():
+                    citation = row.get("Citations", "")
+
+                row["Citation (ADS)"] = str(
+                    citation or ""
+                ).strip()
 
                 row["Year"] = year
                 row["Title"] = title
@@ -257,8 +275,9 @@ def collapse(records):
 
         target = next(
             (
-                c for c in clusters
-                if same_paper(row, c)
+                cluster
+                for cluster in clusters
+                if same_paper(row, cluster)
             ),
             None
         )
@@ -297,16 +316,16 @@ def best_record(records):
 
     def score(row):
 
+        citation = str(
+            row["Citation (ADS)"]
+        ).strip()
+
         return (
             not row["preprint"],
             bool(row["Journal"]),
             bool(row["doi_key"]),
             bool(row["bibcode"]),
-            (
-                int(row["Citation (ADS)"])
-                if str(row["Citation (ADS)"]).isdigit()
-                else -1
-            )
+            int(citation) if citation.isdigit() else -1
         )
 
     return max(records, key=score)
@@ -319,15 +338,15 @@ def best_record(records):
 def ads_authors(records, token):
 
     bibcodes = sorted({
-        r["bibcode"]
-        for r in records
-        if r["bibcode"]
+        row["bibcode"]
+        for row in records
+        if row["bibcode"]
     })
 
     dois = sorted({
-        r["doi_key"]
-        for r in records
-        if r["doi_key"] and not r["bibcode"]
+        row["doi_key"]
+        for row in records
+        if row["doi_key"] and not row["bibcode"]
     })
 
     lookups = (
@@ -369,7 +388,6 @@ def ads_authors(records, token):
         )
 
         try:
-
             with urlopen(
                 request,
                 timeout=60
@@ -559,6 +577,63 @@ def write_csv(path, rows):
 
 
 # ==================================================
+# NEW: Calculate annual publication statistics
+# ==================================================
+
+def make_summary_row(year, rows):
+
+    # Each row represents one unique published paper
+    # because duplicate publications were already
+    # combined before this function is called.
+
+    number_of_papers = len(rows)
+
+    # Collect valid NASA ADS citation counts.
+    # A blank count means unavailable information.
+    # An actual zero is included in the calculation.
+
+    citation_counts = []
+
+    for row in rows:
+
+        value = str(
+            row["Citation (ADS)"]
+        ).strip()
+
+        if value.isdigit():
+            citation_counts.append(int(value))
+
+    total_citations = sum(citation_counts)
+
+    papers_with_ads_data = len(citation_counts)
+
+    # Generate a readable summary for the table.
+
+    summary_text = (
+        f"YEAR {year} SUMMARY: "
+        f"{number_of_papers} published papers; "
+        f"{total_citations:,} ADS citations "
+        f"({papers_with_ads_data}/{number_of_papers} "
+        f"papers with ADS data)"
+    )
+
+    # Use the same columns as the publication table.
+    # Leave the other columns empty so the summary
+    # is not confused with an additional paper.
+
+    summary_row = {
+        "Title": summary_text,
+        "Authors": "",
+        "Journal": "",
+        "Citation (ADS)": "",
+        "DOI URL": "",
+        "ADS URL": ""
+    }
+
+    return summary_row, number_of_papers, total_citations
+
+
+# ==================================================
 # Main program
 # ==================================================
 
@@ -566,6 +641,7 @@ def main():
 
     # Secret comes from GitHub Actions.
     # Never print or save the token.
+
     token = os.environ.get("ADS_API_TOKEN")
 
     if not token:
@@ -573,9 +649,21 @@ def main():
             "Missing ADS_API_TOKEN GitHub Actions secret."
         )
 
+    # --------------------------------------------------
+    # Step 1: Read individual researcher publications
+    # --------------------------------------------------
+
     researchers, records = read_records()
 
+    # --------------------------------------------------
+    # Step 2: Remove duplicate publications
+    # --------------------------------------------------
+
     clusters = collapse(records)
+
+    # --------------------------------------------------
+    # Step 3: Retrieve first-author information
+    # --------------------------------------------------
 
     metadata = ads_authors(records, token)
 
@@ -583,6 +671,10 @@ def main():
         person["name"]: i
         for i, person in enumerate(researchers)
     }
+
+    # --------------------------------------------------
+    # Step 4: Organize publications by year
+    # --------------------------------------------------
 
     annual = defaultdict(list)
     preprints = []
@@ -603,6 +695,7 @@ def main():
 
             # Recent arXiv preprints from the current
             # and previous calendar year.
+
             if int(representative["Year"]) >= (
                 datetime.now(timezone.utc).year - 1
             ):
@@ -619,26 +712,48 @@ def main():
         exist_ok=True
     )
 
-    # One CSV per publication year.
+    # --------------------------------------------------
+    # Step 5: Generate yearly CSVs with statistics
+    # --------------------------------------------------
+
     for year, rows in sorted(
         annual.items(),
         reverse=True
     ):
 
+        # Sort publication records alphabetically.
         rows.sort(
             key=lambda r: r["Title"].casefold()
         )
 
-        file = OUTPUT / f"publications_{year}.csv"
-
-        write_csv(file, rows)
-
-        print(
-            f"{year}: {len(rows)} "
-            "unique published records"
+        # Calculate the statistics for this year.
+        summary_row, number_of_papers, total_citations = (
+            make_summary_row(year, rows)
         )
 
-    # Separate CSV for recent unpublished preprints.
+        # Insert the summary before the publications.
+        rows_with_summary = [summary_row] + rows
+
+        # Keep the original filename and URL.
+        file = OUTPUT / f"publications_{year}.csv"
+
+        write_csv(
+            file,
+            rows_with_summary
+        )
+
+        print(
+            f"{year}: "
+            f"{number_of_papers} unique published papers; "
+            f"{total_citations:,} ADS citations"
+        )
+
+    # --------------------------------------------------
+    # Step 6: Generate recent preprints CSV
+    # --------------------------------------------------
+
+    # Preprints do not receive an annual summary row.
+
     preprints.sort(
         key=lambda r: r["Title"].casefold()
     )
