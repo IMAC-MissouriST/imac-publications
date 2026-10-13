@@ -30,7 +30,7 @@ FIELDS = [
     "Title",
     "Authors",
     "Journal",
-    "Citations",
+    "Citation (ADS)",
     "DOI URL",
     "ADS URL"
 ]
@@ -143,7 +143,7 @@ def read_records():
                 "Year",
                 "Title",
                 "Journal",
-                "Citations",
+                "Citation (ADS)",
                 "DOI URL",
                 "ADS URL"
             }
@@ -303,8 +303,8 @@ def best_record(records):
             bool(row["doi_key"]),
             bool(row["bibcode"]),
             (
-                int(row["Citations"])
-                if str(row["Citations"]).isdigit()
+                int(row["Citation (ADS)"])
+                if str(row["Citation (ADS)"]).isdigit()
                 else -1
             )
         )
@@ -527,7 +527,7 @@ def output_row(cluster, metadata, order):
             record["Journal"],
             quote=False
         ),
-        "Citations": record["Citations"],
+        "Citation (ADS)": record["Citation (ADS)"],
         "DOI URL": record["DOI URL"],
         "ADS URL": record["ADS URL"]
     }
