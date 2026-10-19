@@ -83,6 +83,13 @@
     "source": "PDF checked",
     "status": "unverified"
   },
+  "doi:10.1088/2632-2153/ab527d": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:52:08.595712+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
   "doi:10.1088/2632-2153/abb93a": {
     "arxiv_id": "2005.03745",
     "checked_at": "2026-10-19T16:15:10.577739+00:00",
@@ -125,9 +132,58 @@
     "source": "PDF checked",
     "status": "unverified"
   },
+  "doi:10.1093/mnras/sty2845": {
+    "arxiv_id": "1801.03043",
+    "checked_at": "2026-10-19T16:52:18.091884+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1093/mnras/sty3249": {
+    "arxiv_id": "1803.02132",
+    "checked_at": "2026-10-19T16:52:12.213090+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
   "doi:10.1093/mnrasl/slae023": {
     "arxiv_id": "2312.04847",
     "checked_at": "2026-10-19T16:14:03.121128+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1103/physrevd.100.024004": {
+    "arxiv_id": "1903.01901",
+    "checked_at": "2026-10-19T16:52:37.670960+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1103/physrevd.100.061101": {
+    "arxiv_id": "1903.02886",
+    "checked_at": "2026-10-19T16:53:54.657652+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1103/physrevd.100.062001": {
+    "arxiv_id": "1903.08844",
+    "checked_at": "2026-10-19T16:52:55.471817+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1103/physrevd.100.104036": {
+    "arxiv_id": "1903.04467",
+    "checked_at": "2026-10-19T16:54:25.947483+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1103/physrevd.100.122002": {
+    "arxiv_id": "1906.12040",
+    "checked_at": "2026-10-19T16:53:42.000641+00:00",
     "evidence": "No IMAC affiliation in inspected PDF header",
     "source": "PDF checked",
     "status": "unverified"
@@ -136,6 +192,41 @@
     "arxiv_id": "2402.15540",
     "checked_at": "2026-10-19T15:09:26.819254+00:00",
     "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1103/physrevd.99.122002": {
+    "arxiv_id": "1902.08442",
+    "checked_at": "2026-10-19T16:53:23.321406+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1103/physrevlett.122.061104": {
+    "arxiv_id": "1808.08676",
+    "checked_at": "2026-10-19T16:52:49.473611+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1103/physrevlett.123.011102": {
+    "arxiv_id": "1811.00364",
+    "checked_at": "2026-10-19T16:54:19.031498+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1103/physrevx.9.011001": {
+    "arxiv_id": "1805.11579",
+    "checked_at": "2026-10-19T16:53:29.671054+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1103/physrevx.9.031040": {
+    "arxiv_id": "1811.12907",
+    "checked_at": "2026-10-19T16:53:11.174442+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
     "source": "PDF checked",
     "status": "unverified"
   },
@@ -159,6 +250,83 @@
     "evidence": "lti-messenger Astrophysics and Cosmology, Department of Physics, Missouri University of Science and Technology, 1315 N Pine Street, Rolla, MO 65409, USA 2Kavli Institute for the Physics and Mathematics of the U",
     "source": "PDF header",
     "status": "verified"
+  },
+  "doi:10.3847/1538-4357/aaf21d": {
+    "arxiv_id": "1810.10693",
+    "checked_at": "2026-10-19T16:53:48.024129+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.3847/1538-4357/aaf726": {
+    "arxiv_id": "1810.02764",
+    "checked_at": "2026-10-19T16:52:30.534681+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.3847/1538-4357/ab0e15": {
+    "arxiv_id": "1902.01557",
+    "checked_at": "2026-10-19T16:54:00.477486+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.3847/1538-4357/ab0e8f": {
+    "arxiv_id": "1901.03310",
+    "checked_at": "2026-10-19T16:53:17.474220+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.3847/1538-4357/ab0f3d": {
+    "arxiv_id": "1810.02581",
+    "checked_at": "2026-10-19T16:53:35.686631+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.3847/1538-4357/ab113b": {
+    "arxiv_id": "1812.11656",
+    "checked_at": "2026-10-19T16:54:07.606893+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.3847/1538-4357/ab12d5": {
+    "arxiv_id": "1811.06982",
+    "checked_at": "2026-10-19T16:52:24.504175+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.3847/1538-4357/ab20cb": {
+    "arxiv_id": "1902.08507",
+    "checked_at": "2026-10-19T16:54:12.902523+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.3847/2041-8213/ab14f1": {
+    "arxiv_id": "1901.01540",
+    "checked_at": "2026-10-19T16:53:04.718440+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.3847/2041-8213/ab3800": {
+    "arxiv_id": "1811.12940",
+    "checked_at": "2026-10-19T16:52:43.424921+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.4208/cicp.oa-2018-0092": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:52:58.525573+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
   },
   "doi:10.48550/arxiv.2212.09136": {
     "arxiv_id": "2212.09136",
@@ -384,6 +552,13 @@
     "source": "PDF checked",
     "status": "unverified"
   },
+  "title:ajointfermigbmandligovirgoanalysisofcompactbinarymergersfromthefirstandsecondgravitationalwaveobservingruns": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:52:05.403979+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
   "title:ajointfermigbmandswiftbatanalysisofgravitationalwavecandidatesfromthethirdgravitationalwaveobservingrun": {
     "arxiv_id": "",
     "checked_at": "2026-10-19T16:14:03.123415+00:00",
@@ -454,6 +629,13 @@
     "source": "none",
     "status": "unverified"
   },
+  "title:gw190412observationofabinaryblackholecoalescencewithasymmetricmasses": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:52:05.406041+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
   "title:ligodetectorcharacterizationinthesecondandthirdobservingruns": {
     "arxiv_id": "",
     "checked_at": "2026-10-19T16:15:16.995263+00:00",
@@ -496,6 +678,13 @@
     "source": "none",
     "status": "unverified"
   },
+  "title:spuriousaccelerationnoiseonthelisaspacecraftduetosolaractivity": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:54:12.902578+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
   "title:swiftbatguanofollowupofgravitationalwavetriggersinthethirdligovirgokagraobservingrun": {
     "arxiv_id": "",
     "checked_at": "2026-10-19T15:09:02.319286+00:00",
@@ -513,6 +702,13 @@
   "title:thescienceofgravitationalwavesourcesandbeyondcompactbinarycoalescences": {
     "arxiv_id": "",
     "checked_at": "2026-10-19T16:14:27.846084+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:twodimensionalcorrelationfunctionofbinaryblackholecoalescences": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:52:08.607451+00:00",
     "evidence": "No verified affiliation found",
     "source": "none",
     "status": "unverified"
