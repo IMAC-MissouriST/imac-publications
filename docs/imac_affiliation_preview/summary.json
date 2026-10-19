@@ -6,6 +6,11 @@
   "papers_with_ads_data": 124,
   "unresolved_affiliations": 92,
   "preliminary": true,
-  "summary": "IMAC published a total of 124 articles, cited a total of 25,935 times (according to NASA ADS).",
-  "note": "2019\u20132026; verified affiliations; ADS citation counts available for 124/124 articles. PRELIMINARY: 92 publications remain unresolved. Citation counts are cumulative, not citations received in these years."
+  "verification_statuses": {
+    "verified": 135,
+    "needs_review": 29,
+    "pending": 63
+  },
+  "summary": "So far, 124 IMAC-affiliated articles have been verified, receiving 25,935 citations according to NASA ADS (preliminary).",
+  "note": "2019\u20132026; verified institutional affiliations. ADS citation counts available for 124/124 articles. PRELIMINARY: 92 publications remain unresolved. Citation counts are cumulative to date."
 }
