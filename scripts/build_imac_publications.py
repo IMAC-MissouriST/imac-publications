@@ -14,17 +14,33 @@ from urllib.parse import unquote, urlencode
 from urllib.request import Request, urlopen
 
 
-# ==================================================
-# Configuration
-# ==================================================
+# ============================================================
+# CONFIGURATION
+# ============================================================
 
 ROOT = Path(__file__).resolve().parent.parent
 
 SOURCE = ROOT / "docs" / "publications"
-OUTPUT = ROOT / "docs" / "imac"
+
+LIVE_OUTPUT = ROOT / "docs" / "imac"
+
+PREVIEW_OUTPUT = ROOT / "docs" / "imac_affiliation_preview"
+
 CONFIG = ROOT / "researchers.json"
 
 ADS_API = "https://api.adsabs.harvard.edu/v1/search/query"
+
+# IMAC was established in 2019.
+# This controls the period used for the overall statistics.
+START_YEAR = 2019
+
+# IMPORTANT:
+# Keep "preview" until we verify the new affiliation filtering.
+# Later we can change this to "live".
+OUTPUT_MODE = os.environ.get(
+    "IMAC_OUTPUT_MODE",
+    "preview"
+).strip().lower()
 
 FIELDS = [
     "Title",
@@ -36,11 +52,49 @@ FIELDS = [
 ]
 
 
-# ==================================================
-# Text and identifier cleaning
-# ==================================================
+# ============================================================
+# AFFILIATION MATCHING
+# ============================================================
+
+# Accepted institutional names.
+#
+# We do NOT accept "S&T" alone because it may refer
+# to an unrelated institution.
+#
+# An explicit standalone "IMAC" is accepted, but
+# the affiliation review report should be checked
+# for ambiguous abbreviations.
+
+AFFILIATION_PATTERNS = [
+    re.compile(
+        r"\bMissouri\s+(?:University\s+of\s+)?"
+        r"Science\s*(?:and|&)\s*Technology\b",
+        re.IGNORECASE
+    ),
+
+    re.compile(
+        r"\bMissouri\s+S\s*(?:&|and)\s*T\b",
+        re.IGNORECASE
+    ),
+
+    re.compile(
+        r"\bInstitute\s+for\s+Multi[\s-]*messenger\s+"
+        r"Astrophysics\s*(?:and|&)\s*Cosmology\b",
+        re.IGNORECASE
+    ),
+
+    re.compile(
+        r"\bIMAC\b"
+    )
+]
+
+
+# ============================================================
+# TEXT CLEANING
+# ============================================================
 
 def plain(value):
+
     return html.unescape(
         html.unescape(str(value or ""))
     ).strip()
@@ -49,7 +103,8 @@ def plain(value):
 def title_key(value):
 
     text = unicodedata.normalize(
-        "NFKD", plain(value)
+        "NFKD",
+        plain(value)
     ).casefold()
 
     text = text.replace("∼", "~")
@@ -62,26 +117,39 @@ def title_key(value):
         text
     )
 
-    # Treat "90 sq deg" and "90 deg²" equally.
     text = re.sub(
-        r"(\d+)\s*(?:sq(?:uare)?\s*deg(?:rees?)?|deg(?:rees?)?\s*2)",
+        r"(\d+)\s*(?:sq(?:uare)?\s*deg(?:rees?)?|"
+        r"deg(?:rees?)?\s*2)",
         r"\1squaredegrees",
         text
     )
 
-    return re.sub(r"[^a-z0-9]", "", text)
+    return re.sub(
+        r"[^a-z0-9]",
+        "",
+        text
+    )
 
 
 def doi_key(url):
 
-    return unquote(
-        re.sub(
-            r"^https?://(?:dx\.)?doi\.org/",
-            "",
-            plain(url),
-            flags=re.I
-        )
-    ).casefold()
+    value = plain(url)
+
+    value = re.sub(
+        r"^https?://(?:dx\.)?doi\.org/",
+        "",
+        value,
+        flags=re.I
+    )
+
+    value = re.sub(
+        r"^doi:\s*",
+        "",
+        value,
+        flags=re.I
+    )
+
+    return unquote(value).casefold()
 
 
 def bibcode_from_url(url):
@@ -97,18 +165,20 @@ def bibcode_from_url(url):
 def preprint(row):
 
     journal = plain(row["Journal"]).casefold()
+    title = plain(row["Title"]).casefold()
 
     return (
         "arxiv" in journal
         or doi_key(row["DOI URL"]).startswith(
             "10.48550/arxiv."
         )
+        or title.startswith("arxiv:")
     )
 
 
-# ==================================================
-# Read individual researcher CSV files
-# ==================================================
+# ============================================================
+# READ INDIVIDUAL RESEARCHER PUBLICATION FILES
+# ============================================================
 
 def read_records():
 
@@ -119,13 +189,17 @@ def read_records():
     researchers = configuration["researchers"]
 
     if not researchers:
-        raise RuntimeError("No researchers configured.")
+        raise RuntimeError(
+            "No researchers configured."
+        )
 
     records = []
 
     for person in researchers:
 
-        file = SOURCE / f'{person["orcid"]}.csv'
+        orcid = person["orcid"]
+
+        file = SOURCE / f"{orcid}.csv"
 
         if not file.is_file():
             raise FileNotFoundError(
@@ -151,22 +225,26 @@ def read_records():
 
             if not required.issubset(available):
                 raise ValueError(
-                    f"Unexpected CSV columns: {file.name}"
+                    f"Unexpected columns in {file.name}"
                 )
 
-            # Support both old and new citation headers.
             if not (
                 "Citation (ADS)" in available
                 or "Citations" in available
             ):
                 raise ValueError(
-                    f"Missing citation column: {file.name}"
+                    f"Missing citation column in {file.name}"
                 )
 
             for row in reader:
 
-                year = str(row["Year"]).strip()
-                title = plain(row["Title"])
+                year = str(
+                    row.get("Year", "")
+                ).strip()
+
+                title = plain(
+                    row.get("Title", "")
+                )
 
                 if not title:
                     continue
@@ -177,7 +255,6 @@ def read_records():
                 ):
                     continue
 
-                # Normalize the citation column name.
                 citation = row.get("Citation (ADS)")
 
                 if citation is None or not str(citation).strip():
@@ -189,52 +266,53 @@ def read_records():
 
                 row["Year"] = year
                 row["Title"] = title
-                row["Journal"] = plain(row["Journal"])
+
+                row["Journal"] = plain(
+                    row.get("Journal", "")
+                )
 
                 row["researcher"] = person["name"]
 
                 row["doi_key"] = doi_key(
-                    row["DOI URL"]
+                    row.get("DOI URL", "")
                 )
 
                 row["bibcode"] = bibcode_from_url(
-                    row["ADS URL"]
+                    row.get("ADS URL", "")
                 )
 
                 row["title_key"] = title_key(title)
+
                 row["preprint"] = preprint(row)
 
                 records.append(row)
 
     if not records:
         raise RuntimeError(
-            "No publication records found."
+            "No publication records were found."
         )
 
     return researchers, records
 
 
-# ==================================================
-# Identify shared and duplicate publications
-# ==================================================
+# ============================================================
+# IDENTIFY DUPLICATE PUBLICATIONS
+# ============================================================
 
 def same_paper(row, cluster):
 
-    # Exact DOI match.
     if (
         row["doi_key"]
         and row["doi_key"] in cluster["dois"]
     ):
         return True
 
-    # Exact ADS bibcode match.
     if (
         row["bibcode"]
         and row["bibcode"] in cluster["bibcodes"]
     ):
         return True
 
-    # Compare normalized titles.
     key = row["title_key"]
 
     if len(key) < 35:
@@ -252,14 +330,14 @@ def same_paper(row, cluster):
         if key == other_key:
             return True
 
-        # Conservative fuzzy matching for formatting
-        # differences between preprint and journal titles.
         if (
             len(other_key) >= 35
             and re.findall(r"\d+", key)
             == re.findall(r"\d+", other_key)
             and SequenceMatcher(
-                None, key, other_key
+                None,
+                key,
+                other_key
             ).ratio() >= 0.985
         ):
             return True
@@ -308,9 +386,9 @@ def collapse(records):
     return clusters
 
 
-# ==================================================
-# Prefer journal publications over preprints
-# ==================================================
+# ============================================================
+# PREFER PUBLISHED PAPERS OVER PREPRINTS
+# ============================================================
 
 def best_record(records):
 
@@ -331,11 +409,13 @@ def best_record(records):
     return max(records, key=score)
 
 
-# ==================================================
-# Retrieve authors from NASA ADS
-# ==================================================
+# ============================================================
+# NASA ADS METADATA
+#
+# We now request "aff" as well as author information.
+# ============================================================
 
-def ads_authors(records, token):
+def ads_metadata(records, token):
 
     bibcodes = sorted({
         row["bibcode"]
@@ -346,34 +426,41 @@ def ads_authors(records, token):
     dois = sorted({
         row["doi_key"]
         for row in records
-        if row["doi_key"] and not row["bibcode"]
+        if row["doi_key"]
     })
 
     lookups = (
-        [("bibcode", b) for b in bibcodes]
-        + [("doi", d) for d in dois]
+        [("bibcode", value) for value in bibcodes]
+        + [("doi", value) for value in dois]
     )
 
     by_bibcode = {}
     by_doi = {}
 
-    # Batch requests to reduce ADS API usage.
     for start in range(0, len(lookups), 20):
 
         batch = lookups[start:start + 20]
 
-        clauses = [
-            f'{kind}:"{value.replace(chr(34), "")}"'
-            for kind, value in batch
-        ]
+        clauses = []
+
+        for kind, value in batch:
+
+            safe_value = (
+                value.replace("\\", "\\\\")
+                .replace('"', '\\"')
+            )
+
+            clauses.append(
+                f'{kind}:"{safe_value}"'
+            )
 
         query = " OR ".join(clauses)
 
         url = ADS_API + "?" + urlencode({
             "q": query,
             "fl": (
-                "bibcode,doi,"
-                "first_author,author_count"
+                "bibcode,doi,first_author,"
+                "author_count,aff"
             ),
             "rows": 100
         })
@@ -388,6 +475,7 @@ def ads_authors(records, token):
         )
 
         try:
+
             with urlopen(
                 request,
                 timeout=60
@@ -398,29 +486,29 @@ def ads_authors(records, token):
         except HTTPError as error:
 
             raise RuntimeError(
-                "ADS author lookup failed "
+                "NASA ADS metadata request failed "
                 f"(HTTP {error.code})."
             ) from None
 
         except (URLError, TimeoutError):
 
             raise RuntimeError(
-                "ADS could not be reached "
-                "for author metadata."
+                "NASA ADS could not be reached."
             ) from None
 
         response = result.get("response", {})
+
         docs = response.get("docs")
 
         if not isinstance(docs, list):
             raise RuntimeError(
-                "Unexpected response from ADS."
+                "Unexpected NASA ADS response."
             )
 
         if response.get("numFound", 0) > len(docs):
             raise RuntimeError(
-                "ADS result was truncated. "
-                "Publication update stopped."
+                "NASA ADS results were truncated. "
+                "Update stopped to avoid incomplete metadata."
             )
 
         for doc in docs:
@@ -436,14 +524,119 @@ def ads_authors(records, token):
                 returned_dois = [returned_dois]
 
             for doi in returned_dois:
-                by_doi[doi.casefold()] = doc
+                by_doi[doi_key(doi)] = doc
 
     return by_bibcode, by_doi
 
 
-# ==================================================
-# Format IMAC researcher names
-# ==================================================
+# ============================================================
+# GET ADS DOCUMENTS FOR A PUBLICATION CLUSTER
+# ============================================================
+
+def documents_for_cluster(cluster, metadata):
+
+    by_bibcode, by_doi = metadata
+
+    documents = []
+    seen = set()
+
+    for row in cluster["records"]:
+
+        candidates = [
+            by_bibcode.get(row["bibcode"]),
+            by_doi.get(row["doi_key"])
+        ]
+
+        for doc in candidates:
+
+            if not doc:
+                continue
+
+            bibcode = doc.get("bibcode", "")
+
+            if bibcode and bibcode in seen:
+                continue
+
+            if bibcode:
+                seen.add(bibcode)
+
+            documents.append(doc)
+
+    return documents
+
+
+# ============================================================
+# CHECK IMAC / MISSOURI S&T AFFILIATION
+# ============================================================
+
+def check_affiliation(cluster, metadata):
+
+    documents = documents_for_cluster(
+        cluster,
+        metadata
+    )
+
+    if not documents:
+        return (
+            False,
+            "No matching ADS record",
+            ""
+        )
+
+    affiliations_found = []
+
+    for doc in documents:
+
+        affiliations = doc.get("aff") or []
+
+        if isinstance(affiliations, str):
+            affiliations = [affiliations]
+
+        for affiliation in affiliations:
+
+            value = plain(affiliation)
+
+            if value.casefold() in {
+                "",
+                "-",
+                "n/a",
+                "none",
+                "null",
+                "unknown",
+                "not available"
+            }:
+                continue
+
+            affiliations_found.append(value)
+
+            for pattern in AFFILIATION_PATTERNS:
+
+                if pattern.search(value):
+
+                    return (
+                        True,
+                        "IMAC / Missouri S&T affiliation",
+                        value
+                    )
+
+    if affiliations_found:
+
+        return (
+            False,
+            "Different affiliation in ADS",
+            " | ".join(affiliations_found)[:1000]
+        )
+
+    return (
+        False,
+        "No usable affiliation in ADS",
+        ""
+    )
+
+
+# ============================================================
+# FORMAT IMAC RESEARCHER NAMES
+# ============================================================
 
 def imac_name(name):
 
@@ -455,9 +648,9 @@ def imac_name(name):
     return name
 
 
-# ==================================================
-# Generate combined Authors column
-# ==================================================
+# ============================================================
+# GENERATE AUTHORS COLUMN
+# ============================================================
 
 def authors_label(cluster, metadata, order):
 
@@ -471,32 +664,14 @@ def authors_label(cluster, metadata, order):
         for name in members
     )
 
-    representative = best_record(
-        cluster["records"]
+    documents = documents_for_cluster(
+        cluster,
+        metadata
     )
 
-    bibcode = representative["bibcode"]
-    doi = representative["doi_key"]
+    if documents:
 
-    doc = (
-        metadata[0].get(bibcode)
-        or metadata[1].get(doi)
-    )
-
-    # Try alternative publication editions.
-    if not doc:
-
-        for row in cluster["records"]:
-
-            doc = (
-                metadata[0].get(row["bibcode"])
-                or metadata[1].get(row["doi_key"])
-            )
-
-            if doc:
-                break
-
-    if doc:
+        doc = documents[0]
 
         first = doc.get("first_author") or ""
 
@@ -509,10 +684,16 @@ def authors_label(cluster, metadata, order):
 
             count = doc.get("author_count")
 
+            try:
+                multiple = (
+                    count is None
+                    or int(count) > 1
+                )
+            except (TypeError, ValueError):
+                multiple = True
+
             lead = surname + (
-                " et al."
-                if count is None or int(count) > 1
-                else ""
+                " et al." if multiple else ""
             )
 
             return (
@@ -520,17 +701,18 @@ def authors_label(cluster, metadata, order):
                 f"(incl. {included})"
             )
 
-    # Do not invent first-author information.
     return f"IMAC contributors: {included}"
 
 
-# ==================================================
-# Create one publication row
-# ==================================================
+# ============================================================
+# GENERATE ONE PUBLICATION ROW
+# ============================================================
 
 def output_row(cluster, metadata, order):
 
-    record = best_record(cluster["records"])
+    record = best_record(
+        cluster["records"]
+    )
 
     return {
         "Title": html.escape(
@@ -551,9 +733,9 @@ def output_row(cluster, metadata, order):
     }
 
 
-# ==================================================
-# Write CSV files for Terminalfour
-# ==================================================
+# ============================================================
+# WRITE CSV FILE
+# ============================================================
 
 def write_csv(path, rows):
 
@@ -573,31 +755,37 @@ def write_csv(path, rows):
         writer.writeheader()
         writer.writerows(rows)
 
-    os.replace(temporary, path)
+    os.replace(
+        temporary,
+        path
+    )
 
 
-# ==================================================
-# NEW: Calculate annual publication statistics
-# ==================================================
+# ============================================================
+# GENERATE OVERALL IMAC STATISTICS
+# ============================================================
 
-def make_summary_row(year, rows):
+def create_summary(output_dir, annual):
 
-    # Each row represents one unique published paper
-    # because duplicate publications were already
-    # combined before this function is called.
+    current_year = datetime.now(timezone.utc).year
 
-    number_of_papers = len(rows)
+    # All affiliation-verified published papers
+    # in the selected period.
+    papers = [
+        row
+        for year, rows in annual.items()
+        if START_YEAR <= int(year) <= current_year
+        for row in rows
+    ]
 
-    # Collect valid NASA ADS citation counts.
-    # A blank count means unavailable information.
-    # An actual zero is included in the calculation.
+    total_papers = len(papers)
 
     citation_counts = []
 
-    for row in rows:
+    for paper in papers:
 
         value = str(
-            row["Citation (ADS)"]
+            paper["Citation (ADS)"]
         ).strip()
 
         if value.isdigit():
@@ -607,40 +795,157 @@ def make_summary_row(year, rows):
 
     papers_with_ads_data = len(citation_counts)
 
-    # Generate a readable summary for the table.
+    # --------------------------------------------------
+    # Human-readable summary
+    # --------------------------------------------------
 
-    summary_text = (
-        f"YEAR {year} SUMMARY: "
-        f"{number_of_papers} published papers; "
-        f"{total_citations:,} ADS citations "
-        f"({papers_with_ads_data}/{number_of_papers} "
-        f"papers with ADS data)"
+    summary = (
+        f"IMAC has published a total of "
+        f"{total_papers:,} articles, "
+        f"which have received "
+        f"{total_citations:,} citations "
+        f"according to NASA ADS."
     )
 
-    # Use the same columns as the publication table.
-    # Leave the other columns empty so the summary
-    # is not confused with an additional paper.
+    note = (
+        f"Period: {START_YEAR}–{current_year}. "
+        f"Includes publications with verified "
+        f"IMAC or Missouri S&T affiliations. "
+        f"ADS citation data available for "
+        f"{papers_with_ads_data} of "
+        f"{total_papers} articles."
+    )
 
-    summary_row = {
-        "Title": summary_text,
-        "Authors": "",
-        "Journal": "",
-        "Citation (ADS)": "",
-        "DOI URL": "",
-        "ADS URL": ""
-    }
+    # --------------------------------------------------
+    # 1. Write a simple CSV version
+    # --------------------------------------------------
 
-    return summary_row, number_of_papers, total_citations
+    csv_file = output_dir / "summary_statistics.csv"
+
+    with csv_file.open(
+        "w",
+        newline="",
+        encoding="utf-8"
+    ) as handle:
+
+        writer = csv.writer(handle)
+
+        writer.writerow([
+            "IMAC Publication Summary"
+        ])
+
+        writer.writerow([
+            summary
+        ])
+
+    # --------------------------------------------------
+    # 2. Write JSON version for dynamic display
+    # --------------------------------------------------
+
+    json_file = output_dir / "summary.json"
+
+    json_file.write_text(
+        json.dumps(
+            {
+                "start_year": START_YEAR,
+                "end_year": current_year,
+                "published_papers": total_papers,
+                "total_ads_citations": total_citations,
+                "papers_with_ads_data": papers_with_ads_data,
+                "summary": summary,
+                "note": note
+            },
+            indent=2
+        ),
+        encoding="utf-8"
+    )
+
+    # --------------------------------------------------
+    # 3. Write HTML version for possible embedding
+    # --------------------------------------------------
+
+    summary_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {{
+    margin: 0;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #003b49;
+}}
+.summary {{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.6;
+}}
+.note {{
+    font-size: 13px;
+    color: #555;
+    margin-top: 12px;
+}}
+</style>
+</head>
+<body>
+<div class="summary">{html.escape(summary)}</div>
+<div class="note">{html.escape(note)}</div>
+</body>
+</html>
+"""
+
+    html_file = output_dir / "summary.html"
+
+    html_file.write_text(
+        summary_html,
+        encoding="utf-8"
+    )
+
+    print()
+    print("OVERALL IMAC STATISTICS")
+    print(summary)
+    print(note)
+
+    return total_papers
 
 
-# ==================================================
-# Main program
-# ==================================================
+# ============================================================
+# WRITE AFFILIATION REVIEW REPORT
+# ============================================================
+
+def write_review_report(output_dir, review):
+
+    file = output_dir / "affiliation_review.csv"
+
+    with file.open(
+        "w",
+        newline="",
+        encoding="utf-8"
+    ) as handle:
+
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "Year",
+                "Title",
+                "Reason",
+                "ADS affiliation",
+                "DOI URL",
+                "ADS URL"
+            ]
+        )
+
+        writer.writeheader()
+        writer.writerows(review)
+
+
+# ============================================================
+# MAIN PROGRAM
+# ============================================================
 
 def main():
-
-    # Secret comes from GitHub Actions.
-    # Never print or save the token.
 
     token = os.environ.get("ADS_API_TOKEN")
 
@@ -649,35 +954,61 @@ def main():
             "Missing ADS_API_TOKEN GitHub Actions secret."
         )
 
+    if OUTPUT_MODE not in {"preview", "live"}:
+        raise ValueError(
+            "IMAC_OUTPUT_MODE must be preview or live."
+        )
+
+    output_dir = (
+        PREVIEW_OUTPUT
+        if OUTPUT_MODE == "preview"
+        else LIVE_OUTPUT
+    )
+
+    print("=" * 60)
+    print("IMAC Publications - Affiliation Filter")
+    print("=" * 60)
+    print(f"Output mode: {OUTPUT_MODE}")
+
     # --------------------------------------------------
-    # Step 1: Read individual researcher publications
+    # 1. Read researcher publications
     # --------------------------------------------------
 
     researchers, records = read_records()
 
     # --------------------------------------------------
-    # Step 2: Remove duplicate publications
+    # 2. Remove duplicate publications
     # --------------------------------------------------
 
     clusters = collapse(records)
 
     # --------------------------------------------------
-    # Step 3: Retrieve first-author information
+    # 3. Retrieve NASA ADS author and affiliation data
     # --------------------------------------------------
 
-    metadata = ads_authors(records, token)
+    metadata = ads_metadata(
+        records,
+        token
+    )
 
     order = {
-        person["name"]: i
-        for i, person in enumerate(researchers)
+        person["name"]: index
+        for index, person in enumerate(researchers)
     }
 
-    # --------------------------------------------------
-    # Step 4: Organize publications by year
-    # --------------------------------------------------
-
     annual = defaultdict(list)
+
     preprints = []
+
+    review = []
+
+    current_year = datetime.now(timezone.utc).year
+
+    included_count = 0
+
+    # --------------------------------------------------
+    # 4. Filter papers by author affiliation
+    # --------------------------------------------------
 
     for cluster in clusters:
 
@@ -685,82 +1016,201 @@ def main():
             cluster["records"]
         )
 
+        included, reason, affiliation = (
+            check_affiliation(
+                cluster,
+                metadata
+            )
+        )
+
+        if not included:
+
+            review.append({
+                "Year": representative["Year"],
+                "Title": representative["Title"],
+                "Reason": reason,
+                "ADS affiliation": affiliation,
+                "DOI URL": representative["DOI URL"],
+                "ADS URL": representative["ADS URL"]
+            })
+
+            continue
+
         row = output_row(
             cluster,
             metadata,
             order
         )
 
+        # Prefer published version over preprint.
         if representative["preprint"]:
 
-            # Recent arXiv preprints from the current
-            # and previous calendar year.
-
             if int(representative["Year"]) >= (
-                datetime.now(timezone.utc).year - 1
+                current_year - 1
             ):
                 preprints.append(row)
 
         else:
 
+            # A missing journal can indicate incomplete
+            # publication metadata. Do not count it as
+            # a verified published article automatically.
+
+            if not plain(
+                representative["Journal"]
+            ):
+
+                review.append({
+                    "Year": representative["Year"],
+                    "Title": representative["Title"],
+                    "Reason": "Missing journal metadata",
+                    "ADS affiliation": affiliation,
+                    "DOI URL": representative["DOI URL"],
+                    "ADS URL": representative["ADS URL"]
+                })
+
+                continue
+
             annual[
                 representative["Year"]
             ].append(row)
 
-    OUTPUT.mkdir(
+        included_count += 1
+
+    # --------------------------------------------------
+    # 5. Create output directory
+    # --------------------------------------------------
+
+    output_dir.mkdir(
         parents=True,
         exist_ok=True
     )
 
     # --------------------------------------------------
-    # Step 5: Generate yearly CSVs with statistics
+    # 6. Generate annual CSV files
+    #
+    # IMPORTANT: No individual yearly summary rows.
     # --------------------------------------------------
 
-    for year, rows in sorted(
-        annual.items(),
+    years = set(annual.keys())
+
+    # Regenerate existing years, including years
+    # where filtering leaves zero qualifying papers.
+    # This avoids leaving stale unfiltered rows
+    # when the live mode is eventually enabled.
+
+    for old_file in LIVE_OUTPUT.glob(
+        "publications_*.csv"
+    ):
+
+        match = re.fullmatch(
+            r"publications_(\d{4})\.csv",
+            old_file.name
+        )
+
+        if match:
+            years.add(match.group(1))
+
+    # Always generate the years used for the
+    # institute's 2019-present statistics.
+
+    years.update(
+        str(year)
+        for year in range(
+            START_YEAR,
+            current_year + 1
+        )
+    )
+
+    for year in sorted(
+        years,
         reverse=True
     ):
 
-        # Sort publication records alphabetically.
+        rows = annual.get(year, [])
+
         rows.sort(
-            key=lambda r: r["Title"].casefold()
+            key=lambda row: row["Title"].casefold()
         )
 
-        # Calculate the statistics for this year.
-        summary_row, number_of_papers, total_citations = (
-            make_summary_row(year, rows)
+        file = (
+            output_dir
+            / f"publications_{year}.csv"
         )
-
-        # Insert the summary before the publications.
-        rows_with_summary = [summary_row] + rows
-
-        # Keep the original filename and URL.
-        file = OUTPUT / f"publications_{year}.csv"
 
         write_csv(
             file,
-            rows_with_summary
+            rows
         )
 
         print(
             f"{year}: "
-            f"{number_of_papers} unique published papers; "
-            f"{total_citations:,} ADS citations"
+            f"{len(rows)} affiliation-verified "
+            "published papers"
         )
 
     # --------------------------------------------------
-    # Step 6: Generate recent preprints CSV
+    # 7. Generate recent preprints
     # --------------------------------------------------
 
-    # Preprints do not receive an annual summary row.
-
     preprints.sort(
-        key=lambda r: r["Title"].casefold()
+        key=lambda row: row["Title"].casefold()
     )
 
     write_csv(
-        OUTPUT / "recent_preprints.csv",
+        output_dir / "recent_preprints.csv",
         preprints
+    )
+
+    # --------------------------------------------------
+    # 8. Generate overall statistics
+    # --------------------------------------------------
+
+    number_of_papers = create_summary(
+        output_dir,
+        annual
+    )
+
+    # --------------------------------------------------
+    # 9. Generate affiliation review report
+    # --------------------------------------------------
+
+    write_review_report(
+        output_dir,
+        review
+    )
+
+    # --------------------------------------------------
+    # 10. Safety check before live publishing
+    # --------------------------------------------------
+
+    if (
+        OUTPUT_MODE == "live"
+        and number_of_papers == 0
+    ):
+        raise RuntimeError(
+            "No affiliation-verified published papers "
+            "were found for 2019-present. "
+            "Live publication update stopped."
+        )
+
+    print()
+    print("=" * 60)
+    print("IMAC UPDATE COMPLETE")
+    print("=" * 60)
+
+    print(
+        f"Total unique works examined: {len(clusters)}"
+    )
+
+    print(
+        f"Affiliation-eligible works processed: "
+        f"{included_count}"
+    )
+
+    print(
+        f"Works excluded or requiring review: "
+        f"{len(review)}"
     )
 
     print(
@@ -768,8 +1218,7 @@ def main():
     )
 
     print(
-        "Total unique works, including older preprints: "
-        f"{len(clusters)}"
+        f"Output directory: {output_dir}"
     )
 
 
