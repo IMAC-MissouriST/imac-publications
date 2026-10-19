@@ -16,6 +16,7 @@ import re
 import time
 import unicodedata
 import xml.etree.ElementTree as ET
+
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
@@ -26,26 +27,48 @@ from urllib.request import Request, urlopen
 
 import pymupdf
 
+
+# ============================================================
+# CONFIGURATION
+# ============================================================
+
 ROOT = Path(__file__).resolve().parent.parent
+
 SOURCE = ROOT / "docs" / "publications"
+
 LIVE_DIR = ROOT / "docs" / "imac"
+
 PREVIEW_DIR = ROOT / "docs" / "imac_affiliation_preview"
+
 CACHE_FILE = PREVIEW_DIR / "affiliation_cache.json"
+
 DECISIONS_FILE = ROOT / "affiliation_decisions.json"
+
 RESEARCHERS_FILE = ROOT / "researchers.json"
 
 ADS_API = "https://api.adsabs.harvard.edu/v1/search/query"
+
 ARXIV_API = "https://export.arxiv.org/api/query"
 
 START_YEAR = 2019
-MODE = os.getenv("IMAC_OUTPUT_MODE", "preview").strip().lower()
-MAX_CHECKS = int(os.getenv("IMAC_MAX_NEW_CHECKS", "30"))
+
+MODE = os.getenv(
+    "IMAC_OUTPUT_MODE",
+    "preview"
+).strip().lower()
+
+MAX_CHECKS = int(
+    os.getenv("IMAC_MAX_NEW_CHECKS", "30")
+)
+
 MAX_PDF_BYTES = 40 * 1024 * 1024
 
-# Recheck old unsuccessful verifications with the improved method.
-CACHE_VERSION = 3
+# Version 4 retries previously unresolved papers
+# using the improved full-PDF affiliation checker.
+CACHE_VERSION = 4
 
-# Test-paper priority only; this is NOT an inclusion override.
+# Priority test paper.
+# This is NOT an automatic inclusion override.
 PRIORITY_ARXIV = "2507.16707"
 
 USER_AGENT = (
@@ -75,12 +98,14 @@ AUDIT_COLUMNS = [
 ]
 
 ATOM = "{http://www.w3.org/2005/Atom}"
+
 ARXIV_NS = "{http://arxiv.org/schemas/atom}"
+
 LAST_ARXIV_REQUEST = 0.0
 
 
 # ============================================================
-# AFFILIATION PATTERNS
+# AFFILIATION MATCHING
 # ============================================================
 
 AFFILIATION_PATTERNS = [
@@ -89,10 +114,12 @@ AFFILIATION_PATTERNS = [
         r"(?:and|&)\s*Technology\b",
         re.I
     ),
+
     re.compile(
         r"\bMissouri\s+S\s*(?:&|and)\s*T\b",
         re.I
     ),
+
     re.compile(
         r"\bInstitute\s+for\s+Multi[\s-]*messenger\s+"
         r"Astrophysics\s*(?:and|&)\s*Cosmology\b",
@@ -131,24 +158,34 @@ SECTION_HEADING = re.compile(
 # ============================================================
 
 def clean(value):
+
     return html.unescape(
         html.unescape(str(value or ""))
     ).strip()
 
 
 def normalized_title(value):
+
     text = unicodedata.normalize(
         "NFKD",
         clean(value)
     ).casefold()
 
     text = text.replace(
-        r"\alpha", "alpha"
-    ).replace("α", "alpha")
+        r"\alpha",
+        "alpha"
+    ).replace(
+        "α",
+        "alpha"
+    )
 
     text = text.replace(
-        r"\beta", "beta"
-    ).replace("β", "beta")
+        r"\beta",
+        "beta"
+    ).replace(
+        "β",
+        "beta"
+    )
 
     return re.sub(
         r"[^a-z0-9]",
@@ -158,6 +195,7 @@ def normalized_title(value):
 
 
 def doi_key(value):
+
     value = re.sub(
         r"^https?://(?:dx\.)?doi\.org/",
         "",
@@ -176,6 +214,7 @@ def doi_key(value):
 
 
 def bibcode(value):
+
     match = re.search(
         r"/abs/([^/?#]+)",
         clean(value)
@@ -189,9 +228,12 @@ def bibcode(value):
 
 
 def normalize_affiliation(text):
+
     text = clean(text)
 
     # Rejoin words split across PDF lines.
+    # Example: "Technol-\nogy" -> "Technology"
+
     text = re.sub(
         r"(?<=[a-zA-Z])-\s*\n\s*(?=[a-zA-Z])",
         "",
@@ -206,6 +248,7 @@ def normalize_affiliation(text):
 
 
 def qualifying_affiliation(text):
+
     text = normalize_affiliation(text)
 
     return any(
@@ -215,6 +258,7 @@ def qualifying_affiliation(text):
 
 
 def paper_title_matches(expected, candidate):
+
     a = normalized_title(expected)
     b = normalized_title(candidate)
 
@@ -222,12 +266,16 @@ def paper_title_matches(expected, candidate):
         return a == b
 
     return (
-        SequenceMatcher(None, a, b).ratio()
-        >= 0.91
+        SequenceMatcher(
+            None,
+            a,
+            b
+        ).ratio() >= 0.91
     )
 
 
 def is_preprint(row):
+
     return (
         "arxiv" in row["Journal"].casefold()
         or row["doi_key"].startswith(
@@ -244,6 +292,7 @@ def is_preprint(row):
 # ============================================================
 
 def load_records():
+
     researchers = json.loads(
         RESEARCHERS_FILE.read_text(
             encoding="utf-8"
@@ -253,6 +302,7 @@ def load_records():
     records = []
 
     for person in researchers:
+
         path = (
             SOURCE / f'{person["orcid"]}.csv'
         )
@@ -268,7 +318,10 @@ def load_records():
         ) as handle:
 
             reader = csv.DictReader(handle)
-            cols = set(reader.fieldnames or [])
+
+            cols = set(
+                reader.fieldnames or []
+            )
 
             required = {
                 "Year",
@@ -291,8 +344,14 @@ def load_records():
                 )
 
             for row in reader:
-                year = clean(row.get("Year"))
-                title = clean(row.get("Title"))
+
+                year = clean(
+                    row.get("Year")
+                )
+
+                title = clean(
+                    row.get("Title")
+                )
 
                 if (
                     len(year) != 4
@@ -303,27 +362,35 @@ def load_records():
 
                 row.update({
                     "Year": year,
+
                     "Title": title,
+
                     "Journal": clean(
                         row.get("Journal")
                     ),
+
                     "Citation (ADS)": clean(
                         row.get("Citation (ADS)")
                         or row.get("Citations")
                     ),
+
                     "doi_key": doi_key(
                         row.get("DOI URL")
                     ),
+
                     "bibcode": bibcode(
                         row.get("ADS URL")
                     ),
+
                     "title_key": normalized_title(
                         title
                     ),
+
                     "researcher": person["name"],
                 })
 
                 row["preprint"] = is_preprint(row)
+
                 records.append(row)
 
     if not records:
@@ -339,6 +406,7 @@ def load_records():
 # ============================================================
 
 def same_paper(row, cluster):
+
     if (
         row["doi_key"]
         and row["doi_key"] in cluster["dois"]
@@ -357,6 +425,7 @@ def same_paper(row, cluster):
         return False
 
     for other in cluster["records"]:
+
         if abs(
             int(row["Year"])
             - int(other["Year"])
@@ -373,7 +442,9 @@ def same_paper(row, cluster):
             and re.findall(r"\d+", key)
             == re.findall(r"\d+", second)
             and SequenceMatcher(
-                None, key, second
+                None,
+                key,
+                second
             ).ratio() >= 0.985
         ):
             return True
@@ -382,9 +453,11 @@ def same_paper(row, cluster):
 
 
 def collapse(records):
+
     groups = []
 
     for row in records:
+
         group = next(
             (
                 g for g in groups
@@ -394,15 +467,18 @@ def collapse(records):
         )
 
         if group is None:
+
             group = {
                 "records": [],
                 "researchers": set(),
                 "dois": set(),
                 "bibcodes": set()
             }
+
             groups.append(group)
 
         group["records"].append(row)
+
         group["researchers"].add(
             row["researcher"]
         )
@@ -421,7 +497,9 @@ def collapse(records):
 
 
 def preferred_record(rows):
+
     def rank(row):
+
         value = row["Citation (ADS)"]
 
         return (
@@ -434,12 +512,16 @@ def preferred_record(rows):
             else -1
         )
 
-    return max(rows, key=rank)
+    return max(
+        rows,
+        key=rank
+    )
 
 
 def is_priority(group):
-    for row in group["records"]:
-        identifiers = " ".join(
+
+    return any(
+        PRIORITY_ARXIV in " ".join(
             clean(row.get(key))
             for key in (
                 "Title",
@@ -447,20 +529,13 @@ def is_priority(group):
                 "DOI URL"
             )
         )
-
-        if PRIORITY_ARXIV in identifiers:
-            return True
-
-        title = row["title_key"]
-
-        if (
-            "simulatingrealistic" in title
-            and "radiativetransfer" in title
-            and "lyman" in title
-        ):
-            return True
-
-    return False
+        or (
+            "simulatingrealistic" in row["title_key"]
+            and "radiativetransfer" in row["title_key"]
+            and "lyman" in row["title_key"]
+        )
+        for row in group["records"]
+    )
 
 
 # ============================================================
@@ -468,6 +543,7 @@ def is_priority(group):
 # ============================================================
 
 def format_error(exc):
+
     if isinstance(exc, HTTPError):
         return f"HTTP {exc.code}"
 
@@ -478,6 +554,7 @@ def format_error(exc):
 
 
 def safe_public_https(url):
+
     parts = urlsplit(url)
 
     if (
@@ -499,10 +576,12 @@ def safe_public_https(url):
         return False
 
     try:
+
         if not ipaddress.ip_address(
             hostname
         ).is_global:
             return False
+
     except ValueError:
         pass
 
@@ -510,9 +589,11 @@ def safe_public_https(url):
 
 
 def wait_for_arxiv():
+
     global LAST_ARXIV_REQUEST
 
     if LAST_ARXIV_REQUEST:
+
         remaining = (
             3.2
             - (
@@ -534,6 +615,7 @@ def http_read(
     arxiv=False,
     headers=None
 ):
+
     if not safe_public_https(url):
         raise ValueError(
             "Invalid or unsafe HTTPS URL"
@@ -543,13 +625,17 @@ def http_read(
         "User-Agent": USER_AGENT
     }
 
-    request_headers.update(headers or {})
+    request_headers.update(
+        headers or {}
+    )
 
     for attempt in range(3):
+
         if arxiv:
             wait_for_arxiv()
 
         try:
+
             with urlopen(
                 Request(
                     url,
@@ -617,6 +703,7 @@ def http_read(
 # ============================================================
 
 def fetch_ads(records, token):
+
     keys = sorted({
         ("bibcode", row["bibcode"])
         for row in records
@@ -637,11 +724,13 @@ def fetch_ads(records, token):
         len(keys),
         15
     ):
+
         parts = []
 
         for field, value in keys[
             offset:offset + 15
         ]:
+
             escaped = (
                 value.replace("\\", "\\\\")
                 .replace('"', '\\"')
@@ -653,11 +742,13 @@ def fetch_ads(records, token):
 
         url = ADS_API + "?" + urlencode({
             "q": " OR ".join(parts),
+
             "fl": (
                 "bibcode,doi,identifier,"
                 "first_author,author_count,"
                 "aff,citation_count"
             ),
+
             "rows": 200,
         })
 
@@ -689,6 +780,7 @@ def fetch_ads(records, token):
             )
 
         for doc in docs:
+
             if doc.get("bibcode"):
                 by_bibcode[
                     doc["bibcode"]
@@ -699,11 +791,15 @@ def fetch_ads(records, token):
             )
 
             if isinstance(
-                identifiers, str
+                identifiers,
+                str
             ):
-                identifiers = [identifiers]
+                identifiers = [
+                    identifiers
+                ]
 
             for identifier in identifiers:
+
                 by_doi[
                     doi_key(identifier)
                 ] = doc
@@ -712,12 +808,14 @@ def fetch_ads(records, token):
 
 
 def documents_for(group, ads):
+
     by_bibcode, by_doi = ads
 
     docs = []
     seen = set()
 
     for row in group["records"]:
+
         candidates = (
             by_bibcode.get(
                 row["bibcode"]
@@ -728,13 +826,16 @@ def documents_for(group, ads):
         )
 
         for doc in candidates:
+
             if doc:
+
                 key = (
                     doc.get("bibcode")
                     or id(doc)
                 )
 
                 if key not in seen:
+
                     seen.add(key)
                     docs.append(doc)
 
@@ -742,13 +843,18 @@ def documents_for(group, ads):
 
 
 def check_ads(docs):
+
     for doc in docs:
-        affs = doc.get("aff") or []
+
+        affs = doc.get(
+            "aff"
+        ) or []
 
         if isinstance(affs, str):
             affs = [affs]
 
         for affiliation in affs:
+
             if qualifying_affiliation(
                 affiliation
             ):
@@ -764,9 +870,11 @@ def check_ads(docs):
 # ============================================================
 
 def known_arxiv_id(group, docs):
+
     pieces = []
 
     for row in group["records"]:
+
         pieces.extend(
             clean(row.get(key))
             for key in (
@@ -778,6 +886,7 @@ def known_arxiv_id(group, docs):
         )
 
     for doc in docs:
+
         ids = (
             doc.get("identifier")
             or []
@@ -791,6 +900,7 @@ def known_arxiv_id(group, docs):
         ]
 
     for piece in pieces:
+
         match = ARXIV_PATTERN.search(
             str(piece)
         )
@@ -815,12 +925,15 @@ def known_arxiv_id(group, docs):
 
 
 def parse_arxiv(raw):
+
     root = ET.fromstring(raw)
+
     entries = []
 
     for entry in root.findall(
         ATOM + "entry"
     ):
+
         url = clean(
             entry.findtext(
                 ATOM + "id"
@@ -860,6 +973,7 @@ def parse_arxiv(raw):
         for author in entry.findall(
             ATOM + "author"
         ):
+
             affs += [
                 normalize_affiliation(
                     item.text
@@ -881,6 +995,7 @@ def parse_arxiv(raw):
 
 
 def arxiv_by_id(identifier, title):
+
     url = ARXIV_API + "?" + urlencode({
         "id_list": identifier,
         "max_results": 1
@@ -895,6 +1010,7 @@ def arxiv_by_id(identifier, title):
     )
 
     for entry in entries:
+
         if (
             entry["id"] == identifier
             and paper_title_matches(
@@ -908,8 +1024,9 @@ def arxiv_by_id(identifier, title):
 
 
 def arxiv_by_title(title, year):
-    # Do not trust the first search result blindly.
-    # A close title match is required.
+
+    # A verified title match is required.
+    # Never trust the first search result blindly.
 
     words = re.findall(
         r"[a-zA-Z0-9]+",
@@ -928,9 +1045,7 @@ def arxiv_by_title(title, year):
     )
 
     url = ARXIV_API + "?" + urlencode({
-        "search_query": (
-            f'ti:"{search_phrase}"'
-        ),
+        "search_query": f'ti:"{search_phrase}"',
         "start": 0,
         "max_results": 10,
     })
@@ -945,17 +1060,18 @@ def arxiv_by_title(title, year):
 
     entries = sorted(
         entries,
-        key=lambda e: SequenceMatcher(
+        key=lambda entry: SequenceMatcher(
             None,
             normalized_title(title),
             normalized_title(
-                e["title"]
+                entry["title"]
             )
         ).ratio(),
         reverse=True
     )
 
     for entry in entries:
+
         title_matches = paper_title_matches(
             title,
             entry["title"]
@@ -982,6 +1098,10 @@ def arxiv_by_title(title, year):
 # ============================================================
 
 def lookup_openalex(group):
+
+    # DOI is an exact identifier.
+    # Do not guess OpenAlex records by title alone.
+
     dois = [
         row["doi_key"]
         for row in group["records"]
@@ -1008,6 +1128,7 @@ def lookup_openalex(group):
     )
 
     try:
+
         raw = http_read(
             url,
             max_bytes=3_000_000,
@@ -1016,9 +1137,12 @@ def lookup_openalex(group):
                 "Accept": "application/json"
             }
         )
+
     except HTTPError as exc:
+
         if exc.code == 404:
             return None
+
         raise
 
     obj = json.loads(raw)
@@ -1040,6 +1164,7 @@ def lookup_openalex(group):
 
 
 def openalex_affiliation(obj):
+
     if not obj:
         return ""
 
@@ -1047,12 +1172,14 @@ def openalex_affiliation(obj):
         obj.get("authorships")
         or []
     ):
+
         for affiliation in (
             author.get(
                 "raw_affiliation_strings"
             )
             or []
         ):
+
             if qualifying_affiliation(
                 affiliation
             ):
@@ -1064,6 +1191,7 @@ def openalex_affiliation(obj):
             author.get("institutions")
             or []
         ):
+
             institution = (
                 inst.get("display_name")
                 or ""
@@ -1078,6 +1206,7 @@ def openalex_affiliation(obj):
 
 
 def openalex_pdf_urls(obj):
+
     if not obj:
         return []
 
@@ -1093,6 +1222,7 @@ def openalex_pdf_urls(obj):
     urls = []
 
     for location in locations:
+
         url = (
             location.get("pdf_url")
             or ""
@@ -1108,10 +1238,31 @@ def openalex_pdf_urls(obj):
 
 
 # ============================================================
-# PDF AUTHOR-AFFILIATION EXTRACTION
+# FULL PDF AFFILIATION EXTRACTION
+#
+# IMPORTANT:
+# Examine ALL pages of the PDF.
+#
+# Supports:
+#   1. First-page author affiliations.
+#   2. Explicit affiliation sections.
+#   3. Numbered institution lists anywhere in the PDF.
+#
+# This is particularly useful for LIGO collaboration
+# papers with affiliations near the end of the PDF.
 # ============================================================
 
 def pdf_header_affiliation(url):
+
+    """Check all PDF pages for author-affiliation evidence.
+
+    A qualifying institution must appear in a recognizable
+    author-affiliation context.
+
+    Ordinary mentions in references, acknowledgments,
+    or the main text are not sufficient.
+    """
+
     raw = http_read(
         url,
         max_bytes=MAX_PDF_BYTES,
@@ -1125,7 +1276,7 @@ def pdf_header_affiliation(url):
         ),
         headers={
             "Accept": "application/pdf"
-        }
+        },
     )
 
     if not raw.lstrip().startswith(
@@ -1135,39 +1286,133 @@ def pdf_header_affiliation(url):
             "URL did not provide a readable PDF"
         )
 
+    # Examples of numbered author affiliations:
+    #
+    # 109 Kenyon College, Gambier, Ohio
+    # 110 Missouri University of Science and Technology
+    # 111 Indian Institute of Technology Madras
+    #
+    # Sometimes the superscript number is attached
+    # directly to the institutional name.
+
+    number_and_name = re.compile(
+        r"^\s*(\d{1,4})(?!\d)"
+        r"(?:\s+|(?=[A-Za-z]))"
+        r"([A-Za-z].*)$"
+    )
+
+    number_only = re.compile(
+        r"^\s*\d{1,4}\s*$"
+    )
+
+    institution_word = re.compile(
+        r"\b(?:university|universit\w*|college|"
+        r"institute|institut\w*|laborator\w*|"
+        r"observator\w*|department|school|academy|"
+        r"research\s+cent(?:er|re)|INFN|CNRS)\b",
+        re.IGNORECASE
+    )
+
+    def numbered_affiliation_match(page_text):
+
+        """Find qualifying institutions in numbered lists."""
+
+        lines = [
+            line.strip()
+            for line in page_text.splitlines()
+            if line.strip()
+        ]
+
+        entries = []
+
+        for index, line in enumerate(lines):
+
+            match = number_and_name.match(line)
+
+            if match:
+
+                beginning = match.group(2)
+
+            elif (
+                number_only.match(line)
+                and index + 1 < len(lines)
+            ):
+
+                beginning = lines[index + 1]
+
+            else:
+                continue
+
+            continuation = []
+
+            first_next = index + (
+                2
+                if number_only.match(line)
+                else 1
+            )
+
+            # Allow an institutional address to
+            # continue over several PDF lines.
+            #
+            # Stop when the next numbered entry begins.
+
+            for next_line in lines[
+                first_next:first_next + 3
+            ]:
+
+                if (
+                    number_and_name.match(next_line)
+                    or number_only.match(next_line)
+                ):
+                    break
+
+                continuation.append(next_line)
+
+            entry = normalize_affiliation(
+                " ".join(
+                    [beginning] + continuation
+                )
+            )
+
+            if institution_word.search(entry):
+                entries.append(entry)
+
+        # Require multiple numbered institutions.
+        # This helps avoid mistaking one numbered
+        # reference for an affiliation.
+
+        if len(entries) < 3:
+            return ""
+
+        for entry in entries:
+
+            if qualifying_affiliation(entry):
+                return entry[:320]
+
+        return ""
+
     with pymupdf.open(
         stream=raw,
         filetype="pdf"
     ) as document:
 
-        # Large collaborations can have many
-        # pages of author names and affiliations.
-        #
-        # Before the abstract, inspect front matter.
-        # After the abstract, require an explicit
-        # affiliation section to avoid matching
-        # acknowledgments or ordinary body text.
+        in_affiliation_section = False
 
         front_matter = True
-        affiliation_section = 0
 
-        n = len(document)
+        # ----------------------------------------------------
+        # CRITICAL IMPROVEMENT:
+        #
+        # Examine every page, including page 41 and
+        # the final pages of collaboration papers.
+        # ----------------------------------------------------
 
-        pages = sorted(
-            set(
-                range(min(n, 22))
-            )
-            | set(
-                range(
-                    max(0, n - 8),
-                    n
-                )
-            )
-        )
+        for page_number in range(
+            len(document)
+        ):
 
-        for page_num in pages:
             text = document[
-                page_num
+                page_number
             ].get_text(
                 "text",
                 sort=True
@@ -1176,34 +1421,58 @@ def pdf_header_affiliation(url):
             if not text.strip():
                 continue
 
+            # ------------------------------------------------
+            # Method 1:
+            # Numbered collaboration affiliations
+            # anywhere in the PDF.
+            # ------------------------------------------------
+
+            match = numbered_affiliation_match(
+                text
+            )
+
+            if match:
+
+                return (
+                    match,
+                    f"{url}#page={page_number + 1}"
+                )
+
             candidates = []
+
+            # ------------------------------------------------
+            # Method 2:
+            # Standard first-page affiliations.
+            # ------------------------------------------------
 
             if (
                 front_matter
-                and page_num < 22
+                and page_number < 3
             ):
-                abstract_match = (
+
+                abstract = (
                     ABSTRACT_HEADING.search(
                         text
                     )
                 )
 
-                if abstract_match:
-                    candidates.append(
-                        text[
-                            :abstract_match.start()
-                        ]
-                    )
-                else:
-                    candidates.append(
-                        text[:12000]
-                    )
+                candidates.append(
+                    text[:abstract.start()]
+                    if abstract
+                    else text[:9000]
+                )
 
-                if (
-                    abstract_match
-                    or page_num >= 16
-                ):
+                if abstract:
                     front_matter = False
+
+            else:
+                front_matter = False
+
+            # ------------------------------------------------
+            # Method 3:
+            # Explicit affiliation sections anywhere
+            # in the PDF.
+            # ------------------------------------------------
 
             heading = (
                 AFFILIATION_HEADING.search(
@@ -1212,52 +1481,57 @@ def pdf_header_affiliation(url):
             )
 
             if heading:
-                affiliation_section = 3
+
+                in_affiliation_section = True
 
                 candidates.append(
                     text[
                         heading.end():
-                        heading.end() + 10000
                     ]
                 )
 
-            elif affiliation_section > 0:
-                if not SECTION_HEADING.search(
+            elif in_affiliation_section:
+
+                if SECTION_HEADING.search(
                     text[:700]
                 ):
-                    candidates.append(
-                        text[:10000]
-                    )
 
-                affiliation_section -= 1
+                    in_affiliation_section = False
+
+                else:
+
+                    candidates.append(text)
+
+            # ------------------------------------------------
+            # Check candidate author-affiliation text.
+            # ------------------------------------------------
 
             for candidate in candidates:
+
                 normalized = normalize_affiliation(
                     candidate
                 )
 
-                hit = next(
-                    (
-                        p.search(normalized)
-                        for p in AFFILIATION_PATTERNS
-                        if p.search(normalized)
-                    ),
-                    None
-                )
+                for pattern in AFFILIATION_PATTERNS:
 
-                if hit:
-                    excerpt = normalized[
-                        max(
-                            0,
-                            hit.start() - 70
-                        ):
-                        hit.end() + 130
-                    ]
-
-                    return (
-                        excerpt[:320],
-                        f"{url}#page={page_num + 1}"
+                    match = pattern.search(
+                        normalized
                     )
+
+                    if match:
+
+                        excerpt = normalized[
+                            max(
+                                0,
+                                match.start() - 70
+                            ):
+                            match.end() + 130
+                        ]
+
+                        return (
+                            excerpt[:320],
+                            f"{url}#page={page_number + 1}"
+                        )
 
     return "", ""
 
@@ -1267,6 +1541,7 @@ def pdf_header_affiliation(url):
 # ============================================================
 
 def cluster_cache_key(group):
+
     row = preferred_record(
         group["records"]
     )
@@ -1290,7 +1565,9 @@ def cluster_cache_key(group):
 
 
 def load_cache():
+
     if CACHE_FILE.is_file():
+
         value = json.loads(
             CACHE_FILE.read_text(
                 encoding="utf-8"
@@ -1307,6 +1584,7 @@ def load_cache():
 
 
 def save_cache(cache):
+
     CACHE_FILE.parent.mkdir(
         parents=True,
         exist_ok=True
@@ -1338,6 +1616,7 @@ def save_cache(cache):
 # ============================================================
 
 def load_decisions():
+
     if not DECISIONS_FILE.is_file():
         return {}
 
@@ -1353,6 +1632,7 @@ def load_decisions():
         "decisions",
         []
     ):
+
         verdict = item.get(
             "decision"
         )
@@ -1363,18 +1643,12 @@ def load_decisions():
             else ""
         )
 
-        if identifier:
-            key = (
-                "doi:"
-                + identifier
-            )
-        else:
-            key = (
-                "arxiv:"
-                + clean(
-                    item.get("arxiv")
-                )
-            )
+        key = (
+            "doi:" + identifier
+            if identifier
+            else "arxiv:"
+            + clean(item.get("arxiv"))
+        )
 
         evidence_url = clean(
             item.get("evidence_url")
@@ -1389,6 +1663,7 @@ def load_decisions():
                 "https://"
             )
         ):
+
             raise ValueError(
                 "Manual affiliation decisions require "
                 "include/exclude and HTTPS evidence_url"
@@ -1400,6 +1675,7 @@ def load_decisions():
 
 
 def check_decision(group, decisions):
+
     keys = [
         "doi:" + row["doi_key"]
         for row in group["records"]
@@ -1407,16 +1683,15 @@ def check_decision(group, decisions):
     ]
 
     for row in group["records"]:
-        text = " ".join(
-            clean(row.get(k))
-            for k in (
-                "DOI URL",
-                "ADS URL"
-            )
-        )
 
         match = ARXIV_PATTERN.search(
-            text
+            " ".join(
+                clean(row.get(k))
+                for k in (
+                    "DOI URL",
+                    "ADS URL"
+                )
+            )
         )
 
         if match:
@@ -1426,22 +1701,23 @@ def check_decision(group, decisions):
             )
 
     for key in keys:
+
         if key in decisions:
+
             item = decisions[key]
 
-            status = (
+            return (
                 "verified"
                 if item["decision"] == "include"
-                else "excluded"
-            )
+                else "excluded",
 
-            return (
-                status,
                 "manual review",
+
                 clean(
                     item.get("reason")
                     or "Reviewed affiliation decision"
                 ),
+
                 clean(
                     item["evidence_url"]
                 )
@@ -1451,18 +1727,21 @@ def check_decision(group, decisions):
 
 
 def cached_result(old):
+
     if not isinstance(
         old,
         dict
     ):
         return False
 
-    # Preserve previous positive results.
+    # Preserve previously verified matches.
+
     if old.get("status") == "verified":
         return True
 
-    # Old unsuccessful checks must be rerun
-    # with the improved verification engine.
+    # Retry old inconclusive results using
+    # the new full-PDF checker.
+
     if (
         old.get("cache_version")
         != CACHE_VERSION
@@ -1470,6 +1749,7 @@ def cached_result(old):
         return False
 
     try:
+
         stamp = datetime.fromisoformat(
             old["checked_at"]
         )
@@ -1506,6 +1786,7 @@ def verify(
     decisions,
     budget
 ):
+
     docs = documents_for(
         group,
         ads
@@ -1516,22 +1797,30 @@ def verify(
         docs
     )
 
+    # --------------------------------------------------------
     # 1. Honor evidence-based manual decisions.
+    # --------------------------------------------------------
+
     override = check_decision(
         group,
         decisions
     )
 
     if override:
+
         return (
             *override,
             identifier
         )
 
+    # --------------------------------------------------------
     # 2. Check NASA ADS.
+    # --------------------------------------------------------
+
     hit = check_ads(docs)
 
     if hit:
+
         return (
             "verified",
             "NASA ADS",
@@ -1549,29 +1838,41 @@ def verify(
         {}
     )
 
-    # 3. Reuse previous results where appropriate.
+    # --------------------------------------------------------
+    # 3. Reuse cached results when appropriate.
+    # --------------------------------------------------------
+
     if cached_result(old):
+
         return (
             old["status"],
+
             old.get(
                 "source",
                 "cached"
             ),
+
             old.get(
                 "evidence",
                 ""
             ),
+
             old.get(
                 "evidence_url",
                 ""
             ),
+
             old.get(
                 "arxiv_id"
             ) or identifier
         )
 
-    # Limit expensive external verification attempts.
+    # --------------------------------------------------------
+    # 4. Limit expensive external checks per run.
+    # --------------------------------------------------------
+
     if budget["used"] >= MAX_CHECKS:
+
         return (
             "pending",
             "budget",
@@ -1587,25 +1888,33 @@ def verify(
     )
 
     title = chosen["Title"]
-    year = int(chosen["Year"])
+
+    year = int(
+        chosen["Year"]
+    )
 
     errors = []
+
     sources_checked = []
-    evidence_urls = []
 
     openalex = None
+
     arxiv_entry = None
 
+    evidence_urls = []
+
     # --------------------------------------------------------
-    # 4. Check OpenAlex affiliation metadata.
+    # 5. Check OpenAlex.
     # --------------------------------------------------------
 
     try:
+
         openalex = lookup_openalex(
             group
         )
 
         if openalex:
+
             sources_checked.append(
                 "OpenAlex"
             )
@@ -1615,6 +1924,7 @@ def verify(
             )
 
             if hit:
+
                 result = (
                     "verified",
                     "OpenAlex",
@@ -1645,37 +1955,44 @@ def verify(
         )
 
     # --------------------------------------------------------
-    # 5. Find an arXiv record.
+    # 6. Identify arXiv paper.
     #
     # First try the known identifier.
-    # Otherwise search by title.
+    # Otherwise search by publication title.
     # --------------------------------------------------------
 
     try:
+
         if identifier:
+
             arxiv_entry = arxiv_by_id(
                 identifier,
                 title
             )
 
             if not arxiv_entry:
+
                 errors.append(
                     "arXiv: known ID did not match title"
                 )
+
                 identifier = ""
 
         if not arxiv_entry:
+
             arxiv_entry = arxiv_by_title(
                 title,
                 year
             )
 
             if arxiv_entry:
+
                 identifier = (
                     arxiv_entry["id"]
                 )
 
         if arxiv_entry:
+
             sources_checked.append(
                 "arXiv metadata"
             )
@@ -1683,9 +2000,11 @@ def verify(
             for affiliation in (
                 arxiv_entry["affiliations"]
             ):
+
                 if qualifying_affiliation(
                     affiliation
                 ):
+
                     result = (
                         "verified",
                         "arXiv author metadata",
@@ -1717,16 +2036,14 @@ def verify(
         )
 
     # --------------------------------------------------------
-    # 6. Try accessible PDFs.
+    # 7. Check accessible PDFs.
     #
-    # Prefer arXiv when available, followed by
-    # OpenAlex open-access publisher locations.
+    # Prefer arXiv, then available publisher PDFs.
     # --------------------------------------------------------
 
     pdf_urls = (
         [
-            "https://arxiv.org/pdf/"
-            + identifier
+            f"https://arxiv.org/pdf/{identifier}"
         ]
         if identifier
         else []
@@ -1739,12 +2056,14 @@ def verify(
     seen = set()
 
     for url in pdf_urls:
+
         if url in seen:
             continue
 
         seen.add(url)
 
         try:
+
             hit, evidence_url = (
                 pdf_header_affiliation(
                     url
@@ -1756,6 +2075,7 @@ def verify(
             )
 
             if hit:
+
                 result = (
                     "verified",
                     "PDF affiliation",
@@ -1789,44 +2109,54 @@ def verify(
             )
 
     # --------------------------------------------------------
-    # 7. Inconclusive verification.
+    # 8. Inconclusive verification.
     #
-    # No detected affiliation does NOT prove
-    # that the paper is non-IMAC.
+    # Absence of a detected affiliation does not
+    # prove that the paper is non-IMAC.
     # --------------------------------------------------------
 
     if sources_checked:
+
         result = (
             "needs_review",
+
             ", ".join(
                 sources_checked
             ),
+
             (
                 "No matching author affiliation "
                 "established; "
                 + "; ".join(errors)
             )[:320],
+
             (
                 evidence_urls[0]
                 if evidence_urls
                 else ""
             ),
+
             identifier
         )
 
     else:
+
         result = (
             (
                 "error"
                 if errors
                 else "needs_review"
             ),
+
             "retrieval",
+
             (
                 "; ".join(errors)
                 or "No usable source found"
             )[:320],
+
             "",
+
             identifier
         )
 
@@ -1842,6 +2172,7 @@ def remember_result(
     key,
     result
 ):
+
     (
         status,
         source,
@@ -1852,16 +2183,20 @@ def remember_result(
 
     cache[key] = {
         "cache_version": CACHE_VERSION,
+
         "status": status,
+
         "source": source,
+
         "evidence": evidence[:320],
+
         "evidence_url": evidence_url,
+
         "arxiv_id": identifier,
-        "checked_at": (
-            datetime.now(
-                timezone.utc
-            ).isoformat()
-        )
+
+        "checked_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
     }
 
     return result
@@ -1876,6 +2211,7 @@ def authors_label(
     docs,
     order
 ):
+
     names = sorted(
         group["researchers"],
         key=lambda name: order.get(
@@ -1896,12 +2232,14 @@ def authors_label(
     )
 
     for doc in docs:
+
         first = (
             doc.get("first_author")
             or ""
         )
 
         if isinstance(first, list):
+
             first = (
                 first[0]
                 if first
@@ -1909,11 +2247,13 @@ def authors_label(
             )
 
         if first:
+
             surname = clean(
                 first
             ).split(",")[0]
 
             try:
+
                 many = (
                     int(
                         doc.get(
@@ -1926,6 +2266,7 @@ def authors_label(
                 TypeError,
                 ValueError
             ):
+
                 many = True
 
             return (
@@ -1948,6 +2289,7 @@ def publication_row(
     ads,
     order
 ):
+
     chosen = preferred_record(
         group["records"]
     )
@@ -1957,8 +2299,9 @@ def publication_row(
         ads
     )
 
-    # Do not add arXiv and journal citations.
-    # Preserve the existing maximum-count convention.
+    # Avoid adding the same paper's journal
+    # and arXiv citation counts together.
+
     counts = [
         int(row["Citation (ADS)"])
         for row in group["records"]
@@ -2023,6 +2366,7 @@ def write_csv(
     rows,
     cols
 ):
+
     tmp = path.with_suffix(
         ".csv.tmp"
     )
@@ -2039,6 +2383,7 @@ def write_csv(
         )
 
         writer.writeheader()
+
         writer.writerows(rows)
 
     os.replace(
@@ -2056,6 +2401,7 @@ def write_summary(
     annual,
     statuses
 ):
+
     current = datetime.now(
         timezone.utc
     ).year
@@ -2076,7 +2422,10 @@ def write_summary(
     ]
 
     n = len(papers)
-    total = sum(citation_counts)
+
+    total = sum(
+        citation_counts
+    )
 
     unresolved = sum(
         statuses[s]
@@ -2093,9 +2442,11 @@ def write_summary(
         else "articles"
     )
 
-    # During verification, use preliminary wording.
-    # Once all cases are resolved, use Shun's wording.
+    # Use preliminary wording until all
+    # affiliation cases have been resolved.
+
     if unresolved:
+
         sentence = (
             f"So far, {n:,} IMAC-affiliated "
             f"{noun} have been verified, "
@@ -2103,7 +2454,9 @@ def write_summary(
             "according to NASA ADS "
             "(preliminary)."
         )
+
     else:
+
         sentence = (
             f"IMAC published a total of "
             f"{n:,} {noun}, cited a total of "
@@ -2119,6 +2472,7 @@ def write_summary(
     )
 
     if unresolved:
+
         detail += (
             f"PRELIMINARY: {unresolved} "
             "publications remain unresolved. "
@@ -2129,7 +2483,7 @@ def write_summary(
     )
 
     # --------------------------------------------------------
-    # CSV summary
+    # CSV SUMMARY
     # --------------------------------------------------------
 
     with (
@@ -2151,7 +2505,7 @@ def write_summary(
         ])
 
     # --------------------------------------------------------
-    # JSON summary
+    # JSON SUMMARY
     # --------------------------------------------------------
 
     (
@@ -2160,18 +2514,27 @@ def write_summary(
         json.dumps(
             {
                 "start_year": START_YEAR,
+
                 "end_year": current,
+
                 "published_articles": n,
+
                 "ads_citations": total,
+
                 "papers_with_ads_data": (
                     len(citation_counts)
                 ),
+
                 "unresolved_affiliations": unresolved,
+
                 "preliminary": bool(unresolved),
+
                 "verification_statuses": dict(
                     statuses
                 ),
+
                 "summary": sentence,
+
                 "note": detail
             },
             indent=2
@@ -2180,7 +2543,7 @@ def write_summary(
     )
 
     # --------------------------------------------------------
-    # HTML summary for Terminalfour
+    # HTML SUMMARY FOR TERMINALFOUR
     # --------------------------------------------------------
 
     (
@@ -2220,6 +2583,7 @@ def write_summary(
 # ============================================================
 
 def main():
+
     token = os.getenv(
         "ADS_API_TOKEN"
     )
@@ -2249,17 +2613,19 @@ def main():
     researchers, records = load_records()
 
     # --------------------------------------------------------
-    # Step 2: Remove duplicates
+    # Step 2: Remove duplicate publications
     # --------------------------------------------------------
 
-    groups = collapse(records)
+    groups = collapse(
+        records
+    )
 
     year_now = datetime.now(
         timezone.utc
     ).year
 
     # --------------------------------------------------------
-    # Step 3: Include 2019 onward, including 2019
+    # Step 3: Include publications from 2019 onward
     # --------------------------------------------------------
 
     groups = [
@@ -2284,7 +2650,7 @@ def main():
     ]
 
     # --------------------------------------------------------
-    # Step 4: Retrieve ADS metadata
+    # Step 4: Retrieve NASA ADS metadata
     # --------------------------------------------------------
 
     ads = fetch_ads(
@@ -2293,6 +2659,7 @@ def main():
     )
 
     cache = load_cache()
+
     decisions = load_decisions()
 
     order = {
@@ -2311,18 +2678,20 @@ def main():
     annual = defaultdict(list)
 
     preprints = []
+
     audit = []
 
     # --------------------------------------------------------
-    # Step 5: Set verification priority
+    # Step 5: Determine verification order
     #
-    # Your test paper can be checked first.
-    # Output order is handled separately.
+    # The priority test paper is checked first.
+    # Output ordering is handled separately.
     # --------------------------------------------------------
 
     groups.sort(
         key=lambda group: (
             is_priority(group),
+
             int(
                 preferred_record(
                     group["records"]
@@ -2333,10 +2702,11 @@ def main():
     )
 
     # --------------------------------------------------------
-    # Step 6: Verify affiliations
+    # Step 6: Verify institutional affiliations
     # --------------------------------------------------------
 
     for group in groups:
+
         chosen = preferred_record(
             group["records"]
         )
@@ -2359,23 +2729,32 @@ def main():
 
         audit.append({
             "Year": chosen["Year"],
+
             "Title": chosen["Title"],
+
             "Status": status,
+
             "Source": source,
+
             "Evidence": evidence,
+
             "Evidence URL": evidence_url,
+
             "arXiv": identifier,
+
             "DOI URL": chosen.get(
                 "DOI URL",
                 ""
             ),
+
             "ADS URL": chosen.get(
                 "ADS URL",
                 ""
-            )
+            ),
         })
 
         if is_priority(group):
+
             print(
                 f"PRIORITY PAPER arXiv:"
                 f"{PRIORITY_ARXIV}: "
@@ -2393,18 +2772,21 @@ def main():
         )
 
         if chosen["preprint"]:
+
             if int(
                 chosen["Year"]
             ) >= year_now - 1:
+
                 preprints.append(row)
 
         elif chosen["Journal"]:
+
             annual[
                 chosen["Year"]
             ].append(row)
 
     # --------------------------------------------------------
-    # Step 7: Choose preview or live output
+    # Step 7: Select preview or live output
     # --------------------------------------------------------
 
     output = (
@@ -2427,7 +2809,8 @@ def main():
         )
     )
 
-    # Never publish incomplete live results.
+    # Never publish incomplete live data.
+
     if (
         MODE == "live"
         and (
@@ -2435,6 +2818,7 @@ def main():
             or unresolved
         )
     ):
+
         raise RuntimeError(
             "Live update blocked: unresolved "
             "affiliation checks remain"
@@ -2446,13 +2830,14 @@ def main():
     )
 
     # Save verification results for future daily runs.
+
     save_cache(cache)
 
     # --------------------------------------------------------
-    # Step 8: Generate yearly publication CSVs
+    # Step 8: Generate yearly publication tables
     #
     # 2019 onward only.
-    # No YEAR SUMMARY rows.
+    # No yearly summary rows.
     # --------------------------------------------------------
 
     years = {
@@ -2466,6 +2851,7 @@ def main():
     for path in LIVE_DIR.glob(
         "publications_*.csv"
     ):
+
         match = re.fullmatch(
             r"publications_(\d{4})\.csv",
             path.name
@@ -2477,6 +2863,7 @@ def main():
             <= int(match.group(1))
             <= year_now
         ):
+
             years.add(
                 match.group(1)
             )
@@ -2485,6 +2872,7 @@ def main():
         years,
         reverse=True
     ):
+
         rows = sorted(
             annual.get(year, []),
             key=lambda row: row[
@@ -2509,17 +2897,19 @@ def main():
 
     write_csv(
         output / "recent_preprints.csv",
+
         sorted(
             preprints,
             key=lambda row: row[
                 "Title"
             ].casefold()
         ),
+
         CSV_COLUMNS
     )
 
     # --------------------------------------------------------
-    # Step 10: Generate summary statistics
+    # Step 10: Generate overall statistics
     # --------------------------------------------------------
 
     write_summary(
@@ -2529,10 +2919,10 @@ def main():
     )
 
     # --------------------------------------------------------
-    # Step 11: Sort audit by publication year
+    # Step 11: Sort the affiliation audit
     #
-    # 2026 -> 2025 -> ... -> 2019
-    # Alphabetical within each year.
+    # Newest year first.
+    # Alphabetical by title within each year.
     # --------------------------------------------------------
 
     audit.sort(
@@ -2553,26 +2943,26 @@ def main():
     )
 
     # --------------------------------------------------------
-    # Step 13: Save unresolved cases only
+    # Step 13: Save unresolved cases
     # --------------------------------------------------------
-
-    review = [
-        row
-        for row in audit
-        if row["Status"] not in {
-            "verified",
-            "excluded"
-        }
-    ]
 
     write_csv(
         output / "affiliation_review.csv",
-        review,
+
+        [
+            row
+            for row in audit
+            if row["Status"] not in {
+                "verified",
+                "excluded"
+            }
+        ],
+
         AUDIT_COLUMNS
     )
 
     # --------------------------------------------------------
-    # Step 14: Print workflow results
+    # Step 14: Print results
     # --------------------------------------------------------
 
     print(
@@ -2582,15 +2972,9 @@ def main():
 
     print(
         f"New fallback checks: "
-        f"{budget['used']}/{MAX_CHECKS}"
-    )
-
-    print(
-        f"Output mode: {MODE}"
-    )
-
-    print(
-        f"Output directory: {output}"
+        f"{budget['used']}/{MAX_CHECKS}; "
+        f"mode: {MODE}; "
+        f"directory: {output}"
     )
 
 
