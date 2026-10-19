@@ -1,606 +1,355 @@
+"""Incremental ORCID + NASA ADS updater for IMAC.
+
+Six-column CSV interface unchanged. ADS citations are cached between GitHub
+Actions runs. HTTP 429 switches this run to saved citations, instead of
+terminating the workflow or falsely reporting unavailable counts as zero.
+
+The ADS cache intentionally lives under docs/publications so GitHub Actions
+commits it as part of docs/. It contains only public bibliographic metadata.
+"""
 import csv
 import html
 import json
 import os
 import re
-
+import time
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote, urlencode
+from urllib.parse import quote, unquote, urlencode
 from urllib.request import Request, urlopen
 
-
-# ==================================================
-# Configuration
-# ==================================================
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-CONFIG_FILE = BASE_DIR / "researchers.json"
-
-OUTPUT_DIR = BASE_DIR / "docs" / "publications"
-
+ROOT = Path(__file__).resolve().parent.parent
+CONFIG_FILE = ROOT / "researchers.json"
+OUTPUT_DIR = ROOT / "docs" / "publications"
+CACHE_FILE = OUTPUT_DIR / "ads_metadata_cache.json"
 ADS_API_URL = "https://api.adsabs.harvard.edu/v1/search/query"
+COLUMNS = ["Year", "Title", "Journal", "Citation (ADS)", "DOI URL", "ADS URL"]
+USER_AGENT = "IMAC-Publications-Updater/3.0 (institutional bibliography)"
+ADS_REFRESH_DAYS = max(1, int(os.getenv("ADS_REFRESH_DAYS", "14")))
+ADS_MAX_REQUESTS = max(0, int(os.getenv("ADS_MAX_REQUESTS", "40")))
+ADS_PAUSE_SECONDS = float(os.getenv("ADS_PAUSE_SECONDS", "0.4"))
 
-# Reuse ADS results for publications shared by researchers.
 ADS_CACHE = {}
+ADS_LIMITED = False
+ADS_REQUESTS = 0
+LAST_ADS = 0.0
 
-# Final column order for Terminalfour.
-COLUMNS = [
-    "Year",
-    "Title",
-    "Journal",
-    "Citation (ADS)",
-    "DOI URL",
-    "ADS URL"
-]
-
-
-# ==================================================
-# Clean publication titles and journal names
-# ==================================================
 
 def clean_text(value):
-
-    if not value:
-        return ""
-
-    text = html.unescape(str(value))
-
-    # Convert HTML superscripts into Unicode.
-    superscripts = str.maketrans(
-        "0123456789",
-        "⁰¹²³⁴⁵⁶⁷⁸⁹"
-    )
-
-    text = re.sub(
-        r"<sup\b[^>]*>(.*?)</sup>",
-        lambda m: m.group(1).translate(superscripts),
-        text,
-        flags=re.IGNORECASE
-    )
-
-    # Remove common formatting tags.
-    text = re.sub(
-        r"</?(?:i|em|b|strong|span|sub)\b[^>]*>",
-        "",
-        text,
-        flags=re.IGNORECASE
-    )
-
+    text = html.unescape(str(value or ""))
+    superscripts = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
+    text = re.sub(r"<sup\b[^>]*>(.*?)</sup>",
+                  lambda m: m.group(1).translate(superscripts), text, flags=re.I)
+    text = re.sub(r"</?(?:i|em|b|strong|span|sub)\b[^>]*>", "", text, flags=re.I)
     return " ".join(text.split())
 
 
-# ==================================================
-# Retrieve public works from ORCID
-# ==================================================
+def title_key(text):
+    return re.sub(r"[^a-z0-9]+", "", clean_text(text).casefold())
+
+
+def normalize_doi(doi):
+    doi = str(doi or "").strip()
+    doi = re.sub(r"^https?://(?:dx\.)?doi\.org/", "", doi, flags=re.I)
+    doi = re.sub(r"^doi:\s*", "", doi, flags=re.I)
+    return unquote(doi).strip()
+
 
 def fetch_orcid_works(orcid):
-
     url = f"https://pub.orcid.org/v3.0/{orcid}/works"
-
-    request = Request(
-        url,
-        headers={
-            "Accept": "application/vnd.orcid+json",
-            "User-Agent": "IMAC-Publications-Updater/1.0"
-        }
-    )
-
+    request = Request(url, headers={
+        "Accept": "application/vnd.orcid+json", "User-Agent": USER_AGENT})
     with urlopen(request, timeout=60) as response:
-        return json.load(response)
+        data = json.load(response)
+    if not isinstance(data, dict) or not isinstance(data.get("group"), list):
+        raise ValueError(f"Unexpected ORCID response for {orcid}")
+    return data["group"]
 
-
-# ==================================================
-# Extract identifiers from ORCID
-# ==================================================
 
 def get_identifier(group, id_type):
-
     sources = [group] + (group.get("work-summary") or [])
-
     for source in sources:
-
-        external_ids = (
-            (source.get("external-ids") or {})
-            .get("external-id") or []
-        )
-
-        for item in external_ids:
-
-            if (
-                item.get("external-id-type") or ""
-            ).lower() == id_type:
-
-                return (
-                    (item.get("external-id-normalized") or {})
-                    .get("value")
-                    or item.get("external-id-value")
-                    or ""
-                )
-
+        for item in (source.get("external-ids") or {}).get("external-id") or []:
+            if (item.get("external-id-type") or "").lower() == id_type.lower():
+                return ((item.get("external-id-normalized") or {}).get("value")
+                        or item.get("external-id-value") or "")
     return ""
 
 
-# ==================================================
-# Normalize DOI
-# ==================================================
-
-def normalize_doi(doi):
-
-    if not doi:
-        return ""
-
-    doi = str(doi).strip()
-
-    doi = re.sub(
-        r"^https?://(?:dx\.)?doi\.org/",
-        "",
-        doi,
-        flags=re.IGNORECASE
-    )
-
-    doi = re.sub(
-        r"^doi:\s*",
-        "",
-        doi,
-        flags=re.IGNORECASE
-    )
-
-    return doi.strip()
+def read_existing(orcid):
+    path = OUTPUT_DIR / f"{orcid}.csv"
+    if not path.exists():
+        return []
+    with path.open(newline="", encoding="utf-8-sig") as stream:
+        reader = csv.DictReader(stream)
+        if not set(COLUMNS).issubset(set(reader.fieldnames or [])):
+            raise RuntimeError(f"Existing CSV has unexpected columns: {path}")
+        return list(reader)
 
 
-# ==================================================
-# Query NASA ADS
-# ==================================================
+def previous_index(records):
+    by_doi, by_title = {}, {}
+    for row in records:
+        doi = normalize_doi(row.get("DOI URL")).casefold()
+        if doi:
+            by_doi[doi] = row
+        key = (str(row.get("Year", "")), title_key(row.get("Title")))
+        if key[1]:
+            by_title[key] = row
+    return by_doi, by_title
 
-def search_ads(query, token):
 
-    parameters = urlencode({
-        "q": query,
-        "fl": "bibcode,doi,citation_count",
-        "rows": 10
-    })
+def cache_key(field, value):
+    return f"{field}:{str(value).strip().casefold()}"
 
-    url = f"{ADS_API_URL}?{parameters}"
 
-    request = Request(
-        url,
-        headers={
-            "Authorization": f"Bearer {token}",
-            "Accept": "application/json",
-            "User-Agent": "IMAC-Publications-Updater/1.0"
-        }
-    )
+def load_ads_cache():
+    global ADS_CACHE
+    if not CACHE_FILE.exists():
+        ADS_CACHE = {}
+        return
+    payload = json.loads(CACHE_FILE.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict) or payload.get("version") != 1:
+        raise ValueError("Unsupported ADS metadata cache version")
+    records = payload.get("records")
+    if not isinstance(records, dict):
+        raise ValueError("Invalid ADS cache records")
+    ADS_CACHE = records
 
+
+def save_ads_cache():
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    payload = {"version": 1, "records": ADS_CACHE}
+    temp = CACHE_FILE.with_name(CACHE_FILE.name + ".tmp")
+    temp.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8")
+    os.replace(temp, CACHE_FILE)
+
+
+def keys_for(doi, bibcode):
+    items = []
+    if bibcode:
+        items.append(cache_key("bibcode", bibcode))
+    if doi:
+        items.append(cache_key("doi", normalize_doi(doi)))
+    return items
+
+
+def cached_metadata(doi, bibcode):
+    for key in keys_for(doi, bibcode):
+        item = ADS_CACHE.get(key)
+        if isinstance(item, dict):
+            return item
+    return None
+
+
+def seed_cache(doi, bibcode, row):
+    """Use previously published CSV data, never overwrite a fresher cache."""
+    if not row:
+        return
+    old_url = row.get("ADS URL") or ""
+    if not bibcode and "/abs/" in old_url:
+        bibcode = unquote(old_url.split("/abs/", 1)[1].split("/", 1)[0])
+    keys = keys_for(doi, bibcode)
+    if not keys or any(key in ADS_CACHE for key in keys):
+        return
+    count = row.get("Citation (ADS)", "")
+    metadata = {"bibcode": bibcode, "citation_count": count,
+                "checked_at": datetime.now(timezone.utc).isoformat(),
+                "source": "previous published CSV"}
+    for key in keys:
+        ADS_CACHE[key] = metadata
+
+
+def cache_fresh(item):
     try:
-
-        with urlopen(request, timeout=45) as response:
-            data = json.load(response)
-
-    except HTTPError as error:
-
-        if error.code == 429:
-            raise RuntimeError(
-                "NASA ADS API rate limit reached. "
-                "Try running the workflow again later."
-            ) from error
-
-        if error.code in (401, 403):
-            raise RuntimeError(
-                "NASA ADS API authentication or permission error. "
-                "Check the ADS_API_TOKEN repository secret."
-            ) from error
-
-        raise RuntimeError(
-            f"NASA ADS API request failed: HTTP {error.code}"
-        ) from error
-
-    except (URLError, TimeoutError) as error:
-
-        raise RuntimeError(
-            "Could not connect to NASA ADS. "
-            "Existing published CSV files will not be committed "
-            "with incomplete citation data."
-        ) from error
-
-    response = data.get("response")
-
-    if not isinstance(response, dict):
-        raise RuntimeError(
-            "NASA ADS returned an unexpected response."
-        )
-
-    documents = response.get("docs")
-
-    if not isinstance(documents, list):
-        raise RuntimeError(
-            "NASA ADS response did not contain a valid document list."
-        )
-
-    return documents
+        stamp = datetime.fromisoformat(item["checked_at"])
+        if stamp.tzinfo is None:
+            stamp = stamp.replace(tzinfo=timezone.utc)
+        return datetime.now(timezone.utc) - stamp < timedelta(days=ADS_REFRESH_DAYS)
+    except (KeyError, ValueError, TypeError):
+        return False
 
 
-# ==================================================
-# Get ADS citation count for one publication
-# ==================================================
+def ads_query(query, token):
+    global ADS_LIMITED, ADS_REQUESTS, LAST_ADS
+    if ADS_LIMITED or ADS_REQUESTS >= ADS_MAX_REQUESTS:
+        return None
+    elapsed = time.monotonic() - LAST_ADS
+    if ADS_REQUESTS and ADS_PAUSE_SECONDS > elapsed:
+        time.sleep(ADS_PAUSE_SECONDS - elapsed)
+    url = ADS_API_URL + "?" + urlencode({
+        "q": query, "fl": "bibcode,doi,citation_count", "rows": 10})
+    request = Request(url, headers={
+        "Authorization": f"Bearer {token}", "Accept": "application/json",
+        "User-Agent": USER_AGENT})
+    for attempt in range(2):
+        ADS_REQUESTS += 1
+        LAST_ADS = time.monotonic()
+        try:
+            with urlopen(request, timeout=45) as response:
+                payload = json.load(response)
+            docs = (payload.get("response") or {}).get("docs")
+            if not isinstance(docs, list):
+                raise RuntimeError("Malformed NASA ADS response; not overwriting cache")
+            return docs
+        except HTTPError as error:
+            if error.code == 429:
+                ADS_LIMITED = True
+                print("WARNING: NASA ADS returned HTTP 429. No further ADS queries "
+                      "will be attempted this run; preserving previously saved counts.")
+                return None
+            if error.code in (401, 403):
+                raise RuntimeError("NASA ADS authentication failure: verify ADS_API_TOKEN") from error
+            if error.code not in (500, 502, 503, 504) or attempt == 1:
+                print(f"WARNING: ADS HTTP {error.code}; using saved metadata.")
+                return None
+        except (URLError, TimeoutError, ConnectionError) as error:
+            if attempt == 1:
+                print(f"WARNING: ADS unavailable ({type(error).__name__}); using saved metadata")
+                return None
+        time.sleep(2 * (attempt + 1))
+    return None
+
 
 def get_ads_metadata(doi, bibcode, token):
-
-    doi = normalize_doi(doi)
-
-    bibcode = str(bibcode or "").strip()
-
-    # Prefer ADS bibcode, then DOI.
-    identifiers = []
-
-    if bibcode:
-        identifiers.append(("bibcode", bibcode))
-
-    if doi:
-        identifiers.append(("doi", doi))
-
-    if not identifiers:
+    doi, bibcode = normalize_doi(doi), str(bibcode or "").strip()
+    keys = keys_for(doi, bibcode)
+    if not keys:
         return {}
-
-    # Check in-memory cache.
-    cache_keys = [
-        (field, value.casefold())
-        for field, value in identifiers
-    ]
-
-    for key in cache_keys:
-        if key in ADS_CACHE:
-            return ADS_CACHE[key]
-
-    result = {}
-
-    for field, value in identifiers:
-
-        # Escape special characters inside quoted ADS queries.
-        escaped_value = (
-            value.replace("\\", "\\\\")
-                 .replace('"', '\\"')
-        )
-
-        query = f'{field}:"{escaped_value}"'
-
-        documents = search_ads(query, token)
-
-        if not documents:
+    old = cached_metadata(doi, bibcode)
+    if old and cache_fresh(old):
+        return old
+    if ADS_LIMITED or ADS_REQUESTS >= ADS_MAX_REQUESTS:
+        return old or {}
+    # Query bibcode first, then DOI. Stop immediately when quota is exhausted.
+    for field, value in (("bibcode", bibcode), ("doi", doi)):
+        if not value:
             continue
+        escaped = value.replace("\\", "\\\\").replace('"', '\\"')
+        docs = ads_query(f'{field}:"{escaped}"', token)
+        if docs is None:
+            return old or {}
+        for doc in docs:
+            found_bib = str(doc.get("bibcode", ""))
+            found_dois = doc.get("doi") or []
+            if isinstance(found_dois, str):
+                found_dois = [found_dois]
+            if field == "bibcode" and found_bib.casefold() != value.casefold():
+                continue
+            if field == "doi" and value.casefold() not in {
+                    normalize_doi(x).casefold() for x in found_dois}:
+                continue
+            count = doc.get("citation_count")
+            new = {"bibcode": found_bib,
+                   "citation_count": "" if count is None else count,
+                   "checked_at": datetime.now(timezone.utc).isoformat(),
+                   "source": "NASA ADS"}
+            for key in keys_for(doi, bibcode) + keys_for("", found_bib):
+                ADS_CACHE[key] = new
+            return new
+    # A valid no-match should be cached too, to avoid repeated ADS requests
+    # every day. An actual HTTP error takes an earlier return above instead.
+    if old:
+        return old
+    negative = {"bibcode": bibcode, "citation_count": "",
+                "checked_at": datetime.now(timezone.utc).isoformat(),
+                "source": "NASA ADS: no matching record"}
+    for key in keys:
+        ADS_CACHE[key] = negative
+    return negative
 
-        # Match returned identifiers to the requested paper.
-        for document in documents:
-
-            returned_bibcode = document.get("bibcode", "")
-
-            returned_dois = document.get("doi") or []
-
-            if isinstance(returned_dois, str):
-                returned_dois = [returned_dois]
-
-            if field == "bibcode":
-
-                if returned_bibcode.casefold() != value.casefold():
-                    continue
-
-            elif field == "doi":
-
-                returned_doi_keys = {
-                    normalize_doi(item).casefold()
-                    for item in returned_dois
-                }
-
-                if value.casefold() not in returned_doi_keys:
-                    continue
-
-            citation_count = document.get("citation_count")
-
-            # An ADS count of zero is valid.
-            # Missing citation metadata remains blank.
-            if citation_count is None:
-                citation_count = ""
-
-            result = {
-                "bibcode": returned_bibcode,
-                "citation_count": citation_count
-            }
-
-            break
-
-        if result:
-            break
-
-    # Cache matches and unsuccessful lookups.
-    for key in cache_keys:
-        ADS_CACHE[key] = result
-
-    # Also cache the ADS bibcode returned by a DOI lookup.
-    if result.get("bibcode"):
-        ADS_CACHE[
-            ("bibcode", result["bibcode"].casefold())
-        ] = result
-
-    return result
-
-
-# ==================================================
-# Process ONE researcher's publications
-# ==================================================
 
 def process_researcher(researcher, token):
-
-    name = researcher["name"]
-    orcid = researcher["orcid"]
-
-    if not re.fullmatch(
-        r"\d{4}-\d{4}-\d{4}-[\dX]{4}",
-        orcid
-    ):
-        raise ValueError(f"Invalid ORCID format: {orcid}")
-
-    print(f"\nProcessing researcher: {name}")
-    print(f"ORCID: {orcid}")
-
-    # ==================================================
-    # NEW: Allow researchers with zero public works
-    # ==================================================
-
-    data = fetch_orcid_works(orcid)
-
-    # Validate the ORCID response.
-    # A valid empty list is allowed, but a malformed
-    # or incomplete response must still cause an error.
-
-    if (
-        not isinstance(data, dict)
-        or not isinstance(data.get("group"), list)
-    ):
-        raise RuntimeError(
-            f"Unexpected ORCID response for {name}. "
-            "Existing publication files will not be overwritten."
-        )
-
-    groups = data["group"]
-
+    name, orcid = researcher["name"], researcher["orcid"]
+    if not re.fullmatch(r"\d{4}-\d{4}-\d{4}-[\dX]{4}", orcid):
+        raise ValueError(f"Invalid ORCID: {orcid}")
+    print(f"Processing {name} ({orcid})", flush=True)
+    previous = read_existing(orcid)
+    old_by_doi, old_by_title = previous_index(previous)
+    try:
+        groups = fetch_orcid_works(orcid)
+    except (HTTPError, URLError, TimeoutError, ValueError) as error:
+        if previous:
+            print(f"WARNING: ORCID unavailable for {name}; keeping old CSV ({type(error).__name__})")
+            return
+        raise RuntimeError(f"ORCID unavailable for {name}, no prior CSV to preserve") from error
     if not groups:
-        print(
-            f"{name} has no public ORCID publications yet. "
-            "An empty publication CSV will be generated."
-        )
-
-    # ==================================================
-    # Collect publications
-    # ==================================================
-
-    publications = []
-
-    seen_dois = set()
-    seen_titles = set()
-
+        if previous:
+            print(f"WARNING: ORCID currently shows zero works for {name}; "
+                  "preserving their previous non-empty publication CSV.")
+            return
+        print(f"{name} has no public ORCID works (valid empty profile)")
+    rows, seen_dois, seen_titles = [], set(), set()
     for group in groups:
-
         works = group.get("work-summary") or []
-
         if not works:
             continue
-
-        # Prefer the record with more complete metadata.
-        work = max(
-            works,
-            key=lambda w: (
-                bool((w.get("publication-date") or {}).get("year")),
-                bool(w.get("journal-title"))
-            )
-        )
-
-        title = clean_text(
-            ((work.get("title") or {}).get("title") or {})
-            .get("value")
-        )
-
+        work = max(works, key=lambda w: (
+            bool((w.get("publication-date") or {}).get("year")),
+            bool(w.get("journal-title"))))
+        title = clean_text(((work.get("title") or {}).get("title") or {}).get("value"))
         if not title:
             continue
-
-        date = work.get("publication-date") or {}
-
-        year = (
-            (date.get("year") or {}).get("value")
-            or ""
-        )
-
-        journal = clean_text(
-            (work.get("journal-title") or {}).get("value")
-        )
-
-        # Identifiers from ORCID.
-        doi = normalize_doi(
-            get_identifier(group, "doi")
-        )
-
-        bibcode = get_identifier(group, "bibcode")
-
-        # ------------------------------------------
-        # Remove duplicates within this researcher
-        # ------------------------------------------
-
-        doi_key = doi.casefold()
-
-        title_key = (
-            str(year),
-            re.sub(r"\W+", "", title).casefold()
-        )
-
-        if (
-            (doi_key and doi_key in seen_dois)
-            or title_key in seen_titles
-        ):
+        year = ((work.get("publication-date") or {}).get("year") or {}).get("value") or ""
+        journal = clean_text((work.get("journal-title") or {}).get("value"))
+        doi = normalize_doi(get_identifier(group, "doi"))
+        bib = get_identifier(group, "bibcode")
+        doi_k = doi.casefold()
+        title_k = (str(year), title_key(title))
+        if (doi_k and doi_k in seen_dois) or title_k in seen_titles:
             continue
-
-        if doi_key:
-            seen_dois.add(doi_key)
-
-        seen_titles.add(title_key)
-
-        # ------------------------------------------
-        # Retrieve NASA ADS citation count
-        # ------------------------------------------
-
-        ads_metadata = get_ads_metadata(
-            doi=doi,
-            bibcode=bibcode,
-            token=token
-        )
-
-        citation_count = ads_metadata.get(
-            "citation_count",
-            ""
-        )
-
-        # Use the ADS bibcode when ORCID lacks one.
-        if not bibcode:
-            bibcode = ads_metadata.get("bibcode", "")
-
-        # ------------------------------------------
-        # Generate DOI and ADS links
-        # ------------------------------------------
-
-        doi_url = (
-            "https://doi.org/" + quote(doi, safe="/")
-            if doi else ""
-        )
-
-        ads_url = (
-            "https://ui.adsabs.harvard.edu/abs/"
-            + quote(bibcode, safe="")
-            + "/abstract"
-            if bibcode else ""
-        )
-
-        # ------------------------------------------
-        # Store publication information
-        # ------------------------------------------
-
-        publications.append({
-            "Year": year,
-            "Title": html.escape(title, quote=False),
-            "Journal": html.escape(journal, quote=False),
-            "Citation (ADS)": citation_count,
-            "DOI URL": doi_url,
-            "ADS URL": ads_url
-        })
-
-    # ==================================================
-    # NEW: Handle an empty publication list safely
-    # ==================================================
-
-    if not publications:
-
-        if groups:
-            # ORCID returned publication groups, but we
-            # could not extract any valid publication data.
-            # This may indicate a metadata problem, so
-            # preserve the existing files and stop.
-            raise RuntimeError(
-                f"ORCID returned publication groups for {name}, "
-                "but no valid publications could be extracted. "
-                "Existing publication files will not be overwritten."
-            )
-
-        # A genuinely empty ORCID profile is not an error.
-        print(
-            f"{name}: no publications yet. "
-            "Creating a CSV containing only column headers."
-        )
-
-    # ==================================================
-    # Sort from newest to oldest
-    # ==================================================
-
-    publications.sort(
-        key=lambda p: (
-            -int(p["Year"])
-            if str(p["Year"]).isdigit()
-            else 0,
-            p["Title"].casefold()
-        )
-    )
-
-    # ==================================================
-    # Create an individual CSV
-    # ==================================================
-
-    OUTPUT_DIR.mkdir(
-        parents=True,
-        exist_ok=True
-    )
-
-    output_file = OUTPUT_DIR / f"{orcid}.csv"
-    temporary_file = OUTPUT_DIR / f"{orcid}.csv.tmp"
-
-    with open(
-        temporary_file,
-        "w",
-        newline="",
-        encoding="utf-8"
-    ) as f:
-
-        writer = csv.DictWriter(
-            f,
-            fieldnames=COLUMNS
-        )
-
+        if doi_k:
+            seen_dois.add(doi_k)
+        seen_titles.add(title_k)
+        earlier = old_by_doi.get(doi_k) if doi_k else None
+        earlier = earlier or old_by_title.get(title_k)
+        seed_cache(doi, bib, earlier)
+        ads = get_ads_metadata(doi, bib, token)
+        count = ads.get("citation_count", "")
+        if count == "" and earlier:
+            count = earlier.get("Citation (ADS)", "")
+        result_bib = bib or ads.get("bibcode", "")
+        doi_url = "https://doi.org/" + quote(doi, safe="/") if doi else ""
+        ads_url = ("https://ui.adsabs.harvard.edu/abs/" + quote(result_bib, safe="")
+                   + "/abstract") if result_bib else ""
+        if not ads_url and earlier:
+            ads_url = earlier.get("ADS URL", "")
+        rows.append({"Year": year, "Title": html.escape(title, quote=False),
+                     "Journal": html.escape(journal, quote=False),
+                     "Citation (ADS)": count, "DOI URL": doi_url, "ADS URL": ads_url})
+    if groups and not rows:
+        raise RuntimeError(f"Malformed ORCID works for {name}; old CSV is preserved")
+    rows.sort(key=lambda r: (-int(r["Year"]) if str(r["Year"]).isdigit() else 0,
+                             r["Title"].casefold()))
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    output = OUTPUT_DIR / f"{orcid}.csv"
+    temp = output.with_name(output.name + ".tmp")
+    with temp.open("w", newline="", encoding="utf-8") as stream:
+        writer = csv.DictWriter(stream, fieldnames=COLUMNS)
         writer.writeheader()
-        writer.writerows(publications)
+        writer.writerows(rows)
+    os.replace(temp, output)
+    print(f"Saved {len(rows)} publications for {name} "
+          f"({sum(str(row['Citation (ADS)']) != '' for row in rows)} with ADS counts)")
+    save_ads_cache()  # save progress even if another researcher encounters an error
 
-    # Replace the old CSV only after successful retrieval.
-    os.replace(temporary_file, output_file)
-
-    matched_count = sum(
-        publication["Citation (ADS)"] != ""
-        for publication in publications
-    )
-
-    print(f"Successfully generated: {output_file}")
-    print(f"Number of publications: {len(publications)}")
-    print(f"Publications with ADS citation data: {matched_count}")
-
-
-# ==================================================
-# Main program
-# ==================================================
 
 def main():
-
-    # Token comes from GitHub Actions Secrets.
-    # Never print or save the token in output files.
     token = os.environ.get("ADS_API_TOKEN")
-
     if not token:
-        raise RuntimeError(
-            "ADS_API_TOKEN is missing. "
-            "Configure it under GitHub Actions repository secrets."
-        )
-
-    with open(
-        CONFIG_FILE,
-        "r",
-        encoding="utf-8"
-    ) as f:
-
-        config = json.load(f)
-
-    researchers = config["researchers"]
-
-    print("=" * 50)
-    print("IMAC ORCID + NASA ADS Publication Updater")
-    print("=" * 50)
-
-    for researcher in researchers:
-        process_researcher(researcher, token)
-
-    print("\nAll researchers processed successfully!")
+        raise RuntimeError("Missing ADS_API_TOKEN secret")
+    load_ads_cache()
+    payload = json.loads(CONFIG_FILE.read_text(encoding="utf-8"))
+    researchers = payload["researchers"]
+    print(f"ORCID updater: at most {ADS_MAX_REQUESTS} new ADS requests per run; "
+          f"metadata refreshed every {ADS_REFRESH_DAYS} days.")
+    for person in researchers:
+        process_researcher(person, token)
+    save_ads_cache()
+    print(f"Complete. ADS requests: {ADS_REQUESTS}; ADS limited: {ADS_LIMITED}. "
+          "Existing citation data were retained when ADS was unavailable.")
 
 
 if __name__ == "__main__":
