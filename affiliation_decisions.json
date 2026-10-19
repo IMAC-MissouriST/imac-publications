@@ -300,6 +300,54 @@
       "decision": "exclude",
       "reason": "Manually excluded: this is an abstract in American Astronomical Society Meeting Abstracts #245, not a published research paper.",
       "evidence_url": "https://ui.adsabs.harvard.edu/abs/2025AAS...24546502M/abstract"
+    },
+    {
+      "title": "Spinning black hole in a fluid",
+      "arxiv": "2402.15540",
+      "doi": "10.1103/physrevd.109.064055",
+      "decision": "exclude",
+      "reason": "Manually reviewed: not an IMAC/Missouri S&T-affiliated paper.",
+      "evidence_url": "https://arxiv.org/pdf/2402.15540"
+    },
+    {
+      "title": "Exploring Cosmology with Machine Learning",
+      "decision": "exclude",
+      "reason": "Manually excluded: an educational workshop, not a published research paper.",
+      "evidence_url": "https://sites.mst.edu/exploringcosmologyml/"
+    },
+    {
+      "title": "The Science of Gravitational-Wave Sources and Beyond Compact Binary Coalescences",
+      "decision": "exclude",
+      "reason": "Manually excluded from journal-paper counts: this work is a doctoral dissertation.",
+      "evidence_url": "https://scholarsmine.mst.edu/doctoral_dissertations/3301/"
+    },
+    {
+      "title": "ノイズから重力波を選別するために FAR (誤報率) を使うことは, 藁の山から 1 本の針をみつけるような困難なことである: 英国王立統計学会 Significance から",
+      "decision": "exclude",
+      "reason": "Excluded by curator from the IMAC research-paper list; Japanese-language magazine article was not assessed for qualifying author affiliation. This is a scope decision, not evidence of non-affiliation.",
+      "evidence_url": "https://www.jstat.or.jp/mwbhpwp/wp-content/uploads/90eb966df9974c59b49ad02d74d043ed.pdf"
+    },
+    {
+      "title": "Cosmic Voids and BAO with relative baryon-CDM perturbations",
+      "arxiv": "2109.02949",
+      "doi": "10.1093/mnras/stac331",
+      "decision": "exclude",
+      "reason": "Manually reviewed: not an IMAC/Missouri S&T-affiliated paper.",
+      "evidence_url": "https://arxiv.org/pdf/2109.02949"
+    },
+    {
+      "title": "Subaru HSC weak lensing of SDSS redMaPPer cluster satellite galaxies: empirical upper limit on orphan fractions",
+      "arxiv": "2205.00018",
+      "doi": "10.1093/mnras/stac2862",
+      "decision": "exclude",
+      "reason": "Manually reviewed: not an IMAC/Missouri S&T-affiliated paper.",
+      "evidence_url": "https://arxiv.org/pdf/2205.00018"
+    },
+    {
+      "title": "Detection and waveform reconstruction of gravitational-wave signals with coherent Wave Burst and Wavelet Detection Filter methods",
+      "decision": "exclude",
+      "reason": "Manually excluded: April Meeting of the American Physical Society conference presentation/abstract, not a published research paper.",
+      "evidence_url": "https://bpb-us-e2.wpmucdn.com/sites.mst.edu/dist/d/449/files/2023/09/cavaglia-CV-curators2023.pdf"
     }
   ]
 }
