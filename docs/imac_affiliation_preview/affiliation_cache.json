@@ -78,8 +78,8 @@
   },
   "doi:10.1088/1475-7516/2025/01/108": {
     "arxiv_id": "2404.09181",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:58:27.341876+00:00",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:25:04.829388+00:00",
     "evidence": "No matching author affiliation established; ",
     "evidence_url": "https://arxiv.org/pdf/2404.09181",
     "source": "OpenAlex, arXiv metadata, PDF inspected",
@@ -129,8 +129,8 @@
   },
   "doi:10.1093/mnras/staf2026": {
     "arxiv_id": "2409.05795",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:58:21.043254+00:00",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:24:54.311940+00:00",
     "evidence": "No matching author affiliation established; PDF: HTTP 403",
     "evidence_url": "https://arxiv.org/pdf/2409.05795",
     "source": "OpenAlex, arXiv metadata, PDF inspected",
@@ -348,37 +348,39 @@
   },
   "doi:10.48550/arxiv.2509.07352": {
     "arxiv_id": "2509.07352",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:56:32.734165+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2509.07352",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:23:05.061719+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2509.07352#page=8",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2510.26848": {
     "arxiv_id": "2510.26848",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:58:59.950160+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2510.26848",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:25:35.805471+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2510.26848#page=41",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2511.16863": {
     "arxiv_id": "2511.16863",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:58:53.711141+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2511.16863",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:25:29.138347+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2511.16863#page=32",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2512.16347": {
     "arxiv_id": "2512.16347",
-    "checked_at": "2026-10-19T15:09:20.670369+00:00",
-    "evidence": "No confirmed affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:26:58.138609+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2512.16347#page=7",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2601.16761": {
     "arxiv_id": "2601.16761",
@@ -389,48 +391,48 @@
   },
   "doi:10.48550/arxiv.2603.14168": {
     "arxiv_id": "2603.14168",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:56:06.998376+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2603.14168",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:21:14.817551+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2603.14168#page=41",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2603.19019": {
     "arxiv_id": "2603.19019",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:56:39.158074+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2603.19019",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:23:12.370884+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2603.19019#page=29",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2603.19020": {
     "arxiv_id": "2603.19020",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:56:45.582754+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2603.19020",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:23:19.294270+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2603.19020#page=39",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2603.19021": {
     "arxiv_id": "2603.19021",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:56:52.297840+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2603.19021",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:23:26.271499+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2603.19021#page=36",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2605.05444": {
     "arxiv_id": "2605.05444",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:58:02.459093+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2605.05444",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:24:34.954664+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2605.05444#page=6",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2605.12503": {
     "arxiv_id": "2605.12503",
@@ -448,57 +450,57 @@
   },
   "doi:10.48550/arxiv.2605.27090": {
     "arxiv_id": "2605.27090",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:57:49.468162+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2605.27090",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:24:21.860493+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2605.27090#page=6",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2605.27223": {
     "arxiv_id": "2605.27223",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:56:58.454843+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2605.27223",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:23:32.461224+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2605.27223#page=46",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2605.27224": {
     "arxiv_id": "2605.27224",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:57:11.272207+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2605.27224",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:23:45.020268+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2605.27224#page=47",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2605.27225": {
     "arxiv_id": "2605.27225",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:57:17.304949+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2605.27225",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:23:51.520638+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2605.27225#page=50",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2605.27226": {
     "arxiv_id": "2605.27226",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:57:24.006848+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2605.27226",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:23:57.806972+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2605.27226#page=51",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2605.27227": {
     "arxiv_id": "2605.27227",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:57:04.611271+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2605.27227",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:23:36.948321+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2605.27227#page=7",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2606.04208": {
     "arxiv_id": "2606.04208",
@@ -518,12 +520,12 @@
   },
   "doi:10.48550/arxiv.2607.07765": {
     "arxiv_id": "2607.07765",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:58:08.668078+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2607.07765",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:24:41.983809+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2607.07765#page=25",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2607.08453": {
     "arxiv_id": "2607.08453",
@@ -534,12 +536,12 @@
   },
   "doi:10.48550/arxiv.2607.19293": {
     "arxiv_id": "2607.19293",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:57:30.321764+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2607.19293",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:24:04.106149+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2607.19293#page=41",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2607.23062": {
     "arxiv_id": "2607.23062",
@@ -550,39 +552,39 @@
   },
   "doi:10.48550/arxiv.2608.11620": {
     "arxiv_id": "2608.11620",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:56:19.694484+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2608.11620",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:21:25.989585+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2608.11620#page=8",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2608.11673": {
     "arxiv_id": "2608.11673",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:57:36.808887+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2608.11673",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:24:09.024446+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2608.11673#page=10",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2608.12193": {
     "arxiv_id": "2608.12193",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:57:43.084340+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2608.12193",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:24:16.510640+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2608.12193#page=2",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2608.23477": {
     "arxiv_id": "2608.23477",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:58:14.924863+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2608.23477",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:24:47.414056+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2608.23477#page=8",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "doi:10.48550/arxiv.2609.16134": {
     "arxiv_id": "2609.16134",
@@ -593,12 +595,12 @@
   },
   "doi:10.48550/arxiv.2610.20276": {
     "arxiv_id": "2610.20276",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:57:55.768532+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2610.20276",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:24:29.148243+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2610.20276#page=31",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:ajointfermigbmandligovirgoanalysisofcompactbinarymergersfromthefirstandsecondgravitationalwaveobservingruns": {
     "arxiv_id": "",
@@ -616,8 +618,8 @@
   },
   "title:arxivnarrowbandsearchesforcontinuousgravitationalwavesfromknownpulsarsinthefirsttwopartsofthefourthligovirgokagraobservingrun": {
     "arxiv_id": "",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:56:09.104902+00:00",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:21:15.731455+00:00",
     "evidence": "No usable source found",
     "evidence_url": "",
     "source": "retrieval",
@@ -625,8 +627,8 @@
   },
   "title:arxivsearchesforbinarymergerswithsubsolarmasscomponentsindatafromthefirstpartofligovirgokagrasfourthobservingrun": {
     "arxiv_id": "",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:56:12.326457+00:00",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:21:18.950383+00:00",
     "evidence": "No usable source found",
     "evidence_url": "",
     "source": "retrieval",
@@ -654,13 +656,13 @@
     "status": "unverified"
   },
   "title:deepsearchforjointsourcesofgravitationalwavesandhighenergyneutrinoswithicecubeduringthethirdobservingrunofligoandvirgo": {
-    "arxiv_id": "2601.07595",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:56:26.056958+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2601.07595",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "arxiv_id": "",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:23:01.241588+00:00",
+    "evidence": "arXiv: HTTP 429",
+    "evidence_url": "",
+    "source": "retrieval",
+    "status": "error"
   },
   "title:detectionandwaveformreconstructionofgravitationalwavesignalswithcoherentwaveburstandwaveletdetectionfiltermethods": {
     "arxiv_id": "",
@@ -692,12 +694,12 @@
   },
   "title:gw231123abinaryblackholemergerwithtotalmass190265mbackslashodot": {
     "arxiv_id": "2507.08219",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:58:34.282910+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2507.08219",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:25:08.703569+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2507.08219#page=7",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:ligodetectorcharacterizationinthesecondandthirdobservingruns": {
     "arxiv_id": "",
@@ -722,12 +724,12 @@
   },
   "title:searchforcontinuousgravitationalwavesfromknownpulsarsinthefirstpartofthefourthligovirgokagraobservingrun": {
     "arxiv_id": "2501.01495",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:58:40.649330+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2501.01495",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:25:15.080597+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2501.01495#page=7",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:searchforeccentricblackholecoalescencesduringthethirdobservingrunofligoandvirgo": {
     "arxiv_id": "",
@@ -759,12 +761,12 @@
   },
   "title:swiftbatguanofollowupofgravitationalwavetriggersinthethirdligovirgokagraobservingrun": {
     "arxiv_id": "2407.12867",
-    "cache_version": 3,
-    "checked_at": "2026-10-19T17:58:47.125978+00:00",
-    "evidence": "No matching author affiliation established; ",
-    "evidence_url": "https://arxiv.org/pdf/2407.12867",
-    "source": "arXiv metadata, PDF inspected",
-    "status": "needs_review"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:25:21.516525+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2407.12867#page=7",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:testsofgeneralrelativitywithgwtc3": {
     "arxiv_id": "",
