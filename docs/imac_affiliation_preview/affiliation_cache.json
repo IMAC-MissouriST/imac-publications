@@ -1,0 +1,107 @@
+{
+  "doi:10.48550/arxiv.2509.07352": {
+    "arxiv_id": "2509.07352",
+    "checked_at": "2026-10-19T14:12:30.025124+00:00",
+    "evidence": "arXiv metadata: HTTPError",
+    "source": "PDF checked",
+    "status": "error"
+  },
+  "doi:10.48550/arxiv.2601.16761": {
+    "arxiv_id": "2601.16761",
+    "checked_at": "2026-10-19T14:09:25.371507+00:00",
+    "evidence": "na), Alvise Raccanelli (Padova), Jason Rhodes (JPL), Shun Saito (Missouri S&T), Hee-Jong Seo (Ohio Univ.), Zachary Slepian (Univ. of Florida), Steve Smee (JHU)",
+    "source": "PDF header",
+    "status": "verified"
+  },
+  "doi:10.48550/arxiv.2603.14168": {
+    "arxiv_id": "2603.14168",
+    "checked_at": "2026-10-19T14:11:22.100597+00:00",
+    "evidence": "arXiv metadata: TimeoutError",
+    "source": "PDF checked",
+    "status": "error"
+  },
+  "doi:10.48550/arxiv.2603.19019": {
+    "arxiv_id": "2603.19019",
+    "checked_at": "2026-10-19T14:13:04.021045+00:00",
+    "evidence": "arXiv metadata: HTTPError",
+    "source": "PDF checked",
+    "status": "error"
+  },
+  "doi:10.48550/arxiv.2605.12503": {
+    "arxiv_id": "2605.12503",
+    "checked_at": "2026-10-19T14:10:44.022608+00:00",
+    "evidence": "lti-messenger Astrophysics and Cosmology, Department of Physics, Missouri University of Science and Technology, 1315 N Pine Street, Rolla, MO 65409, USA 9Lawrence Berkeley National Laboratory, 1 Cyclotron Road,",
+    "source": "PDF header",
+    "status": "verified"
+  },
+  "doi:10.48550/arxiv.2605.13546": {
+    "arxiv_id": "2605.13546",
+    "checked_at": "2026-10-19T14:09:59.449613+00:00",
+    "evidence": "Multi-messenger Astrophysics & Cosmology, Department of Physics, Missouri University of Science & Technology, Rolla, MO 65409, United States of America 4Kavli Institute for the Physics & Mathematics of the Un",
+    "source": "PDF header",
+    "status": "verified"
+  },
+  "doi:10.48550/arxiv.2606.04208": {
+    "arxiv_id": "2606.04208",
+    "checked_at": "2026-10-19T14:09:13.020996+00:00",
+    "evidence": "lti-messenger Astrophysics and Cosmology, Department of Physics, Missouri University of Science and Technology, 1315 N. Pine St., Rolla MO 65409, USA 25Institut f\u00a8ur Astrophysik, Universit\u00a8at G\u00a8ottingen, Friedr",
+    "source": "PDF header",
+    "status": "verified"
+  },
+  "doi:10.48550/arxiv.2606.18581": {
+    "arxiv_id": "2606.18581",
+    "checked_at": "2026-10-19T14:09:00.719435+00:00",
+    "evidence": "arXiv metadata: TimeoutError",
+    "source": "PDF checked",
+    "status": "error"
+  },
+  "doi:10.48550/arxiv.2607.08453": {
+    "arxiv_id": "2607.08453",
+    "checked_at": "2026-10-19T14:09:06.768746+00:00",
+    "evidence": "lti-messenger Astrophysics and Cosmology, Department of Physics, Missouri University of Science and Technology, 1315 N. Pine St., Rolla MO 65409, USA 17Max-Planck-Institut f\u00a8ur extraterrestrische Physik, Postfa",
+    "source": "PDF header",
+    "status": "verified"
+  },
+  "doi:10.48550/arxiv.2607.23062": {
+    "arxiv_id": "2607.23062",
+    "checked_at": "2026-10-19T14:09:19.129026+00:00",
+    "evidence": "lti-messenger Astrophysics and Cosmology, Department of Physics, Missouri University of Science and Technology, 1315 N. Pine St., Rolla MO 65409, USA 22Kavli Institute for the Physics and Mathematics of the Uni",
+    "source": "PDF header",
+    "status": "verified"
+  },
+  "doi:10.48550/arxiv.2608.11620": {
+    "arxiv_id": "2608.11620",
+    "checked_at": "2026-10-19T14:11:55.725747+00:00",
+    "evidence": "arXiv metadata: HTTPError",
+    "source": "PDF checked",
+    "status": "error"
+  },
+  "doi:10.48550/arxiv.2609.16134": {
+    "arxiv_id": "2609.16134",
+    "checked_at": "2026-10-19T14:10:37.627843+00:00",
+    "evidence": "lti-messenger Astrophysics and Cosmology, Department of Physics, Missouri University of Science and Technology, 1315 N. Pine St., Rolla MO 65409, USA 15Kavli Institute for the Physics and Mathematics of the Uni",
+    "source": "PDF header",
+    "status": "verified"
+  },
+  "title:arxivnarrowbandsearchesforcontinuousgravitationalwavesfromknownpulsarsinthefirsttwopartsofthefourthligovirgokagraobservingrun": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T14:11:22.100657+00:00",
+    "evidence": "No accessible, confirmed affiliation",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:arxivsearchesforbinarymergerswithsubsolarmasscomponentsindatafromthefirstpartofligovirgokagrasfourthobservingrun": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T14:11:22.100669+00:00",
+    "evidence": "No accessible, confirmed affiliation",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:deepsearchforjointsourcesofgravitationalwavesandhighenergyneutrinoswithicecubeduringthethirdobservingrunofligoandvirgo": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T14:11:55.725808+00:00",
+    "evidence": "No accessible, confirmed affiliation",
+    "source": "none",
+    "status": "unverified"
+  }
+}
