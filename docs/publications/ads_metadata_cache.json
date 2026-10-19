@@ -1,0 +1,5231 @@
+{
+  "version": 1,
+  "records": {
+    "bibcode:2026apjs..284...67m": {
+      "bibcode": "2026ApJS..284...67M",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:53.420215+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4365/ae6068": {
+      "bibcode": "2026ApJS..284...67M",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:53.420215+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025ojap....851254k": {
+      "bibcode": "2025OJAp....851254K",
+      "citation_count": "10",
+      "checked_at": "2026-10-19T23:32:53.420295+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.33232/001c.151254": {
+      "bibcode": "2025OJAp....851254K",
+      "citation_count": "10",
+      "checked_at": "2026-10-19T23:32:53.420295+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025aas...24546502m": {
+      "bibcode": "2025AAS...24546502M",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.420346+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2024apj...962..102w": {
+      "bibcode": "2024ApJ...962..102W",
+      "citation_count": "6",
+      "checked_at": "2026-10-19T23:32:53.420379+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ad1b51": {
+      "bibcode": "2024ApJ...962..102W",
+      "citation_count": "6",
+      "checked_at": "2026-10-19T23:32:53.420379+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023jcap...07..046s": {
+      "bibcode": "2023JCAP...07..046S",
+      "citation_count": "31",
+      "checked_at": "2026-10-19T23:32:53.420415+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2023/07/046": {
+      "bibcode": "2023JCAP...07..046S",
+      "citation_count": "31",
+      "checked_at": "2026-10-19T23:32:53.420415+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023apj...943..177m": {
+      "bibcode": "2023ApJ...943..177M",
+      "citation_count": "60",
+      "checked_at": "2026-10-19T23:32:53.420477+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/aca962": {
+      "bibcode": "2023ApJ...943..177M",
+      "citation_count": "60",
+      "checked_at": "2026-10-19T23:32:53.420477+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022arxiv221209136h": {
+      "bibcode": "2022arXiv221209136H",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:53.420508+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2212.09136": {
+      "bibcode": "2022arXiv221209136H",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:53.420508+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022mnras.511.4333k": {
+      "bibcode": "2022MNRAS.511.4333K",
+      "citation_count": "13",
+      "checked_at": "2026-10-19T23:32:53.420541+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stac331": {
+      "bibcode": "2022MNRAS.511.4333K",
+      "citation_count": "13",
+      "checked_at": "2026-10-19T23:32:53.420541+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021jcap...03..023k": {
+      "bibcode": "2021JCAP...03..023K",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:53.420572+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2021/03/023": {
+      "bibcode": "2021JCAP...03..023K",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:53.420572+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020jcap...07..039k": {
+      "bibcode": "2020JCAP...07..039K",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:53.420602+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2020/07/039": {
+      "bibcode": "2020JCAP...07..039K",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:53.420602+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260916134m": {
+      "bibcode": "2026arXiv260916134M",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.968062+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2609.16134": {
+      "bibcode": "2026arXiv260916134M",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.968062+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260708453m": {
+      "bibcode": "2026arXiv260708453M",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.968133+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2607.08453": {
+      "bibcode": "2026arXiv260708453M",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.968133+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260723062f": {
+      "bibcode": "2026arXiv260723062F",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:53.968171+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2607.23062": {
+      "bibcode": "2026arXiv260723062F",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:53.968171+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260618581h": {
+      "bibcode": "2026arXiv260618581H",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.968202+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2606.18581": {
+      "bibcode": "2026arXiv260618581H",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.968202+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026apj..1003..122d": {
+      "bibcode": "2026ApJ..1003..122D",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:53.968236+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ae6329": {
+      "bibcode": "2026ApJ..1003..122D",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:53.968236+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260604208m": {
+      "bibcode": "2026arXiv260604208M",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.968266+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2606.04208": {
+      "bibcode": "2026arXiv260604208M",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.968266+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026aj....171..318m": {
+      "bibcode": "2026AJ....171..318M",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:53.968346+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-3881/ae5baf": {
+      "bibcode": "2026AJ....171..318M",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:53.968346+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026jcap...05..002f": {
+      "bibcode": "2026JCAP...05..002F",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:53.968377+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2026/05/002": {
+      "bibcode": "2026JCAP...05..002F",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:53.968377+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260513546d": {
+      "bibcode": "2026arXiv260513546D",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:53.968408+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2605.13546": {
+      "bibcode": "2026arXiv260513546D",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:53.968408+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260512503c": {
+      "bibcode": "2026arXiv260512503C",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:53.968440+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2605.12503": {
+      "bibcode": "2026arXiv260512503C",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:53.968440+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026apj...999..177l": {
+      "bibcode": "2026ApJ...999..177L",
+      "citation_count": "5",
+      "checked_at": "2026-10-19T23:32:53.968482+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ae3a98": {
+      "bibcode": "2026ApJ...999..177L",
+      "citation_count": "5",
+      "checked_at": "2026-10-19T23:32:53.968482+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260116761b": {
+      "bibcode": "2026arXiv260116761B",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.968515+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2601.16761": {
+      "bibcode": "2026arXiv260116761B",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.968515+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025apj...995..220l": {
+      "bibcode": "2025ApJ...995..220L",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:53.968545+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ae1ae6": {
+      "bibcode": "2025ApJ...995..220L",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:53.968545+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025jcap...11..049z": {
+      "bibcode": "2025JCAP...11..049Z",
+      "citation_count": "20",
+      "checked_at": "2026-10-19T23:32:53.968605+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2025/11/049": {
+      "bibcode": "2025JCAP...11..049Z",
+      "citation_count": "20",
+      "checked_at": "2026-10-19T23:32:53.968605+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025apj...992..121h": {
+      "bibcode": "2025ApJ...992..121H",
+      "citation_count": "2",
+      "checked_at": "2026-10-19T23:32:53.968633+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ae0036": {
+      "bibcode": "2025ApJ...992..121H",
+      "citation_count": "2",
+      "checked_at": "2026-10-19T23:32:53.968633+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025jcap...08..018d": {
+      "bibcode": "2025JCAP...08..018D",
+      "citation_count": "28",
+      "checked_at": "2026-10-19T23:32:53.968663+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2025/08/018": {
+      "bibcode": "2025JCAP...08..018D",
+      "citation_count": "28",
+      "checked_at": "2026-10-19T23:32:53.968663+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025jcap...08..029k": {
+      "bibcode": "2025JCAP...08..029K",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:53.968695+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2025/08/029": {
+      "bibcode": "2025JCAP...08..029K",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:53.968695+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025apjs..277...37u": {
+      "bibcode": "2025ApJS..277...37U",
+      "citation_count": "37",
+      "checked_at": "2026-10-19T23:32:53.968770+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4365/adb1c0": {
+      "bibcode": "2025ApJS..277...37U",
+      "citation_count": "37",
+      "checked_at": "2026-10-19T23:32:53.968770+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2024spie13092e..0zc": {
+      "bibcode": "2024SPIE13092E..0ZC",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:53.968838+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1117/12.3017865": {
+      "bibcode": "2024SPIE13092E..0ZC",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:53.968838+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023mnras.524.1651s": {
+      "bibcode": "2023MNRAS.524.1651S",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:53.968901+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stad1935": {
+      "bibcode": "2023MNRAS.524.1651S",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:53.968901+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023apj...954..209d": {
+      "bibcode": "2023ApJ...954..209D",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:53.968930+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ace4c2": {
+      "bibcode": "2023ApJ...954..209D",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:53.968930+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023mnras.523.3133s": {
+      "bibcode": "2023MNRAS.523.3133S",
+      "citation_count": "30",
+      "checked_at": "2026-10-19T23:32:53.968960+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stad1505": {
+      "bibcode": "2023MNRAS.523.3133S",
+      "citation_count": "30",
+      "checked_at": "2026-10-19T23:32:53.968960+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023apj...952...80k": {
+      "bibcode": "2023ApJ...952...80K",
+      "citation_count": "17",
+      "checked_at": "2026-10-19T23:32:53.969018+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/acd92f": {
+      "bibcode": "2023ApJ...952...80K",
+      "citation_count": "17",
+      "checked_at": "2026-10-19T23:32:53.969018+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023phrvd.107l3523o": {
+      "bibcode": "2023PhRvD.107l3523O",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:53.969045+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.107.123523": {
+      "bibcode": "2023PhRvD.107l3523O",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:53.969045+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023apj...946...86d": {
+      "bibcode": "2023ApJ...946...86D",
+      "citation_count": "31",
+      "checked_at": "2026-10-19T23:32:53.969072+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/acb0ca": {
+      "bibcode": "2023ApJ...946...86D",
+      "citation_count": "31",
+      "checked_at": "2026-10-19T23:32:53.969072+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022arxiv221107960o": {
+      "bibcode": "2022arXiv221107960O",
+      "citation_count": "",
+      "checked_at": "2026-10-19T23:32:53.969129+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022apj...931...97k": {
+      "bibcode": "2022ApJ...931...97K",
+      "citation_count": "22",
+      "checked_at": "2026-10-19T23:32:53.969161+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ac69de": {
+      "bibcode": "2022ApJ...931...97K",
+      "citation_count": "22",
+      "checked_at": "2026-10-19T23:32:53.969161+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022mnras.511.1557s": {
+      "bibcode": "2022MNRAS.511.1557S",
+      "citation_count": "15",
+      "checked_at": "2026-10-19T23:32:53.969188+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stac082": {
+      "bibcode": "2022MNRAS.511.1557S",
+      "citation_count": "15",
+      "checked_at": "2026-10-19T23:32:53.969188+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022mnras.510.4525g": {
+      "bibcode": "2022MNRAS.510.4525G",
+      "citation_count": "31",
+      "checked_at": "2026-10-19T23:32:53.969217+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stab3554": {
+      "bibcode": "2022MNRAS.510.4525G",
+      "citation_count": "31",
+      "checked_at": "2026-10-19T23:32:53.969217+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021phrvd.104l3508o": {
+      "bibcode": "2021PhRvD.104l3508O",
+      "citation_count": "10",
+      "checked_at": "2026-10-19T23:32:53.969246+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.104.123508": {
+      "bibcode": "2021PhRvD.104l3508O",
+      "citation_count": "10",
+      "checked_at": "2026-10-19T23:32:53.969246+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021apj...923..217g": {
+      "bibcode": "2021ApJ...923..217G",
+      "citation_count": "141",
+      "checked_at": "2026-10-19T23:32:53.969276+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ac2e03": {
+      "bibcode": "2021ApJ...923..217G",
+      "citation_count": "141",
+      "checked_at": "2026-10-19T23:32:53.969276+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021mnras.507.3187f": {
+      "bibcode": "2021MNRAS.507.3187F",
+      "citation_count": "29",
+      "checked_at": "2026-10-19T23:32:53.969307+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021mnras.501.2862s": {
+      "bibcode": "2021MNRAS.501.2862S",
+      "citation_count": "46",
+      "checked_at": "2026-10-19T23:32:53.969347+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/staa3725": {
+      "bibcode": "2021MNRAS.501.2862S",
+      "citation_count": "46",
+      "checked_at": "2026-10-19T23:32:53.969347+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021mnras.500..603g": {
+      "bibcode": "2021MNRAS.500..603G",
+      "citation_count": "10",
+      "checked_at": "2026-10-19T23:32:53.969381+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/staa3269": {
+      "bibcode": "2021MNRAS.500..603G",
+      "citation_count": "10",
+      "checked_at": "2026-10-19T23:32:53.969381+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020apj...904..159y": {
+      "bibcode": "2020ApJ...904..159Y",
+      "citation_count": "24",
+      "checked_at": "2026-10-19T23:32:53.969412+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/abbd46": {
+      "bibcode": "2020ApJ...904..159Y",
+      "citation_count": "24",
+      "checked_at": "2026-10-19T23:32:53.969412+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020apj...903...24m": {
+      "bibcode": "2020ApJ...903...24M",
+      "citation_count": "15",
+      "checked_at": "2026-10-19T23:32:53.969465+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/abb81b": {
+      "bibcode": "2020ApJ...903...24M",
+      "citation_count": "15",
+      "checked_at": "2026-10-19T23:32:53.969465+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020mnras.497.1684s": {
+      "bibcode": "2020MNRAS.497.1684S",
+      "citation_count": "72",
+      "checked_at": "2026-10-19T23:32:53.969558+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/staa1940": {
+      "bibcode": "2020MNRAS.497.1684S",
+      "citation_count": "72",
+      "checked_at": "2026-10-19T23:32:53.969558+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020jcap...06..057s": {
+      "bibcode": "2020JCAP...06..057S",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:53.969587+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2020/06/057": {
+      "bibcode": "2020JCAP...06..057S",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:53.969587+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020mnras.494..199s": {
+      "bibcode": "2020MNRAS.494..199S",
+      "citation_count": "49",
+      "checked_at": "2026-10-19T23:32:53.969647+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/staa727": {
+      "bibcode": "2020MNRAS.494..199S",
+      "citation_count": "49",
+      "checked_at": "2026-10-19T23:32:53.969647+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019mnras.489.3472b": {
+      "bibcode": "2019MNRAS.489.3472B",
+      "citation_count": "19",
+      "checked_at": "2026-10-19T23:32:53.969727+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stz2260": {
+      "bibcode": "2019MNRAS.489.3472B",
+      "citation_count": "19",
+      "checked_at": "2026-10-19T23:32:53.969727+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019mnras.487..253d": {
+      "bibcode": "2019MNRAS.487..253D",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:53.969755+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stz1257": {
+      "bibcode": "2019MNRAS.487..253D",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:53.969755+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019aas...23420302s": {
+      "bibcode": "2019AAS...23420302S",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.969799+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019baas...51c.423h": {
+      "bibcode": "2019BAAS...51c.423H",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:53.969820+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...876...32g": {
+      "bibcode": "2019ApJ...876...32G",
+      "citation_count": "27",
+      "checked_at": "2026-10-19T23:32:53.969843+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ab12d5": {
+      "bibcode": "2019ApJ...876...32G",
+      "citation_count": "27",
+      "checked_at": "2026-10-19T23:32:53.969843+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019mnras.484..364s": {
+      "bibcode": "2019MNRAS.484..364S",
+      "citation_count": "101",
+      "checked_at": "2026-10-19T23:32:53.969872+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/sty3249": {
+      "bibcode": "2019MNRAS.484..364S",
+      "citation_count": "101",
+      "checked_at": "2026-10-19T23:32:53.969872+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019mnras.482.3497z": {
+      "bibcode": "2019MNRAS.482.3497Z",
+      "citation_count": "237",
+      "checked_at": "2026-10-19T23:32:53.969918+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/sty2845": {
+      "bibcode": "2019MNRAS.482.3497Z",
+      "citation_count": "237",
+      "checked_at": "2026-10-19T23:32:53.969918+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2018a&a...614a..31b": {
+      "bibcode": "2018A&A...614A..31B",
+      "citation_count": "41",
+      "checked_at": "2026-10-19T23:32:53.969971+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1051/0004-6361/201731783": {
+      "bibcode": "2018A&A...614A..31B",
+      "citation_count": "41",
+      "checked_at": "2026-10-19T23:32:53.969971+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2018pasj...70s..11h": {
+      "bibcode": "2018PASJ...70S..11H",
+      "citation_count": "146",
+      "checked_at": "2026-10-19T23:32:53.970036+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/pasj/psx097": {
+      "bibcode": "2018PASJ...70S..11H",
+      "citation_count": "146",
+      "checked_at": "2026-10-19T23:32:53.970036+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017apj...851...34b": {
+      "bibcode": "2017ApJ...851...34B",
+      "citation_count": "28",
+      "checked_at": "2026-10-19T23:32:53.970120+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/aa9896": {
+      "bibcode": "2017ApJ...851...34B",
+      "citation_count": "28",
+      "checked_at": "2026-10-19T23:32:53.970120+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017jcap...10..003a": {
+      "bibcode": "2017JCAP...10..003A",
+      "citation_count": "61",
+      "checked_at": "2026-10-19T23:32:53.970148+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2017/10/003": {
+      "bibcode": "2017JCAP...10..003A",
+      "citation_count": "61",
+      "checked_at": "2026-10-19T23:32:53.970148+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017arxiv170909066k": {
+      "bibcode": "2017arXiv170909066K",
+      "citation_count": "289",
+      "checked_at": "2026-10-19T23:32:53.970174+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017mnras.470.2617a": {
+      "bibcode": "2017MNRAS.470.2617A",
+      "citation_count": "3141",
+      "checked_at": "2026-10-19T23:32:53.970203+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stx721": {
+      "bibcode": "2017MNRAS.470.2617A",
+      "citation_count": "3141",
+      "checked_at": "2026-10-19T23:32:53.970203+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017mnras.466.2242b": {
+      "bibcode": "2017MNRAS.466.2242B",
+      "citation_count": "353",
+      "checked_at": "2026-10-19T23:32:53.970263+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stw3298": {
+      "bibcode": "2017MNRAS.466.2242B",
+      "citation_count": "353",
+      "checked_at": "2026-10-19T23:32:53.970263+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017mnras.466..762z": {
+      "bibcode": "2017MNRAS.466..762Z",
+      "citation_count": "61",
+      "checked_at": "2026-10-19T23:32:53.970293+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stw3199": {
+      "bibcode": "2017MNRAS.466..762Z",
+      "citation_count": "61",
+      "checked_at": "2026-10-19T23:32:53.970293+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017mnras.464.3409b": {
+      "bibcode": "2017MNRAS.464.3409B",
+      "citation_count": "252",
+      "checked_at": "2026-10-19T23:32:53.970323+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stw2373": {
+      "bibcode": "2017MNRAS.464.3409B",
+      "citation_count": "252",
+      "checked_at": "2026-10-19T23:32:53.970323+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017mnras.464.1168r": {
+      "bibcode": "2017MNRAS.464.1168R",
+      "citation_count": "255",
+      "checked_at": "2026-10-19T23:32:53.970353+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stw2372": {
+      "bibcode": "2017MNRAS.464.1168R",
+      "citation_count": "255",
+      "checked_at": "2026-10-19T23:32:53.970353+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016mnras.460.1457s": {
+      "bibcode": "2016MNRAS.460.1457S",
+      "citation_count": "93",
+      "checked_at": "2026-10-19T23:32:53.970461+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stw1080": {
+      "bibcode": "2016MNRAS.460.1457S",
+      "citation_count": "93",
+      "checked_at": "2026-10-19T23:32:53.970461+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016mnras.460.2453s": {
+      "bibcode": "2016MNRAS.460.2453S",
+      "citation_count": "83",
+      "checked_at": "2026-10-19T23:32:53.970492+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stw1138": {
+      "bibcode": "2016MNRAS.460.2453S",
+      "citation_count": "83",
+      "checked_at": "2026-10-19T23:32:53.970492+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016apj...821..123h": {
+      "bibcode": "2016ApJ...821..123H",
+      "citation_count": "140",
+      "checked_at": "2026-10-19T23:32:53.970524+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/0004-637x/821/2/123": {
+      "bibcode": "2016ApJ...821..123H",
+      "citation_count": "140",
+      "checked_at": "2026-10-19T23:32:53.970524+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016mnras.457.4021l": {
+      "bibcode": "2016MNRAS.457.4021L",
+      "citation_count": "72",
+      "checked_at": "2026-10-19T23:32:53.970555+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stw117": {
+      "bibcode": "2016MNRAS.457.4021L",
+      "citation_count": "72",
+      "checked_at": "2026-10-19T23:32:53.970555+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2015apjs..221...15b": {
+      "bibcode": "2015ApJS..221...15B",
+      "citation_count": "52",
+      "checked_at": "2026-10-19T23:32:53.970604+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0067-0049/221/1/15": {
+      "bibcode": "2015ApJS..221...15B",
+      "citation_count": "52",
+      "checked_at": "2026-10-19T23:32:53.970604+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2015mnras.452..998h": {
+      "bibcode": "2015MNRAS.452..998H",
+      "citation_count": "74",
+      "checked_at": "2026-10-19T23:32:53.970631+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stv1271": {
+      "bibcode": "2015MNRAS.452..998H",
+      "citation_count": "74",
+      "checked_at": "2026-10-19T23:32:53.970631+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014phrvd..90l3522s": {
+      "bibcode": "2014PhRvD..90l3522S",
+      "citation_count": "195",
+      "checked_at": "2026-10-19T23:32:53.970660+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.90.123522": {
+      "bibcode": "2014PhRvD..90l3522S",
+      "citation_count": "195",
+      "checked_at": "2026-10-19T23:32:53.970660+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014mnras.444.3501b": {
+      "bibcode": "2014MNRAS.444.3501B",
+      "citation_count": "125",
+      "checked_at": "2026-10-19T23:32:53.970691+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stu1702": {
+      "bibcode": "2014MNRAS.444.3501B",
+      "citation_count": "125",
+      "checked_at": "2026-10-19T23:32:53.970691+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014mnras.443.1065b": {
+      "bibcode": "2014MNRAS.443.1065B",
+      "citation_count": "343",
+      "checked_at": "2026-10-19T23:32:53.970720+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stu1051": {
+      "bibcode": "2014MNRAS.443.1065B",
+      "citation_count": "343",
+      "checked_at": "2026-10-19T23:32:53.970720+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014mnras.441...24a": {
+      "bibcode": "2014MNRAS.441...24A",
+      "citation_count": "1505",
+      "checked_at": "2026-10-19T23:32:53.970750+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stu523": {
+      "bibcode": "2014MNRAS.441...24A",
+      "citation_count": "1505",
+      "checked_at": "2026-10-19T23:32:53.970750+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014mnras.439.2515o": {
+      "bibcode": "2014MNRAS.439.2515O",
+      "citation_count": "233",
+      "checked_at": "2026-10-19T23:32:53.970779+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stu111": {
+      "bibcode": "2014MNRAS.439.2515O",
+      "citation_count": "233",
+      "checked_at": "2026-10-19T23:32:53.970779+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014mnras.439.2531p": {
+      "bibcode": "2014MNRAS.439.2531P",
+      "citation_count": "261",
+      "checked_at": "2026-10-19T23:32:53.970806+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stu112": {
+      "bibcode": "2014MNRAS.439.2531P",
+      "citation_count": "261",
+      "checked_at": "2026-10-19T23:32:53.970806+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014jcap...03..011v": {
+      "bibcode": "2014JCAP...03..011V",
+      "citation_count": "164",
+      "checked_at": "2026-10-19T23:32:53.970836+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2014/03/011": {
+      "bibcode": "2014JCAP...03..011V",
+      "citation_count": "164",
+      "checked_at": "2026-10-19T23:32:53.970836+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014jpscp...1a3096o": {
+      "bibcode": "2014JPSCP...1a3096O",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.970865+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.7566/jpscp.1.013096": {
+      "bibcode": "2014JPSCP...1a3096O",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:53.970865+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2013mnras.436.2038z": {
+      "bibcode": "2013MNRAS.436.2038Z",
+      "citation_count": "101",
+      "checked_at": "2026-10-19T23:32:53.970896+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stt1710": {
+      "bibcode": "2013MNRAS.436.2038Z",
+      "citation_count": "101",
+      "checked_at": "2026-10-19T23:32:53.970896+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012apj...761...13s": {
+      "bibcode": "2012ApJ...761...13S",
+      "citation_count": "112",
+      "checked_at": "2026-10-19T23:32:53.970939+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/761/1/13": {
+      "bibcode": "2012ApJ...761...13S",
+      "citation_count": "112",
+      "checked_at": "2026-10-19T23:32:53.970939+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012apj...761...14h": {
+      "bibcode": "2012ApJ...761...14H",
+      "citation_count": "159",
+      "checked_at": "2026-10-19T23:32:53.970970+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/761/1/14": {
+      "bibcode": "2012ApJ...761...14H",
+      "citation_count": "159",
+      "checked_at": "2026-10-19T23:32:53.970970+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2011phrvd..84l3513k": {
+      "bibcode": "2011PhRvD..84l3513K",
+      "citation_count": "86",
+      "checked_at": "2026-10-19T23:32:53.970997+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.84.123513": {
+      "bibcode": "2011PhRvD..84l3513K",
+      "citation_count": "86",
+      "checked_at": "2026-10-19T23:32:53.970997+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2011phrvd..83j3527t": {
+      "bibcode": "2011PhRvD..83j3527T",
+      "citation_count": "57",
+      "checked_at": "2026-10-19T23:32:53.971025+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.83.103527": {
+      "bibcode": "2011PhRvD..83j3527T",
+      "citation_count": "57",
+      "checked_at": "2026-10-19T23:32:53.971025+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2011phrvd..83h4045n": {
+      "bibcode": "2011PhRvD..83h4045N",
+      "citation_count": "53",
+      "checked_at": "2026-10-19T23:32:53.971051+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.83.084045": {
+      "bibcode": "2011PhRvD..83h4045N",
+      "citation_count": "53",
+      "checked_at": "2026-10-19T23:32:53.971051+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2011phrvd..83d3529s": {
+      "bibcode": "2011PhRvD..83d3529S",
+      "citation_count": "61",
+      "checked_at": "2026-10-19T23:32:53.971083+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.83.043529": {
+      "bibcode": "2011PhRvD..83d3529S",
+      "citation_count": "61",
+      "checked_at": "2026-10-19T23:32:53.971083+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2011apj...726....7t": {
+      "bibcode": "2011ApJ...726....7T",
+      "citation_count": "51",
+      "checked_at": "2026-10-19T23:32:53.971113+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/726/1/7": {
+      "bibcode": "2011ApJ...726....7T",
+      "citation_count": "51",
+      "checked_at": "2026-10-19T23:32:53.971113+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010jcap...12..027n": {
+      "bibcode": "2010JCAP...12..027N",
+      "citation_count": "40",
+      "checked_at": "2026-10-19T23:32:53.971141+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2010/12/027": {
+      "bibcode": "2010JCAP...12..027N",
+      "citation_count": "40",
+      "checked_at": "2026-10-19T23:32:53.971141+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010phrvd..82f3522t": {
+      "bibcode": "2010PhRvD..82f3522T",
+      "citation_count": "404",
+      "checked_at": "2026-10-19T23:32:53.971170+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.82.063522": {
+      "bibcode": "2010PhRvD..82f3522T",
+      "citation_count": "404",
+      "checked_at": "2026-10-19T23:32:53.971170+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009phrvd..80l3503t": {
+      "bibcode": "2009PhRvD..80l3503T",
+      "citation_count": "133",
+      "checked_at": "2026-10-19T23:32:53.971198+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.80.123503": {
+      "bibcode": "2009PhRvD..80l3503T",
+      "citation_count": "133",
+      "checked_at": "2026-10-19T23:32:53.971198+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009phrvd..80h3528s": {
+      "bibcode": "2009PhRvD..80h3528S",
+      "citation_count": "107",
+      "checked_at": "2026-10-19T23:32:53.971226+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.80.083528": {
+      "bibcode": "2009PhRvD..80h3528S",
+      "citation_count": "107",
+      "checked_at": "2026-10-19T23:32:53.971226+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009apj...700..479t": {
+      "bibcode": "2009ApJ...700..479T",
+      "citation_count": "137",
+      "checked_at": "2026-10-19T23:32:53.971254+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/700/1/479": {
+      "bibcode": "2009ApJ...700..479T",
+      "citation_count": "137",
+      "checked_at": "2026-10-19T23:32:53.971254+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2008mnras.389.1675t": {
+      "bibcode": "2008MNRAS.389.1675T",
+      "citation_count": "43",
+      "checked_at": "2026-10-19T23:32:53.971314+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1111/j.1365-2966.2008.13731.x": {
+      "bibcode": "2008MNRAS.389.1675T",
+      "citation_count": "43",
+      "checked_at": "2026-10-19T23:32:53.971314+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2008aipc.1040...32s": {
+      "bibcode": "2008AIPC.1040...32S",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:53.971347+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1063/1.2981549": {
+      "bibcode": "2008AIPC.1040...32S",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:53.971347+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2008jcap...06..020n": {
+      "bibcode": "2008JCAP...06..020N",
+      "citation_count": "155",
+      "checked_at": "2026-10-19T23:32:53.971376+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2008/06/020": {
+      "bibcode": "2008JCAP...06..020N",
+      "citation_count": "155",
+      "checked_at": "2026-10-19T23:32:53.971376+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2008phrvd..77l4001n": {
+      "bibcode": "2008PhRvD..77l4001N",
+      "citation_count": "93",
+      "checked_at": "2026-10-19T23:32:53.971404+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.77.124001": {
+      "bibcode": "2008PhRvD..77l4001N",
+      "citation_count": "93",
+      "checked_at": "2026-10-19T23:32:53.971404+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2008phrvl.100s1301s": {
+      "bibcode": "2008PhRvL.100s1301S",
+      "citation_count": "141",
+      "checked_at": "2026-10-19T23:32:53.971431+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.100.191301": {
+      "bibcode": "2008PhRvL.100s1301S",
+      "citation_count": "141",
+      "checked_at": "2026-10-19T23:32:53.971431+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2007jcap...09..002s": {
+      "bibcode": "2007JCAP...09..002S",
+      "citation_count": "128",
+      "checked_at": "2026-10-19T23:32:53.971502+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2007/09/002": {
+      "bibcode": "2007JCAP...09..002S",
+      "citation_count": "128",
+      "checked_at": "2026-10-19T23:32:53.971502+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025cqgra..42r5017s": {
+      "bibcode": "2025CQGra..42r5017S",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.554479+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1361-6382/ae0388": {
+      "bibcode": "2025CQGra..42r5017S",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.554479+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025apj...985..183a": {
+      "bibcode": "2025ApJ...985..183A",
+      "citation_count": "28",
+      "checked_at": "2026-10-19T23:32:54.554544+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/adc681": {
+      "bibcode": "2025ApJ...985..183A",
+      "citation_count": "28",
+      "checked_at": "2026-10-19T23:32:54.554544+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025lrr....28....2c": {
+      "bibcode": "2025LRR....28....2C",
+      "citation_count": "36",
+      "checked_at": "2026-10-19T23:32:54.554580+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1007/s41114-024-00055-8": {
+      "bibcode": "2025LRR....28....2C",
+      "citation_count": "36",
+      "checked_at": "2026-10-19T23:32:54.554580+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025gwsm.book...13c": {
+      "bibcode": "2025gwsm.book...13C",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.554615+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1007/978-981-96-1737-1_2": {
+      "bibcode": "2025gwsm.book...13C",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.554615+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2024cqgra..41h5012b": {
+      "bibcode": "2024CQGra..41h5012B",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:54.554647+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1361-6382/ad3279": {
+      "bibcode": "2024CQGra..41h5012B",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:54.554647+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2024cqgra..41e5004l": {
+      "bibcode": "2024CQGra..41e5004L",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:54.554701+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1361-6382/ad1f26": {
+      "bibcode": "2024CQGra..41e5004L",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:54.554701+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2024phrvd.109b2001a": {
+      "bibcode": "2024PhRvD.109b2001A",
+      "citation_count": "1110",
+      "checked_at": "2026-10-19T23:32:54.554736+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.109.022001": {
+      "bibcode": "2024PhRvD.109b2001A",
+      "citation_count": "1110",
+      "checked_at": "2026-10-19T23:32:54.554736+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023phrvl.131q1403z": {
+      "bibcode": "2023PhRvL.131q1403Z",
+      "citation_count": "8",
+      "checked_at": "2026-10-19T23:32:54.554855+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.131.171403": {
+      "bibcode": "2023PhRvL.131q1403Z",
+      "citation_count": "8",
+      "checked_at": "2026-10-19T23:32:54.554855+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023apj...949...76a": {
+      "bibcode": "2023ApJ...949...76A",
+      "citation_count": "378",
+      "checked_at": "2026-10-19T23:32:54.554888+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ac74bb": {
+      "bibcode": "2023ApJ...949...76A",
+      "citation_count": "378",
+      "checked_at": "2026-10-19T23:32:54.554888+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023phrvx..13d1039a": {
+      "bibcode": "2023PhRvX..13d1039A",
+      "citation_count": "3098",
+      "checked_at": "2026-10-19T23:32:54.554922+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevx.13.041039": {
+      "bibcode": "2023PhRvX..13d1039A",
+      "citation_count": "3098",
+      "checked_at": "2026-10-19T23:32:54.554922+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023apjs..267...29a": {
+      "bibcode": "2023ApJS..267...29A",
+      "citation_count": "398",
+      "checked_at": "2026-10-19T23:32:54.554951+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4365/acdc9f": {
+      "bibcode": "2023ApJS..267...29A",
+      "citation_count": "398",
+      "checked_at": "2026-10-19T23:32:54.554951+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023phrvx..13a1048a": {
+      "bibcode": "2023PhRvX..13a1048A",
+      "citation_count": "1393",
+      "checked_at": "2026-10-19T23:32:54.554980+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevx.13.011048": {
+      "bibcode": "2023PhRvX..13a1048A",
+      "citation_count": "1393",
+      "checked_at": "2026-10-19T23:32:54.554980+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023apj...955..155a": {
+      "bibcode": "2023ApJ...955..155A",
+      "citation_count": "53",
+      "checked_at": "2026-10-19T23:32:54.555017+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/acd770": {
+      "bibcode": "2023ApJ...955..155A",
+      "citation_count": "53",
+      "checked_at": "2026-10-19T23:32:54.555017+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023mnras.524.5984l": {
+      "bibcode": "2023MNRAS.524.5984L",
+      "citation_count": "53",
+      "checked_at": "2026-10-19T23:32:54.555047+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stad588": {
+      "bibcode": "2023MNRAS.524.5984L",
+      "citation_count": "53",
+      "checked_at": "2026-10-19T23:32:54.555047+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022phrvd.106j2008a": {
+      "bibcode": "2022PhRvD.106j2008A",
+      "citation_count": "139",
+      "checked_at": "2026-10-19T23:32:54.555096+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.106.102008": {
+      "bibcode": "2022PhRvD.106j2008A",
+      "citation_count": "139",
+      "checked_at": "2026-10-19T23:32:54.555096+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022phrvd.105j2001a": {
+      "bibcode": "2022PhRvD.105j2001A",
+      "citation_count": "126",
+      "checked_at": "2026-10-19T23:32:54.555124+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.105.102001": {
+      "bibcode": "2022PhRvD.105j2001A",
+      "citation_count": "126",
+      "checked_at": "2026-10-19T23:32:54.555124+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022phrvd.105l2001a": {
+      "bibcode": "2022PhRvD.105l2001A",
+      "citation_count": "44",
+      "checked_at": "2026-10-19T23:32:54.555155+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.105.122001": {
+      "bibcode": "2022PhRvD.105l2001A",
+      "citation_count": "44",
+      "checked_at": "2026-10-19T23:32:54.555155+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022cqgra..39m5012c": {
+      "bibcode": "2022CQGra..39m5012C",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:54.555182+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1361-6382/ac7325": {
+      "bibcode": "2022CQGra..39m5012C",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:54.555182+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022phrvd.105f3030a": {
+      "bibcode": "2022PhRvD.105f3030A",
+      "citation_count": "99",
+      "checked_at": "2026-10-19T23:32:54.555213+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.105.063030": {
+      "bibcode": "2022PhRvD.105f3030A",
+      "citation_count": "99",
+      "checked_at": "2026-10-19T23:32:54.555213+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022ptep.2022f3f01a": {
+      "bibcode": "2022PTEP.2022f3F01A",
+      "citation_count": "57",
+      "checked_at": "2026-10-19T23:32:54.555240+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/ptep/ptac073": {
+      "bibcode": "2022PTEP.2022f3F01A",
+      "citation_count": "57",
+      "checked_at": "2026-10-19T23:32:54.555240+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022apj...941l..30a": {
+      "bibcode": "2022ApJ...941L..30A",
+      "citation_count": "39",
+      "checked_at": "2026-10-19T23:32:54.555273+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/aca1b0": {
+      "bibcode": "2022ApJ...941L..30A",
+      "citation_count": "39",
+      "checked_at": "2026-10-19T23:32:54.555273+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022apj...932..133a": {
+      "bibcode": "2022ApJ...932..133A",
+      "citation_count": "85",
+      "checked_at": "2026-10-19T23:32:54.555302+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ac6ad0": {
+      "bibcode": "2022ApJ...932..133A",
+      "citation_count": "85",
+      "checked_at": "2026-10-19T23:32:54.555302+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022apj...928..186a": {
+      "bibcode": "2022ApJ...928..186A",
+      "citation_count": "52",
+      "checked_at": "2026-10-19T23:32:54.555335+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ac532b": {
+      "bibcode": "2022ApJ...928..186A",
+      "citation_count": "52",
+      "checked_at": "2026-10-19T23:32:54.555335+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022phrvl.129f1104a": {
+      "bibcode": "2022PhRvL.129f1104A",
+      "citation_count": "91",
+      "checked_at": "2026-10-19T23:32:54.555365+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.129.061104": {
+      "bibcode": "2022PhRvL.129f1104A",
+      "citation_count": "91",
+      "checked_at": "2026-10-19T23:32:54.555365+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022phrvd.106d2003a": {
+      "bibcode": "2022PhRvD.106d2003A",
+      "citation_count": "73",
+      "checked_at": "2026-10-19T23:32:54.555394+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.106.042003": {
+      "bibcode": "2022PhRvD.106d2003A",
+      "citation_count": "73",
+      "checked_at": "2026-10-19T23:32:54.555394+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022phrvd.105b2002a": {
+      "bibcode": "2022PhRvD.105b2002A",
+      "citation_count": "75",
+      "checked_at": "2026-10-19T23:32:54.555423+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.105.022002": {
+      "bibcode": "2022PhRvD.105b2002A",
+      "citation_count": "75",
+      "checked_at": "2026-10-19T23:32:54.555423+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022phrvd.106f2002a": {
+      "bibcode": "2022PhRvD.106f2002A",
+      "citation_count": "45",
+      "checked_at": "2026-10-19T23:32:54.555467+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.106.062002": {
+      "bibcode": "2022PhRvD.106f2002A",
+      "citation_count": "45",
+      "checked_at": "2026-10-19T23:32:54.555467+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022a&a...659a..84a": {
+      "bibcode": "2022A&A...659A..84A",
+      "citation_count": "104",
+      "checked_at": "2026-10-19T23:32:54.555511+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1051/0004-6361/202141452": {
+      "bibcode": "2022A&A...659A..84A",
+      "citation_count": "104",
+      "checked_at": "2026-10-19T23:32:54.555511+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022phrvd.105h2005a": {
+      "bibcode": "2022PhRvD.105h2005A",
+      "citation_count": "46",
+      "checked_at": "2026-10-19T23:32:54.555556+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.105.082005": {
+      "bibcode": "2022PhRvD.105h2005A",
+      "citation_count": "46",
+      "checked_at": "2026-10-19T23:32:54.555556+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022apj...935....1a": {
+      "bibcode": "2022ApJ...935....1A",
+      "citation_count": "117",
+      "checked_at": "2026-10-19T23:32:54.555586+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ac6acf": {
+      "bibcode": "2022ApJ...935....1A",
+      "citation_count": "117",
+      "checked_at": "2026-10-19T23:32:54.555586+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022phrvd.105h4054a": {
+      "bibcode": "2022PhRvD.105h4054A",
+      "citation_count": "22",
+      "checked_at": "2026-10-19T23:32:54.555618+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.105.084054": {
+      "bibcode": "2022PhRvD.105h4054A",
+      "citation_count": "22",
+      "checked_at": "2026-10-19T23:32:54.555618+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1111/1740-9713.01488": {
+      "bibcode": "",
+      "citation_count": "",
+      "checked_at": "2026-10-19T23:32:54.555667+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021apj...909..218a": {
+      "bibcode": "2021ApJ...909..218A",
+      "citation_count": "355",
+      "checked_at": "2026-10-19T23:32:54.555697+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/abdcb7": {
+      "bibcode": "2021ApJ...909..218A",
+      "citation_count": "355",
+      "checked_at": "2026-10-19T23:32:54.555697+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021phrvd.104h2004a": {
+      "bibcode": "2021PhRvD.104h2004A",
+      "citation_count": "69",
+      "checked_at": "2026-10-19T23:32:54.555726+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.104.082004": {
+      "bibcode": "2021PhRvD.104h2004A",
+      "citation_count": "69",
+      "checked_at": "2026-10-19T23:32:54.555726+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021phrvd.104j2001a": {
+      "bibcode": "2021PhRvD.104j2001A",
+      "citation_count": "49",
+      "checked_at": "2026-10-19T23:32:54.555754+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.104.102001": {
+      "bibcode": "2021PhRvD.104j2001A",
+      "citation_count": "49",
+      "checked_at": "2026-10-19T23:32:54.555754+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021phrvd.104l2004a": {
+      "bibcode": "2021PhRvD.104l2004A",
+      "citation_count": "106",
+      "checked_at": "2026-10-19T23:32:54.555781+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.104.122004": {
+      "bibcode": "2021PhRvD.104l2004A",
+      "citation_count": "106",
+      "checked_at": "2026-10-19T23:32:54.555781+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021phrvd.103f4017a": {
+      "bibcode": "2021PhRvD.103f4017A",
+      "citation_count": "72",
+      "checked_at": "2026-10-19T23:32:54.555809+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.103.064017": {
+      "bibcode": "2021PhRvD.103f4017A",
+      "citation_count": "72",
+      "checked_at": "2026-10-19T23:32:54.555809+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021apj...922...71a": {
+      "bibcode": "2021ApJ...922...71A",
+      "citation_count": "68",
+      "checked_at": "2026-10-19T23:32:54.555841+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ac0d52": {
+      "bibcode": "2021ApJ...922...71A",
+      "citation_count": "68",
+      "checked_at": "2026-10-19T23:32:54.555841+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021phrvl.126x1102a": {
+      "bibcode": "2021PhRvL.126x1102A",
+      "citation_count": "213",
+      "checked_at": "2026-10-19T23:32:54.555871+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.126.241102": {
+      "bibcode": "2021PhRvL.126x1102A",
+      "citation_count": "213",
+      "checked_at": "2026-10-19T23:32:54.555871+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021phrvd.104j2002s": {
+      "bibcode": "2021PhRvD.104j2002S",
+      "citation_count": "91",
+      "checked_at": "2026-10-19T23:32:54.555900+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.104.102002": {
+      "bibcode": "2021PhRvD.104j2002S",
+      "citation_count": "91",
+      "checked_at": "2026-10-19T23:32:54.555900+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021apj...913l..27a": {
+      "bibcode": "2021ApJ...913L..27A",
+      "citation_count": "58",
+      "checked_at": "2026-10-19T23:32:54.555931+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/abffcd": {
+      "bibcode": "2021ApJ...913L..27A",
+      "citation_count": "58",
+      "checked_at": "2026-10-19T23:32:54.555931+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021mls&t...2a1002c": {
+      "bibcode": "2021MLS&T...2a1002C",
+      "citation_count": "184",
+      "checked_at": "2026-10-19T23:32:54.555962+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/2632-2153/abb93a": {
+      "bibcode": "2021MLS&T...2a1002C",
+      "citation_count": "184",
+      "checked_at": "2026-10-19T23:32:54.555962+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021phrvx..11b1053a": {
+      "bibcode": "2021PhRvX..11b1053A",
+      "citation_count": "2559",
+      "checked_at": "2026-10-19T23:32:54.555997+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevx.11.021053": {
+      "bibcode": "2021PhRvX..11b1053A",
+      "citation_count": "2559",
+      "checked_at": "2026-10-19T23:32:54.555997+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/2632-2153/abea69": {
+      "bibcode": "",
+      "citation_count": "",
+      "checked_at": "2026-10-19T23:32:54.556027+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021apj...915l...5a": {
+      "bibcode": "2021ApJ...915L...5A",
+      "citation_count": "890",
+      "checked_at": "2026-10-19T23:32:54.556058+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ac082e": {
+      "bibcode": "2021ApJ...915L...5A",
+      "citation_count": "890",
+      "checked_at": "2026-10-19T23:32:54.556058+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021softx..1300658a": {
+      "bibcode": "2021SoftX..1300658A",
+      "citation_count": "573",
+      "checked_at": "2026-10-19T23:32:54.556087+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1016/j.softx.2021.100658": {
+      "bibcode": "2021SoftX..1300658A",
+      "citation_count": "573",
+      "checked_at": "2026-10-19T23:32:54.556087+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021apj...913l...7a": {
+      "bibcode": "2021ApJ...913L...7A",
+      "citation_count": "1015",
+      "checked_at": "2026-10-19T23:32:54.556114+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/abe949": {
+      "bibcode": "2021ApJ...913L...7A",
+      "citation_count": "1015",
+      "checked_at": "2026-10-19T23:32:54.556114+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021apj...915...86a": {
+      "bibcode": "2021ApJ...915...86A",
+      "citation_count": "55",
+      "checked_at": "2026-10-19T23:32:54.556143+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/abee15": {
+      "bibcode": "2021ApJ...915...86A",
+      "citation_count": "55",
+      "checked_at": "2026-10-19T23:32:54.556143+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021apj...923...14a": {
+      "bibcode": "2021ApJ...923...14A",
+      "citation_count": "220",
+      "checked_at": "2026-10-19T23:32:54.556176+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ac23db": {
+      "bibcode": "2021ApJ...923...14A",
+      "citation_count": "220",
+      "checked_at": "2026-10-19T23:32:54.556176+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021phrvd.104b2005a": {
+      "bibcode": "2021PhRvD.104b2005A",
+      "citation_count": "126",
+      "checked_at": "2026-10-19T23:32:54.556207+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.104.022005": {
+      "bibcode": "2021PhRvD.104b2005A",
+      "citation_count": "126",
+      "checked_at": "2026-10-19T23:32:54.556207+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021apj...921...80a": {
+      "bibcode": "2021ApJ...921...80A",
+      "citation_count": "81",
+      "checked_at": "2026-10-19T23:32:54.556236+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ac17ea": {
+      "bibcode": "2021ApJ...921...80A",
+      "citation_count": "81",
+      "checked_at": "2026-10-19T23:32:54.556236+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021phrvd.103l2002a": {
+      "bibcode": "2021PhRvD.103l2002A",
+      "citation_count": "943",
+      "checked_at": "2026-10-19T23:32:54.556264+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.103.122002": {
+      "bibcode": "2021PhRvD.103l2002A",
+      "citation_count": "943",
+      "checked_at": "2026-10-19T23:32:54.556264+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2021phrvd.104b2004a": {
+      "bibcode": "2021PhRvD.104b2004A",
+      "citation_count": "495",
+      "checked_at": "2026-10-19T23:32:54.556294+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.104.022004": {
+      "bibcode": "2021PhRvD.104b2004A",
+      "citation_count": "495",
+      "checked_at": "2026-10-19T23:32:54.556294+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020cqgra..37e5002a": {
+      "bibcode": "2020CQGra..37e5002A",
+      "citation_count": "379",
+      "checked_at": "2026-10-19T23:32:54.556406+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1361-6382/ab685e": {
+      "bibcode": "2020CQGra..37e5002A",
+      "citation_count": "379",
+      "checked_at": "2026-10-19T23:32:54.556406+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020apj...892l...3a": {
+      "bibcode": "2020ApJ...892L...3A",
+      "citation_count": "1794",
+      "checked_at": "2026-10-19T23:32:54.556464+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ab75f5": {
+      "bibcode": "2020ApJ...892L...3A",
+      "citation_count": "1794",
+      "checked_at": "2026-10-19T23:32:54.556464+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020phrvl.125j1102a": {
+      "bibcode": "2020PhRvL.125j1102A",
+      "citation_count": "1376",
+      "checked_at": "2026-10-19T23:32:54.556494+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.125.101102": {
+      "bibcode": "2020PhRvL.125j1102A",
+      "citation_count": "1376",
+      "checked_at": "2026-10-19T23:32:54.556494+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020apj...896l..44a": {
+      "bibcode": "2020ApJ...896L..44A",
+      "citation_count": "1947",
+      "checked_at": "2026-10-19T23:32:54.556526+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ab960f": {
+      "bibcode": "2020ApJ...896L..44A",
+      "citation_count": "1947",
+      "checked_at": "2026-10-19T23:32:54.556526+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020apj...902l..21a": {
+      "bibcode": "2020ApJ...902L..21A",
+      "citation_count": "104",
+      "checked_at": "2026-10-19T23:32:54.556554+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/abb655": {
+      "bibcode": "2020ApJ...902L..21A",
+      "citation_count": "104",
+      "checked_at": "2026-10-19T23:32:54.556554+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/2632-2153/ab527d": {
+      "bibcode": "",
+      "citation_count": "",
+      "checked_at": "2026-10-19T23:32:54.556583+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020cqgra..37d5006a": {
+      "bibcode": "2020CQGra..37d5006A",
+      "citation_count": "160",
+      "checked_at": "2026-10-19T23:32:54.556613+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1361-6382/ab5f7c": {
+      "bibcode": "2020CQGra..37d5006A",
+      "citation_count": "160",
+      "checked_at": "2026-10-19T23:32:54.556613+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020cqgra..37q5007f": {
+      "bibcode": "2020CQGra..37q5007F",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:54.556639+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1361-6382/ab9bba": {
+      "bibcode": "2020CQGra..37q5007F",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:54.556639+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020phrvd.101h4002a": {
+      "bibcode": "2020PhRvD.101h4002A",
+      "citation_count": "116",
+      "checked_at": "2026-10-19T23:32:54.556671+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.101.084002": {
+      "bibcode": "2020PhRvD.101h4002A",
+      "citation_count": "116",
+      "checked_at": "2026-10-19T23:32:54.556671+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2020apj...900l..13a": {
+      "bibcode": "2020ApJ...900L..13A",
+      "citation_count": "670",
+      "checked_at": "2026-10-19T23:32:54.556701+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/aba493": {
+      "bibcode": "2020ApJ...900L..13A",
+      "citation_count": "670",
+      "checked_at": "2026-10-19T23:32:54.556701+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...871...90b": {
+      "bibcode": "2019ApJ...871...90B",
+      "citation_count": "35",
+      "checked_at": "2026-10-19T23:32:54.556815+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/aaf726": {
+      "bibcode": "2019ApJ...871...90B",
+      "citation_count": "35",
+      "checked_at": "2026-10-19T23:32:54.556815+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvd.100b4017a": {
+      "bibcode": "2019PhRvD.100b4017A",
+      "citation_count": "119",
+      "checked_at": "2026-10-19T23:32:54.556844+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.100.024017": {
+      "bibcode": "2019PhRvD.100b4017A",
+      "citation_count": "119",
+      "checked_at": "2026-10-19T23:32:54.556844+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvd.100b4004a": {
+      "bibcode": "2019PhRvD.100b4004A",
+      "citation_count": "137",
+      "checked_at": "2026-10-19T23:32:54.556874+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.100.024004": {
+      "bibcode": "2019PhRvD.100b4004A",
+      "citation_count": "137",
+      "checked_at": "2026-10-19T23:32:54.556874+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvd..99j4033a": {
+      "bibcode": "2019PhRvD..99j4033A",
+      "citation_count": "41",
+      "checked_at": "2026-10-19T23:32:54.556907+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.99.104033": {
+      "bibcode": "2019PhRvD..99j4033A",
+      "citation_count": "41",
+      "checked_at": "2026-10-19T23:32:54.556907+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...882l..24a": {
+      "bibcode": "2019ApJ...882L..24A",
+      "citation_count": "975",
+      "checked_at": "2026-10-19T23:32:54.556936+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ab3800": {
+      "bibcode": "2019ApJ...882L..24A",
+      "citation_count": "975",
+      "checked_at": "2026-10-19T23:32:54.556936+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvl.122f1104a": {
+      "bibcode": "2019PhRvL.122f1104A",
+      "citation_count": "54",
+      "checked_at": "2026-10-19T23:32:54.556963+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.122.061104": {
+      "bibcode": "2019PhRvL.122f1104A",
+      "citation_count": "54",
+      "checked_at": "2026-10-19T23:32:54.556963+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvd.100f2001a": {
+      "bibcode": "2019PhRvD.100f2001A",
+      "citation_count": "82",
+      "checked_at": "2026-10-19T23:32:54.556993+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.100.062001": {
+      "bibcode": "2019PhRvD.100f2001A",
+      "citation_count": "82",
+      "checked_at": "2026-10-19T23:32:54.556993+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019ccoph..25..963.": {
+      "bibcode": "2019CCoPh..25..963.",
+      "citation_count": "33",
+      "checked_at": "2026-10-19T23:32:54.557020+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.4208/cicp.oa-2018-0092": {
+      "bibcode": "2019CCoPh..25..963.",
+      "citation_count": "33",
+      "checked_at": "2026-10-19T23:32:54.557020+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...876l...7s": {
+      "bibcode": "2019ApJ...876L...7S",
+      "citation_count": "318",
+      "checked_at": "2026-10-19T23:32:54.557052+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ab14f1": {
+      "bibcode": "2019ApJ...876L...7S",
+      "citation_count": "318",
+      "checked_at": "2026-10-19T23:32:54.557052+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvx...9c1040a": {
+      "bibcode": "2019PhRvX...9c1040A",
+      "citation_count": "3830",
+      "checked_at": "2026-10-19T23:32:54.557082+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevx.9.031040": {
+      "bibcode": "2019PhRvX...9c1040A",
+      "citation_count": "3830",
+      "checked_at": "2026-10-19T23:32:54.557082+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...875..161a": {
+      "bibcode": "2019ApJ...875..161A",
+      "citation_count": "101",
+      "checked_at": "2026-10-19T23:32:54.557113+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ab0e8f": {
+      "bibcode": "2019ApJ...875..161A",
+      "citation_count": "101",
+      "checked_at": "2026-10-19T23:32:54.557113+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvd..99l2002a": {
+      "bibcode": "2019PhRvD..99l2002A",
+      "citation_count": "79",
+      "checked_at": "2026-10-19T23:32:54.557141+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.99.122002": {
+      "bibcode": "2019PhRvD..99l2002A",
+      "citation_count": "79",
+      "checked_at": "2026-10-19T23:32:54.557141+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvx...9a1001a": {
+      "bibcode": "2019PhRvX...9a1001A",
+      "citation_count": "1375",
+      "checked_at": "2026-10-19T23:32:54.557168+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevx.9.011001": {
+      "bibcode": "2019PhRvX...9a1001A",
+      "citation_count": "1375",
+      "checked_at": "2026-10-19T23:32:54.557168+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...883..149a": {
+      "bibcode": "2019ApJ...883..149A",
+      "citation_count": "119",
+      "checked_at": "2026-10-19T23:32:54.557199+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ab3c2d": {
+      "bibcode": "2019ApJ...883..149A",
+      "citation_count": "119",
+      "checked_at": "2026-10-19T23:32:54.557199+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...870..134a": {
+      "bibcode": "2019ApJ...870..134A",
+      "citation_count": "52",
+      "checked_at": "2026-10-19T23:32:54.557234+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/aaf21d": {
+      "bibcode": "2019ApJ...870..134A",
+      "citation_count": "52",
+      "checked_at": "2026-10-19T23:32:54.557234+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvl.123p1102a": {
+      "bibcode": "2019PhRvL.123p1102A",
+      "citation_count": "181",
+      "checked_at": "2026-10-19T23:32:54.557261+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.123.161102": {
+      "bibcode": "2019PhRvL.123p1102A",
+      "citation_count": "181",
+      "checked_at": "2026-10-19T23:32:54.557261+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...874..163a": {
+      "bibcode": "2019ApJ...874..163A",
+      "citation_count": "51",
+      "checked_at": "2026-10-19T23:32:54.557290+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ab0e15": {
+      "bibcode": "2019ApJ...874..163A",
+      "citation_count": "51",
+      "checked_at": "2026-10-19T23:32:54.557290+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvd.100l2002a": {
+      "bibcode": "2019PhRvD.100l2002A",
+      "citation_count": "67",
+      "checked_at": "2026-10-19T23:32:54.557318+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.100.122002": {
+      "bibcode": "2019PhRvD.100l2002A",
+      "citation_count": "67",
+      "checked_at": "2026-10-19T23:32:54.557318+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...875..160a": {
+      "bibcode": "2019ApJ...875..160A",
+      "citation_count": "140",
+      "checked_at": "2026-10-19T23:32:54.557360+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ab0f3d": {
+      "bibcode": "2019ApJ...875..160A",
+      "citation_count": "140",
+      "checked_at": "2026-10-19T23:32:54.557360+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...886...75a": {
+      "bibcode": "2019ApJ...886...75A",
+      "citation_count": "37",
+      "checked_at": "2026-10-19T23:32:54.557392+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ab4b48": {
+      "bibcode": "2019ApJ...886...75A",
+      "citation_count": "37",
+      "checked_at": "2026-10-19T23:32:54.557392+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvd.100f4064a": {
+      "bibcode": "2019PhRvD.100f4064A",
+      "citation_count": "85",
+      "checked_at": "2026-10-19T23:32:54.557421+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.100.064064": {
+      "bibcode": "2019PhRvD.100f4064A",
+      "citation_count": "85",
+      "checked_at": "2026-10-19T23:32:54.557421+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvd.100f1101a": {
+      "bibcode": "2019PhRvD.100f1101A",
+      "citation_count": "383",
+      "checked_at": "2026-10-19T23:32:54.557460+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.100.061101": {
+      "bibcode": "2019PhRvD.100f1101A",
+      "citation_count": "383",
+      "checked_at": "2026-10-19T23:32:54.557460+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...875..122a": {
+      "bibcode": "2019ApJ...875..122A",
+      "citation_count": "65",
+      "checked_at": "2026-10-19T23:32:54.557490+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ab113b": {
+      "bibcode": "2019ApJ...875..122A",
+      "citation_count": "65",
+      "checked_at": "2026-10-19T23:32:54.557490+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...879...10a": {
+      "bibcode": "2019ApJ...879...10A",
+      "citation_count": "108",
+      "checked_at": "2026-10-19T23:32:54.557517+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ab20cb": {
+      "bibcode": "2019ApJ...879...10A",
+      "citation_count": "108",
+      "checked_at": "2026-10-19T23:32:54.557517+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvl.123a1102a": {
+      "bibcode": "2019PhRvL.123a1102A",
+      "citation_count": "711",
+      "checked_at": "2026-10-19T23:32:54.557543+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.123.011102": {
+      "bibcode": "2019PhRvL.123a1102A",
+      "citation_count": "711",
+      "checked_at": "2026-10-19T23:32:54.557543+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019phrvd.100j4036a": {
+      "bibcode": "2019PhRvD.100j4036A",
+      "citation_count": "945",
+      "checked_at": "2026-10-19T23:32:54.557572+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.100.104036": {
+      "bibcode": "2019PhRvD.100j4036A",
+      "citation_count": "945",
+      "checked_at": "2026-10-19T23:32:54.557572+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2019apj...880...55m": {
+      "bibcode": "2019ApJ...880...55M",
+      "citation_count": "15",
+      "checked_at": "2026-10-19T23:32:54.557601+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ab1f76": {
+      "bibcode": "2019ApJ...880...55M",
+      "citation_count": "15",
+      "checked_at": "2026-10-19T23:32:54.557601+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2018cqgra..35f5009a": {
+      "bibcode": "2018CQGra..35f5009A",
+      "citation_count": "32",
+      "checked_at": "2026-10-19T23:32:54.557633+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1361-6382/aaab76": {
+      "bibcode": "2018CQGra..35f5009A",
+      "citation_count": "32",
+      "checked_at": "2026-10-19T23:32:54.557633+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2018phrvd..97j2002a": {
+      "bibcode": "2018PhRvD..97j2002A",
+      "citation_count": "157",
+      "checked_at": "2026-10-19T23:32:54.557661+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.97.102002": {
+      "bibcode": "2018PhRvD..97j2002A",
+      "citation_count": "157",
+      "checked_at": "2026-10-19T23:32:54.557661+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2018cqgra..35f5010a": {
+      "bibcode": "2018CQGra..35f5010A",
+      "citation_count": "142",
+      "checked_at": "2026-10-19T23:32:54.557692+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1361-6382/aaaafa": {
+      "bibcode": "2018CQGra..35f5010A",
+      "citation_count": "142",
+      "checked_at": "2026-10-19T23:32:54.557692+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2018phrvl.120c1104a": {
+      "bibcode": "2018PhRvL.120c1104A",
+      "citation_count": "89",
+      "checked_at": "2026-10-19T23:32:54.557718+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.120.031104": {
+      "bibcode": "2018PhRvL.120c1104A",
+      "citation_count": "89",
+      "checked_at": "2026-10-19T23:32:54.557718+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2018phrvd..97j2003a": {
+      "bibcode": "2018PhRvD..97j2003A",
+      "citation_count": "50",
+      "checked_at": "2026-10-19T23:32:54.557747+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.97.102003": {
+      "bibcode": "2018PhRvD..97j2003A",
+      "citation_count": "50",
+      "checked_at": "2026-10-19T23:32:54.557747+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2018phrvl.120i1101a": {
+      "bibcode": "2018PhRvL.120i1101A",
+      "citation_count": "247",
+      "checked_at": "2026-10-19T23:32:54.557777+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.120.091101": {
+      "bibcode": "2018PhRvL.120i1101A",
+      "citation_count": "247",
+      "checked_at": "2026-10-19T23:32:54.557777+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2018phrvl.121p1101a": {
+      "bibcode": "2018PhRvL.121p1101A",
+      "citation_count": "2608",
+      "checked_at": "2026-10-19T23:32:54.557804+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.121.161101": {
+      "bibcode": "2018PhRvL.121p1101A",
+      "citation_count": "2608",
+      "checked_at": "2026-10-19T23:32:54.557804+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2018lrr....21....3a": {
+      "bibcode": "2018LRR....21....3A",
+      "citation_count": "1043",
+      "checked_at": "2026-10-19T23:32:54.557831+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1007/s41114-018-0012-9": {
+      "bibcode": "2018LRR....21....3A",
+      "citation_count": "1043",
+      "checked_at": "2026-10-19T23:32:54.557831+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2018phrvl.121w1103a": {
+      "bibcode": "2018PhRvL.121w1103A",
+      "citation_count": "129",
+      "checked_at": "2026-10-19T23:32:54.557873+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.121.231103": {
+      "bibcode": "2018PhRvL.121w1103A",
+      "citation_count": "129",
+      "checked_at": "2026-10-19T23:32:54.557873+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2018phrvl.120t1102a": {
+      "bibcode": "2018PhRvL.120t1102A",
+      "citation_count": "135",
+      "checked_at": "2026-10-19T23:32:54.557900+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.120.201102": {
+      "bibcode": "2018PhRvL.120t1102A",
+      "citation_count": "135",
+      "checked_at": "2026-10-19T23:32:54.557900+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017natur.551...85a": {
+      "bibcode": "2017Natur.551...85A",
+      "citation_count": "1338",
+      "checked_at": "2026-10-19T23:32:54.557926+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1038/nature24471": {
+      "bibcode": "2017Natur.551...85A",
+      "citation_count": "1338",
+      "checked_at": "2026-10-19T23:32:54.557926+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvd..96f2002a": {
+      "bibcode": "2017PhRvD..96f2002A",
+      "citation_count": "87",
+      "checked_at": "2026-10-19T23:32:54.557952+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.96.062002": {
+      "bibcode": "2017PhRvD..96f2002A",
+      "citation_count": "87",
+      "checked_at": "2026-10-19T23:32:54.557952+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvd..95d2003a": {
+      "bibcode": "2017PhRvD..95d2003A",
+      "citation_count": "100",
+      "checked_at": "2026-10-19T23:32:54.557979+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.95.042003": {
+      "bibcode": "2017PhRvD..95d2003A",
+      "citation_count": "100",
+      "checked_at": "2026-10-19T23:32:54.557979+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017ijmpa..3250082c": {
+      "bibcode": "2017IJMPA..3250082C",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.558005+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0217751x17500828": {
+      "bibcode": "2017IJMPA..3250082C",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.558005+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvd..95f2003a": {
+      "bibcode": "2017PhRvD..95f2003A",
+      "citation_count": "131",
+      "checked_at": "2026-10-19T23:32:54.558035+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.95.062003": {
+      "bibcode": "2017PhRvD..95f2003A",
+      "citation_count": "131",
+      "checked_at": "2026-10-19T23:32:54.558035+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017cqgra..34c4002p": {
+      "bibcode": "2017CQGra..34c4002P",
+      "citation_count": "71",
+      "checked_at": "2026-10-19T23:32:54.558067+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1361-6382/34/3/034002": {
+      "bibcode": "2017CQGra..34c4002P",
+      "citation_count": "71",
+      "checked_at": "2026-10-19T23:32:54.558067+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvl.118l1102a": {
+      "bibcode": "2017PhRvL.118l1102A",
+      "citation_count": "110",
+      "checked_at": "2026-10-19T23:32:54.558094+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.118.121102": {
+      "bibcode": "2017PhRvL.118l1102A",
+      "citation_count": "110",
+      "checked_at": "2026-10-19T23:32:54.558094+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017cqgra..34j4002a": {
+      "bibcode": "2017CQGra..34j4002A",
+      "citation_count": "153",
+      "checked_at": "2026-10-19T23:32:54.558122+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1361-6382/aa6854": {
+      "bibcode": "2017CQGra..34j4002A",
+      "citation_count": "153",
+      "checked_at": "2026-10-19T23:32:54.558122+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017apj...850l..39a": {
+      "bibcode": "2017ApJ...850L..39A",
+      "citation_count": "236",
+      "checked_at": "2026-10-19T23:32:54.558150+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/aa9478": {
+      "bibcode": "2017ApJ...850L..39A",
+      "citation_count": "236",
+      "checked_at": "2026-10-19T23:32:54.558150+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017cqgra..34d4001a": {
+      "bibcode": "2017CQGra..34d4001A",
+      "citation_count": "1266",
+      "checked_at": "2026-10-19T23:32:54.558179+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1361-6382/aa51f4": {
+      "bibcode": "2017CQGra..34d4001A",
+      "citation_count": "1266",
+      "checked_at": "2026-10-19T23:32:54.558179+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvd..96l2004a": {
+      "bibcode": "2017PhRvD..96l2004A",
+      "citation_count": "79",
+      "checked_at": "2026-10-19T23:32:54.558207+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.96.122004": {
+      "bibcode": "2017PhRvD..96l2004A",
+      "citation_count": "79",
+      "checked_at": "2026-10-19T23:32:54.558207+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvd..96l2006a": {
+      "bibcode": "2017PhRvD..96l2006A",
+      "citation_count": "67",
+      "checked_at": "2026-10-19T23:32:54.558236+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.96.122006": {
+      "bibcode": "2017PhRvD..96l2006A",
+      "citation_count": "67",
+      "checked_at": "2026-10-19T23:32:54.558236+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017apj...839...12a": {
+      "bibcode": "2017ApJ...839...12A",
+      "citation_count": "150",
+      "checked_at": "2026-10-19T23:32:54.558263+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/aa677f": {
+      "bibcode": "2017ApJ...839...12A",
+      "citation_count": "150",
+      "checked_at": "2026-10-19T23:32:54.558263+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvl.118v1101a": {
+      "bibcode": "2017PhRvL.118v1101A",
+      "citation_count": "2462",
+      "checked_at": "2026-10-19T23:32:54.558290+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.118.221101": {
+      "bibcode": "2017PhRvL.118v1101A",
+      "citation_count": "2462",
+      "checked_at": "2026-10-19T23:32:54.558290+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017apj...851l..35a": {
+      "bibcode": "2017ApJ...851L..35A",
+      "citation_count": "1188",
+      "checked_at": "2026-10-19T23:32:54.558317+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/aa9f0c": {
+      "bibcode": "2017ApJ...851L..35A",
+      "citation_count": "1188",
+      "checked_at": "2026-10-19T23:32:54.558317+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvl.119n1101a": {
+      "bibcode": "2017PhRvL.119n1101A",
+      "citation_count": "2073",
+      "checked_at": "2026-10-19T23:32:54.558345+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.119.141101": {
+      "bibcode": "2017PhRvL.119n1101A",
+      "citation_count": "2073",
+      "checked_at": "2026-10-19T23:32:54.558345+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvl.119p1101a": {
+      "bibcode": "2017PhRvL.119p1101A",
+      "citation_count": "9883",
+      "checked_at": "2026-10-19T23:32:54.558372+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.119.161101": {
+      "bibcode": "2017PhRvL.119p1101A",
+      "citation_count": "9883",
+      "checked_at": "2026-10-19T23:32:54.558372+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017apj...848l..13a": {
+      "bibcode": "2017ApJ...848L..13A",
+      "citation_count": "3463",
+      "checked_at": "2026-10-19T23:32:54.558404+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/aa920c": {
+      "bibcode": "2017ApJ...848L..13A",
+      "citation_count": "3463",
+      "checked_at": "2026-10-19T23:32:54.558404+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017apj...848l..12a": {
+      "bibcode": "2017ApJ...848L..12A",
+      "citation_count": "4190",
+      "checked_at": "2026-10-19T23:32:54.558431+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/aa91c9": {
+      "bibcode": "2017ApJ...848L..12A",
+      "citation_count": "4190",
+      "checked_at": "2026-10-19T23:32:54.558431+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017cgrc.book..291a": {
+      "bibcode": "2017cgrc.book..291A",
+      "citation_count": "27",
+      "checked_at": "2026-10-19T23:32:54.558466+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/9789814699662_0011": {
+      "bibcode": "2017cgrc.book..291A",
+      "citation_count": "27",
+      "checked_at": "2026-10-19T23:32:54.558466+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017apj...850l..40a": {
+      "bibcode": "2017ApJ...850L..40A",
+      "citation_count": "110",
+      "checked_at": "2026-10-19T23:32:54.558496+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/aa93fc": {
+      "bibcode": "2017ApJ...850L..40A",
+      "citation_count": "110",
+      "checked_at": "2026-10-19T23:32:54.558496+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017apj...841...89a": {
+      "bibcode": "2017ApJ...841...89A",
+      "citation_count": "70",
+      "checked_at": "2026-10-19T23:32:54.558527+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/aa6c47": {
+      "bibcode": "2017ApJ...841...89A",
+      "citation_count": "70",
+      "checked_at": "2026-10-19T23:32:54.558527+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017apj...850l..35a": {
+      "bibcode": "2017ApJ...850L..35A",
+      "citation_count": "209",
+      "checked_at": "2026-10-19T23:32:54.558556+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/aa9aed": {
+      "bibcode": "2017ApJ...850L..35A",
+      "citation_count": "209",
+      "checked_at": "2026-10-19T23:32:54.558556+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvd..96b2005a": {
+      "bibcode": "2017PhRvD..96b2005A",
+      "citation_count": "58",
+      "checked_at": "2026-10-19T23:32:54.558585+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.96.022005": {
+      "bibcode": "2017PhRvD..96b2005A",
+      "citation_count": "58",
+      "checked_at": "2026-10-19T23:32:54.558585+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017apj...851l..16a": {
+      "bibcode": "2017ApJ...851L..16A",
+      "citation_count": "267",
+      "checked_at": "2026-10-19T23:32:54.558615+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/aa9a35": {
+      "bibcode": "2017ApJ...851L..16A",
+      "citation_count": "267",
+      "checked_at": "2026-10-19T23:32:54.558615+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvd..95h2005a": {
+      "bibcode": "2017PhRvD..95h2005A",
+      "citation_count": "28",
+      "checked_at": "2026-10-19T23:32:54.558642+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.95.082005": {
+      "bibcode": "2017PhRvD..95h2005A",
+      "citation_count": "28",
+      "checked_at": "2026-10-19T23:32:54.558642+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvd..95l2003a": {
+      "bibcode": "2017PhRvD..95l2003A",
+      "citation_count": "78",
+      "checked_at": "2026-10-19T23:32:54.558671+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.95.122003": {
+      "bibcode": "2017PhRvD..95l2003A",
+      "citation_count": "78",
+      "checked_at": "2026-10-19T23:32:54.558671+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvd..96b2001a": {
+      "bibcode": "2017PhRvD..96b2001A",
+      "citation_count": "94",
+      "checked_at": "2026-10-19T23:32:54.558698+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.96.022001": {
+      "bibcode": "2017PhRvD..96b2001A",
+      "citation_count": "94",
+      "checked_at": "2026-10-19T23:32:54.558698+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017ncimc..40..124c": {
+      "bibcode": "2017NCimC..40..124C",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:54.558727+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1393/ncc/i2017-17124-4": {
+      "bibcode": "2017NCimC..40..124C",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:54.558727+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017anp...52900209a": {
+      "bibcode": "2017AnP...52900209A",
+      "citation_count": "129",
+      "checked_at": "2026-10-19T23:32:54.558753+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1002/andp.201600209": {
+      "bibcode": "2017AnP...52900209A",
+      "citation_count": "129",
+      "checked_at": "2026-10-19T23:32:54.558753+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017apj...847...47a": {
+      "bibcode": "2017ApJ...847...47A",
+      "citation_count": "59",
+      "checked_at": "2026-10-19T23:32:54.558782+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/aa86f0": {
+      "bibcode": "2017ApJ...847...47A",
+      "citation_count": "59",
+      "checked_at": "2026-10-19T23:32:54.558782+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2017phrvl.118l1101a": {
+      "bibcode": "2017PhRvL.118l1101A",
+      "citation_count": "283",
+      "checked_at": "2026-10-19T23:32:54.558811+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.118.121101": {
+      "bibcode": "2017PhRvL.118l1101A",
+      "citation_count": "283",
+      "checked_at": "2026-10-19T23:32:54.558811+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvd..94j2001a": {
+      "bibcode": "2016PhRvD..94j2001A",
+      "citation_count": "81",
+      "checked_at": "2026-10-19T23:32:54.558840+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.94.102001": {
+      "bibcode": "2016PhRvD..94j2001A",
+      "citation_count": "81",
+      "checked_at": "2026-10-19T23:32:54.558840+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvd..93d2005a": {
+      "bibcode": "2016PhRvD..93d2005A",
+      "citation_count": "34",
+      "checked_at": "2026-10-19T23:32:54.558869+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.93.042005": {
+      "bibcode": "2016PhRvD..93d2005A",
+      "citation_count": "34",
+      "checked_at": "2026-10-19T23:32:54.558869+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016apj...818l..22a": {
+      "bibcode": "2016ApJ...818L..22A",
+      "citation_count": "721",
+      "checked_at": "2026-10-19T23:32:54.558897+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8205/818/2/l22": {
+      "bibcode": "2016ApJ...818L..22A",
+      "citation_count": "721",
+      "checked_at": "2026-10-19T23:32:54.558897+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvx...6d1015a": {
+      "bibcode": "2016PhRvX...6d1015A",
+      "citation_count": "1329",
+      "checked_at": "2026-10-19T23:32:54.558923+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevx.6.041015": {
+      "bibcode": "2016PhRvX...6d1015A",
+      "citation_count": "1329",
+      "checked_at": "2026-10-19T23:32:54.558923+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016cqgra..33m4001a": {
+      "bibcode": "2016CQGra..33m4001A",
+      "citation_count": "342",
+      "checked_at": "2026-10-19T23:32:54.558953+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/33/13/134001": {
+      "bibcode": "2016CQGra..33m4001A",
+      "citation_count": "342",
+      "checked_at": "2026-10-19T23:32:54.558953+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvd..94d2002a": {
+      "bibcode": "2016PhRvD..94d2002A",
+      "citation_count": "41",
+      "checked_at": "2026-10-19T23:32:54.558981+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.94.042002": {
+      "bibcode": "2016PhRvD..94d2002A",
+      "citation_count": "41",
+      "checked_at": "2026-10-19T23:32:54.558981+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvd..94f4035a": {
+      "bibcode": "2016PhRvD..94f4035A",
+      "citation_count": "159",
+      "checked_at": "2026-10-19T23:32:54.559011+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.94.064035": {
+      "bibcode": "2016PhRvD..94f4035A",
+      "citation_count": "159",
+      "checked_at": "2026-10-19T23:32:54.559011+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvd..93d2007a": {
+      "bibcode": "2016PhRvD..93d2007A",
+      "citation_count": "37",
+      "checked_at": "2026-10-19T23:32:54.559038+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.93.042007": {
+      "bibcode": "2016PhRvD..93d2007A",
+      "citation_count": "37",
+      "checked_at": "2026-10-19T23:32:54.559038+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvd..93l2003a": {
+      "bibcode": "2016PhRvD..93l2003A",
+      "citation_count": "513",
+      "checked_at": "2026-10-19T23:32:54.559066+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.93.122003": {
+      "bibcode": "2016PhRvD..93l2003A",
+      "citation_count": "513",
+      "checked_at": "2026-10-19T23:32:54.559066+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvl.116m1102a": {
+      "bibcode": "2016PhRvL.116m1102A",
+      "citation_count": "371",
+      "checked_at": "2026-10-19T23:32:54.559093+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.116.131102": {
+      "bibcode": "2016PhRvL.116m1102A",
+      "citation_count": "371",
+      "checked_at": "2026-10-19T23:32:54.559093+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvl.116m1103a": {
+      "bibcode": "2016PhRvL.116m1103A",
+      "citation_count": "721",
+      "checked_at": "2026-10-19T23:32:54.559120+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.116.131103": {
+      "bibcode": "2016PhRvL.116m1103A",
+      "citation_count": "721",
+      "checked_at": "2026-10-19T23:32:54.559120+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvl.116x1103a": {
+      "bibcode": "2016PhRvL.116x1103A",
+      "citation_count": "3398",
+      "checked_at": "2026-10-19T23:32:54.559148+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.116.241103": {
+      "bibcode": "2016PhRvL.116x1103A",
+      "citation_count": "3398",
+      "checked_at": "2026-10-19T23:32:54.559148+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvd..93l2010a": {
+      "bibcode": "2016PhRvD..93l2010A",
+      "citation_count": "115",
+      "checked_at": "2026-10-19T23:32:54.559176+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.93.122010": {
+      "bibcode": "2016PhRvD..93l2010A",
+      "citation_count": "115",
+      "checked_at": "2026-10-19T23:32:54.559176+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvx...6d1014a": {
+      "bibcode": "2016PhRvX...6d1014A",
+      "citation_count": "146",
+      "checked_at": "2026-10-19T23:32:54.559204+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevx.6.041014": {
+      "bibcode": "2016PhRvX...6d1014A",
+      "citation_count": "146",
+      "checked_at": "2026-10-19T23:32:54.559204+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016apj...826l..13a": {
+      "bibcode": "2016ApJ...826L..13A",
+      "citation_count": "269",
+      "checked_at": "2026-10-19T23:32:54.559233+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8205/826/1/l13": {
+      "bibcode": "2016ApJ...826L..13A",
+      "citation_count": "269",
+      "checked_at": "2026-10-19T23:32:54.559233+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvl.116f1102a": {
+      "bibcode": "2016PhRvL.116f1102A",
+      "citation_count": "13790",
+      "checked_at": "2026-10-19T23:32:54.559259+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.116.061102": {
+      "bibcode": "2016PhRvL.116f1102A",
+      "citation_count": "13790",
+      "checked_at": "2026-10-19T23:32:54.559259+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvd..93l2004a": {
+      "bibcode": "2016PhRvD..93l2004A",
+      "citation_count": "168",
+      "checked_at": "2026-10-19T23:32:54.559286+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.93.122004": {
+      "bibcode": "2016PhRvD..93l2004A",
+      "citation_count": "168",
+      "checked_at": "2026-10-19T23:32:54.559286+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvl.116x1102a": {
+      "bibcode": "2016PhRvL.116x1102A",
+      "citation_count": "1039",
+      "checked_at": "2026-10-19T23:32:54.559312+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.116.241102": {
+      "bibcode": "2016PhRvL.116x1102A",
+      "citation_count": "1039",
+      "checked_at": "2026-10-19T23:32:54.559312+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvd..94j2002a": {
+      "bibcode": "2016PhRvD..94j2002A",
+      "citation_count": "35",
+      "checked_at": "2026-10-19T23:32:54.559345+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.94.102002": {
+      "bibcode": "2016PhRvD..94j2002A",
+      "citation_count": "35",
+      "checked_at": "2026-10-19T23:32:54.559345+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvd..93l2008a": {
+      "bibcode": "2016PhRvD..93l2008A",
+      "citation_count": "23",
+      "checked_at": "2026-10-19T23:32:54.559375+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.93.122008": {
+      "bibcode": "2016PhRvD..93l2008A",
+      "citation_count": "23",
+      "checked_at": "2026-10-19T23:32:54.559375+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvd..93d2006a": {
+      "bibcode": "2016PhRvD..93d2006A",
+      "citation_count": "20",
+      "checked_at": "2026-10-19T23:32:54.559404+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.93.042006": {
+      "bibcode": "2016PhRvD..93d2006A",
+      "citation_count": "20",
+      "checked_at": "2026-10-19T23:32:54.559404+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016apjs..225....8a": {
+      "bibcode": "2016ApJS..225....8A",
+      "citation_count": "54",
+      "checked_at": "2026-10-19T23:32:54.559431+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/0067-0049/225/1/8": {
+      "bibcode": "2016ApJS..225....8A",
+      "citation_count": "54",
+      "checked_at": "2026-10-19T23:32:54.559431+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016apjs..227...14a": {
+      "bibcode": "2016ApJS..227...14A",
+      "citation_count": "86",
+      "checked_at": "2026-10-19T23:32:54.559478+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/0067-0049/227/2/14": {
+      "bibcode": "2016ApJS..227...14A",
+      "citation_count": "86",
+      "checked_at": "2026-10-19T23:32:54.559478+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016phrvl.116v1101a": {
+      "bibcode": "2016PhRvL.116v1101A",
+      "citation_count": "1870",
+      "checked_at": "2026-10-19T23:32:54.559504+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.116.221101": {
+      "bibcode": "2016PhRvL.116v1101A",
+      "citation_count": "1870",
+      "checked_at": "2026-10-19T23:32:54.559504+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016apj...833l...1a": {
+      "bibcode": "2016ApJ...833L...1A",
+      "citation_count": "368",
+      "checked_at": "2026-10-19T23:32:54.559532+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8205/833/1/l1": {
+      "bibcode": "2016ApJ...833L...1A",
+      "citation_count": "368",
+      "checked_at": "2026-10-19T23:32:54.559532+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2016apj...832l..21a": {
+      "bibcode": "2016ApJ...832L..21A",
+      "citation_count": "173",
+      "checked_at": "2026-10-19T23:32:54.559561+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8205/832/2/l21": {
+      "bibcode": "2016ApJ...832L..21A",
+      "citation_count": "173",
+      "checked_at": "2026-10-19T23:32:54.559561+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2015cqgra..32g4001l": {
+      "bibcode": "2015CQGra..32g4001L",
+      "citation_count": "4076",
+      "checked_at": "2026-10-19T23:32:54.559590+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/32/7/074001": {
+      "bibcode": "2015CQGra..32g4001L",
+      "citation_count": "4076",
+      "checked_at": "2026-10-19T23:32:54.559590+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2015jhep...11..185h": {
+      "bibcode": "2015JHEP...11..185H",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:54.559618+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1007/jhep11(2015)185": {
+      "bibcode": "2015JHEP...11..185H",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:54.559618+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2015cqgra..32k5012a": {
+      "bibcode": "2015CQGra..32k5012A",
+      "citation_count": "927",
+      "checked_at": "2026-10-19T23:32:54.559667+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/32/11/115012": {
+      "bibcode": "2015CQGra..32k5012A",
+      "citation_count": "927",
+      "checked_at": "2026-10-19T23:32:54.559667+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2015cqgra..32u5012p": {
+      "bibcode": "2015CQGra..32u5012P",
+      "citation_count": "86",
+      "checked_at": "2026-10-19T23:32:54.559695+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/32/21/215012": {
+      "bibcode": "2015CQGra..32u5012P",
+      "citation_count": "86",
+      "checked_at": "2026-10-19T23:32:54.559695+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2015phrvd..91f2008a": {
+      "bibcode": "2015PhRvD..91f2008A",
+      "citation_count": "54",
+      "checked_at": "2026-10-19T23:32:54.559722+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.91.062008": {
+      "bibcode": "2015PhRvD..91f2008A",
+      "citation_count": "54",
+      "checked_at": "2026-10-19T23:32:54.559722+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2015phrvd..91b2004a": {
+      "bibcode": "2015PhRvD..91b2004A",
+      "citation_count": "48",
+      "checked_at": "2026-10-19T23:32:54.559751+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.91.022004": {
+      "bibcode": "2015PhRvD..91b2004A",
+      "citation_count": "48",
+      "checked_at": "2026-10-19T23:32:54.559751+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2015apj...813...39a": {
+      "bibcode": "2015ApJ...813...39A",
+      "citation_count": "78",
+      "checked_at": "2026-10-19T23:32:54.559777+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/813/1/39": {
+      "bibcode": "2015ApJ...813...39A",
+      "citation_count": "78",
+      "checked_at": "2026-10-19T23:32:54.559777+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2015phrvd..91b2003a": {
+      "bibcode": "2015PhRvD..91b2003A",
+      "citation_count": "49",
+      "checked_at": "2026-10-19T23:32:54.559818+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.91.022003": {
+      "bibcode": "2015PhRvD..91b2003A",
+      "citation_count": "49",
+      "checked_at": "2026-10-19T23:32:54.559818+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014cqgra..31h5014a": {
+      "bibcode": "2014CQGra..31h5014A",
+      "citation_count": "25",
+      "checked_at": "2026-10-19T23:32:54.559846+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/31/8/085014": {
+      "bibcode": "2014CQGra..31h5014A",
+      "citation_count": "25",
+      "checked_at": "2026-10-19T23:32:54.559846+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014phrvl.112m1101a": {
+      "bibcode": "2014PhRvL.112m1101A",
+      "citation_count": "76",
+      "checked_at": "2026-10-19T23:32:54.559873+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.112.131101": {
+      "bibcode": "2014PhRvL.112m1101A",
+      "citation_count": "76",
+      "checked_at": "2026-10-19T23:32:54.559873+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014apjs..211....7a": {
+      "bibcode": "2014ApJS..211....7A",
+      "citation_count": "59",
+      "checked_at": "2026-10-19T23:32:54.559900+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0067-0049/211/1/7": {
+      "bibcode": "2014ApJS..211....7A",
+      "citation_count": "59",
+      "checked_at": "2026-10-19T23:32:54.559900+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014phrvd..90f2010a": {
+      "bibcode": "2014PhRvD..90f2010A",
+      "citation_count": "64",
+      "checked_at": "2026-10-19T23:32:54.559928+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.90.062010": {
+      "bibcode": "2014PhRvD..90f2010A",
+      "citation_count": "64",
+      "checked_at": "2026-10-19T23:32:54.559928+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014apj...785..119a": {
+      "bibcode": "2014ApJ...785..119A",
+      "citation_count": "148",
+      "checked_at": "2026-10-19T23:32:54.559958+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/785/2/119": {
+      "bibcode": "2014ApJ...785..119A",
+      "citation_count": "148",
+      "checked_at": "2026-10-19T23:32:54.559958+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014cqgra..31p5014a": {
+      "bibcode": "2014CQGra..31p5014A",
+      "citation_count": "40",
+      "checked_at": "2026-10-19T23:32:54.559990+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/31/16/165014": {
+      "bibcode": "2014CQGra..31p5014A",
+      "citation_count": "40",
+      "checked_at": "2026-10-19T23:32:54.559990+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014phrvl.113w1101a": {
+      "bibcode": "2014PhRvL.113w1101A",
+      "citation_count": "98",
+      "checked_at": "2026-10-19T23:32:54.560017+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.113.231101": {
+      "bibcode": "2014PhRvL.113w1101A",
+      "citation_count": "98",
+      "checked_at": "2026-10-19T23:32:54.560017+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014phrvd..89l2004a": {
+      "bibcode": "2014PhRvD..89l2004A",
+      "citation_count": "38",
+      "checked_at": "2026-10-19T23:32:54.560047+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.89.122004": {
+      "bibcode": "2014PhRvD..89l2004A",
+      "citation_count": "38",
+      "checked_at": "2026-10-19T23:32:54.560047+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014phrvd..90j2002a": {
+      "bibcode": "2014PhRvD..90j2002A",
+      "citation_count": "41",
+      "checked_at": "2026-10-19T23:32:54.560077+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.90.102002": {
+      "bibcode": "2014PhRvD..90j2002A",
+      "citation_count": "41",
+      "checked_at": "2026-10-19T23:32:54.560077+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014phrvd..89l2003a": {
+      "bibcode": "2014PhRvD..89l2003A",
+      "citation_count": "38",
+      "checked_at": "2026-10-19T23:32:54.560106+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.89.122003": {
+      "bibcode": "2014PhRvD..89l2003A",
+      "citation_count": "38",
+      "checked_at": "2026-10-19T23:32:54.560106+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014phrvd..89j2006a": {
+      "bibcode": "2014PhRvD..89j2006A",
+      "citation_count": "34",
+      "checked_at": "2026-10-19T23:32:54.560135+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.89.102006": {
+      "bibcode": "2014PhRvD..89j2006A",
+      "citation_count": "34",
+      "checked_at": "2026-10-19T23:32:54.560135+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014phrvl.113a1102a": {
+      "bibcode": "2014PhRvL.113a1102A",
+      "citation_count": "43",
+      "checked_at": "2026-10-19T23:32:54.560166+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.113.011102": {
+      "bibcode": "2014PhRvL.113a1102A",
+      "citation_count": "43",
+      "checked_at": "2026-10-19T23:32:54.560166+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2014cqgra..31k5004a": {
+      "bibcode": "2014CQGra..31k5004A",
+      "citation_count": "70",
+      "checked_at": "2026-10-19T23:32:54.560197+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/31/11/115004": {
+      "bibcode": "2014CQGra..31k5004A",
+      "citation_count": "70",
+      "checked_at": "2026-10-19T23:32:54.560197+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2013jcap...06..008a": {
+      "bibcode": "2013JCAP...06..008A",
+      "citation_count": "58",
+      "checked_at": "2026-10-19T23:32:54.560225+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2013/06/008": {
+      "bibcode": "2013JCAP...06..008A",
+      "citation_count": "58",
+      "checked_at": "2026-10-19T23:32:54.560225+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2013apj...767..140p": {
+      "bibcode": "2013ApJ...767..140P",
+      "citation_count": "49",
+      "checked_at": "2026-10-19T23:32:54.560253+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/767/2/140": {
+      "bibcode": "2013ApJ...767..140P",
+      "citation_count": "49",
+      "checked_at": "2026-10-19T23:32:54.560253+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2013phrvd..88j2002a": {
+      "bibcode": "2013PhRvD..88j2002A",
+      "citation_count": "67",
+      "checked_at": "2026-10-19T23:32:54.560279+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.88.102002": {
+      "bibcode": "2013PhRvD..88j2002A",
+      "citation_count": "67",
+      "checked_at": "2026-10-19T23:32:54.560279+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2013phrvd..87d2001a": {
+      "bibcode": "2013PhRvD..87d2001A",
+      "citation_count": "91",
+      "checked_at": "2026-10-19T23:32:54.560306+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.87.042001": {
+      "bibcode": "2013PhRvD..87d2001A",
+      "citation_count": "91",
+      "checked_at": "2026-10-19T23:32:54.560306+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2013napho...7..613a": {
+      "bibcode": "2013NaPho...7..613A",
+      "citation_count": "1084",
+      "checked_at": "2026-10-19T23:32:54.560336+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1038/nphoton.2013.177": {
+      "bibcode": "2013NaPho...7..613A",
+      "citation_count": "1084",
+      "checked_at": "2026-10-19T23:32:54.560336+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2013phrvd..88f2001a": {
+      "bibcode": "2013PhRvD..88f2001A",
+      "citation_count": "157",
+      "checked_at": "2026-10-19T23:32:54.560367+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.88.062001": {
+      "bibcode": "2013PhRvD..88f2001A",
+      "citation_count": "157",
+      "checked_at": "2026-10-19T23:32:54.560367+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2013phrvd..87b2002a": {
+      "bibcode": "2013PhRvD..87b2002A",
+      "citation_count": "106",
+      "checked_at": "2026-10-19T23:32:54.560397+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.87.022002": {
+      "bibcode": "2013PhRvD..87b2002A",
+      "citation_count": "106",
+      "checked_at": "2026-10-19T23:32:54.560397+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012phrvd..85b2001a": {
+      "bibcode": "2012PhRvD..85b2001A",
+      "citation_count": "78",
+      "checked_at": "2026-10-19T23:32:54.560471+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.85.022001": {
+      "bibcode": "2012PhRvD..85b2001A",
+      "citation_count": "78",
+      "checked_at": "2026-10-19T23:32:54.560471+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012phrvd..85l2007a": {
+      "bibcode": "2012PhRvD..85l2007A",
+      "citation_count": "114",
+      "checked_at": "2026-10-19T23:32:54.560499+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.85.122007": {
+      "bibcode": "2012PhRvD..85l2007A",
+      "citation_count": "114",
+      "checked_at": "2026-10-19T23:32:54.560499+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012a&a...541a.155a": {
+      "bibcode": "2012A&A...541A.155A",
+      "citation_count": "78",
+      "checked_at": "2026-10-19T23:32:54.560535+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1051/0004-6361/201218860": {
+      "bibcode": "2012A&A...541A.155A",
+      "citation_count": "78",
+      "checked_at": "2026-10-19T23:32:54.560535+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012a&a...539a.124l": {
+      "bibcode": "2012A&A...539A.124L",
+      "citation_count": "109",
+      "checked_at": "2026-10-19T23:32:54.560571+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1051/0004-6361/201118219": {
+      "bibcode": "2012A&A...539A.124L",
+      "citation_count": "109",
+      "checked_at": "2026-10-19T23:32:54.560571+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012apj...755....2a": {
+      "bibcode": "2012ApJ...755....2A",
+      "citation_count": "84",
+      "checked_at": "2026-10-19T23:32:54.560599+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/755/1/2": {
+      "bibcode": "2012ApJ...755....2A",
+      "citation_count": "84",
+      "checked_at": "2026-10-19T23:32:54.560599+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012phrvd..85j2004a": {
+      "bibcode": "2012PhRvD..85j2004A",
+      "citation_count": "58",
+      "checked_at": "2026-10-19T23:32:54.560626+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.85.102004": {
+      "bibcode": "2012PhRvD..85j2004A",
+      "citation_count": "58",
+      "checked_at": "2026-10-19T23:32:54.560626+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012phrvd..85h2002a": {
+      "bibcode": "2012PhRvD..85h2002A",
+      "citation_count": "218",
+      "checked_at": "2026-10-19T23:32:54.560658+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.85.082002": {
+      "bibcode": "2012PhRvD..85h2002A",
+      "citation_count": "218",
+      "checked_at": "2026-10-19T23:32:54.560658+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012apj...760...12a": {
+      "bibcode": "2012ApJ...760...12A",
+      "citation_count": "121",
+      "checked_at": "2026-10-19T23:32:54.560692+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/760/1/12": {
+      "bibcode": "2012ApJ...760...12A",
+      "citation_count": "121",
+      "checked_at": "2026-10-19T23:32:54.560692+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012apjs..203...28e": {
+      "bibcode": "2012ApJS..203...28E",
+      "citation_count": "65",
+      "checked_at": "2026-10-19T23:32:54.560718+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0067-0049/203/2/28": {
+      "bibcode": "2012ApJS..203...28E",
+      "citation_count": "65",
+      "checked_at": "2026-10-19T23:32:54.560718+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012cqgra..29o5002a": {
+      "bibcode": "2012CQGra..29o5002A",
+      "citation_count": "85",
+      "checked_at": "2026-10-19T23:32:54.560745+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/29/15/155002": {
+      "bibcode": "2012CQGra..29o5002A",
+      "citation_count": "85",
+      "checked_at": "2026-10-19T23:32:54.560745+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2012phrvd..85l2001a": {
+      "bibcode": "2012PhRvD..85l2001A",
+      "citation_count": "52",
+      "checked_at": "2026-10-19T23:32:54.560778+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.85.122001": {
+      "bibcode": "2012PhRvD..85l2001A",
+      "citation_count": "52",
+      "checked_at": "2026-10-19T23:32:54.560778+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2011natph...7..962l": {
+      "bibcode": "2011NatPh...7..962L",
+      "citation_count": "720",
+      "checked_at": "2026-10-19T23:32:54.560806+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1038/nphys2083": {
+      "bibcode": "2011NatPh...7..962L",
+      "citation_count": "720",
+      "checked_at": "2026-10-19T23:32:54.560806+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2011phrvd..83d2001a": {
+      "bibcode": "2011PhRvD..83d2001A",
+      "citation_count": "73",
+      "checked_at": "2026-10-19T23:32:54.560834+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.83.042001": {
+      "bibcode": "2011PhRvD..83d2001A",
+      "citation_count": "73",
+      "checked_at": "2026-10-19T23:32:54.560834+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2011apj...737...93a": {
+      "bibcode": "2011ApJ...737...93A",
+      "citation_count": "93",
+      "checked_at": "2026-10-19T23:32:54.560861+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/737/2/93": {
+      "bibcode": "2011ApJ...737...93A",
+      "citation_count": "93",
+      "checked_at": "2026-10-19T23:32:54.560861+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2011phrvl.107a1102a": {
+      "bibcode": "2011PhRvL.107A1102A",
+      "citation_count": "101",
+      "checked_at": "2026-10-19T23:32:54.560887+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.107.271102": {
+      "bibcode": "2011PhRvL.107A1102A",
+      "citation_count": "101",
+      "checked_at": "2026-10-19T23:32:54.560887+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2011apj...734l..35a": {
+      "bibcode": "2011ApJ...734L..35A",
+      "citation_count": "75",
+      "checked_at": "2026-10-19T23:32:54.560914+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/2041-8205/734/2/l35": {
+      "bibcode": "2011ApJ...734L..35A",
+      "citation_count": "75",
+      "checked_at": "2026-10-19T23:32:54.560914+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2011phrvd..83l2005a": {
+      "bibcode": "2011PhRvD..83l2005A",
+      "citation_count": "113",
+      "checked_at": "2026-10-19T23:32:54.560940+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.83.122005": {
+      "bibcode": "2011PhRvD..83l2005A",
+      "citation_count": "113",
+      "checked_at": "2026-10-19T23:32:54.560940+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010phrvd..81j2001a": {
+      "bibcode": "2010PhRvD..81j2001A",
+      "citation_count": "120",
+      "checked_at": "2026-10-19T23:32:54.561000+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.81.102001": {
+      "bibcode": "2010PhRvD..81j2001A",
+      "citation_count": "120",
+      "checked_at": "2026-10-19T23:32:54.561000+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010jphcs.203a2115c": {
+      "bibcode": "2010JPhCS.203a2115C",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.561029+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1742-6596/203/1/012115": {
+      "bibcode": "2010JPhCS.203a2115C",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.561029+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010jphcs.228a2001c": {
+      "bibcode": "2010JPhCS.228a2001C",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.561055+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1742-6596/228/1/012001": {
+      "bibcode": "2010JPhCS.228a2001C",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.561055+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010nimpa.624..223a": {
+      "bibcode": "2010NIMPA.624..223A",
+      "citation_count": "128",
+      "checked_at": "2026-10-19T23:32:54.561101+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1016/j.nima.2010.07.089": {
+      "bibcode": "2010NIMPA.624..223A",
+      "citation_count": "128",
+      "checked_at": "2026-10-19T23:32:54.561101+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010apj...722.1504a": {
+      "bibcode": "2010ApJ...722.1504A",
+      "citation_count": "111",
+      "checked_at": "2026-10-19T23:32:54.561145+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/722/2/1504": {
+      "bibcode": "2010ApJ...722.1504A",
+      "citation_count": "111",
+      "checked_at": "2026-10-19T23:32:54.561145+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010cqgra..27p5023s": {
+      "bibcode": "2010CQGra..27p5023S",
+      "citation_count": "50",
+      "checked_at": "2026-10-19T23:32:54.561175+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/27/16/165023": {
+      "bibcode": "2010CQGra..27p5023S",
+      "citation_count": "50",
+      "checked_at": "2026-10-19T23:32:54.561175+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010cqgra..27q3001a": {
+      "bibcode": "2010CQGra..27q3001A",
+      "citation_count": "1031",
+      "checked_at": "2026-10-19T23:32:54.561206+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/27/17/173001": {
+      "bibcode": "2010CQGra..27q3001A",
+      "citation_count": "1031",
+      "checked_at": "2026-10-19T23:32:54.561206+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010phrvd..82j2001a": {
+      "bibcode": "2010PhRvD..82j2001A",
+      "citation_count": "114",
+      "checked_at": "2026-10-19T23:32:54.561236+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.82.102001": {
+      "bibcode": "2010PhRvD..82j2001A",
+      "citation_count": "114",
+      "checked_at": "2026-10-19T23:32:54.561236+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010apj...715.1438a": {
+      "bibcode": "2010ApJ...715.1438A",
+      "citation_count": "83",
+      "checked_at": "2026-10-19T23:32:54.561266+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/715/2/1438": {
+      "bibcode": "2010ApJ...715.1438A",
+      "citation_count": "83",
+      "checked_at": "2026-10-19T23:32:54.561266+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010apj...715.1453a": {
+      "bibcode": "2010ApJ...715.1453A",
+      "citation_count": "102",
+      "checked_at": "2026-10-19T23:32:54.561297+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/715/2/1453": {
+      "bibcode": "2010ApJ...715.1453A",
+      "citation_count": "102",
+      "checked_at": "2026-10-19T23:32:54.561297+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2010apj...713..671a": {
+      "bibcode": "2010ApJ...713..671A",
+      "citation_count": "183",
+      "checked_at": "2026-10-19T23:32:54.561326+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/713/1/671": {
+      "bibcode": "2010ApJ...713..671A",
+      "citation_count": "183",
+      "checked_at": "2026-10-19T23:32:54.561326+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009natur.460..990a": {
+      "bibcode": "2009Natur.460..990A",
+      "citation_count": "310",
+      "checked_at": "2026-10-19T23:32:54.561353+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1038/nature08278": {
+      "bibcode": "2009Natur.460..990A",
+      "citation_count": "310",
+      "checked_at": "2026-10-19T23:32:54.561353+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009phrvd..80d2003a": {
+      "bibcode": "2009PhRvD..80d2003A",
+      "citation_count": "79",
+      "checked_at": "2026-10-19T23:32:54.561382+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.80.042003": {
+      "bibcode": "2009PhRvD..80d2003A",
+      "citation_count": "79",
+      "checked_at": "2026-10-19T23:32:54.561382+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009phrvd..80f2002a": {
+      "bibcode": "2009PhRvD..80f2002A",
+      "citation_count": "55",
+      "checked_at": "2026-10-19T23:32:54.561409+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.80.062002": {
+      "bibcode": "2009PhRvD..80f2002A",
+      "citation_count": "55",
+      "checked_at": "2026-10-19T23:32:54.561409+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009rpph...72g6901a": {
+      "bibcode": "2009RPPh...72g6901A",
+      "citation_count": "1106",
+      "checked_at": "2026-10-19T23:32:54.561435+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0034-4885/72/7/076901": {
+      "bibcode": "2009RPPh...72g6901A",
+      "citation_count": "1106",
+      "checked_at": "2026-10-19T23:32:54.561435+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009phrvd..79l2001a": {
+      "bibcode": "2009PhRvD..79l2001A",
+      "citation_count": "137",
+      "checked_at": "2026-10-19T23:32:54.561471+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.79.122001": {
+      "bibcode": "2009PhRvD..79l2001A",
+      "citation_count": "137",
+      "checked_at": "2026-10-19T23:32:54.561471+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009phrvd..80d7101a": {
+      "bibcode": "2009PhRvD..80d7101A",
+      "citation_count": "111",
+      "checked_at": "2026-10-19T23:32:54.561501+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.80.047101": {
+      "bibcode": "2009PhRvD..80d7101A",
+      "citation_count": "111",
+      "checked_at": "2026-10-19T23:32:54.561501+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009phrvd..80j2002a": {
+      "bibcode": "2009PhRvD..80j2002A",
+      "citation_count": "38",
+      "checked_at": "2026-10-19T23:32:54.561529+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.80.102002": {
+      "bibcode": "2009PhRvD..80j2002A",
+      "citation_count": "38",
+      "checked_at": "2026-10-19T23:32:54.561529+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009phrvd..80f2001a": {
+      "bibcode": "2009PhRvD..80f2001A",
+      "citation_count": "47",
+      "checked_at": "2026-10-19T23:32:54.561556+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.80.062001": {
+      "bibcode": "2009PhRvD..80f2001A",
+      "citation_count": "47",
+      "checked_at": "2026-10-19T23:32:54.561556+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009phrvd..80j2001a": {
+      "bibcode": "2009PhRvD..80j2001A",
+      "citation_count": "98",
+      "checked_at": "2026-10-19T23:32:54.561586+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.80.102001": {
+      "bibcode": "2009PhRvD..80j2001A",
+      "citation_count": "98",
+      "checked_at": "2026-10-19T23:32:54.561586+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009apj...701l..68a": {
+      "bibcode": "2009ApJ...701L..68A",
+      "citation_count": "57",
+      "checked_at": "2026-10-19T23:32:54.561613+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0004-637x/701/2/l68": {
+      "bibcode": "2009ApJ...701L..68A",
+      "citation_count": "57",
+      "checked_at": "2026-10-19T23:32:54.561613+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2009phrvd..80a5006r": {
+      "bibcode": "2009PhRvD..80a5006R",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:54.561641+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.80.015006": {
+      "bibcode": "2009PhRvD..80a5006R",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:54.561641+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2008phrvd..77f4029r": {
+      "bibcode": "2008PhRvD..77f4029R",
+      "citation_count": "6",
+      "checked_at": "2026-10-19T23:32:54.561667+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.77.064029": {
+      "bibcode": "2008PhRvD..77f4029R",
+      "citation_count": "6",
+      "checked_at": "2026-10-19T23:32:54.561667+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2008bhgs.confe..27p": {
+      "bibcode": "2008bhgs.confE..27P",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.561692+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.22323/1.075.0027": {
+      "bibcode": "2008bhgs.confE..27P",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.561692+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2008phrvd..77l4044c": {
+      "bibcode": "2008PhRvD..77l4044C",
+      "citation_count": "196",
+      "checked_at": "2026-10-19T23:32:54.561743+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.77.124044": {
+      "bibcode": "2008PhRvD..77l4044C",
+      "citation_count": "196",
+      "checked_at": "2026-10-19T23:32:54.561743+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2008cqgra..25s5010c": {
+      "bibcode": "2008CQGra..25s5010C",
+      "citation_count": "72",
+      "checked_at": "2026-10-19T23:32:54.561790+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/25/19/195010": {
+      "bibcode": "2008CQGra..25s5010C",
+      "citation_count": "72",
+      "checked_at": "2026-10-19T23:32:54.561790+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2008mpla...23.3225c": {
+      "bibcode": "2008MPLA...23.3225C",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.561816+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0217732308028600": {
+      "bibcode": "2008MPLA...23.3225C",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.561816+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2008mpla...23.2987r": {
+      "bibcode": "2008MPLA...23.2987R",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:54.561841+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0217732308028399": {
+      "bibcode": "2008MPLA...23.2987R",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:54.561841+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2007cophc.177..506c": {
+      "bibcode": "2007CoPhC.177..506C",
+      "citation_count": "73",
+      "checked_at": "2026-10-19T23:32:54.561869+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1016/j.cpc.2007.05.011": {
+      "bibcode": "2007CoPhC.177..506C",
+      "citation_count": "73",
+      "checked_at": "2026-10-19T23:32:54.561869+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2007phrvd..75h4020c": {
+      "bibcode": "2007PhRvD..75h4020C",
+      "citation_count": "16",
+      "checked_at": "2026-10-19T23:32:54.561895+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.75.084020": {
+      "bibcode": "2007PhRvD..75h4020C",
+      "citation_count": "16",
+      "checked_at": "2026-10-19T23:32:54.561895+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2007phrvd..76j4044b": {
+      "bibcode": "2007PhRvD..76j4044B",
+      "citation_count": "209",
+      "checked_at": "2026-10-19T23:32:54.561922+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.76.104044": {
+      "bibcode": "2007PhRvD..76j4044B",
+      "citation_count": "209",
+      "checked_at": "2026-10-19T23:32:54.561922+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2007phrvd..76d4005c": {
+      "bibcode": "2007PhRvD..76d4005C",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:54.561949+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.76.044005": {
+      "bibcode": "2007PhRvD..76d4005C",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:54.561949+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2007jhep...06..055c": {
+      "bibcode": "2007JHEP...06..055C",
+      "citation_count": "26",
+      "checked_at": "2026-10-19T23:32:54.561974+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1126-6708/2007/06/055": {
+      "bibcode": "2007JHEP...06..055C",
+      "citation_count": "26",
+      "checked_at": "2026-10-19T23:32:54.561974+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2006phrvl..96g1301c": {
+      "bibcode": "2006PhRvL..96g1301C",
+      "citation_count": "130",
+      "checked_at": "2026-10-19T23:32:54.562003+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevlett.96.071301": {
+      "bibcode": "2006PhRvL..96g1301C",
+      "citation_count": "130",
+      "checked_at": "2026-10-19T23:32:54.562003+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2006phrvd..74h4011c": {
+      "bibcode": "2006PhRvD..74h4011C",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:54.562047+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.74.084011": {
+      "bibcode": "2006PhRvD..74h4011C",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:54.562047+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2006jhep...02..021c": {
+      "bibcode": "2006JHEP...02..021C",
+      "citation_count": "118",
+      "checked_at": "2026-10-19T23:32:54.562078+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1126-6708/2006/02/021": {
+      "bibcode": "2006JHEP...02..021C",
+      "citation_count": "118",
+      "checked_at": "2026-10-19T23:32:54.562078+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2006phrvd..73d2002a": {
+      "bibcode": "2006PhRvD..73d2002A",
+      "citation_count": "28",
+      "checked_at": "2026-10-19T23:32:54.562104+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.73.042002": {
+      "bibcode": "2006PhRvD..73d2002A",
+      "citation_count": "28",
+      "checked_at": "2026-10-19T23:32:54.562104+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2006phrvd..74b4027c": {
+      "bibcode": "2006PhRvD..74b4027C",
+      "citation_count": "27",
+      "checked_at": "2026-10-19T23:32:54.562130+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.74.024027": {
+      "bibcode": "2006PhRvD..74b4027C",
+      "citation_count": "27",
+      "checked_at": "2026-10-19T23:32:54.562130+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2005gregr..37.1255b": {
+      "bibcode": "2005GReGr..37.1255B",
+      "citation_count": "187",
+      "checked_at": "2026-10-19T23:32:54.562157+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1007/s10714-005-0108-x": {
+      "bibcode": "2005GReGr..37.1255B",
+      "citation_count": "187",
+      "checked_at": "2026-10-19T23:32:54.562157+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2005aipc..805..338c": {
+      "bibcode": "2005AIPC..805..338C",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:54.562185+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1063/1.2149725": {
+      "bibcode": "2005AIPC..805..338C",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:54.562185+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2005phlb..610....9c": {
+      "bibcode": "2005PhLB..610....9C",
+      "citation_count": "6",
+      "checked_at": "2026-10-19T23:32:54.562227+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1016/j.physletb.2005.01.089": {
+      "bibcode": "2005PhLB..610....9C",
+      "citation_count": "6",
+      "checked_at": "2026-10-19T23:32:54.562227+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2005ijmpa..20.3409g": {
+      "bibcode": "2005IJMPA..20.3409G",
+      "citation_count": "16",
+      "checked_at": "2026-10-19T23:32:54.562256+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0217751x05026674": {
+      "bibcode": "2005IJMPA..20.3409G",
+      "citation_count": "16",
+      "checked_at": "2026-10-19T23:32:54.562256+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2005aph....22..377a": {
+      "bibcode": "2005APh....22..377A",
+      "citation_count": "34",
+      "checked_at": "2026-10-19T23:32:54.562287+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1016/j.astropartphys.2004.06.008": {
+      "bibcode": "2005APh....22..377A",
+      "citation_count": "34",
+      "checked_at": "2026-10-19T23:32:54.562287+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2005cqgra..22l..61c": {
+      "bibcode": "2005CQGra..22L..61C",
+      "citation_count": "43",
+      "checked_at": "2026-10-19T23:32:54.562314+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/22/12/l01": {
+      "bibcode": "2005CQGra..22L..61C",
+      "citation_count": "43",
+      "checked_at": "2026-10-19T23:32:54.562314+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2004phrvd..70d4010c": {
+      "bibcode": "2004PhRvD..70d4010C",
+      "citation_count": "15",
+      "checked_at": "2026-10-19T23:32:54.562363+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.70.044010": {
+      "bibcode": "2004PhRvD..70d4010C",
+      "citation_count": "15",
+      "checked_at": "2026-10-19T23:32:54.562363+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2004phrvd..69l4011b": {
+      "bibcode": "2004PhRvD..69l4011B",
+      "citation_count": "90",
+      "checked_at": "2026-10-19T23:32:54.562391+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.69.124011": {
+      "bibcode": "2004PhRvD..69l4011B",
+      "citation_count": "90",
+      "checked_at": "2026-10-19T23:32:54.562391+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2004cqgra..21.4511c": {
+      "bibcode": "2004CQGra..21.4511C",
+      "citation_count": "163",
+      "checked_at": "2026-10-19T23:32:54.562419+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/21/19/001": {
+      "bibcode": "2004CQGra..21.4511C",
+      "citation_count": "163",
+      "checked_at": "2026-10-19T23:32:54.562419+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2003ijmpa..18.1843c": {
+      "bibcode": "2003IJMPA..18.1843C",
+      "citation_count": "208",
+      "checked_at": "2026-10-19T23:32:54.562517+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0217751x03013569": {
+      "bibcode": "2003IJMPA..18.1843C",
+      "citation_count": "208",
+      "checked_at": "2026-10-19T23:32:54.562517+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2003phlb..569....7c": {
+      "bibcode": "2003PhLB..569....7C",
+      "citation_count": "55",
+      "checked_at": "2026-10-19T23:32:54.562545+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1016/j.physletb.2003.06.065": {
+      "bibcode": "2003PhLB..569....7C",
+      "citation_count": "55",
+      "checked_at": "2026-10-19T23:32:54.562545+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2003phlb..551....1a": {
+      "bibcode": "2003PhLB..551....1A",
+      "citation_count": "98",
+      "checked_at": "2026-10-19T23:32:54.562570+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1016/s0370-2693(02)03011-3": {
+      "bibcode": "2003PhLB..551....1A",
+      "citation_count": "98",
+      "checked_at": "2026-10-19T23:32:54.562570+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2003ijmpd..12.1699a": {
+      "bibcode": "2003IJMPD..12.1699A",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:54.562601+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0218271803004006": {
+      "bibcode": "2003IJMPD..12.1699A",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:54.562601+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2003phrvd..68d3004a": {
+      "bibcode": "2003PhRvD..68d3004A",
+      "citation_count": "70",
+      "checked_at": "2026-10-19T23:32:54.562627+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.68.043004": {
+      "bibcode": "2003PhRvD..68d3004A",
+      "citation_count": "70",
+      "checked_at": "2026-10-19T23:32:54.562627+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2003cqgra..20l.205c": {
+      "bibcode": "2003CQGra..20L.205C",
+      "citation_count": "186",
+      "checked_at": "2026-10-19T23:32:54.562653+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/20/15/101": {
+      "bibcode": "2003CQGra..20L.205C",
+      "citation_count": "186",
+      "checked_at": "2026-10-19T23:32:54.562653+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2002gregr..34.2037a": {
+      "bibcode": "2002GReGr..34.2037A",
+      "citation_count": "19",
+      "checked_at": "2026-10-19T23:32:54.562678+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1023/a:1021123131985": {
+      "bibcode": "2002GReGr..34.2037A",
+      "citation_count": "19",
+      "checked_at": "2026-10-19T23:32:54.562678+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2001phrvd..65b4002c": {
+      "bibcode": "2001PhRvD..65b4002C",
+      "citation_count": "10",
+      "checked_at": "2026-10-19T23:32:54.562711+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.65.024002": {
+      "bibcode": "2001PhRvD..65b4002C",
+      "citation_count": "10",
+      "checked_at": "2026-10-19T23:32:54.562711+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2002phrvd..65d4012c": {
+      "bibcode": "2002PhRvD..65d4012C",
+      "citation_count": "19",
+      "checked_at": "2026-10-19T23:32:54.562741+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.65.044012": {
+      "bibcode": "2002PhRvD..65d4012C",
+      "citation_count": "19",
+      "checked_at": "2026-10-19T23:32:54.562741+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2002phrvd..66f5008c": {
+      "bibcode": "2002PhRvD..66f5008C",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:54.562766+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.66.065008": {
+      "bibcode": "2002PhRvD..66f5008C",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:54.562766+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2001cqgra..18...95c": {
+      "bibcode": "2001CQGra..18...95C",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:54.562792+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/18/1/307": {
+      "bibcode": "2001CQGra..18...95C",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:54.562792+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2001phrvd..63h4024c": {
+      "bibcode": "2001PhRvD..63h4024C",
+      "citation_count": "29",
+      "checked_at": "2026-10-19T23:32:54.562819+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.63.084024": {
+      "bibcode": "2001PhRvD..63h4024C",
+      "citation_count": "29",
+      "checked_at": "2026-10-19T23:32:54.562819+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2001cqgra..18.1355c": {
+      "bibcode": "2001CQGra..18.1355C",
+      "citation_count": "5",
+      "checked_at": "2026-10-19T23:32:54.562843+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/18/7/316": {
+      "bibcode": "2001CQGra..18.1355C",
+      "citation_count": "5",
+      "checked_at": "2026-10-19T23:32:54.562843+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2001mpla...16.1601c": {
+      "bibcode": "2001MPLA...16.1601C",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.562871+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0217732301004947": {
+      "bibcode": "2001MPLA...16.1601C",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.562871+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2001phlb..499..315c": {
+      "bibcode": "2001PhLB..499..315C",
+      "citation_count": "31",
+      "checked_at": "2026-10-19T23:32:54.562899+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1016/s0370-2693(00)01398-8": {
+      "bibcode": "2001PhLB..499..315C",
+      "citation_count": "31",
+      "checked_at": "2026-10-19T23:32:54.562899+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2000mpla...15.2113c": {
+      "bibcode": "2000MPLA...15.2113C",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:54.562943+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0217732300002437": {
+      "bibcode": "2000MPLA...15.2113C",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:54.562943+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2000phrvd..61f4019c": {
+      "bibcode": "2000PhRvD..61f4019C",
+      "citation_count": "14",
+      "checked_at": "2026-10-19T23:32:54.562986+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.61.064019": {
+      "bibcode": "2000PhRvD..61f4019C",
+      "citation_count": "14",
+      "checked_at": "2026-10-19T23:32:54.562986+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2000nuphs..88..355c": {
+      "bibcode": "2000NuPhS..88..355C",
+      "citation_count": "5",
+      "checked_at": "2026-10-19T23:32:54.563011+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1016/s0920-5632(00)00801-x": {
+      "bibcode": "2000NuPhS..88..355C",
+      "citation_count": "5",
+      "checked_at": "2026-10-19T23:32:54.563011+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1999ijmpd...8..101c": {
+      "bibcode": "1999IJMPD...8..101C",
+      "citation_count": "2",
+      "checked_at": "2026-10-19T23:32:54.563042+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0218271899000092": {
+      "bibcode": "1999IJMPD...8..101C",
+      "citation_count": "2",
+      "checked_at": "2026-10-19T23:32:54.563042+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1999cqgra..16.1401c": {
+      "bibcode": "1999CQGra..16.1401C",
+      "citation_count": "21",
+      "checked_at": "2026-10-19T23:32:54.563069+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/16/4/028": {
+      "bibcode": "1999CQGra..16.1401C",
+      "citation_count": "21",
+      "checked_at": "2026-10-19T23:32:54.563069+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1999phrvd..59h4011c": {
+      "bibcode": "1999PhRvD..59h4011C",
+      "citation_count": "44",
+      "checked_at": "2026-10-19T23:32:54.563095+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.59.084011": {
+      "bibcode": "1999PhRvD..59h4011C",
+      "citation_count": "44",
+      "checked_at": "2026-10-19T23:32:54.563095+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1998phrvd..57.5295c": {
+      "bibcode": "1998PhRvD..57.5295C",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:54.563207+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.57.5295": {
+      "bibcode": "1998PhRvD..57.5295C",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:54.563207+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1998phlb..424..265c": {
+      "bibcode": "1998PhLB..424..265C",
+      "citation_count": "24",
+      "checked_at": "2026-10-19T23:32:54.563235+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1016/s0370-2693(98)00226-3": {
+      "bibcode": "1998PhLB..424..265C",
+      "citation_count": "24",
+      "checked_at": "2026-10-19T23:32:54.563235+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1998aipc..453..442c": {
+      "bibcode": "1998AIPC..453..442C",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:54.563266+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1063/1.57109": {
+      "bibcode": "1998AIPC..453..442C",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:54.563266+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1998cqgra..15.3627c": {
+      "bibcode": "1998CQGra..15.3627C",
+      "citation_count": "11",
+      "checked_at": "2026-10-19T23:32:54.563292+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/0264-9381/15/11/021": {
+      "bibcode": "1998CQGra..15.3627C",
+      "citation_count": "11",
+      "checked_at": "2026-10-19T23:32:54.563292+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1997ijmpd...6...39c": {
+      "bibcode": "1997IJMPD...6...39C",
+      "citation_count": "10",
+      "checked_at": "2026-10-19T23:32:54.563340+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0218271897000030": {
+      "bibcode": "1997IJMPD...6...39C",
+      "citation_count": "10",
+      "checked_at": "2026-10-19T23:32:54.563340+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1997gregr..29..773c": {
+      "bibcode": "1997GReGr..29..773C",
+      "citation_count": "23",
+      "checked_at": "2026-10-19T23:32:54.563382+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1023/a:1018890023591": {
+      "bibcode": "1997GReGr..29..773C",
+      "citation_count": "23",
+      "checked_at": "2026-10-19T23:32:54.563382+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1997phlb..413..287c": {
+      "bibcode": "1997PhLB..413..287C",
+      "citation_count": "10",
+      "checked_at": "2026-10-19T23:32:54.563412+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1016/s0370-2693(97)01133-7": {
+      "bibcode": "1997PhLB..413..287C",
+      "citation_count": "10",
+      "checked_at": "2026-10-19T23:32:54.563412+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1996ijmpd...5..227c": {
+      "bibcode": "1996IJMPD...5..227C",
+      "citation_count": "49",
+      "checked_at": "2026-10-19T23:32:54.563487+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0218271896000163": {
+      "bibcode": "1996IJMPD...5..227C",
+      "citation_count": "49",
+      "checked_at": "2026-10-19T23:32:54.563487+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1995ijmpa..10..611c": {
+      "bibcode": "1995IJMPA..10..611C",
+      "citation_count": "21",
+      "checked_at": "2026-10-19T23:32:54.563514+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0217751x95000279": {
+      "bibcode": "1995IJMPA..10..611C",
+      "citation_count": "21",
+      "checked_at": "2026-10-19T23:32:54.563514+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1995ijmpd...4..661c": {
+      "bibcode": "1995IJMPD...4..661C",
+      "citation_count": "72",
+      "checked_at": "2026-10-19T23:32:54.563543+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0218271895000442": {
+      "bibcode": "1995IJMPD...4..661C",
+      "citation_count": "72",
+      "checked_at": "2026-10-19T23:32:54.563543+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1995phrvd..52.2583c": {
+      "bibcode": "1995PhRvD..52.2583C",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:54.563571+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.52.2583": {
+      "bibcode": "1995PhRvD..52.2583C",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:54.563571+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1994phrvd..49.6493c": {
+      "bibcode": "1994PhRvD..49.6493C",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:54.563612+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.49.6493": {
+      "bibcode": "1994PhRvD..49.6493C",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:54.563612+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1994ijmpd...3..623c": {
+      "bibcode": "1994IJMPD...3..623C",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:54.563638+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0218271894000757": {
+      "bibcode": "1994IJMPD...3..623C",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:54.563638+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1994phrvd..50.6435c": {
+      "bibcode": "1994PhRvD..50.6435C",
+      "citation_count": "19",
+      "checked_at": "2026-10-19T23:32:54.563667+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.50.6435": {
+      "bibcode": "1994PhRvD..50.6435C",
+      "citation_count": "19",
+      "checked_at": "2026-10-19T23:32:54.563667+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1994mpla....9..569c": {
+      "bibcode": "1994MPLA....9..569C",
+      "citation_count": "11",
+      "checked_at": "2026-10-19T23:32:54.563707+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s0217732394003804": {
+      "bibcode": "1994MPLA....9..569C",
+      "citation_count": "11",
+      "checked_at": "2026-10-19T23:32:54.563707+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1994phrvd..50.5087c": {
+      "bibcode": "1994PhRvD..50.5087C",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:54.563736+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.50.5087": {
+      "bibcode": "1994PhRvD..50.5087C",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:54.563736+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:1994mpla....9.1897c": {
+      "bibcode": "1994MPLA....9.1897C",
+      "citation_count": "15",
+      "checked_at": "2026-10-19T23:32:54.563761+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1142/s021773239400174x": {
+      "bibcode": "1994MPLA....9.1897C",
+      "citation_count": "15",
+      "checked_at": "2026-10-19T23:32:54.563761+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025jcap...01..108a": {
+      "bibcode": "2025JCAP...01..108A",
+      "citation_count": "72",
+      "checked_at": "2026-10-19T23:32:54.977550+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1088/1475-7516/2025/01/108": {
+      "bibcode": "2025JCAP...01..108A",
+      "citation_count": "72",
+      "checked_at": "2026-10-19T23:32:54.977550+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2024phrvd.109f4055d": {
+      "bibcode": "2024PhRvD.109f4055D",
+      "citation_count": "2",
+      "checked_at": "2026-10-19T23:32:54.977593+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.109.064055": {
+      "bibcode": "2024PhRvD.109f4055D",
+      "citation_count": "2",
+      "checked_at": "2026-10-19T23:32:54.977593+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023arxiv230612201m": {
+      "bibcode": "2023arXiv230612201M",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.977646+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2306.12201": {
+      "bibcode": "2023arXiv230612201M",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:54.977646+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv261020276t": {
+      "bibcode": "2026arXiv261020276T",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:55.622070+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2610.20276": {
+      "bibcode": "2026arXiv261020276T",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:55.622070+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026phrvl.137m1001a": {
+      "bibcode": "2026PhRvL.137m1001A",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:55.622136+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/qdnd-rsnh": {
+      "bibcode": "2026PhRvL.137m1001A",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:55.622136+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260811620t": {
+      "bibcode": "2026arXiv260811620T",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:55.622174+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2608.11620": {
+      "bibcode": "2026arXiv260811620T",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:55.622174+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026phrvl.137g1401a": {
+      "bibcode": "2026PhRvL.137g1401A",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:55.622207+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/gzrj-mwv3": {
+      "bibcode": "2026PhRvL.137g1401A",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:55.622207+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026apj..1007l..17a": {
+      "bibcode": "2026ApJ..1007L..17A",
+      "citation_count": "99",
+      "checked_at": "2026-10-19T23:32:55.622240+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ae69dd": {
+      "bibcode": "2026ApJ..1007L..17A",
+      "citation_count": "99",
+      "checked_at": "2026-10-19T23:32:55.622240+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260811673s": {
+      "bibcode": "2026arXiv260811673S",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:55.622271+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2608.11673": {
+      "bibcode": "2026arXiv260811673S",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:55.622271+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260812193g": {
+      "bibcode": "2026arXiv260812193G",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:55.622301+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2608.12193": {
+      "bibcode": "2026arXiv260812193G",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:55.622301+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260823477t": {
+      "bibcode": "2026arXiv260823477T",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:55.622332+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2608.23477": {
+      "bibcode": "2026arXiv260823477T",
+      "citation_count": "1",
+      "checked_at": "2026-10-19T23:32:55.622332+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026phrvd.114d2001a": {
+      "bibcode": "2026PhRvD.114d2001A",
+      "citation_count": "47",
+      "checked_at": "2026-10-19T23:32:55.622363+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/wq57-sjt2": {
+      "bibcode": "2026PhRvD.114d2001A",
+      "citation_count": "47",
+      "checked_at": "2026-10-19T23:32:55.622363+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026apj..1005...12a": {
+      "bibcode": "2026ApJ..1005...12A",
+      "citation_count": "2",
+      "checked_at": "2026-10-19T23:32:55.622391+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ae63bc": {
+      "bibcode": "2026ApJ..1005...12A",
+      "citation_count": "2",
+      "checked_at": "2026-10-19T23:32:55.622391+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025arxiv250907352t": {
+      "bibcode": "2025arXiv250907352T",
+      "citation_count": "14",
+      "checked_at": "2026-10-19T23:32:55.622425+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2509.07352": {
+      "bibcode": "2025arXiv250907352T",
+      "citation_count": "14",
+      "checked_at": "2026-10-19T23:32:55.622425+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026phrvd.114b2001a": {
+      "bibcode": "2026PhRvD.114b2001A",
+      "citation_count": "20",
+      "checked_at": "2026-10-19T23:32:55.622465+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/wgp7-t8r8": {
+      "bibcode": "2026PhRvD.114b2001A",
+      "citation_count": "20",
+      "checked_at": "2026-10-19T23:32:55.622465+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026apj..1005l..51a": {
+      "bibcode": "2026ApJ..1005L..51A",
+      "citation_count": "378",
+      "checked_at": "2026-10-19T23:32:55.622493+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ae771e": {
+      "bibcode": "2026ApJ..1005L..51A",
+      "citation_count": "378",
+      "checked_at": "2026-10-19T23:32:55.622493+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260719293t": {
+      "bibcode": "2026arXiv260719293T",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:55.622520+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2607.19293": {
+      "bibcode": "2026arXiv260719293T",
+      "citation_count": "3",
+      "checked_at": "2026-10-19T23:32:55.622520+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026apj..1005..221a": {
+      "bibcode": "2026ApJ..1005..221A",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:55.622557+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ae77fc": {
+      "bibcode": "2026ApJ..1005..221A",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:55.622557+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026phrvd.114b2005a": {
+      "bibcode": "2026PhRvD.114b2005A",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:55.622587+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/s551-7pch": {
+      "bibcode": "2026PhRvD.114b2005A",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:55.622587+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260707765t": {
+      "bibcode": "2026arXiv260707765T",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:55.622615+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2607.07765": {
+      "bibcode": "2026arXiv260707765T",
+      "citation_count": "0",
+      "checked_at": "2026-10-19T23:32:55.622615+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026apj..1004l..23a": {
+      "bibcode": "2026ApJ..1004L..23A",
+      "citation_count": "44",
+      "checked_at": "2026-10-19T23:32:55.622644+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ae2ad3": {
+      "bibcode": "2026ApJ..1004L..23A",
+      "citation_count": "44",
+      "checked_at": "2026-10-19T23:32:55.622644+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026apj..1004l..21a": {
+      "bibcode": "2026ApJ..1004L..21A",
+      "citation_count": "118",
+      "checked_at": "2026-10-19T23:32:55.622672+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ae447b": {
+      "bibcode": "2026ApJ..1004L..21A",
+      "citation_count": "118",
+      "checked_at": "2026-10-19T23:32:55.622672+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026apj..1004l..22a": {
+      "bibcode": "2026ApJ..1004L..22A",
+      "citation_count": "99",
+      "checked_at": "2026-10-19T23:32:55.622706+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ae2c74": {
+      "bibcode": "2026ApJ..1004L..22A",
+      "citation_count": "99",
+      "checked_at": "2026-10-19T23:32:55.622706+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026apj..1004..232a": {
+      "bibcode": "2026ApJ..1004..232A",
+      "citation_count": "106",
+      "checked_at": "2026-10-19T23:32:55.622735+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ae211e": {
+      "bibcode": "2026ApJ..1004..232A",
+      "citation_count": "106",
+      "checked_at": "2026-10-19T23:32:55.622735+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026apj..1004..204a": {
+      "bibcode": "2026ApJ..1004..204A",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:55.622765+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/1538-4357/ae6263": {
+      "bibcode": "2026ApJ..1004..204A",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:55.622765+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260527223t": {
+      "bibcode": "2026arXiv260527223T",
+      "citation_count": "53",
+      "checked_at": "2026-10-19T23:32:55.622793+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2605.27223": {
+      "bibcode": "2026arXiv260527223T",
+      "citation_count": "53",
+      "checked_at": "2026-10-19T23:32:55.622793+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260527227t": {
+      "bibcode": "2026arXiv260527227T",
+      "citation_count": "21",
+      "checked_at": "2026-10-19T23:32:55.622822+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2605.27227": {
+      "bibcode": "2026arXiv260527227T",
+      "citation_count": "21",
+      "checked_at": "2026-10-19T23:32:55.622822+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260527224t": {
+      "bibcode": "2026arXiv260527224T",
+      "citation_count": "11",
+      "checked_at": "2026-10-19T23:32:55.622849+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2605.27224": {
+      "bibcode": "2026arXiv260527224T",
+      "citation_count": "11",
+      "checked_at": "2026-10-19T23:32:55.622849+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260527225t": {
+      "bibcode": "2026arXiv260527225T",
+      "citation_count": "79",
+      "checked_at": "2026-10-19T23:32:55.622879+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2605.27225": {
+      "bibcode": "2026arXiv260527225T",
+      "citation_count": "79",
+      "checked_at": "2026-10-19T23:32:55.622879+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260527226t": {
+      "bibcode": "2026arXiv260527226T",
+      "citation_count": "57",
+      "checked_at": "2026-10-19T23:32:55.622904+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2605.27226": {
+      "bibcode": "2026arXiv260527226T",
+      "citation_count": "57",
+      "checked_at": "2026-10-19T23:32:55.622904+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260527090t": {
+      "bibcode": "2026arXiv260527090T",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:55.622931+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2605.27090": {
+      "bibcode": "2026arXiv260527090T",
+      "citation_count": "12",
+      "checked_at": "2026-10-19T23:32:55.622931+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260505444t": {
+      "bibcode": "2026arXiv260505444T",
+      "citation_count": "6",
+      "checked_at": "2026-10-19T23:32:55.622961+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2605.05444": {
+      "bibcode": "2026arXiv260505444T",
+      "citation_count": "6",
+      "checked_at": "2026-10-19T23:32:55.622961+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260314168t": {
+      "bibcode": "2026arXiv260314168T",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:55.622991+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2603.14168": {
+      "bibcode": "2026arXiv260314168T",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:55.622991+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260319019t": {
+      "bibcode": "2026arXiv260319019T",
+      "citation_count": "68",
+      "checked_at": "2026-10-19T23:32:55.623018+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2603.19019": {
+      "bibcode": "2026arXiv260319019T",
+      "citation_count": "68",
+      "checked_at": "2026-10-19T23:32:55.623018+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260319020t": {
+      "bibcode": "2026arXiv260319020T",
+      "citation_count": "59",
+      "checked_at": "2026-10-19T23:32:55.623045+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2603.19020": {
+      "bibcode": "2026arXiv260319020T",
+      "citation_count": "59",
+      "checked_at": "2026-10-19T23:32:55.623045+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026arxiv260319021t": {
+      "bibcode": "2026arXiv260319021T",
+      "citation_count": "49",
+      "checked_at": "2026-10-19T23:32:55.623071+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2603.19021": {
+      "bibcode": "2026arXiv260319021T",
+      "citation_count": "49",
+      "checked_at": "2026-10-19T23:32:55.623071+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026phrvl.136d1403a": {
+      "bibcode": "2026PhRvL.136d1403A",
+      "citation_count": "149",
+      "checked_at": "2026-10-19T23:32:55.623099+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/6c61-fm1n": {
+      "bibcode": "2026PhRvL.136d1403A",
+      "citation_count": "149",
+      "checked_at": "2026-10-19T23:32:55.623099+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025apj...995l..18a": {
+      "bibcode": "2025ApJ...995L..18A",
+      "citation_count": "150",
+      "checked_at": "2026-10-19T23:32:55.623236+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ae0c06": {
+      "bibcode": "2025ApJ...995L..18A",
+      "citation_count": "150",
+      "checked_at": "2026-10-19T23:32:55.623236+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025arxiv251216347t": {
+      "bibcode": "2025arXiv251216347T",
+      "citation_count": "41",
+      "checked_at": "2026-10-19T23:32:55.623266+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2512.16347": {
+      "bibcode": "2025arXiv251216347T",
+      "citation_count": "41",
+      "checked_at": "2026-10-19T23:32:55.623266+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025arxiv251116863t": {
+      "bibcode": "2025arXiv251116863T",
+      "citation_count": "5",
+      "checked_at": "2026-10-19T23:32:55.623298+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2511.16863": {
+      "bibcode": "2025arXiv251116863T",
+      "citation_count": "5",
+      "checked_at": "2026-10-19T23:32:55.623298+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025phrvd.112j2005a": {
+      "bibcode": "2025PhRvD.112j2005A",
+      "citation_count": "18",
+      "checked_at": "2026-10-19T23:32:55.623327+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/wjdz-jdby": {
+      "bibcode": "2025PhRvD.112j2005A",
+      "citation_count": "18",
+      "checked_at": "2026-10-19T23:32:55.623327+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025apj...993l..25a": {
+      "bibcode": "2025ApJ...993L..25A",
+      "citation_count": "276",
+      "checked_at": "2026-10-19T23:32:55.623362+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ae0c9c": {
+      "bibcode": "2025ApJ...993L..25A",
+      "citation_count": "276",
+      "checked_at": "2026-10-19T23:32:55.623362+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025apj...993l..21a": {
+      "bibcode": "2025ApJ...993L..21A",
+      "citation_count": "86",
+      "checked_at": "2026-10-19T23:32:55.623392+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.3847/2041-8213/ae0d54": {
+      "bibcode": "2025ApJ...993L..21A",
+      "citation_count": "86",
+      "checked_at": "2026-10-19T23:32:55.623392+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025arxiv251026848t": {
+      "bibcode": "2025arXiv251026848T",
+      "citation_count": "25",
+      "checked_at": "2026-10-19T23:32:55.623421+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2510.26848": {
+      "bibcode": "2025arXiv251026848T",
+      "citation_count": "25",
+      "checked_at": "2026-10-19T23:32:55.623421+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025arxiv251027022t": {
+      "bibcode": "2025arXiv251027022T",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:55.623460+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2510.27022": {
+      "bibcode": "2025arXiv251027022T",
+      "citation_count": "7",
+      "checked_at": "2026-10-19T23:32:55.623460+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025phrvl.135k1403a": {
+      "bibcode": "2025PhRvL.135k1403A",
+      "citation_count": "221",
+      "checked_at": "2026-10-19T23:32:55.623489+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/kw5g-d732": {
+      "bibcode": "2025PhRvL.135k1403A",
+      "citation_count": "221",
+      "checked_at": "2026-10-19T23:32:55.623489+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025arxiv250818082t": {
+      "bibcode": "2025arXiv250818082T",
+      "citation_count": "502",
+      "checked_at": "2026-10-19T23:32:55.623518+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2508.18082": {
+      "bibcode": "2025arXiv250818082T",
+      "citation_count": "502",
+      "checked_at": "2026-10-19T23:32:55.623518+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026phrvd.113h2004a": {
+      "bibcode": "2026PhRvD.113h2004A",
+      "citation_count": "11",
+      "checked_at": "2026-10-19T23:32:55.623549+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2507.12282": {
+      "bibcode": "2026PhRvD.113h2004A",
+      "citation_count": "11",
+      "checked_at": "2026-10-19T23:32:55.623549+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2025cqgra..42h5016s": {
+      "bibcode": "2025CQGra..42h5016S",
+      "citation_count": "125",
+      "checked_at": "2026-10-19T23:32:55.623632+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.48550/arxiv.2409.02831": {
+      "bibcode": "2025CQGra..42h5016S",
+      "citation_count": "125",
+      "checked_at": "2026-10-19T23:32:55.623632+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2023phrvd.107h2001t": {
+      "bibcode": "2023PhRvD.107h2001T",
+      "citation_count": "51",
+      "checked_at": "2026-10-19T23:32:55.623687+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1103/physrevd.107.082001": {
+      "bibcode": "2023PhRvD.107h2001T",
+      "citation_count": "51",
+      "checked_at": "2026-10-19T23:32:55.623687+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2026mnras.545f2026k": {
+      "bibcode": "2026MNRAS.545f2026K",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:55.835361+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/staf2026": {
+      "bibcode": "2026MNRAS.545f2026K",
+      "citation_count": "4",
+      "checked_at": "2026-10-19T23:32:55.835361+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2024mnras.531l..20k": {
+      "bibcode": "2024MNRAS.531L..20K",
+      "citation_count": "5",
+      "checked_at": "2026-10-19T23:32:55.835426+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnrasl/slae023": {
+      "bibcode": "2024MNRAS.531L..20K",
+      "citation_count": "5",
+      "checked_at": "2026-10-19T23:32:55.835426+00:00",
+      "source": "previous published CSV"
+    },
+    "bibcode:2022mnras.517.4389k": {
+      "bibcode": "2022MNRAS.517.4389K",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:55.835491+00:00",
+      "source": "previous published CSV"
+    },
+    "doi:10.1093/mnras/stac2862": {
+      "bibcode": "2022MNRAS.517.4389K",
+      "citation_count": "9",
+      "checked_at": "2026-10-19T23:32:55.835491+00:00",
+      "source": "previous published CSV"
+    }
+  }
+}
