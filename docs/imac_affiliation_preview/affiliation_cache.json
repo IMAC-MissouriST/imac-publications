@@ -1,10 +1,87 @@
 {
+  "arxiv:2410.09151": {
+    "arxiv_id": "2410.09151",
+    "checked_at": "2026-10-19T15:09:33.102318+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "arxiv:2501.01495": {
+    "arxiv_id": "2501.01495",
+    "checked_at": "2026-10-19T15:09:02.319228+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "arxiv:2507.08219": {
+    "arxiv_id": "2507.08219",
+    "checked_at": "2026-10-19T15:08:56.537497+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1088/1475-7516/2025/01/108": {
+    "arxiv_id": "2404.09181",
+    "checked_at": "2026-10-19T15:08:51.450375+00:00",
+    "evidence": "PDF exceeds configured download limit",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1093/mnras/staf2026": {
+    "arxiv_id": "2409.05795",
+    "checked_at": "2026-10-19T15:08:43.614146+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1103/physrevd.109.064055": {
+    "arxiv_id": "2402.15540",
+    "checked_at": "2026-10-19T15:09:26.819254+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1117/12.3017865": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T15:09:21.124731+00:00",
+    "evidence": "No accessible, confirmed affiliation",
+    "source": "none",
+    "status": "unverified"
+  },
+  "doi:10.33232/001c.151254": {
+    "arxiv_id": "2507.16707",
+    "checked_at": "2026-10-19T15:07:04.690028+00:00",
+    "evidence": "lti-messenger Astrophysics and Cosmology, Department of Physics, Missouri University of Science and Technology, 1315 N Pine Street, Rolla, MO 65409, USA 2Kavli Institute for the Physics and Mathematics of the U",
+    "source": "PDF header",
+    "status": "verified"
+  },
   "doi:10.48550/arxiv.2509.07352": {
     "arxiv_id": "2509.07352",
     "checked_at": "2026-10-19T14:12:30.025124+00:00",
     "evidence": "arXiv metadata: HTTPError",
     "source": "PDF checked",
     "status": "error"
+  },
+  "doi:10.48550/arxiv.2510.26848": {
+    "arxiv_id": "2510.26848",
+    "checked_at": "2026-10-19T15:09:15.954252+00:00",
+    "evidence": "PDF exceeds configured download limit",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.48550/arxiv.2511.16863": {
+    "arxiv_id": "2511.16863",
+    "checked_at": "2026-10-19T15:09:08.598506+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.48550/arxiv.2512.16347": {
+    "arxiv_id": "2512.16347",
+    "checked_at": "2026-10-19T15:09:20.670369+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
   },
   "doi:10.48550/arxiv.2601.16761": {
     "arxiv_id": "2601.16761",
@@ -27,6 +104,27 @@
     "source": "PDF checked",
     "status": "error"
   },
+  "doi:10.48550/arxiv.2603.19020": {
+    "arxiv_id": "2603.19020",
+    "checked_at": "2026-10-19T15:07:10.637607+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.48550/arxiv.2603.19021": {
+    "arxiv_id": "2603.19021",
+    "checked_at": "2026-10-19T15:07:18.236225+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.48550/arxiv.2605.05444": {
+    "arxiv_id": "2605.05444",
+    "checked_at": "2026-10-19T15:08:25.390053+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
   "doi:10.48550/arxiv.2605.12503": {
     "arxiv_id": "2605.12503",
     "checked_at": "2026-10-19T14:10:44.022608+00:00",
@@ -40,6 +138,48 @@
     "evidence": "Multi-messenger Astrophysics & Cosmology, Department of Physics, Missouri University of Science & Technology, Rolla, MO 65409, United States of America 4Kavli Institute for the Physics & Mathematics of the Un",
     "source": "PDF header",
     "status": "verified"
+  },
+  "doi:10.48550/arxiv.2605.27090": {
+    "arxiv_id": "2605.27090",
+    "checked_at": "2026-10-19T15:08:13.076311+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.48550/arxiv.2605.27223": {
+    "arxiv_id": "2605.27223",
+    "checked_at": "2026-10-19T15:07:23.019967+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.48550/arxiv.2605.27224": {
+    "arxiv_id": "2605.27224",
+    "checked_at": "2026-10-19T15:07:35.291016+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.48550/arxiv.2605.27225": {
+    "arxiv_id": "2605.27225",
+    "checked_at": "2026-10-19T15:07:42.628982+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.48550/arxiv.2605.27226": {
+    "arxiv_id": "2605.27226",
+    "checked_at": "2026-10-19T15:07:48.593915+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.48550/arxiv.2605.27227": {
+    "arxiv_id": "2605.27227",
+    "checked_at": "2026-10-19T15:07:29.295718+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
   },
   "doi:10.48550/arxiv.2606.04208": {
     "arxiv_id": "2606.04208",
@@ -55,12 +195,26 @@
     "source": "PDF checked",
     "status": "error"
   },
+  "doi:10.48550/arxiv.2607.07765": {
+    "arxiv_id": "2607.07765",
+    "checked_at": "2026-10-19T15:08:31.124894+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
   "doi:10.48550/arxiv.2607.08453": {
     "arxiv_id": "2607.08453",
     "checked_at": "2026-10-19T14:09:06.768746+00:00",
     "evidence": "lti-messenger Astrophysics and Cosmology, Department of Physics, Missouri University of Science and Technology, 1315 N. Pine St., Rolla MO 65409, USA 17Max-Planck-Institut f\u00a8ur extraterrestrische Physik, Postfa",
     "source": "PDF header",
     "status": "verified"
+  },
+  "doi:10.48550/arxiv.2607.19293": {
+    "arxiv_id": "2607.19293",
+    "checked_at": "2026-10-19T15:07:53.829085+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
   },
   "doi:10.48550/arxiv.2607.23062": {
     "arxiv_id": "2607.23062",
@@ -76,12 +230,40 @@
     "source": "PDF checked",
     "status": "error"
   },
+  "doi:10.48550/arxiv.2608.11673": {
+    "arxiv_id": "2608.11673",
+    "checked_at": "2026-10-19T15:08:00.235911+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.48550/arxiv.2608.12193": {
+    "arxiv_id": "2608.12193",
+    "checked_at": "2026-10-19T15:08:08.489048+00:00",
+    "evidence": "PDF exceeds configured download limit",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.48550/arxiv.2608.23477": {
+    "arxiv_id": "2608.23477",
+    "checked_at": "2026-10-19T15:08:37.682703+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
   "doi:10.48550/arxiv.2609.16134": {
     "arxiv_id": "2609.16134",
     "checked_at": "2026-10-19T14:10:37.627843+00:00",
     "evidence": "lti-messenger Astrophysics and Cosmology, Department of Physics, Missouri University of Science and Technology, 1315 N. Pine St., Rolla MO 65409, USA 15Kavli Institute for the Physics and Mathematics of the Uni",
     "source": "PDF header",
     "status": "verified"
+  },
+  "doi:10.48550/arxiv.2610.20276": {
+    "arxiv_id": "2610.20276",
+    "checked_at": "2026-10-19T15:08:18.772166+00:00",
+    "evidence": "No confirmed affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
   },
   "title:arxivnarrowbandsearchesforcontinuousgravitationalwavesfromknownpulsarsinthefirsttwopartsofthefourthligovirgokagraobservingrun": {
     "arxiv_id": "",
@@ -100,6 +282,34 @@
   "title:deepsearchforjointsourcesofgravitationalwavesandhighenergyneutrinoswithicecubeduringthethirdobservingrunofligoandvirgo": {
     "arxiv_id": "",
     "checked_at": "2026-10-19T14:11:55.725808+00:00",
+    "evidence": "No accessible, confirmed affiliation",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:searchforeccentricblackholecoalescencesduringthethirdobservingrunofligoandvirgo": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T15:09:21.126360+00:00",
+    "evidence": "No accessible, confirmed affiliation",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:shadowimagesofcompactobjectsinbeyondhorndeskitheory": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T15:09:21.126372+00:00",
+    "evidence": "No accessible, confirmed affiliation",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:swiftbatguanofollowupofgravitationalwavetriggersinthethirdligovirgokagraobservingrun": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T15:09:02.319286+00:00",
+    "evidence": "No accessible, confirmed affiliation",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:ultralightvectordarkmattersearchusingdatafromthekagrao3gkrun": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T15:09:21.126339+00:00",
     "evidence": "No accessible, confirmed affiliation",
     "source": "none",
     "status": "unverified"
