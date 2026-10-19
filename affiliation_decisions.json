@@ -1,3 +1,195 @@
+{
+  "decisions": [
+    {
+      "title": "arXiv: Narrowband searches for continuous gravitational waves from known pulsars in the first two parts of the fourth LIGO--Virgo--KAGRA observing run",
+      "arxiv": "2603.25938",
+      "decision": "include",
+      "reason": "Manually reviewed and confirmed to meet the IMAC/Missouri S&T author-affiliation criterion.",
+      "evidence_url": "https://arxiv.org/pdf/2603.25938"
+    },
+    {
+      "title": "arXiv: Searches for Binary Mergers with Sub-solar Mass Components in Data from the First Part of LIGO--Virgo--KAGRA's Fourth Observing Run",
+      "arxiv": "2605.05444",
+      "decision": "include",
+      "reason": "Manually reviewed and confirmed to meet the IMAC/Missouri S&T author-affiliation criterion.",
+      "evidence_url": "https://arxiv.org/pdf/2605.05444"
+    },
+    {
+      "title": "Deep search for joint sources of gravitational waves and high-energy neutrinos with IceCube during the third observing run of LIGO and Virgo",
+      "arxiv": "2601.07595",
+      "decision": "include",
+      "reason": "Manually reviewed and confirmed to meet the IMAC/Missouri S&T author-affiliation criterion.",
+      "evidence_url": "https://arxiv.org/pdf/2601.07595"
+    },
+    {
+      "title": "Environmental dependence of the galaxy–halo connection of satellites using HSC weak lensing",
+      "arxiv": "2409.05795",
+      "doi": "10.1093/mnras/staf2026",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2409.05795"
+    },
+    {
+      "title": "The Lunar Gravitational-wave Antenna: mission studies and science case",
+      "arxiv": "2404.09181",
+      "doi": "10.1088/1475-7516/2025/01/108",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2404.09181"
+    },
+    {
+      "title": "Coding The Cosmos: Introduction to Gravitational Waves Summer Workshop",
+      "decision": "exclude",
+      "reason": "Manually excluded: a summer workshop, not a research paper.",
+      "evidence_url": "https://github.com/IMAC-MissouriST/imac-publications/blob/main/docs/imac_affiliation_preview/affiliation_review.csv#L6"
+    },
+    {
+      "title": "Overabundance of orphan galaxies in the UniverseMachine empirical galaxy formation model",
+      "arxiv": "2312.04847",
+      "doi": "10.1093/mnrasl/slae023",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2312.04847"
+    },
+    {
+      "title": "Shadow images of compact objects in beyond Horndeski theory",
+      "arxiv": "2401.15249",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2401.15249"
+    },
+    {
+      "title": "SIRMOS: NIR spectroscopy of 131,000,000 galaxies over 1 < z < 4 and R 1300",
+      "doi": "10.1117/12.3017865",
+      "decision": "include",
+      "reason": "Manually reviewed and confirmed to meet the IMAC/Missouri S&T author-affiliation criterion.",
+      "evidence_url": "https://doi.org/10.1117/12.3017865"
+    },
+    {
+      "title": "Acoustic Kerr Metric in Analogue Gravity",
+      "arxiv": "2306.12201",
+      "doi": "10.48550/arxiv.2306.12201",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2306.12201"
+    },
+    {
+      "title": "arXiv: Search for Eccentric Black Hole Coalescences during the Third Observing Run of LIGO and Virgo",
+      "arxiv": "2308.03822",
+      "decision": "include",
+      "reason": "Manually reviewed and confirmed to meet the IMAC/Missouri S&T author-affiliation criterion.",
+      "evidence_url": "https://arxiv.org/pdf/2308.03822"
+    },
+    {
+      "title": "Bounds on the spatial anisotropy of foreground binary black hole merger detections in the third LIGO-Virgo-KAGRA catalog",
+      "decision": "exclude",
+      "reason": "Manually excluded: this ADS record is a conference abstract, not a research paper.",
+      "evidence_url": "https://ui.adsabs.harvard.edu/abs/2023APS..APRV09008C/abstract"
+    },
+    {
+      "title": "Quantifying the impact of baryon-CDM perturbations on halo clustering and baryon fraction",
+      "arxiv": "2011.01037",
+      "doi": "10.1088/1475-7516/2021/03/023",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2011.01037"
+    },
+    {
+      "title": "A guide to LIGO--Virgo detector noise and extraction of transient gravitational-wave signals",
+      "arxiv": "1908.11170",
+      "doi": "10.1088/1361-6382/ab685e",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1908.11170"
+    },
+    {
+      "title": "Constraints on the Spacetime Dynamics of an Early Dark Energy Component",
+      "arxiv": "2001.10252",
+      "doi": "10.1088/1475-7516/2020/07/039",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2001.10252"
+    },
+    {
+      "title": "A complete FFT-based decomposition formalism for the redshift-space bispectrum",
+      "arxiv": "1803.02132",
+      "doi": "10.1093/mnras/sty3249",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1803.02132"
+    },
+    {
+      "title": "A Fermi Gamma-ray Burst Monitor Search for Electromagnetic Signals Coincident with Gravitational-Wave Candidates in Advanced LIGO's First Observing Run",
+      "arxiv": "1810.02764",
+      "doi": "10.3847/1538-4357/aaf726",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1810.02764"
+    },
+    {
+      "title": "All-sky search for continuous gravitational waves from isolated neutron stars using Advanced LIGO O2 data",
+      "arxiv": "1903.01901",
+      "doi": "10.1103/physrevd.100.024004",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1903.01901"
+    },
+    {
+      "title": "Binary Black Hole Population Properties Inferred from the First and Second Observing Runs of Advanced LIGO and Advanced Virgo",
+      "arxiv": "1811.12940",
+      "doi": "10.3847/2041-8213/ab3800",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1811.12940"
+    },
+    {
+      "title": "Constraining the $p$-Mode--$g$-Mode Tidal Instability with GW170817",
+      "arxiv": "1808.08676",
+      "doi": "10.1103/physrevlett.122.061104",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1808.08676"
+    },
+    {
+      "title": "Directional limits on persistent gravitational waves using data from Advanced LIGO's first two observing runs",
+      "arxiv": "1903.08844",
+      "doi": "10.1103/physrevd.100.062001",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1903.08844"
+    },
+    {
+      "title": "Finding the origin of noise transients in LIGO data with machine learning",
+      "arxiv": "1812.05225",
+      "doi": "10.4208/cicp.oa-2018-0092",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1812.05225"
+    },
+    {
+      "title": "First Measurement of the Hubble Constant from a Dark Standard Siren using the Dark Energy Survey Galaxies and the LIGO/Virgo Binary--Black-hole Merger GW170814",
+      "arxiv": "1901.01540",
+      "doi": "10.3847/2041-8213/ab14f1",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1901.01540"
+    },
+    {
+      "title": "GWTC-1: A Gravitational-Wave Transient Catalog of Compact Binary Mergers Observed by LIGO and Virgo during the First and Second Observing Runs",
+      "arxiv": "1811.12907",
+      "doi": "10.1103/physrevx.9.031040",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1811.12907"
+    },
+    {
+      "title": "Low-latency Gravitational-wave Alerts for Multimessenger Astronomy during the Second Advanced LIGO and Virgo Observing Run",
+      "arxiv": "1901.03310",
+      "doi": "10.3847/1538-4357/ab0e8f",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1901.03310"
+    },
     {
       "title": "Narrow-band search for gravitational waves from known pulsars using the second LIGO observing run",
       "arxiv": "1902.08442",
