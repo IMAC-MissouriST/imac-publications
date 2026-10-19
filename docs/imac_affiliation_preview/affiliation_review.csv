@@ -4,37 +4,22 @@ Year,Title,Status,Source,Evidence,Evidence URL,arXiv,DOI URL,ADS URL
 2026,Deep search for joint sources of gravitational waves and high-energy neutrinos with IceCube during the third observing run of LIGO and Virgo,error,retrieval,arXiv: HTTP 429,,,,
 2026,Environmental dependence of the galaxy–halo connection of satellites using HSC weak lensing,needs_review,"OpenAlex, arXiv metadata, PDF inspected",No matching author affiliation established; PDF: HTTP 403,https://arxiv.org/pdf/2409.05795,2409.05795,https://doi.org/10.1093/mnras/staf2026,https://ui.adsabs.harvard.edu/abs/2026MNRAS.545f2026K/abstract
 2025,The Lunar Gravitational-wave Antenna: mission studies and science case,needs_review,"OpenAlex, arXiv metadata, PDF inspected",No matching author affiliation established; ,https://arxiv.org/pdf/2404.09181,2404.09181,https://doi.org/10.1088/1475-7516/2025/01/108,https://ui.adsabs.harvard.edu/abs/2025JCAP...01..108A/abstract
-2024,A search using GEO600 for gravitational waves coincident with fast radio bursts from SGR 1935+ 2154,pending,budget,Waiting for next daily run,,2410.09151,,
-2024,Coding The Cosmos: Introduction to Gravitational Waves Summer Workshop,pending,budget,Waiting for next daily run,,,,
-2024,Observation of Gravitational Waves from the Coalescence of a $2.5$\backslash$text ${$-$}$ 4.5̃ M_$\backslash$odot $ Compact Object and a Neutron Star,pending,budget,Waiting for next daily run,,2404.04248,,
-2024,Optically targeted search for gravitational waves emitted by core-collapse supernovae during the third observing run of Advanced LIGO and Advanced Virgo,pending,budget,Waiting for next daily run,,,,
-2024,Overabundance of orphan galaxies in the UniverseMachine empirical galaxy formation model,pending,budget,Waiting for next daily run,,2312.04847,https://doi.org/10.1093/mnrasl/slae023,https://ui.adsabs.harvard.edu/abs/2024MNRAS.531L..20K/abstract
-2024,Search for eccentric black hole coalescences during the third observing run of LIGO and Virgo,pending,budget,Waiting for next daily run,,,,
-2024,Shadow images of compact objects in beyond Horndeski theory,pending,budget,Waiting for next daily run,,,,
-2024,"SIRMOS: NIR spectroscopy of 131,000,000 galaxies over 1 < z < 4 and R 1300",pending,budget,Waiting for next daily run,,,https://doi.org/10.1117/12.3017865,https://ui.adsabs.harvard.edu/abs/2024SPIE13092E..0ZC/abstract
-2024,Spinning black hole in a fluid,pending,budget,Waiting for next daily run,,2402.15540,https://doi.org/10.1103/physrevd.109.064055,https://ui.adsabs.harvard.edu/abs/2024PhRvD.109f4055D/abstract
-2024,Ultralight vector dark matter search using data from the KAGRA O3GK run,pending,budget,Waiting for next daily run,,,,
-2023,A Joint Fermi-GBM and Swift-BAT Analysis of Gravitational-Wave Candidates from the Third Gravitational-wave Observing Run,pending,budget,Waiting for next daily run,,,,
-2023,Acoustic Kerr Metric in Analogue Gravity,pending,budget,Waiting for next daily run,,2306.12201,https://doi.org/10.48550/arxiv.2306.12201,https://ui.adsabs.harvard.edu/abs/2023arXiv230612201M/abstract
-2023,arXiv: Search for Eccentric Black Hole Coalescences during the Third Observing Run of LIGO and Virgo,pending,budget,Waiting for next daily run,,,,
-2023,Bounds on the spatial anisotropy of foreground binary black hole merger detections in the third LIGO-Virgo-KAGRA catalog,pending,budget,Waiting for next daily run,,,,
-2023,Exploring Cosmology with Machine Learning,pending,budget,Waiting for next daily run,,,,
-2023,Low-latency gravitational wave alert products and their performance in anticipation of the fourth LIGO-Virgo-KAGRA observing run,pending,budget,Waiting for next daily run,,,,
-2023,Possibility of Over-spinning Kerr Blackhole,pending,budget,Waiting for next daily run,,2303.11232,,
-2023,Search for gravitational-lensing signatures in the full third observing run of the LIGO-Virgo network,pending,budget,Waiting for next daily run,,2304.08393,,
-2023,Search for subsolar-mass black hole binaries in the second part of Advanced LIGO's and Advanced Virgo's third observing run,pending,budget,Waiting for next daily run,,2212.01477,https://doi.org/10.1093/mnras/stad588,https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.5984L/abstract
-2023,The angular power spectrum of gravitational-wave transient sources as a probe of the large-scale structure,pending,budget,Waiting for next daily run,,2305.02652,,
-2023,The Science of Gravitational-Wave Sources and Beyond Compact Binary Coalescences,pending,budget,Waiting for next daily run,,,,
-2023,"ノイズから重力波を選別するために FAR (誤報率) を使うことは, 藁の山から 1 本の針をみつけるような困難なことである: 英国王立統計学会 Significance から",pending,budget,Waiting for next daily run,,,,
-2022,Cosmic Voids and BAO with relative baryon-CDM perturbations,pending,budget,Waiting for next daily run,,2109.02949,https://doi.org/10.1093/mnras/stac331,https://ui.adsabs.harvard.edu/abs/2022MNRAS.511.4333K/abstract
-2022,Search for gravitational-wave transients associated with magnetar bursts in Advanced LIGO and Advanced Virgo data from the third observing run,pending,budget,Waiting for next daily run,,,,
-2022,Subaru HSC weak lensing of SDSS redMaPPer cluster satellite galaxies: empirical upper limit on orphan fractions,pending,budget,Waiting for next daily run,,2205.00018,https://doi.org/10.1093/mnras/stac2862,https://ui.adsabs.harvard.edu/abs/2022MNRAS.517.4389K/abstract
-2021,A needle in (many) haystacks: Using the false alarm rate to sift gravitational waves from noise,pending,budget,Waiting for next daily run,,,https://doi.org/10.1111/1740-9713.01488,
-2021,Detection and waveform reconstruction of gravitational-wave signals with coherent Wave Burst and Wavelet Detection Filter methods,pending,budget,Waiting for next daily run,,,,
+2024,Coding The Cosmos: Introduction to Gravitational Waves Summer Workshop,needs_review,retrieval,No usable source found,,,,
+2024,Overabundance of orphan galaxies in the UniverseMachine empirical galaxy formation model,needs_review,OpenAlex,No matching author affiliation established; arXiv: known ID did not match title; PDF: HTTP 403,,,https://doi.org/10.1093/mnrasl/slae023,https://ui.adsabs.harvard.edu/abs/2024MNRAS.531L..20K/abstract
+2024,Shadow images of compact objects in beyond Horndeski theory,needs_review,"arXiv metadata, PDF inspected",No matching author affiliation established; ,https://arxiv.org/pdf/2401.15249,2401.15249,,
+2024,"SIRMOS: NIR spectroscopy of 131,000,000 galaxies over 1 < z < 4 and R 1300",needs_review,OpenAlex,No matching author affiliation established; ,,,https://doi.org/10.1117/12.3017865,https://ui.adsabs.harvard.edu/abs/2024SPIE13092E..0ZC/abstract
+2024,Spinning black hole in a fluid,needs_review,"OpenAlex, arXiv metadata, PDF inspected",No matching author affiliation established; ,https://arxiv.org/pdf/2402.15540,2402.15540,https://doi.org/10.1103/physrevd.109.064055,https://ui.adsabs.harvard.edu/abs/2024PhRvD.109f4055D/abstract
+2023,Acoustic Kerr Metric in Analogue Gravity,needs_review,"arXiv metadata, PDF inspected",No matching author affiliation established; ,https://arxiv.org/pdf/2306.12201,2306.12201,https://doi.org/10.48550/arxiv.2306.12201,https://ui.adsabs.harvard.edu/abs/2023arXiv230612201M/abstract
+2023,arXiv: Search for Eccentric Black Hole Coalescences during the Third Observing Run of LIGO and Virgo,needs_review,retrieval,No usable source found,,,,
+2023,Bounds on the spatial anisotropy of foreground binary black hole merger detections in the third LIGO-Virgo-KAGRA catalog,needs_review,retrieval,No usable source found,,,,
+2023,Exploring Cosmology with Machine Learning,needs_review,retrieval,No usable source found,,,,
+2023,The Science of Gravitational-Wave Sources and Beyond Compact Binary Coalescences,needs_review,retrieval,No usable source found,,,,
+2023,"ノイズから重力波を選別するために FAR (誤報率) を使うことは, 藁の山から 1 本の針をみつけるような困難なことである: 英国王立統計学会 Significance から",needs_review,retrieval,No usable source found,,,,
+2022,Cosmic Voids and BAO with relative baryon-CDM perturbations,needs_review,"OpenAlex, arXiv metadata, PDF inspected",No matching author affiliation established; ,https://arxiv.org/pdf/2109.02949,2109.02949,https://doi.org/10.1093/mnras/stac331,https://ui.adsabs.harvard.edu/abs/2022MNRAS.511.4333K/abstract
+2022,Subaru HSC weak lensing of SDSS redMaPPer cluster satellite galaxies: empirical upper limit on orphan fractions,needs_review,"OpenAlex, arXiv metadata, PDF inspected",No matching author affiliation established; ,https://arxiv.org/pdf/2205.00018,2205.00018,https://doi.org/10.1093/mnras/stac2862,https://ui.adsabs.harvard.edu/abs/2022MNRAS.517.4389K/abstract
+2021,Detection and waveform reconstruction of gravitational-wave signals with coherent Wave Burst and Wavelet Detection Filter methods,needs_review,retrieval,No usable source found,,,,
 2021,LIGO detector characterization in the second and third observing runs,pending,budget,Waiting for next daily run,,,,
-2021,NNETFIX: an artificial neural network-based denoising engine for gravitational-wave signals,pending,budget,Waiting for next daily run,,,https://doi.org/10.1088/2632-2153/abea69,
-2021,Quantifying the impact of baryon-CDM perturbations on halo clustering and baryon fraction,pending,budget,Waiting for next daily run,,2011.01037,https://doi.org/10.1088/1475-7516/2021/03/023,https://ui.adsabs.harvard.edu/abs/2021JCAP...03..023K/abstract
-2021,Tests of General Relativity with GWTC-3,pending,budget,Waiting for next daily run,,,,
+2021,Quantifying the impact of baryon-CDM perturbations on halo clustering and baryon fraction,needs_review,"OpenAlex, arXiv metadata, PDF inspected",No matching author affiliation established; PDF: ValueError: URL did not provide a readable PDF,https://arxiv.org/pdf/2011.01037,2011.01037,https://doi.org/10.1088/1475-7516/2021/03/023,https://ui.adsabs.harvard.edu/abs/2021JCAP...03..023K/abstract
 2021,The population of merging compact binaries inferred using gravitational waves through GWTC-3,pending,budget,Waiting for next daily run,,2111.03634,,
 2020,A guide to LIGO--Virgo detector noise and extraction of transient gravitational-wave signals,pending,budget,Waiting for next daily run,,1908.11170,https://doi.org/10.1088/1361-6382/ab685e,https://ui.adsabs.harvard.edu/abs/2020CQGra..37e5002A/abstract
 2020,A Joint Fermi-GBM and LIGO/Virgo Analysis of Compact Binary Mergers From the First and Second Gravitational-wave Observing Runs,pending,budget,Waiting for next daily run,,,,

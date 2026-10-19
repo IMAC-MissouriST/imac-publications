@@ -71,10 +71,12 @@
   },
   "doi:10.1088/1475-7516/2021/03/023": {
     "arxiv_id": "2011.01037",
-    "checked_at": "2026-10-19T16:15:02.519836+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:46.802425+00:00",
+    "evidence": "No matching author affiliation established; PDF: ValueError: URL did not provide a readable PDF",
+    "evidence_url": "https://arxiv.org/pdf/2011.01037",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1088/1475-7516/2025/01/108": {
     "arxiv_id": "2404.09181",
@@ -101,31 +103,39 @@
   },
   "doi:10.1088/2632-2153/abea69": {
     "arxiv_id": "",
-    "checked_at": "2026-10-19T16:15:16.980448+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:47.881519+00:00",
+    "evidence": "Institute of Multi-messenger Astrophysics and Cosmology, Missouri University of Science and Technology, Physics Building, 1315 N. Pine St., Rolla, MO 65409, United States of America",
+    "evidence_url": "https://openalex.org/W3119483553",
+    "source": "OpenAlex",
+    "status": "verified"
   },
   "doi:10.1093/mnras/stac2862": {
     "arxiv_id": "2205.00018",
-    "checked_at": "2026-10-19T16:14:56.586691+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:39.146103+00:00",
+    "evidence": "No matching author affiliation established; ",
+    "evidence_url": "https://arxiv.org/pdf/2205.00018",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1093/mnras/stac331": {
     "arxiv_id": "2109.02949",
-    "checked_at": "2026-10-19T16:14:42.068872+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:26.364025+00:00",
+    "evidence": "No matching author affiliation established; ",
+    "evidence_url": "https://arxiv.org/pdf/2109.02949",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1093/mnras/stad588": {
     "arxiv_id": "2212.01477",
-    "checked_at": "2026-10-19T16:14:15.641281+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:31:49.338602+00:00",
+    "evidence": "Missouri University of Science and Technology , Rolla, MO 65409, USA",
+    "evidence_url": "https://openalex.org/W4322739600",
+    "source": "OpenAlex",
+    "status": "verified"
   },
   "doi:10.1093/mnras/staf2026": {
     "arxiv_id": "2409.05795",
@@ -151,11 +161,13 @@
     "status": "unverified"
   },
   "doi:10.1093/mnrasl/slae023": {
-    "arxiv_id": "2312.04847",
-    "checked_at": "2026-10-19T16:14:03.121128+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "arxiv_id": "",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:31:28.000201+00:00",
+    "evidence": "No matching author affiliation established; arXiv: known ID did not match title; PDF: HTTP 403",
+    "evidence_url": "",
+    "source": "OpenAlex",
+    "status": "needs_review"
   },
   "doi:10.1103/physrevd.100.024004": {
     "arxiv_id": "1903.01901",
@@ -194,10 +206,12 @@
   },
   "doi:10.1103/physrevd.109.064055": {
     "arxiv_id": "2402.15540",
-    "checked_at": "2026-10-19T15:09:26.819254+00:00",
-    "evidence": "No confirmed affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:30:59.261031+00:00",
+    "evidence": "No matching author affiliation established; ",
+    "evidence_url": "https://arxiv.org/pdf/2402.15540",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1103/physrevd.99.122002": {
     "arxiv_id": "1902.08442",
@@ -236,17 +250,21 @@
   },
   "doi:10.1111/1740-9713.01488": {
     "arxiv_id": "",
-    "checked_at": "2026-10-19T16:15:07.103380+00:00",
-    "evidence": "PDF: HTTPError",
-    "source": "none",
-    "status": "error"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:47.541796+00:00",
+    "evidence": "Yanyan Zheng is a physics PhD student at the Missouri University of Science and Technology and a member of the LIGO Scientific Collaboration",
+    "evidence_url": "https://openalex.org/W3127731267",
+    "source": "OpenAlex",
+    "status": "verified"
   },
   "doi:10.1117/12.3017865": {
     "arxiv_id": "",
-    "checked_at": "2026-10-19T15:09:21.124731+00:00",
-    "evidence": "No accessible, confirmed affiliation",
-    "source": "none",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:30:33.483144+00:00",
+    "evidence": "No matching author affiliation established; ",
+    "evidence_url": "",
+    "source": "OpenAlex",
+    "status": "needs_review"
   },
   "doi:10.33232/001c.151254": {
     "arxiv_id": "2507.16707",
@@ -341,10 +359,12 @@
   },
   "doi:10.48550/arxiv.2306.12201": {
     "arxiv_id": "2306.12201",
-    "checked_at": "2026-10-19T16:14:21.633341+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:31:53.562133+00:00",
+    "evidence": "No matching author affiliation established; ",
+    "evidence_url": "https://arxiv.org/pdf/2306.12201",
+    "source": "arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.48550/arxiv.2509.07352": {
     "arxiv_id": "2509.07352",
@@ -610,11 +630,13 @@
     "status": "unverified"
   },
   "title:ajointfermigbmandswiftbatanalysisofgravitationalwavecandidatesfromthethirdgravitationalwaveobservingrun": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T16:14:03.123415+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "2308.13666",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:31:34.649283+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2308.13666#page=7",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:arxivnarrowbandsearchesforcontinuousgravitationalwavesfromknownpulsarsinthefirsttwopartsofthefourthligovirgokagraobservingrun": {
     "arxiv_id": "",
@@ -636,24 +658,39 @@
   },
   "title:arxivsearchforeccentricblackholecoalescencesduringthethirdobservingrunofligoandvirgo": {
     "arxiv_id": "",
-    "checked_at": "2026-10-19T16:14:21.633398+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:31:56.651559+00:00",
+    "evidence": "No usable source found",
+    "evidence_url": "",
+    "source": "retrieval",
+    "status": "needs_review"
+  },
+  "title:asearchusinggeo600forgravitationalwavescoincidentwithfastradioburstsfromsgr19352154": {
+    "arxiv_id": "2410.09151",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:31:06.365034+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2410.09151#page=22",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:boundsonthespatialanisotropyofforegroundbinaryblackholemergerdetectionsinthethirdligovirgokagracatalog": {
     "arxiv_id": "",
-    "checked_at": "2026-10-19T16:14:21.633412+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:31:59.810864+00:00",
+    "evidence": "No usable source found",
+    "evidence_url": "",
+    "source": "retrieval",
+    "status": "needs_review"
   },
   "title:codingthecosmosintroductiontogravitationalwavessummerworkshop": {
     "arxiv_id": "",
-    "checked_at": "2026-10-19T16:13:59.773853+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:31:21.419928+00:00",
+    "evidence": "No usable source found",
+    "evidence_url": "",
+    "source": "retrieval",
+    "status": "needs_review"
   },
   "title:deepsearchforjointsourcesofgravitationalwavesandhighenergyneutrinoswithicecubeduringthethirdobservingrunofligoandvirgo": {
     "arxiv_id": "",
@@ -666,24 +703,30 @@
   },
   "title:detectionandwaveformreconstructionofgravitationalwavesignalswithcoherentwaveburstandwaveletdetectionfiltermethods": {
     "arxiv_id": "",
-    "checked_at": "2026-10-19T16:15:16.995253+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:54.450819+00:00",
+    "evidence": "No usable source found",
+    "evidence_url": "",
+    "source": "retrieval",
+    "status": "needs_review"
   },
   "title:exploringcosmologywithmachinelearning": {
     "arxiv_id": "",
-    "checked_at": "2026-10-19T16:14:27.846110+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:12.636356+00:00",
+    "evidence": "No usable source found",
+    "evidence_url": "",
+    "source": "retrieval",
+    "status": "needs_review"
   },
   "title:far1significance": {
     "arxiv_id": "",
-    "checked_at": "2026-10-19T16:14:27.846100+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:09.411694+00:00",
+    "evidence": "No usable source found",
+    "evidence_url": "",
+    "source": "retrieval",
+    "status": "needs_review"
   },
   "title:gw190412observationofabinaryblackholecoalescencewithasymmetricmasses": {
     "arxiv_id": "",
@@ -709,18 +752,40 @@
     "status": "unverified"
   },
   "title:lowlatencygravitationalwavealertproductsandtheirperformanceinanticipationofthefourthligovirgokagraobservingrun": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T16:14:03.127545+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "2308.04545",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:31:40.655791+00:00",
+    "evidence": "Institute of Multi-messenger Astrophysics and Cosmology, Missouri University of Science and Technology, Physics Building, 1315 N. Pine St., Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2308.04545#page=1",
+    "source": "PDF affiliation",
+    "status": "verified"
+  },
+  "title:observationofgravitationalwavesfromthecoalescenceofa25backslashtext45mbackslashodotcompactobjectandaneutronstar": {
+    "arxiv_id": "2404.04248",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:31:12.183039+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2404.04248#page=7",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:opticallytargetedsearchforgravitationalwavesemittedbycorecollapsesupernovaeduringthethirdobservingrunofadvancedligoandadvancedvirgo": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T16:13:59.773839+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "2305.16146",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:31:18.349977+00:00",
+    "evidence": "Institute of Multi-messenger Astrophysics and Cosmology, Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2305.16146#page=1",
+    "source": "PDF affiliation",
+    "status": "verified"
+  },
+  "title:possibilityofoverspinningkerrblackhole": {
+    "arxiv_id": "2303.11232",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:19.047001+00:00",
+    "evidence": "sorbed by the blackhole which leads to a change in \u2217Current adddress: Missouri University of Science and Technology, Missouri S&T, Rolla, MO 65409, U.S.A. \u2020Electronic address: dmkwf@umsystem.edu \u2021Electronic address: rajesh@iiserkol.ac.in",
+    "evidence_url": "https://arxiv.org/pdf/2303.11232#page=1",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:searchforcontinuousgravitationalwavesfromknownpulsarsinthefirstpartofthefourthligovirgokagraobservingrun": {
     "arxiv_id": "2501.01495",
@@ -732,25 +797,40 @@
     "status": "verified"
   },
   "title:searchforeccentricblackholecoalescencesduringthethirdobservingrunofligoandvirgo": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T15:09:21.126360+00:00",
-    "evidence": "No accessible, confirmed affiliation",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "2308.03822",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:30:46.797439+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2308.03822#page=7",
+    "source": "PDF affiliation",
+    "status": "verified"
+  },
+  "title:searchforgravitationallensingsignaturesinthefullthirdobservingrunoftheligovirgonetwork": {
+    "arxiv_id": "2304.08393",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:31:48.028777+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2304.08393#page=24",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:searchforgravitationalwavetransientsassociatedwithmagnetarburstsinadvancedligoandadvancedvirgodatafromthethirdobservingrun": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T16:14:48.248424+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "2210.10931",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:33.006725+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2210.10931#page=26",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:shadowimagesofcompactobjectsinbeyondhorndeskitheory": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T15:09:21.126372+00:00",
-    "evidence": "No accessible, confirmed affiliation",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "2401.15249",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:30:53.056514+00:00",
+    "evidence": "No matching author affiliation established; ",
+    "evidence_url": "https://arxiv.org/pdf/2401.15249",
+    "source": "arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "title:spuriousaccelerationnoiseonthelisaspacecraftduetosolaractivity": {
     "arxiv_id": "",
@@ -769,18 +849,31 @@
     "status": "verified"
   },
   "title:testsofgeneralrelativitywithgwtc3": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T16:15:16.993355+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "2112.06861",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:51.589495+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2112.06861#page=6",
+    "source": "PDF affiliation",
+    "status": "verified"
+  },
+  "title:theangularpowerspectrumofgravitationalwavetransientsourcesasaprobeofthelargescalestructure": {
+    "arxiv_id": "2305.02652",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:06.198214+00:00",
+    "evidence": "Institute of Multi-messenger Astrophysics and Cosmology, Missouri University of Science and Technology, Physics Building, 1315 N. Pine St., Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2305.02652#page=1",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:thescienceofgravitationalwavesourcesandbeyondcompactbinarycoalescences": {
     "arxiv_id": "",
-    "checked_at": "2026-10-19T16:14:27.846084+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:32:09.411597+00:00",
+    "evidence": "No usable source found",
+    "evidence_url": "",
+    "source": "retrieval",
+    "status": "needs_review"
   },
   "title:twodimensionalcorrelationfunctionofbinaryblackholecoalescences": {
     "arxiv_id": "",
@@ -790,10 +883,12 @@
     "status": "unverified"
   },
   "title:ultralightvectordarkmattersearchusingdatafromthekagrao3gkrun": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T15:09:21.126339+00:00",
-    "evidence": "No accessible, confirmed affiliation",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "2403.03004",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:30:40.141656+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2403.03004#page=7",
+    "source": "PDF affiliation",
+    "status": "verified"
   }
 }
