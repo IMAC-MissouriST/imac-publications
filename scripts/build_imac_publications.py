@@ -1,12 +1,22 @@
 """Build IMAC-wide publications from researcher CSVs.
 
-Affiliation evidence: ADS -> arXiv author metadata -> accessible PDF header.
-Default output is a PREVIEW; individual researcher CSVs are not modified.
+Affiliation evidence:
+    NASA ADS -> arXiv author metadata -> paper PDF.
+
+This version:
+    - Focuses on publications from 2019 onward.
+    - Checks arXiv:2507.16707 first.
+    - Performs up to 30 new verification checks per run.
+    - Saves verification results in a cache.
+    - Creates affiliation audit and review reports.
+    - Generates overall IMAC publication statistics.
+    - Uses preview mode by default.
+
+Individual researcher CSV files are not modified.
 """
 
 import csv
 import html
-import io
 import json
 import os
 import re
@@ -47,16 +57,21 @@ ARXIV_API = "https://export.arxiv.org/api/query"
 
 START_YEAR = 2019
 
-# Keep preview mode until results have been verified.
+# Keep preview mode until we verify the results.
 MODE = os.environ.get(
     "IMAC_OUTPUT_MODE",
     "preview"
 ).strip().lower()
 
-# Limit new arXiv/PDF checks per workflow run.
+# Maximum new affiliation verification attempts per run.
 MAX_NEW_CHECKS = int(
-    os.environ.get("IMAC_MAX_NEW_CHECKS", "15")
+    os.environ.get("IMAC_MAX_NEW_CHECKS", "30")
 )
+
+# Test this publication first:
+# Simulating realistic Lyman-alpha emitting galaxies
+# including the effect of radiative transfer.
+PRIORITY_ARXIV = "2507.16707"
 
 MAX_PDF_BYTES = 16 * 1024 * 1024
 
@@ -79,8 +94,8 @@ USER_AGENT = (
 # AFFILIATION MATCHING
 # ============================================================
 
-# Recognize full institutional names.
-# Do not use bare "S&T", which could match unrelated institutions.
+# Recognize IMAC and Missouri S&T.
+# Never match the abbreviation "S&T" alone.
 
 AFF_PATTERNS = [
     re.compile(
@@ -102,7 +117,8 @@ AFF_PATTERNS = [
 ]
 
 ARXIV_ID = re.compile(
-    r"(?i)(?:arxiv[:./\s]|10\.48550/arxiv\.)"
+    r"(?i)(?:arxiv(?:\.org/(?:abs|pdf)/|[:./\s])|"
+    r"10\.48550/arxiv\.)"
     r"(\d{4}\.\d{4,5})(?:v\d+)?"
 )
 
@@ -198,13 +214,15 @@ def is_preprint(row):
 
 
 # ============================================================
-# READ INDIVIDUAL RESEARCHER CSV FILES
+# READ INDIVIDUAL RESEARCHER PUBLICATION FILES
 # ============================================================
 
 def read_records():
 
     researchers = json.loads(
-        CONFIG.read_text(encoding="utf-8")
+        CONFIG.read_text(
+            encoding="utf-8"
+        )
     )["researchers"]
 
     if not researchers:
@@ -287,20 +305,27 @@ def read_records():
 
                 row.update({
                     "Year": year,
+
                     "Title": title,
+
                     "Journal": plain(
                         row.get("Journal")
                     ),
+
                     "Citation (ADS)": str(
                         citation or ""
                     ).strip(),
+
                     "researcher": person["name"],
+
                     "doi_key": doi_key(
                         row.get("DOI URL", "")
                     ),
+
                     "bibcode": bibcode_from_url(
                         row.get("ADS URL", "")
                     ),
+
                     "title_key": title_key(title),
                 })
 
@@ -439,6 +464,41 @@ def best_record(records):
 
 
 # ============================================================
+# RECOGNIZE PRIORITY PAPER
+# ============================================================
+
+def is_priority_paper(cluster):
+
+    """
+    Identify the 2025 test paper even if ORCID or ADS
+    does not contain its arXiv identifier.
+    """
+
+    for row in cluster["records"]:
+
+        identifiers = " ".join([
+            str(row.get("DOI URL", "")),
+            str(row.get("ADS URL", "")),
+            str(row.get("Title", "")),
+            str(row.get("Journal", ""))
+        ])
+
+        title = row["title_key"]
+
+        if PRIORITY_ARXIV in identifiers:
+            return True
+
+        if (
+            "simulatingrealistic" in title
+            and "radiativetransfer" in title
+            and "lyman" in title
+        ):
+            return True
+
+    return False
+
+
+# ============================================================
 # RETRIEVE NASA ADS METADATA
 # ============================================================
 
@@ -484,11 +544,13 @@ def fetch_ads(records, token):
 
         url = ADS_API + "?" + urlencode({
             "q": " OR ".join(clauses),
+
             "fl": (
                 "bibcode,doi,identifier,"
                 "first_author,author_count,"
                 "aff,citation_count"
             ),
+
             "rows": 200,
         })
 
@@ -529,25 +591,26 @@ def fetch_ads(records, token):
             {}
         )
 
-        docs = response.get("docs")
+        documents = response.get("docs")
 
         if (
-            not isinstance(docs, list)
-            or response.get("numFound", 0) > len(docs)
+            not isinstance(documents, list)
+            or response.get("numFound", 0) > len(documents)
         ):
             raise RuntimeError(
                 "Incomplete ADS metadata response; "
                 "refusing to update publication files"
             )
 
-        for doc in docs:
+        for document in documents:
 
-            if doc.get("bibcode"):
+            if document.get("bibcode"):
+
                 by_bibcode[
-                    doc["bibcode"]
-                ] = doc
+                    document["bibcode"]
+                ] = document
 
-            dois = doc.get("doi") or []
+            dois = document.get("doi") or []
 
             if isinstance(dois, str):
                 dois = [dois]
@@ -556,7 +619,7 @@ def fetch_ads(records, token):
 
                 by_doi[
                     doi_key(doi)
-                ] = doc
+                ] = document
 
     return by_bibcode, by_doi
 
@@ -579,20 +642,20 @@ def documents_for(cluster, metadata):
             dois.get(row["doi_key"])
         )
 
-        for doc in candidates:
+        for document in candidates:
 
-            if not doc:
+            if not document:
                 continue
 
             key = (
-                doc.get("bibcode")
-                or id(doc)
+                document.get("bibcode")
+                or id(document)
             )
 
             if key not in seen:
 
                 seen.add(key)
-                documents.append(doc)
+                documents.append(document)
 
     return documents
 
@@ -636,9 +699,9 @@ def ads_affiliation(documents):
 
     found_any = False
 
-    for doc in documents:
+    for document in documents:
 
-        affiliations = doc.get(
+        affiliations = document.get(
             "aff"
         ) or []
 
@@ -694,6 +757,11 @@ def ads_affiliation(documents):
 
 def arxiv_id_for(cluster, documents):
 
+    # For the priority paper, use the known arXiv ID.
+    # Its journal DOI may not contain this identifier.
+    if is_priority_paper(cluster):
+        return PRIORITY_ARXIV
+
     pieces = []
 
     for row in cluster["records"]:
@@ -705,9 +773,9 @@ def arxiv_id_for(cluster, documents):
             row.get("Journal", "")
         ])
 
-    for doc in documents:
+    for document in documents:
 
-        identifiers = doc.get(
+        identifiers = document.get(
             "identifier"
         ) or []
 
@@ -719,7 +787,7 @@ def arxiv_id_for(cluster, documents):
 
         pieces.extend(
             identifiers
-            + [doc.get("bibcode", "")]
+            + [document.get("bibcode", "")]
         )
 
     for piece in pieces:
@@ -763,6 +831,7 @@ def wait_for_arxiv():
         LAST_ARXIV_REQUEST
         and delta < 3.1
     ):
+
         time.sleep(
             3.1 - delta
         )
@@ -831,7 +900,10 @@ def arxiv_author_affiliation(identifier):
 
 def openalex_pdf_url(cluster):
 
-    """Find an accessible PDF when there is no arXiv ID."""
+    """
+    Try to find an open-access PDF when an arXiv ID
+    is not available.
+    """
 
     representative = best_record(
         cluster["records"]
@@ -894,14 +966,17 @@ def openalex_pdf_url(cluster):
 
 
 # ============================================================
-# READ AUTHOR AFFILIATIONS FROM PAPER PDF
+# READ AFFILIATION FROM PAPER PDF
 # ============================================================
 
 def pdf_affiliation(pdf_url):
 
-    """Check affiliation text near the beginning of a PDF.
+    """
+    Search the first-page author/title area.
 
-    Avoid matching acknowledgments or references.
+    Do not use the complete paper text, because
+    acknowledgments and references could produce
+    false affiliation matches.
     """
 
     parts = urlsplit(pdf_url)
@@ -910,6 +985,7 @@ def pdf_affiliation(pdf_url):
         parts.scheme != "https"
         or not parts.hostname
     ):
+
         return (
             "",
             "Invalid PDF URL"
@@ -920,6 +996,7 @@ def pdf_affiliation(pdf_url):
         "127.0.0.1",
         "169.254.169.254"
     }:
+
         return (
             "",
             "Unsafe PDF URL"
@@ -968,9 +1045,6 @@ def pdf_affiliation(pdf_url):
         filetype="pdf"
     ) as document:
 
-        # Check the first page and, when relevant,
-        # an explicit affiliation block on page two.
-
         for page_number in range(
             min(len(document), 2)
         ):
@@ -997,6 +1071,9 @@ def pdf_affiliation(pdf_url):
                 )
 
             else:
+
+                # Only consider the second page when it
+                # explicitly starts with author affiliations.
 
                 if not re.search(
                     r"(?i)affiliations?\s*"
@@ -1033,6 +1110,7 @@ def pdf_affiliation(pdf_url):
                     ][:350]
 
                 else:
+
                     evidence = cleaned[:350]
 
                 return (
@@ -1188,6 +1266,9 @@ def verify_affiliation(
             else 30
         )
 
+        # Successfully verified affiliations remain cached.
+        # Unverified results are checked periodically.
+
         if (
             old.get("status") == "verified"
             or age < days
@@ -1219,6 +1300,7 @@ def verify_affiliation(
     checks["used"] += 1
 
     status = "unverified"
+
     method = "none"
 
     detail = (
@@ -1243,9 +1325,7 @@ def verify_affiliation(
 
                 status = "verified"
 
-                method = (
-                    "arXiv author metadata"
-                )
+                method = "arXiv author metadata"
 
                 detail = evidence
 
@@ -1341,11 +1421,15 @@ def verify_affiliation(
 
     cache[key] = {
         "status": status,
+
         "source": method,
+
         "evidence": detail[:350],
+
         "checked_at": datetime.now(
             timezone.utc
         ).isoformat(),
+
         "arxiv_id": arxiv_id,
     }
 
@@ -1386,9 +1470,9 @@ def author_label(
         for name in names
     )
 
-    for doc in documents:
+    for document in documents:
 
-        first = doc.get(
+        first = document.get(
             "first_author"
         ) or ""
 
@@ -1410,7 +1494,7 @@ def author_label(
 
                 multiple = (
                     int(
-                        doc.get(
+                        document.get(
                             "author_count"
                         ) or 2
                     ) > 1
@@ -1448,16 +1532,13 @@ def output_row(
         cluster["records"]
     )
 
-    docs = documents_for(
+    documents = documents_for(
         cluster,
         metadata
     )
 
-    # Avoid adding the same journal and preprint
-    # citation counts together.
-    #
-    # Use the largest available ADS count for
-    # records representing the same work.
+    # Avoid counting both journal and arXiv citations
+    # independently for the same publication.
 
     counts = [
         int(row["Citation (ADS)"])
@@ -1466,10 +1547,10 @@ def output_row(
     ]
 
     counts += [
-        int(doc["citation_count"])
-        for doc in docs
+        int(document["citation_count"])
+        for document in documents
         if str(
-            doc.get(
+            document.get(
                 "citation_count",
                 ""
             )
@@ -1491,7 +1572,7 @@ def output_row(
         "Authors": html.escape(
             author_label(
                 cluster,
-                docs,
+                documents,
                 order
             ),
             quote=False
@@ -1585,9 +1666,16 @@ def write_summary(
     # Summary sentence requested by Shun
     # --------------------------------------------------------
 
+    article_label = (
+        "article"
+        if count == 1
+        else "articles"
+    )
+
     statement = (
         f"IMAC published a total of "
-        f"{count:,} articles, cited a total of "
+        f"{count:,} {article_label}, "
+        f"cited a total of "
         f"{total:,} times "
         f"(according to NASA ADS)."
     )
@@ -1633,11 +1721,17 @@ def write_summary(
         json.dumps(
             {
                 "start_year": START_YEAR,
+
                 "end_year": year_now,
+
                 "published_articles": count,
+
                 "ads_citations": total,
+
                 "papers_with_ads_data": covered,
+
                 "summary": statement,
+
                 "note": note,
             },
             indent=2
@@ -1722,12 +1816,54 @@ def main():
 
     clusters = collapse(records)
 
+    year_now = datetime.now(
+        timezone.utc
+    ).year
+
+    # --------------------------------------------------------
+    # Step 2b: Focus on 2019-present
+    # --------------------------------------------------------
+
+    all_clusters_count = len(clusters)
+
+    clusters = [
+        cluster
+        for cluster in clusters
+        if (
+            START_YEAR
+            <= int(
+                best_record(
+                    cluster["records"]
+                )["Year"]
+            )
+            <= year_now
+        )
+    ]
+
+    recent_records = [
+        record
+        for cluster in clusters
+        for record in cluster["records"]
+    ]
+
+    print(
+        f"Total unique publications: "
+        f"{all_clusters_count}"
+    )
+
+    print(
+        f"Publications from "
+        f"{START_YEAR}-{year_now}: "
+        f"{len(clusters)}"
+    )
+
     # --------------------------------------------------------
     # Step 3: Retrieve ADS metadata
+    # Only for publications from 2019 onward
     # --------------------------------------------------------
 
     metadata = fetch_ads(
-        records,
+        recent_records,
         token
     )
 
@@ -1750,26 +1886,41 @@ def main():
 
     audit = []
 
-    year_now = datetime.now(
-        timezone.utc
-    ).year
-
     statuses = Counter()
 
     # --------------------------------------------------------
-    # Step 4: Verify affiliations
+    # Step 4: Set verification priority
+    #
+    # 1. arXiv:2507.16707
+    # 2. Remaining papers, newest to oldest
     # --------------------------------------------------------
 
-    # Check recent papers first because the number
-    # of new PDF checks per run is limited.
-
     clusters.sort(
-        key=lambda cluster: max(
-            int(row["Year"])
-            for row in cluster["records"]
+        key=lambda cluster: (
+            1 if is_priority_paper(cluster) else 0,
+            int(
+                best_record(
+                    cluster["records"]
+                )["Year"]
+            )
         ),
         reverse=True
     )
+
+    priority_found = any(
+        is_priority_paper(cluster)
+        for cluster in clusters
+    )
+
+    print(
+        "Priority paper "
+        f"arXiv:{PRIORITY_ARXIV} found: "
+        f"{priority_found}"
+    )
+
+    # --------------------------------------------------------
+    # Step 5: Verify affiliations
+    # --------------------------------------------------------
 
     for cluster in clusters:
 
@@ -1777,28 +1928,93 @@ def main():
             cluster["records"]
         )
 
-        (
-            status,
-            source,
-            evidence,
-            arxiv_id
-        ) = verify_affiliation(
-            cluster,
-            metadata,
-            cache,
-            checks
+        # Force retry if the priority paper was previously
+        # cached as unverified or error.
+        # Keep any positive verification.
+
+        if is_priority_paper(cluster):
+
+            documents = documents_for(
+                cluster,
+                metadata
+            )
+
+            arxiv_id = arxiv_id_for(
+                cluster,
+                documents
+            )
+
+            key = cache_key(
+                cluster,
+                arxiv_id
+            )
+
+            if (
+                key in cache
+                and cache[key].get("status") != "verified"
+            ):
+                del cache[key]
+
+        status, source, evidence, arxiv_id = (
+            verify_affiliation(
+                cluster,
+                metadata,
+                cache,
+                checks
+            )
         )
 
         statuses[status] += 1
 
+        # Print a clearly identifiable test result
+        # in the GitHub Actions logs.
+
+        if is_priority_paper(cluster):
+
+            print("=" * 60)
+
+            print(
+                "PRIORITY PAPER TEST RESULT"
+            )
+
+            print(
+                f"Paper: arXiv:{PRIORITY_ARXIV}"
+            )
+
+            print(
+                f"Status: {status}"
+            )
+
+            print(
+                f"Verification source: {source}"
+            )
+
+            print(
+                f"Evidence: {evidence}"
+            )
+
+            print(
+                f"Detected arXiv ID: "
+                f"{arxiv_id or PRIORITY_ARXIV}"
+            )
+
+            print("=" * 60)
+
         audit.append({
             "Year": chosen["Year"],
+
             "Title": chosen["Title"],
+
             "Status": status,
+
             "Source": source,
+
             "Evidence": evidence,
+
             "arXiv": arxiv_id,
+
             "DOI URL": chosen["DOI URL"],
+
             "ADS URL": chosen["ADS URL"],
         })
 
@@ -1812,7 +2028,7 @@ def main():
         )
 
         # ----------------------------------------------------
-        # Separate recent preprints from published articles
+        # Separate preprints and published articles
         # ----------------------------------------------------
 
         if chosen["preprint"]:
@@ -1825,9 +2041,6 @@ def main():
 
         else:
 
-            # A journal name is required before
-            # counting this as a published article.
-
             if chosen["Journal"]:
 
                 annual[
@@ -1835,7 +2048,7 @@ def main():
                 ].append(row)
 
     # --------------------------------------------------------
-    # Step 5: Create output folder
+    # Step 6: Create output folder
     # --------------------------------------------------------
 
     output.mkdir(
@@ -1847,15 +2060,15 @@ def main():
     save_cache(cache)
 
     # --------------------------------------------------------
-    # Step 6: Generate yearly publication tables
+    # Step 7: Generate yearly publication tables
     #
     # NO yearly summary rows.
     # --------------------------------------------------------
 
     years = set(annual)
 
-    # Preserve the same yearly filenames used
-    # by the existing Terminalfour website.
+    # Preserve existing yearly filenames only
+    # for 2019 onward.
 
     for old_file in LIVE_OUTPUT.glob(
         "publications_*.csv"
@@ -1867,9 +2080,16 @@ def main():
         )
 
         if match:
-            years.add(
+
+            year = int(
                 match.group(1)
             )
+
+            if START_YEAR <= year <= year_now:
+
+                years.add(
+                    str(year)
+                )
 
     years.update(
         str(year)
@@ -1905,7 +2125,7 @@ def main():
         )
 
     # --------------------------------------------------------
-    # Step 7: Generate recent preprints
+    # Step 8: Generate recent preprints
     # --------------------------------------------------------
 
     write_csv(
@@ -1919,16 +2139,16 @@ def main():
     )
 
     # --------------------------------------------------------
-    # Step 8: Generate overall IMAC statistics
+    # Step 9: Generate overall IMAC statistics
     # --------------------------------------------------------
 
-    n_papers = write_summary(
+    number_of_papers = write_summary(
         output,
         annual
     )
 
     # --------------------------------------------------------
-    # Step 9: Generate affiliation audit and review reports
+    # Step 10: Generate affiliation audit and review reports
     # --------------------------------------------------------
 
     fields = [
@@ -1958,36 +2178,46 @@ def main():
         fields
     )
 
+    # --------------------------------------------------------
+    # Step 11: Print final summary
+    # --------------------------------------------------------
+
     print(
         "Verification status:",
         dict(statuses)
     )
 
     print(
-        f"New PDF/arXiv checks this run: "
+        f"New arXiv/PDF checks this run: "
         f"{checks['used']} / {MAX_NEW_CHECKS}"
     )
 
     print(
-        f"Output mode: {MODE}; "
-        f"files saved in {output}"
+        f"Output mode: {MODE}"
+    )
+
+    print(
+        f"Files saved in: {output}"
     )
 
     # --------------------------------------------------------
-    # Step 10: Safety check
+    # Step 12: Safety check
     # --------------------------------------------------------
 
     if (
         MODE == "live"
-        and n_papers == 0
+        and (
+            number_of_papers == 0
+            or statuses["pending"] > 0
+        )
     ):
 
         raise RuntimeError(
-            "No verified 2019+ papers; "
-            "refusing a live update"
+            "Live update stopped: "
+            "no verified 2019+ papers, or some "
+            "affiliation checks are still pending."
         )
 
 
 if __name__ == "__main__":
-
     main()
