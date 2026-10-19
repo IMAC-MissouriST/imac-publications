@@ -1,4 +1,39 @@
 {
+  "arxiv:2111.03634": {
+    "arxiv_id": "2111.03634",
+    "checked_at": "2026-10-19T16:15:27.527435+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "arxiv:2303.11232": {
+    "arxiv_id": "2303.11232",
+    "checked_at": "2026-10-19T16:14:35.648894+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "arxiv:2304.08393": {
+    "arxiv_id": "2304.08393",
+    "checked_at": "2026-10-19T16:14:09.380532+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "arxiv:2305.02652": {
+    "arxiv_id": "2305.02652",
+    "checked_at": "2026-10-19T16:14:27.846016+00:00",
+    "evidence": "u2, \u2217\u2217 1Institute of Multi-messenger Astrophysics and Cosmology, Missouri University of Science and Technology, Physics Building, 1315 N. Pine St., Rolla, MO 65409, USA 2Theoretical Particle Physics and Cosmolo",
+    "source": "PDF header",
+    "status": "verified"
+  },
+  "arxiv:2404.04248": {
+    "arxiv_id": "2404.04248",
+    "checked_at": "2026-10-19T16:13:59.773763+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
   "arxiv:2410.09151": {
     "arxiv_id": "2410.09151",
     "checked_at": "2026-10-19T15:09:33.102318+00:00",
@@ -20,10 +55,66 @@
     "source": "PDF checked",
     "status": "unverified"
   },
+  "doi:10.1088/1361-6382/ab685e": {
+    "arxiv_id": "1908.11170",
+    "checked_at": "2026-10-19T16:16:10.924310+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1088/1475-7516/2020/07/039": {
+    "arxiv_id": "2001.10252",
+    "checked_at": "2026-10-19T16:16:00.963222+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1088/1475-7516/2021/03/023": {
+    "arxiv_id": "2011.01037",
+    "checked_at": "2026-10-19T16:15:02.519836+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
   "doi:10.1088/1475-7516/2025/01/108": {
     "arxiv_id": "2404.09181",
     "checked_at": "2026-10-19T15:08:51.450375+00:00",
     "evidence": "PDF exceeds configured download limit",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1088/2632-2153/abb93a": {
+    "arxiv_id": "2005.03745",
+    "checked_at": "2026-10-19T16:15:10.577739+00:00",
+    "evidence": "avagli\u00e0 Institute of Multi-messenger Astrophysics and Cosmology, Missouri University of Science and Technology, 1315 N. Pine St., Rolla, MO 65409, USA.[astro-ph.HE] Kendall Ackley School of Physics and Astronom",
+    "source": "PDF header",
+    "status": "verified"
+  },
+  "doi:10.1088/2632-2153/abea69": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:15:16.980448+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1093/mnras/stac2862": {
+    "arxiv_id": "2205.00018",
+    "checked_at": "2026-10-19T16:14:56.586691+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1093/mnras/stac331": {
+    "arxiv_id": "2109.02949",
+    "checked_at": "2026-10-19T16:14:42.068872+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
+  "doi:10.1093/mnras/stad588": {
+    "arxiv_id": "2212.01477",
+    "checked_at": "2026-10-19T16:14:15.641281+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
     "source": "PDF checked",
     "status": "unverified"
   },
@@ -34,12 +125,26 @@
     "source": "PDF checked",
     "status": "unverified"
   },
+  "doi:10.1093/mnrasl/slae023": {
+    "arxiv_id": "2312.04847",
+    "checked_at": "2026-10-19T16:14:03.121128+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
+  },
   "doi:10.1103/physrevd.109.064055": {
     "arxiv_id": "2402.15540",
     "checked_at": "2026-10-19T15:09:26.819254+00:00",
     "evidence": "No confirmed affiliation in inspected PDF header",
     "source": "PDF checked",
     "status": "unverified"
+  },
+  "doi:10.1111/1740-9713.01488": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:15:07.103380+00:00",
+    "evidence": "PDF: HTTPError",
+    "source": "none",
+    "status": "error"
   },
   "doi:10.1117/12.3017865": {
     "arxiv_id": "",
@@ -54,6 +159,20 @@
     "evidence": "lti-messenger Astrophysics and Cosmology, Department of Physics, Missouri University of Science and Technology, 1315 N Pine Street, Rolla, MO 65409, USA 2Kavli Institute for the Physics and Mathematics of the U",
     "source": "PDF header",
     "status": "verified"
+  },
+  "doi:10.48550/arxiv.2212.09136": {
+    "arxiv_id": "2212.09136",
+    "checked_at": "2026-10-19T16:14:48.228149+00:00",
+    "evidence": "lti-messenger Astrophysics and Cosmology, Department of Physics, Missouri University of Science and Technology, 1315 N Pine St, Rolla, MO 65409, USA Accepted XXX. Received YYY; in original form ZZZ2022 ABSTRACT",
+    "source": "PDF header",
+    "status": "verified"
+  },
+  "doi:10.48550/arxiv.2306.12201": {
+    "arxiv_id": "2306.12201",
+    "checked_at": "2026-10-19T16:14:21.633341+00:00",
+    "evidence": "No IMAC affiliation in inspected PDF header",
+    "source": "PDF checked",
+    "status": "unverified"
   },
   "doi:10.48550/arxiv.2509.07352": {
     "arxiv_id": "2509.07352",
@@ -265,6 +384,13 @@
     "source": "PDF checked",
     "status": "unverified"
   },
+  "title:ajointfermigbmandswiftbatanalysisofgravitationalwavecandidatesfromthethirdgravitationalwaveobservingrun": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:14:03.123415+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
   "title:arxivnarrowbandsearchesforcontinuousgravitationalwavesfromknownpulsarsinthefirsttwopartsofthefourthligovirgokagraobservingrun": {
     "arxiv_id": "",
     "checked_at": "2026-10-19T14:11:22.100657+00:00",
@@ -279,6 +405,27 @@
     "source": "none",
     "status": "unverified"
   },
+  "title:arxivsearchforeccentricblackholecoalescencesduringthethirdobservingrunofligoandvirgo": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:14:21.633398+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:boundsonthespatialanisotropyofforegroundbinaryblackholemergerdetectionsinthethirdligovirgokagracatalog": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:14:21.633412+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:codingthecosmosintroductiontogravitationalwavessummerworkshop": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:13:59.773853+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
   "title:deepsearchforjointsourcesofgravitationalwavesandhighenergyneutrinoswithicecubeduringthethirdobservingrunofligoandvirgo": {
     "arxiv_id": "",
     "checked_at": "2026-10-19T14:11:55.725808+00:00",
@@ -286,10 +433,59 @@
     "source": "none",
     "status": "unverified"
   },
+  "title:detectionandwaveformreconstructionofgravitationalwavesignalswithcoherentwaveburstandwaveletdetectionfiltermethods": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:15:16.995253+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:exploringcosmologywithmachinelearning": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:14:27.846110+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:far1significance": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:14:27.846100+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:ligodetectorcharacterizationinthesecondandthirdobservingruns": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:15:16.995263+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:lowlatencygravitationalwavealertproductsandtheirperformanceinanticipationofthefourthligovirgokagraobservingrun": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:14:03.127545+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:opticallytargetedsearchforgravitationalwavesemittedbycorecollapsesupernovaeduringthethirdobservingrunofadvancedligoandadvancedvirgo": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:13:59.773839+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
   "title:searchforeccentricblackholecoalescencesduringthethirdobservingrunofligoandvirgo": {
     "arxiv_id": "",
     "checked_at": "2026-10-19T15:09:21.126360+00:00",
     "evidence": "No accessible, confirmed affiliation",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:searchforgravitationalwavetransientsassociatedwithmagnetarburstsinadvancedligoandadvancedvirgodatafromthethirdobservingrun": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:14:48.248424+00:00",
+    "evidence": "No verified affiliation found",
     "source": "none",
     "status": "unverified"
   },
@@ -304,6 +500,20 @@
     "arxiv_id": "",
     "checked_at": "2026-10-19T15:09:02.319286+00:00",
     "evidence": "No accessible, confirmed affiliation",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:testsofgeneralrelativitywithgwtc3": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:15:16.993355+00:00",
+    "evidence": "No verified affiliation found",
+    "source": "none",
+    "status": "unverified"
+  },
+  "title:thescienceofgravitationalwavesourcesandbeyondcompactbinarycoalescences": {
+    "arxiv_id": "",
+    "checked_at": "2026-10-19T16:14:27.846084+00:00",
+    "evidence": "No verified affiliation found",
     "source": "none",
     "status": "unverified"
   },
