@@ -1,0 +1,96 @@
+{
+  "decisions": [
+    {
+      "title": "arXiv: Narrowband searches for continuous gravitational waves from known pulsars in the first two parts of the fourth LIGO--Virgo--KAGRA observing run",
+      "arxiv": "2603.25938",
+      "decision": "include",
+      "reason": "Manually reviewed and confirmed to meet the IMAC/Missouri S&T author-affiliation criterion.",
+      "evidence_url": "https://arxiv.org/pdf/2603.25938"
+    },
+    {
+      "title": "arXiv: Searches for Binary Mergers with Sub-solar Mass Components in Data from the First Part of LIGO--Virgo--KAGRA's Fourth Observing Run",
+      "arxiv": "2605.05444",
+      "decision": "include",
+      "reason": "Manually reviewed and confirmed to meet the IMAC/Missouri S&T author-affiliation criterion.",
+      "evidence_url": "https://arxiv.org/pdf/2605.05444"
+    },
+    {
+      "title": "Deep search for joint sources of gravitational waves and high-energy neutrinos with IceCube during the third observing run of LIGO and Virgo",
+      "arxiv": "2601.07595",
+      "decision": "include",
+      "reason": "Manually reviewed and confirmed to meet the IMAC/Missouri S&T author-affiliation criterion.",
+      "evidence_url": "https://arxiv.org/pdf/2601.07595"
+    },
+    {
+      "title": "Environmental dependence of the galaxy–halo connection of satellites using HSC weak lensing",
+      "arxiv": "2409.05795",
+      "doi": "10.1093/mnras/staf2026",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2409.05795"
+    },
+    {
+      "title": "The Lunar Gravitational-wave Antenna: mission studies and science case",
+      "arxiv": "2404.09181",
+      "doi": "10.1088/1475-7516/2025/01/108",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2404.09181"
+    },
+    {
+      "title": "Coding The Cosmos: Introduction to Gravitational Waves Summer Workshop",
+      "decision": "exclude",
+      "reason": "Manually excluded: a summer workshop, not a research paper.",
+      "evidence_url": "https://github.com/IMAC-MissouriST/imac-publications/blob/main/docs/imac_affiliation_preview/affiliation_review.csv#L6"
+    },
+    {
+      "title": "Overabundance of orphan galaxies in the UniverseMachine empirical galaxy formation model",
+      "arxiv": "2312.04847",
+      "doi": "10.1093/mnrasl/slae023",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2312.04847"
+    },
+    {
+      "title": "Shadow images of compact objects in beyond Horndeski theory",
+      "arxiv": "2401.15249",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2401.15249"
+    },
+    {
+      "title": "SIRMOS: NIR spectroscopy of 131,000,000 galaxies over 1 < z < 4 and R 1300",
+      "doi": "10.1117/12.3017865",
+      "decision": "include",
+      "reason": "Manually reviewed and confirmed to meet the IMAC/Missouri S&T author-affiliation criterion.",
+      "evidence_url": "https://doi.org/10.1117/12.3017865"
+    },
+    {
+      "title": "Acoustic Kerr Metric in Analogue Gravity",
+      "arxiv": "2306.12201",
+      "doi": "10.48550/arxiv.2306.12201",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2306.12201"
+    },
+    {
+      "title": "arXiv: Search for Eccentric Black Hole Coalescences during the Third Observing Run of LIGO and Virgo",
+      "arxiv": "2308.03822",
+      "decision": "include",
+      "reason": "Manually reviewed and confirmed to meet the IMAC/Missouri S&T author-affiliation criterion.",
+      "evidence_url": "https://arxiv.org/pdf/2308.03822"
+    },
+    {
+      "title": "Bounds on the spatial anisotropy of foreground binary black hole merger detections in the third LIGO-Virgo-KAGRA catalog",
+      "decision": "exclude",
+      "reason": "Manually excluded: this ADS record is a conference abstract, not a research paper.",
+      "evidence_url": "https://ui.adsabs.harvard.edu/abs/2023APS..APRV09008C/abstract"
+    },
+    {
+      "title": "Quantifying the impact of baryon-CDM perturbations on halo clustering and baryon fraction",
+      "arxiv": "2011.01037",
+      "doi": "10.1088/1475-7516/2021/03/023",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2011.01037"
+    },
