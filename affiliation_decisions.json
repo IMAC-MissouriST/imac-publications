@@ -94,3 +94,35 @@
       "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
       "evidence_url": "https://arxiv.org/pdf/2011.01037"
     },
+    {
+      "title": "A guide to LIGO--Virgo detector noise and extraction of transient gravitational-wave signals",
+      "arxiv": "1908.11170",
+      "doi": "10.1088/1361-6382/ab685e",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1908.11170"
+    },
+    {
+      "title": "Constraints on the Spacetime Dynamics of an Early Dark Energy Component",
+      "arxiv": "2001.10252",
+      "doi": "10.1088/1475-7516/2020/07/039",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/2001.10252"
+    },
+    {
+      "title": "A complete FFT-based decomposition formalism for the redshift-space bispectrum",
+      "arxiv": "1803.02132",
+      "doi": "10.1093/mnras/sty3249",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1803.02132"
+    },
+    {
+      "title": "A Fermi Gamma-ray Burst Monitor Search for Electromagnetic Signals Coincident with Gravitational-Wave Candidates in Advanced LIGO's First Observing Run",
+      "arxiv": "1810.02764",
+      "doi": "10.3847/1538-4357/aaf726",
+      "decision": "exclude",
+      "reason": "Manually reviewed and excluded under the IMAC author-affiliation and publication-type criteria.",
+      "evidence_url": "https://arxiv.org/pdf/1810.02764"
+    },
