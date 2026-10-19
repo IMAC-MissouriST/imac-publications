@@ -1,17 +1,17 @@
 {
   "start_year": 2019,
   "end_year": 2026,
-  "published_articles": 131,
+  "published_articles": 133,
   "ads_citations": 25988,
   "papers_with_ads_data": 125,
-  "unresolved_affiliations": 52,
+  "unresolved_affiliations": 45,
   "preliminary": true,
   "verification_statuses": {
-    "verified": 175,
-    "needs_review": 19,
+    "verified": 182,
+    "needs_review": 42,
     "error": 1,
-    "pending": 32
+    "pending": 2
   },
-  "summary": "So far, 131 IMAC-affiliated articles have been verified, receiving 25,988 citations according to NASA ADS (preliminary).",
-  "note": "2019\u20132026; verified institutional affiliations. ADS citation counts available for 125/131 articles. PRELIMINARY: 52 publications remain unresolved. Citation counts are cumulative to date."
+  "summary": "So far, 133 IMAC-affiliated articles have been verified, receiving 25,988 citations according to NASA ADS (preliminary).",
+  "note": "2019\u20132026; verified institutional affiliations. ADS citation counts available for 125/133 articles. PRELIMINARY: 45 publications remain unresolved. Citation counts are cumulative to date."
 }

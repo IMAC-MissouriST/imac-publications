@@ -57,17 +57,21 @@
   },
   "doi:10.1088/1361-6382/ab685e": {
     "arxiv_id": "1908.11170",
-    "checked_at": "2026-10-19T16:16:10.924310+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:47:50.000154+00:00",
+    "evidence": "No matching author affiliation established; PDF: URLError: <urlopen error timed out>",
+    "evidence_url": "https://arxiv.org/pdf/1908.11170",
+    "source": "OpenAlex, arXiv metadata, PDF inspected, PDF inspected, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1088/1475-7516/2020/07/039": {
     "arxiv_id": "2001.10252",
-    "checked_at": "2026-10-19T16:16:00.963222+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:44:00.667966+00:00",
+    "evidence": "No matching author affiliation established; PDF: ValueError: URL did not provide a readable PDF",
+    "evidence_url": "https://arxiv.org/pdf/2001.10252",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1088/1475-7516/2021/03/023": {
     "arxiv_id": "2011.01037",
@@ -89,10 +93,12 @@
   },
   "doi:10.1088/2632-2153/ab527d": {
     "arxiv_id": "",
-    "checked_at": "2026-10-19T16:52:08.595712+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:48:01.832986+00:00",
+    "evidence": "Missouri University of Science and Technology, 1315 N. Pine St., Rolla MO 65409, United States of America",
+    "evidence_url": "https://openalex.org/W3004775028",
+    "source": "OpenAlex",
+    "status": "verified"
   },
   "doi:10.1088/2632-2153/abb93a": {
     "arxiv_id": "2005.03745",
@@ -148,17 +154,21 @@
   },
   "doi:10.1093/mnras/sty2845": {
     "arxiv_id": "1801.03043",
-    "checked_at": "2026-10-19T16:52:18.091884+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:48:31.470702+00:00",
+    "evidence": "No matching author affiliation established; ",
+    "evidence_url": "https://arxiv.org/pdf/1801.03043",
+    "source": "OpenAlex, arXiv metadata, PDF inspected, PDF inspected, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1093/mnras/sty3249": {
     "arxiv_id": "1803.02132",
-    "checked_at": "2026-10-19T16:52:12.213090+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:48:13.485421+00:00",
+    "evidence": "No matching author affiliation established; ",
+    "evidence_url": "https://arxiv.org/pdf/1803.02132",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1093/mnrasl/slae023": {
     "arxiv_id": "",
@@ -171,24 +181,30 @@
   },
   "doi:10.1103/physrevd.100.024004": {
     "arxiv_id": "1903.01901",
-    "checked_at": "2026-10-19T16:52:37.670960+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:49:07.608887+00:00",
+    "evidence": "No matching author affiliation established; PDF: HTTP 401; PDF: HTTP 404; PDF: HTTP 403",
+    "evidence_url": "https://arxiv.org/pdf/1903.01901",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1103/physrevd.100.061101": {
     "arxiv_id": "1903.02886",
-    "checked_at": "2026-10-19T16:53:54.657652+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T19:03:21.562861+00:00",
+    "evidence": "No matching author affiliation established; PDF: HTTP 404; PDF: URLError: <urlopen error timed out>",
+    "evidence_url": "https://arxiv.org/pdf/1903.02886",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1103/physrevd.100.062001": {
     "arxiv_id": "1903.08844",
-    "checked_at": "2026-10-19T16:52:55.471817+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:50:30.343521+00:00",
+    "evidence": "No matching author affiliation established; PDF: HTTP 404; PDF: HTTP 401",
+    "evidence_url": "https://arxiv.org/pdf/1903.08844",
+    "source": "OpenAlex, arXiv metadata, PDF inspected, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1103/physrevd.100.104036": {
     "arxiv_id": "1903.04467",
@@ -199,10 +215,12 @@
   },
   "doi:10.1103/physrevd.100.122002": {
     "arxiv_id": "1906.12040",
-    "checked_at": "2026-10-19T16:53:42.000641+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:59:35.178875+00:00",
+    "evidence": "No matching author affiliation established; PDF: HTTP 401",
+    "evidence_url": "https://arxiv.org/pdf/1906.12040",
+    "source": "OpenAlex, arXiv metadata, PDF inspected, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1103/physrevd.109.064055": {
     "arxiv_id": "2402.15540",
@@ -215,17 +233,21 @@
   },
   "doi:10.1103/physrevd.99.122002": {
     "arxiv_id": "1902.08442",
-    "checked_at": "2026-10-19T16:53:23.321406+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:58:12.282795+00:00",
+    "evidence": "No matching author affiliation established; PDF: HTTP 401; PDF: URLError: <urlopen error timed out>",
+    "evidence_url": "https://arxiv.org/pdf/1902.08442",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1103/physrevlett.122.061104": {
     "arxiv_id": "1808.08676",
-    "checked_at": "2026-10-19T16:52:49.473611+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:49:24.498481+00:00",
+    "evidence": "No matching author affiliation established; PDF: HTTP 403",
+    "evidence_url": "https://arxiv.org/pdf/1808.08676",
+    "source": "OpenAlex, arXiv metadata, PDF inspected, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1103/physrevlett.123.011102": {
     "arxiv_id": "1811.00364",
@@ -236,17 +258,21 @@
   },
   "doi:10.1103/physrevx.9.011001": {
     "arxiv_id": "1805.11579",
-    "checked_at": "2026-10-19T16:53:29.671054+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:58:34.250495+00:00",
+    "evidence": "No matching author affiliation established; PDF: HTTP 404; PDF: HTTP 404",
+    "evidence_url": "https://arxiv.org/pdf/1805.11579",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1103/physrevx.9.031040": {
     "arxiv_id": "1811.12907",
-    "checked_at": "2026-10-19T16:53:11.174442+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:51:13.560051+00:00",
+    "evidence": "No matching author affiliation established; PDF: HTTP 401; PDF: HTTP 404; PDF: HTTP 403",
+    "evidence_url": "https://arxiv.org/pdf/1811.12907",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.1111/1740-9713.01488": {
     "arxiv_id": "",
@@ -275,80 +301,102 @@
   },
   "doi:10.3847/1538-4357/aaf21d": {
     "arxiv_id": "1810.10693",
-    "checked_at": "2026-10-19T16:53:48.024129+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:59:44.957159+00:00",
+    "evidence": "No matching author affiliation established; PDF: HTTP 404; PDF: HTTP 401",
+    "evidence_url": "https://arxiv.org/pdf/1810.10693",
+    "source": "OpenAlex, arXiv metadata, PDF inspected, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.3847/1538-4357/aaf726": {
     "arxiv_id": "1810.02764",
-    "checked_at": "2026-10-19T16:52:30.534681+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:48:48.762763+00:00",
+    "evidence": "No matching author affiliation established; PDF: HTTP 401; PDF: HTTP 404; PDF: HTTP 404",
+    "evidence_url": "https://arxiv.org/pdf/1810.02764",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.3847/1538-4357/ab0e15": {
     "arxiv_id": "1902.01557",
-    "checked_at": "2026-10-19T16:54:00.477486+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T19:03:39.295953+00:00",
+    "evidence": "No matching author affiliation established; PDF: ValueError: URL did not provide a readable PDF; PDF: HTTP 404; PDF: HTTP 403",
+    "evidence_url": "https://arxiv.org/pdf/1902.01557",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.3847/1538-4357/ab0e8f": {
     "arxiv_id": "1901.03310",
-    "checked_at": "2026-10-19T16:53:17.474220+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:54:44.378619+00:00",
+    "evidence": "No matching author affiliation established; PDF: ValueError: URL did not provide a readable PDF; PDF: HTTP 404; PDF: URLError: <urlopen error timed out>",
+    "evidence_url": "https://arxiv.org/pdf/1901.03310",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.3847/1538-4357/ab0f3d": {
     "arxiv_id": "1810.02581",
-    "checked_at": "2026-10-19T16:53:35.686631+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:59:19.156640+00:00",
+    "evidence": "No matching author affiliation established; PDF: ValueError: URL did not provide a readable PDF",
+    "evidence_url": "https://arxiv.org/pdf/1810.02581",
+    "source": "OpenAlex, arXiv metadata, PDF inspected, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.3847/1538-4357/ab113b": {
     "arxiv_id": "1812.11656",
-    "checked_at": "2026-10-19T16:54:07.606893+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T19:03:47.007916+00:00",
+    "evidence": "No matching author affiliation established; PDF: ValueError: URL did not provide a readable PDF; PDF: ValueError: URL did not provide a readable PDF",
+    "evidence_url": "https://arxiv.org/pdf/1812.11656",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.3847/1538-4357/ab12d5": {
     "arxiv_id": "1811.06982",
-    "checked_at": "2026-10-19T16:52:24.504175+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:48:39.360654+00:00",
+    "evidence": "No matching author affiliation established; ",
+    "evidence_url": "https://arxiv.org/pdf/1811.06982",
+    "source": "OpenAlex, arXiv metadata, PDF inspected, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.3847/1538-4357/ab20cb": {
     "arxiv_id": "1902.08507",
-    "checked_at": "2026-10-19T16:54:12.902523+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T19:07:16.435089+00:00",
+    "evidence": "No matching author affiliation established; PDF: URLError: <urlopen error timed out>",
+    "evidence_url": "https://arxiv.org/pdf/1902.08507",
+    "source": "OpenAlex, arXiv metadata, PDF inspected, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.3847/2041-8213/ab14f1": {
     "arxiv_id": "1901.01540",
-    "checked_at": "2026-10-19T16:53:04.718440+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:50:57.295125+00:00",
+    "evidence": "No matching author affiliation established; PDF: HTTP 404; PDF: HTTP 404; PDF: HTTP 403",
+    "evidence_url": "https://arxiv.org/pdf/1901.01540",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.3847/2041-8213/ab3800": {
     "arxiv_id": "1811.12940",
-    "checked_at": "2026-10-19T16:52:43.424921+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:49:17.590567+00:00",
+    "evidence": "No matching author affiliation established; PDF: ValueError: URL did not provide a readable PDF",
+    "evidence_url": "https://arxiv.org/pdf/1811.12940",
+    "source": "OpenAlex, arXiv metadata, PDF inspected, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.4208/cicp.oa-2018-0092": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T16:52:58.525573+00:00",
-    "evidence": "No IMAC affiliation in inspected PDF header",
-    "source": "PDF checked",
-    "status": "unverified"
+    "arxiv_id": "1812.05225",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:50:34.523883+00:00",
+    "evidence": "No matching author affiliation established; ",
+    "evidence_url": "https://arxiv.org/pdf/1812.05225",
+    "source": "OpenAlex, arXiv metadata, PDF inspected",
+    "status": "needs_review"
   },
   "doi:10.48550/arxiv.2212.09136": {
     "arxiv_id": "2212.09136",
@@ -623,11 +671,13 @@
     "status": "verified"
   },
   "title:ajointfermigbmandligovirgoanalysisofcompactbinarymergersfromthefirstandsecondgravitationalwaveobservingruns": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T16:52:05.403979+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "2001.00923",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:47:53.542078+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2001.00923#page=5",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:ajointfermigbmandswiftbatanalysisofgravitationalwavecandidatesfromthethirdgravitationalwaveobservingrun": {
     "arxiv_id": "2308.13666",
@@ -729,11 +779,13 @@
     "status": "needs_review"
   },
   "title:gw190412observationofabinaryblackholecoalescencewithasymmetricmasses": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T16:52:05.406041+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "2004.08342",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:48:01.575676+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, Missouri 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2004.08342#page=27",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:gw231123abinaryblackholemergerwithtotalmass190265mbackslashodot": {
     "arxiv_id": "2507.08219",
@@ -745,11 +797,13 @@
     "status": "verified"
   },
   "title:ligodetectorcharacterizationinthesecondandthirdobservingruns": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T16:15:16.995263+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "2101.11673",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:43:44.388124+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2101.11673#page=2",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:lowlatencygravitationalwavealertproductsandtheirperformanceinanticipationofthefourthligovirgokagraobservingrun": {
     "arxiv_id": "2308.04545",
@@ -833,11 +887,13 @@
     "status": "needs_review"
   },
   "title:spuriousaccelerationnoiseonthelisaspacecraftduetosolaractivity": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T16:54:12.902578+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "1912.07715",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T19:07:20.063864+00:00",
+    "evidence": "Physics Department, Missouri University of Science and Technology, Rolla, MO 65409, U.S.A.",
+    "evidence_url": "https://arxiv.org/pdf/1912.07715#page=1",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:swiftbatguanofollowupofgravitationalwavetriggersinthethirdligovirgokagraobservingrun": {
     "arxiv_id": "2407.12867",
@@ -866,6 +922,15 @@
     "source": "PDF affiliation",
     "status": "verified"
   },
+  "title:thepopulationofmergingcompactbinariesinferredusinggravitationalwavesthroughgwtc3": {
+    "arxiv_id": "2111.03634",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:43:54.596511+00:00",
+    "evidence": "Missouri University of Science and Technology, Rolla, Missouri 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2111.03634#page=70",
+    "source": "PDF affiliation",
+    "status": "verified"
+  },
   "title:thescienceofgravitationalwavesourcesandbeyondcompactbinarycoalescences": {
     "arxiv_id": "",
     "cache_version": 4,
@@ -876,11 +941,13 @@
     "status": "needs_review"
   },
   "title:twodimensionalcorrelationfunctionofbinaryblackholecoalescences": {
-    "arxiv_id": "",
-    "checked_at": "2026-10-19T16:52:08.607451+00:00",
-    "evidence": "No verified affiliation found",
-    "source": "none",
-    "status": "unverified"
+    "arxiv_id": "2005.06004",
+    "cache_version": 4,
+    "checked_at": "2026-10-19T18:48:06.197405+00:00",
+    "evidence": "Institute of Multi-messenger Astrophysics and Cosmology, Missouri University of Science and Technology, Physics Building, 1315 N. Pine St., Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2005.06004#page=1",
+    "source": "PDF affiliation",
+    "status": "verified"
   },
   "title:ultralightvectordarkmattersearchusingdatafromthekagrao3gkrun": {
     "arxiv_id": "2403.03004",
