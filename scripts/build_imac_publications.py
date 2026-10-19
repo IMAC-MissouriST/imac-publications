@@ -5,6 +5,8 @@ Missing evidence is not evidence of a non-IMAC affiliation.
 
 Default: write docs/imac_affiliation_preview, never overwrite live tables.
 The individual researchers' career-publication CSVs are read, not modified.
+Optional manual decisions are matched by DOI, arXiv ID or exact normalized title.
+The public summary always uses Shun's exact wording, with enlarged counts.
 """
 
 import csv
@@ -92,5 +94,3 @@ def bibcode(value):
 def normalize_affiliation(text):
     text = clean(text)
     # Rejoin words split at PDF line breaks, e.g., "Technol-\nogy".
-    text = re.sub(r"(?<=[a-zA-Z])-\s*\n\s*(?=[a-zA-Z])", "", text)
-    return re.sub(r"\s+", " ", text)
