@@ -343,15 +343,36 @@ def process_researcher(researcher, token):
     print(f"\nProcessing researcher: {name}")
     print(f"ORCID: {orcid}")
 
+    # ==================================================
+    # NEW: Allow researchers with zero public works
+    # ==================================================
+
     data = fetch_orcid_works(orcid)
 
-    groups = data.get("group") or []
+    # Validate the ORCID response.
+    # A valid empty list is allowed, but a malformed
+    # or incomplete response must still cause an error.
+
+    if (
+        not isinstance(data, dict)
+        or not isinstance(data.get("group"), list)
+    ):
+        raise RuntimeError(
+            f"Unexpected ORCID response for {name}. "
+            "Existing publication files will not be overwritten."
+        )
+
+    groups = data["group"]
 
     if not groups:
-        raise RuntimeError(
-            f"No public publication groups returned for {name}. "
-            "Existing publication files should not be overwritten."
+        print(
+            f"{name} has no public ORCID publications yet. "
+            "An empty publication CSV will be generated."
         )
+
+    # ==================================================
+    # Collect publications
+    # ==================================================
 
     publications = []
 
@@ -470,9 +491,27 @@ def process_researcher(researcher, token):
             "ADS URL": ads_url
         })
 
+    # ==================================================
+    # NEW: Handle an empty publication list safely
+    # ==================================================
+
     if not publications:
-        raise RuntimeError(
-            f"No valid publications found for {name}."
+
+        if groups:
+            # ORCID returned publication groups, but we
+            # could not extract any valid publication data.
+            # This may indicate a metadata problem, so
+            # preserve the existing files and stop.
+            raise RuntimeError(
+                f"ORCID returned publication groups for {name}, "
+                "but no valid publications could be extracted. "
+                "Existing publication files will not be overwritten."
+            )
+
+        # A genuinely empty ORCID profile is not an error.
+        print(
+            f"{name}: no publications yet. "
+            "Creating a CSV containing only column headers."
         )
 
     # ==================================================
