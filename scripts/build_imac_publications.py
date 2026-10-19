@@ -33,6 +33,7 @@ SOURCE = ROOT / "docs" / "publications"
 LIVE_DIR = ROOT / "docs" / "imac"
 PREVIEW_DIR = ROOT / "docs" / "imac_affiliation_preview"
 CACHE_FILE = PREVIEW_DIR / "affiliation_cache.json"
+AUTHOR_CACHE_FILE = PREVIEW_DIR / "author_metadata_cache.json"
 DECISIONS_FILE = ROOT / "affiliation_decisions.json"  # optional, evidence-based
 RESEARCHERS_FILE = ROOT / "researchers.json"
 ADS_API = "https://api.adsabs.harvard.edu/v1/search/query"
@@ -40,6 +41,8 @@ ARXIV_API = "https://export.arxiv.org/api/query"
 START_YEAR = 2019  # inclusive
 MODE = os.getenv("IMAC_OUTPUT_MODE", "preview").strip().lower()
 MAX_CHECKS = int(os.getenv("IMAC_MAX_NEW_CHECKS", "30"))
+# New no-key author lookups per run (separate from the affiliation-check limit).
+MAX_AUTHOR_LOOKUPS = max(0, int(os.getenv("IMAC_MAX_AUTHOR_LOOKUPS", "8")))
 MAX_PDF_BYTES = 40 * 1024 * 1024
 CACHE_VERSION = 4  # retry previously unresolved papers with full-PDF checks
 PRIORITY_ARXIV = "2507.16707"  # ONLY processing priority, NOT automatic inclusion
@@ -387,9 +390,14 @@ def parse_arxiv(raw):
         year_text = clean(entry.findtext(ATOM + "published"))
         year = int(year_text[:4]) if re.match(r"^\d{4}", year_text) else 0
         affs = []
-        for author in entry.findall(ATOM + "author"):
+        people = entry.findall(ATOM + "author")
+        for author in people:
             affs += [normalize_affiliation(item.text) for item in author.findall(ARXIV_NS + "affiliation") if item.text]
-        entries.append({"id": match.group(1), "title": title, "year": year, "affiliations": affs})
+        full_name = clean(people[0].findtext(ATOM + "name")) if people else ""
+        first_author = full_name.split()[-1] if full_name else ""
+        entries.append({"id": match.group(1), "title": title, "year": year,
+                        "affiliations": affs, "first_author": first_author,
+                        "author_count": len(people)})
     return entries
 
 
@@ -901,25 +909,211 @@ def remember_result(cache, key, result):
     return result
 
 
-def authors_label(group, docs, order):
-    names = sorted(group["researchers"], key=lambda name: order.get(name, 9999))
-    selected = ", ".join((name.split()[0][0] + ". " + name.split()[-1])
-                         if len(name.split()) > 1 else name for name in names)
+# Restore previously established lead-author names when NASA ADS is rate-limited.
+# The older docs/imac yearly CSVs contain reliable values such as
+# "Abac et al. (incl. Y. Zheng, D. Malakar)". Never infer a first author
+# from the ADS bibcode or from one of the IMAC contributors.
+def author_identity_keys(group):
+    keys = []
+    for record in group["records"]:
+        if record.get("doi_key"):
+            keys.append("doi:" + record["doi_key"])
+        if record.get("bibcode"):
+            keys.append("ads:" + record["bibcode"])
+        title = decision_title_key(record["Title"])
+        if title:
+            keys.append("title:" + title)
+    return list(dict.fromkeys(keys))
+
+
+def historic_author_index():
+    """Recover first-author metadata from old successful website tables.
+
+    Read-only: never alters the live files or any publication membership.
+    Old live files are read first, followed by preview files. The same
+    paper is indexed by DOI, ADS bibcode and exact normalized title.
+    """
+    index = {}
+    for directory in (LIVE_DIR, PREVIEW_DIR):
+        if not directory.is_dir():
+            continue
+        paths = sorted(directory.glob("publications_????.csv"))
+        paths += [directory / "recent_preprints.csv"]
+        for path in paths:
+            if not path.is_file():
+                continue
+            with path.open(newline="", encoding="utf-8-sig") as handle:
+                for row in csv.DictReader(handle):
+                    label = clean(row.get("Authors"))
+                    # Ignore synthetic author labels and yearly summary rows.
+                    if not label or label.startswith("IMAC contributors:"):
+                        continue
+                    match = re.fullmatch(
+                        r"(.+?)(\s+et al\.)?\s+\(incl\.\s+[^)]+\)",
+                        label, flags=re.I,
+                    )
+                    if not match:
+                        continue
+                    info = {"first_author": match.group(1).strip(),
+                            "et_al": bool(match.group(2)), "source": "historic IMAC CSV"}
+                    title = decision_title_key(row.get("Title"))
+                    doi = doi_key(row.get("DOI URL"))
+                    ads_id = bibcode(row.get("ADS URL"))
+                    keys = (["title:" + title] if title else [])
+                    keys += (["doi:" + doi] if doi else [])
+                    keys += (["ads:" + ads_id] if ads_id else [])
+                    for key in keys:
+                        index.setdefault(key, info)
+    return index
+
+
+def load_author_cache():
+    if not AUTHOR_CACHE_FILE.is_file():
+        return {}
+    try:
+        value = json.loads(AUTHOR_CACHE_FILE.read_text(encoding="utf-8"))
+        return value if isinstance(value, dict) else {}
+    except (OSError, ValueError, json.JSONDecodeError):
+        return {}
+
+
+def save_author_cache(cache):
+    AUTHOR_CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    temporary = AUTHOR_CACHE_FILE.with_suffix(".json.tmp")
+    temporary.write_text(json.dumps(cache, indent=2, ensure_ascii=False, sort_keys=True)
+                         + "\n", encoding="utf-8")
+    os.replace(temporary, AUTHOR_CACHE_FILE)
+
+
+def author_information_from_ads(docs):
     for doc in docs:
         first = doc.get("first_author") or ""
         if isinstance(first, list):
             first = first[0] if first else ""
-        if first:
-            surname = clean(first).split(",")[0]
+        if not first:
+            continue
+        # NASA ADS first_author is conventionally "Surname, Firstname".
+        surname = clean(first).split(",", 1)[0].strip()
+        if not surname:
+            continue
+        try:
+            multiple = int(doc.get("author_count") or 2) > 1
+        except (TypeError, ValueError):
+            multiple = True
+        return {"first_author": surname, "et_al": multiple, "source": "NASA ADS"}
+    return None
+
+
+def first_author_from_crossref(doi):
+    if not doi or doi.startswith("10.48550/arxiv."):
+        return None
+    url = "https://api.crossref.org/works/" + quote(doi, safe="/")
+    raw = http_read(url, max_bytes=1_500_000, timeout=12,
+                    headers={"Accept": "application/json"})
+    obj = json.loads(raw).get("message") or {}
+    authors = obj.get("author") or []
+    if not isinstance(authors, list) or not authors:
+        return None
+    first = authors[0]
+    if not isinstance(first, dict):
+        return None
+    name = clean(first.get("family") or first.get("name"))
+    if not name:
+        return None
+    return {"first_author": name, "et_al": len(authors) > 1, "source": "Crossref"}
+
+
+def first_author_from_openalex(group):
+    obj = lookup_openalex(group)  # exact DOI lookup, never guess by title
+    authors = (obj or {}).get("authorships") or []
+    if not authors:
+        return None
+    author = authors[0].get("author") or {}
+    full_name = clean(author.get("display_name"))
+    if not full_name:
+        return None
+    # OpenAlex supplies a first-name-last-name display name, unlike ADS.
+    # The final token is a reasonable short display surname; keep documented
+    # multicomponent surnames from historical CSVs when they exist.
+    surname = full_name.split()[-1]
+    return {"first_author": surname, "et_al": len(authors) > 1,
+            "source": "OpenAlex"}
+
+
+def first_author_from_arxiv(group, docs):
+    identifier = known_arxiv_id(group, docs)
+    title = preferred_record(group["records"])["Title"]
+    year = int(preferred_record(group["records"])["Year"])
+    match = arxiv_by_id(identifier, title) if identifier else None
+    if match is None:
+        match = arxiv_by_title(title, year)
+    if not match or not match.get("first_author"):
+        return None
+    return {"first_author": match["first_author"],
+            "et_al": match.get("author_count", 2) > 1, "source": "arXiv"}
+
+
+def resolve_author_information(group, docs, history, cache, budget):
+    keys = author_identity_keys(group)
+    info = author_information_from_ads(docs)
+    if info is None:
+        info = next((history[key] for key in keys if key in history), None)
+    if info is None:
+        info = next((cache[key] for key in keys
+                     if key in cache and cache[key].get("first_author")), None)
+
+    # Do not repeatedly contact bibliographic services for names when a
+    # previously verified first author can be recovered locally.
+    if info is None and budget["used"] < MAX_AUTHOR_LOOKUPS and not budget["paused"]:
+        budget["used"] += 1
+        dois = [r["doi_key"] for r in group["records"] if r.get("doi_key")]
+        doi = next((d for d in dois if not d.startswith("10.48550/arxiv.")), "")
+        if doi:
             try:
-                many = int(doc.get("author_count") or 2) > 1
-            except (TypeError, ValueError):
-                many = True
-            return f"{surname}{' et al.' if many else ''} (incl. {selected})"
+                info = first_author_from_crossref(doi)
+            except HTTPError as exc:
+                if exc.code in {429, 503}:
+                    budget["paused"] = True
+                # The author name is optional metadata: no publication fails.
+            except (URLError, TimeoutError, ValueError, json.JSONDecodeError):
+                pass
+        if info is None and not budget["paused"] and doi:
+            try:
+                info = first_author_from_openalex(group)
+            except HTTPError as exc:
+                if exc.code in {429, 503}:
+                    budget["paused"] = True
+            except (URLError, TimeoutError, ValueError, json.JSONDecodeError):
+                pass
+        if info is None and not budget["paused"]:
+            try:
+                info = first_author_from_arxiv(group, docs)
+            except HTTPError as exc:
+                if exc.code in {429, 503}:
+                    budget["paused"] = True
+            except (URLError, TimeoutError, ValueError, ET.ParseError, json.JSONDecodeError):
+                pass
+    if info is not None:
+        for key in keys:
+            cache[key] = info  # persisted with the generated docs each run
+    return info
+
+
+def authors_label(group, docs, order, history, author_cache, author_budget):
+    names = sorted(group["researchers"], key=lambda name: order.get(name, 9999))
+    selected = ", ".join((name.split()[0][0] + ". " + name.split()[-1])
+                         if len(name.split()) > 1 else name for name in names)
+    info = resolve_author_information(group, docs, history, author_cache, author_budget)
+    if info and info.get("first_author"):
+        first = clean(info["first_author"])
+        suffix = " et al." if info.get("et_al", True) else ""
+        return f"{first}{suffix} (incl. {selected})"
+    # Avoid inventing a lead author. A few papers may retain this label
+    # temporarily when none of the verified metadata sources has a name.
     return f"IMAC contributors: {selected}"
 
 
-def publication_row(group, ads, order):
+def publication_row(group, ads, order, history, author_cache, author_budget):
     chosen = preferred_record(group["records"])
     docs = documents_for(group, ads)
     # Keep previous behavior: do not ADD arXiv and journal citation totals.
@@ -929,7 +1123,7 @@ def publication_row(group, ads, order):
                if str(doc.get("citation_count", "")).isdigit()]
     return {
         "Title": html.escape(chosen["Title"], quote=False),
-        "Authors": html.escape(authors_label(group, docs, order), quote=False),
+        "Authors": html.escape(authors_label(group, docs, order, history, author_cache, author_budget), quote=False),
         "Journal": html.escape(chosen["Journal"], quote=False),
         "Citation (ADS)": max(counts) if counts else "",
         "DOI URL": chosen.get("DOI URL", ""), "ADS URL": chosen.get("ADS URL", ""),
@@ -1064,6 +1258,9 @@ def main():
             "Existing preview files were not overwritten. Try the next daily run."
         )
     cache, decisions = load_cache(), load_decisions()
+    author_history, author_cache = historic_author_index(), load_author_cache()
+    author_budget = {"used": 0, "paused": False}
+    print(f"Previously known first-author labels: {len(author_history)} keys")
     order = {person["name"]: i for i, person in enumerate(researchers)}
     statuses, budget = Counter(), {"used": 0}
     annual, preprints, audit = defaultdict(list), [], []
@@ -1084,7 +1281,7 @@ def main():
             print(f"PRIORITY PAPER arXiv:{PRIORITY_ARXIV}: {status} | {source} | {evidence[:160]}")
         if status != "verified":
             continue
-        row = publication_row(group, ads, order)
+        row = publication_row(group, ads, order, author_history, author_cache, author_budget)
         if chosen["preprint"]:
             if int(chosen["Year"]) >= year_now - 1:
                 preprints.append(row)
@@ -1101,6 +1298,8 @@ def main():
         raise RuntimeError("Live update blocked: unresolved affiliation checks remain")
     output.mkdir(parents=True, exist_ok=True)
     save_cache(cache)
+    save_author_cache(author_cache)
+    print(f"New author lookups: {author_budget['used']}/{MAX_AUTHOR_LOOKUPS}")
     years = {str(y) for y in range(START_YEAR, year_now + 1)} | set(annual)
     for path in LIVE_DIR.glob("publications_*.csv"):
         match = re.fullmatch(r"publications_(\d{4})\.csv", path.name)
