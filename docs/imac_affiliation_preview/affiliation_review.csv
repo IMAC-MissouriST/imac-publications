@@ -1,8 +1,1 @@
 Year,Title,Status,Source,Evidence,Evidence URL,arXiv,DOI URL,ADS URL
-2024,Spinning black hole in a fluid,needs_review,"OpenAlex, arXiv metadata, PDF inspected",No matching author affiliation established; ,https://arxiv.org/pdf/2402.15540,2402.15540,https://doi.org/10.1103/physrevd.109.064055,https://ui.adsabs.harvard.edu/abs/2024PhRvD.109f4055D/abstract
-2023,Exploring Cosmology with Machine Learning,needs_review,retrieval,No usable source found,,,,
-2023,The Science of Gravitational-Wave Sources and Beyond Compact Binary Coalescences,needs_review,retrieval,No usable source found,,,,
-2023,"ノイズから重力波を選別するために FAR (誤報率) を使うことは, 藁の山から 1 本の針をみつけるような困難なことである: 英国王立統計学会 Significance から",needs_review,retrieval,No usable source found,,,,
-2022,Cosmic Voids and BAO with relative baryon-CDM perturbations,needs_review,"OpenAlex, arXiv metadata, PDF inspected",No matching author affiliation established; ,https://arxiv.org/pdf/2109.02949,2109.02949,https://doi.org/10.1093/mnras/stac331,https://ui.adsabs.harvard.edu/abs/2022MNRAS.511.4333K/abstract
-2022,Subaru HSC weak lensing of SDSS redMaPPer cluster satellite galaxies: empirical upper limit on orphan fractions,needs_review,"OpenAlex, arXiv metadata, PDF inspected",No matching author affiliation established; ,https://arxiv.org/pdf/2205.00018,2205.00018,https://doi.org/10.1093/mnras/stac2862,https://ui.adsabs.harvard.edu/abs/2022MNRAS.517.4389K/abstract
-2021,Detection and waveform reconstruction of gravitational-wave signals with coherent Wave Burst and Wavelet Detection Filter methods,needs_review,retrieval,No usable source found,,,,
