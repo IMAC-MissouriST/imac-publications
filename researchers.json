@@ -1,3 +1,4 @@
+
 {
   "researchers": [
     {
@@ -31,6 +32,10 @@
     {
       "name": "Steven Karst",
       "orcid": "0009-0007-7576-088X"
+    },
+    {
+      "name": "Simarpreet Grin",
+      "orcid": "0009-0006-9218-8187"
     }
   ]
 }
