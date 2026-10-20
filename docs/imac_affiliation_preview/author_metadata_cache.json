@@ -747,7 +747,7 @@
   "ads:2026arXiv260604208M": {
     "et_al": true,
     "first_author": "Cooper",
-    "source": "arXiv"
+    "source": "historic IMAC CSV"
   },
   "ads:2026arXiv260618581H": {
     "et_al": true,
@@ -1532,7 +1532,7 @@
   "doi:10.48550/arxiv.2606.04208": {
     "et_al": true,
     "first_author": "Cooper",
-    "source": "arXiv"
+    "source": "historic IMAC CSV"
   },
   "doi:10.48550/arxiv.2606.18581": {
     "et_al": true,
@@ -1679,6 +1679,11 @@
     "first_author": "Cuoco",
     "source": "historic IMAC CSV"
   },
+  "title:asearchusinggeo600forgravitationalwavescoincidentwithfastradioburstsfromsgr19352154": {
+    "et_al": true,
+    "first_author": "Collaboration",
+    "source": "arXiv"
+  },
   "title:asimpleselfsimilaritybasedunsupervisednoisemonitorforgravitationalwavedetectors": {
     "et_al": false,
     "first_author": "Cavaglià",
@@ -1753,6 +1758,11 @@
     "et_al": true,
     "first_author": "Yoshikawa",
     "source": "historic IMAC CSV"
+  },
+  "title:deepsearchforjointsourcesofgravitationalwavesandhighenergyneutrinoswithicecubeduringthethirdobservingrunofligoandvirgo": {
+    "et_al": true,
+    "first_author": "Collaboration",
+    "source": "arXiv"
   },
   "title:desidatarelease2elgspropertydependentsubsamplesimagingsystematicsandclustering": {
     "et_al": true,
@@ -1884,6 +1894,11 @@
     "first_author": "Abac",
     "source": "historic IMAC CSV"
   },
+  "title:gw231123abinaryblackholemergerwithtotalmass190265mbackslashodot": {
+    "et_al": true,
+    "first_author": "Collaboration",
+    "source": "arXiv"
+  },
   "title:gw240925andgw250207astrophysicalcalibrationofgravitationalwavedetectors": {
     "et_al": true,
     "first_author": "Abac",
@@ -2002,7 +2017,7 @@
   "title:hetdexpublicdatarelease1sourcecatalog2anddatacubesfrom90sqdegofintegralfieldopticalspectroscopy": {
     "et_al": true,
     "first_author": "Cooper",
-    "source": "arXiv"
+    "source": "historic IMAC CSV"
   },
   "title:hetdexpublicsourcecatalog1220ksourcesincludingover50klyalphaemittersfromanuntargetedwideareaspectroscopicsurvey": {
     "et_al": true,
@@ -2109,6 +2124,11 @@
     "first_author": "Dinda",
     "source": "historic IMAC CSV"
   },
+  "title:observationofgravitationalwavesfromthecoalescenceofa25backslashtext45mbackslashodotcompactobjectandaneutronstar": {
+    "et_al": true,
+    "first_author": "Collaboration",
+    "source": "arXiv"
+  },
   "title:observationofgravitationalwavesfromtwoneutronstarblackholecoalescences": {
     "et_al": true,
     "first_author": "Abbott",
@@ -2209,10 +2229,20 @@
     "first_author": "Abbott",
     "source": "historic IMAC CSV"
   },
+  "title:searchforcontinuousgravitationalwavesfromknownpulsarsinthefirstpartofthefourthligovirgokagraobservingrun": {
+    "et_al": true,
+    "first_author": "Collaboration",
+    "source": "arXiv"
+  },
   "title:searchforeccentricbinaryblackholemergerswithadvancedligoandadvancedvirgoduringtheirfirstandsecondobservingruns": {
     "et_al": true,
     "first_author": "Abbott",
     "source": "historic IMAC CSV"
+  },
+  "title:searchforeccentricblackholecoalescencesduringthethirdobservingrunofligoandvirgo": {
+    "et_al": true,
+    "first_author": "Collaboration",
+    "source": "arXiv"
   },
   "title:searchforgravitationalwavesassociatedwithfastradioburstsdetectedbychimefrbduringtheligovirgoobservingruno3a": {
     "et_al": true,
@@ -2319,6 +2349,11 @@
     "first_author": "The LIGO Scientific Collaboration",
     "source": "historic IMAC CSV"
   },
+  "title:swiftbatguanofollowupofgravitationalwavetriggersinthethirdligovirgokagraobservingrun": {
+    "et_al": true,
+    "first_author": "Raman",
+    "source": "arXiv"
+  },
   "title:testsofgeneralrelativitywithbinaryblackholesfromthesecondligovirgogravitationalwavetransientcatalog": {
     "et_al": true,
     "first_author": "Abbott",
@@ -2353,6 +2388,11 @@
     "et_al": false,
     "first_author": "Saito",
     "source": "historic IMAC CSV"
+  },
+  "title:ultralightvectordarkmattersearchusingdatafromthekagrao3gkrun": {
+    "et_al": true,
+    "first_author": "Collaboration",
+    "source": "arXiv"
   },
   "title:unveilinghiddenlymanalphaemittersinthedesidr1data": {
     "et_al": true,
