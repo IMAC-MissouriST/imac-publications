@@ -889,10 +889,20 @@
     "first_author": "Fernández-García",
     "source": "NASA ADS"
   },
+  "doi:10.1088/2632-2153/ab527d": {
+    "et_al": true,
+    "first_author": "Cavaglià",
+    "source": "Crossref"
+  },
   "doi:10.1088/2632-2153/abb93a": {
     "et_al": true,
     "first_author": "Cuoco",
     "source": "NASA ADS"
+  },
+  "doi:10.1088/2632-2153/abea69": {
+    "et_al": true,
+    "first_author": "Mogushi",
+    "source": "Crossref"
   },
   "doi:10.1093/mnras/staa1940": {
     "et_al": true,
@@ -1162,7 +1172,7 @@
   "doi:10.1111/1740-9713.01488": {
     "et_al": true,
     "first_author": "Zheng",
-    "source": "Crossref"
+    "source": "historic IMAC CSV"
   },
   "doi:10.1117/12.3017865": {
     "et_al": true,
@@ -1614,6 +1624,11 @@
     "first_author": "Abbott",
     "source": "NASA ADS"
   },
+  "title:ajointfermigbmandligovirgoanalysisofcompactbinarymergersfromthefirstandsecondgravitationalwaveobservingruns": {
+    "et_al": true,
+    "first_author": "Team",
+    "source": "arXiv"
+  },
   "title:ajointfermigbmandswiftbatanalysisofgravitationalwavecandidatesfromthethirdgravitationalwaveobservingrun": {
     "et_al": true,
     "first_author": "Fletcher",
@@ -1687,7 +1702,7 @@
   "title:aneedleinmanyhaystacksusingthefalsealarmratetosiftgravitationalwavesfromnoise": {
     "et_al": true,
     "first_author": "Zheng",
-    "source": "Crossref"
+    "source": "historic IMAC CSV"
   },
   "title:aneuralnetworkforestimatingcompactbinarycoalescenceparametersofgravitationalwaveeventsinrealtime": {
     "et_al": true,
@@ -1894,6 +1909,11 @@
     "first_author": "Abbott",
     "source": "NASA ADS"
   },
+  "title:gw190412observationofabinaryblackholecoalescencewithasymmetricmasses": {
+    "et_al": true,
+    "first_author": "Collaboration",
+    "source": "arXiv"
+  },
   "title:gw190425observationofacompactbinarycoalescencewithtotalmass34m": {
     "et_al": true,
     "first_author": "Abbott",
@@ -2069,6 +2089,11 @@
     "first_author": "Dinda",
     "source": "NASA ADS"
   },
+  "title:improvingthebackgroundofgravitationalwavesearchesforcorecollapsesupernovaeamachinelearningapproach": {
+    "et_al": true,
+    "first_author": "Cavaglià",
+    "source": "Crossref"
+  },
   "title:iterativereconstructionexcursionsforbaryonacousticoscillationsandbeyond": {
     "et_al": true,
     "first_author": "Seo",
@@ -2093,6 +2118,11 @@
     "et_al": true,
     "first_author": "Soni",
     "source": "NASA ADS"
+  },
+  "title:ligodetectorcharacterizationinthesecondandthirdobservingruns": {
+    "et_al": true,
+    "first_author": "Davis",
+    "source": "arXiv"
   },
   "title:ligodetectorcharacterizationinthesecondandthirdpartsofthefourthobservingrun": {
     "et_al": true,
@@ -2149,6 +2179,11 @@
     "first_author": "Sugiyama",
     "source": "NASA ADS"
   },
+  "title:nnetfixanartificialneuralnetworkbaseddenoisingengineforgravitationalwavesignals": {
+    "et_al": true,
+    "first_author": "Mogushi",
+    "source": "Crossref"
+  },
   "title:noevidenceforphantomcrossinglocalgoodnessoffitimprovementsdonotpersistunderglobalbayesianmodelcomparison": {
     "et_al": true,
     "first_author": "Dinda",
@@ -2192,7 +2227,7 @@
   "title:opticallytargetedsearchforgravitationalwavesemittedbycorecollapsesupernovaeduringthethirdobservingrunofadvancedligoandadvancedvirgo": {
     "et_al": true,
     "first_author": "Szczepańczyk",
-    "source": "arXiv"
+    "source": "historic IMAC CSV"
   },
   "title:perturbationtheoryapproachtopredictthecovariancematricesofthegalaxypowerspectrumandbispectruminredshiftspace": {
     "et_al": true,
@@ -2414,6 +2449,11 @@
     "first_author": "Abbott",
     "source": "NASA ADS"
   },
+  "title:testsofgeneralrelativitywithgwtc3": {
+    "et_al": true,
+    "first_author": "Collaboration",
+    "source": "arXiv"
+  },
   "title:theangularpowerspectrumofgravitationalwavetransientsourcesasaprobeofthelargescalestructure": {
     "et_al": true,
     "first_author": "Zheng",
@@ -2428,6 +2468,11 @@
     "et_al": true,
     "first_author": "Gebhardt",
     "source": "NASA ADS"
+  },
+  "title:thepopulationofmergingcompactbinariesinferredusinggravitationalwavesthroughgwtc3": {
+    "et_al": true,
+    "first_author": "Collaboration",
+    "source": "arXiv"
   },
   "title:thesyntheticemissionlinecosmoscataloghalphaandoiigalaxyluminosityfunctionsandcountsat03z25": {
     "et_al": true,
@@ -2448,6 +2493,11 @@
     "et_al": false,
     "first_author": "Saito",
     "source": "NASA ADS"
+  },
+  "title:twodimensionalcorrelationfunctionofbinaryblackholecoalescences": {
+    "et_al": true,
+    "first_author": "Cavaglia",
+    "source": "arXiv"
   },
   "title:ultralightvectordarkmattersearchusingdatafromthekagrao3gkrun": {
     "et_al": true,
