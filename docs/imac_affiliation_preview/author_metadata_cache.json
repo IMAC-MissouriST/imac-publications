@@ -892,7 +892,7 @@
   "doi:10.1088/2632-2153/ab527d": {
     "et_al": true,
     "first_author": "Cavaglià",
-    "source": "Crossref"
+    "source": "historic IMAC CSV"
   },
   "doi:10.1088/2632-2153/abb93a": {
     "et_al": true,
@@ -902,7 +902,7 @@
   "doi:10.1088/2632-2153/abea69": {
     "et_al": true,
     "first_author": "Mogushi",
-    "source": "Crossref"
+    "source": "historic IMAC CSV"
   },
   "doi:10.1093/mnras/staa1940": {
     "et_al": true,
@@ -2092,7 +2092,7 @@
   "title:improvingthebackgroundofgravitationalwavesearchesforcorecollapsesupernovaeamachinelearningapproach": {
     "et_al": true,
     "first_author": "Cavaglià",
-    "source": "Crossref"
+    "source": "historic IMAC CSV"
   },
   "title:iterativereconstructionexcursionsforbaryonacousticoscillationsandbeyond": {
     "et_al": true,
@@ -2122,7 +2122,7 @@
   "title:ligodetectorcharacterizationinthesecondandthirdobservingruns": {
     "et_al": true,
     "first_author": "Davis",
-    "source": "arXiv"
+    "source": "historic IMAC CSV"
   },
   "title:ligodetectorcharacterizationinthesecondandthirdpartsofthefourthobservingrun": {
     "et_al": true,
@@ -2182,7 +2182,7 @@
   "title:nnetfixanartificialneuralnetworkbaseddenoisingengineforgravitationalwavesignals": {
     "et_al": true,
     "first_author": "Mogushi",
-    "source": "Crossref"
+    "source": "historic IMAC CSV"
   },
   "title:noevidenceforphantomcrossinglocalgoodnessoffitimprovementsdonotpersistunderglobalbayesianmodelcomparison": {
     "et_al": true,
@@ -2428,6 +2428,11 @@
     "et_al": true,
     "first_author": "Content",
     "source": "NASA ADS"
+  },
+  "title:spuriousaccelerationnoiseonthelisaspacecraftduetosolaractivity": {
+    "et_al": true,
+    "first_author": "Frank",
+    "source": "arXiv"
   },
   "title:squeezinginformationfromradiosurveystoprobetheprimordialuniverse": {
     "et_al": true,
