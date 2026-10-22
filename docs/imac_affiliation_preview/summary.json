@@ -2,7 +2,7 @@
   "start_year": 2019,
   "end_year": 2026,
   "published_articles": 134,
-  "ads_citations": 25989,
+  "ads_citations": 26011,
   "papers_with_ads_data": 125,
   "unresolved_affiliations": 0,
   "preliminary": false,
@@ -10,6 +10,6 @@
     "verified": 186,
     "excluded": 41
   },
-  "summary": "IMAC published a total of 134 articles cited a total of 25,989 times (according to NASA ADS)",
+  "summary": "IMAC published a total of 134 articles cited a total of 26,011 times (according to NASA ADS)",
   "note": "2019\u20132026; verified institutional affiliations. ADS citation counts available for 125/134 articles. Citation counts are cumulative to date."
 }
