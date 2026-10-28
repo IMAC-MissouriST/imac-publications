@@ -371,6 +371,15 @@
     "source": "OpenAlex, arXiv metadata, PDF inspected, PDF inspected",
     "status": "needs_review"
   },
+  "doi:10.3847/1538-4357/aeaa44": {
+    "arxiv_id": "2605.12503",
+    "cache_version": 4,
+    "checked_at": "2026-10-28T18:22:08.648517+00:00",
+    "evidence": "Institute for Multi-messenger Astrophysics and Cosmology, Department of Physics, Missouri University of Science and Technology, 1315 N Pine Street, Rolla, MO 65409, USA",
+    "evidence_url": "https://arxiv.org/pdf/2605.12503#page=1",
+    "source": "PDF affiliation",
+    "status": "verified"
+  },
   "doi:10.3847/2041-8213/ab14f1": {
     "arxiv_id": "1901.01540",
     "cache_version": 4,
