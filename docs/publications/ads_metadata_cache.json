@@ -3,225 +3,225 @@
   "records": {
     "bibcode:2026apjs..284...67m": {
       "bibcode": "2026ApJS..284...67M",
-      "citation_count": "3",
-      "checked_at": "2026-10-19T23:32:53.420215+00:00",
-      "source": "previous published CSV"
+      "citation_count": 5,
+      "checked_at": "2026-11-03T19:29:31.184049+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4365/ae6068": {
       "bibcode": "2026ApJS..284...67M",
-      "citation_count": "3",
-      "checked_at": "2026-10-19T23:32:53.420215+00:00",
-      "source": "previous published CSV"
+      "citation_count": 5,
+      "checked_at": "2026-11-03T19:29:31.184049+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2025ojap....851254k": {
       "bibcode": "2025OJAp....851254K",
-      "citation_count": "10",
-      "checked_at": "2026-10-19T23:32:53.420295+00:00",
-      "source": "previous published CSV"
+      "citation_count": 13,
+      "checked_at": "2026-11-03T19:29:31.432453+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.33232/001c.151254": {
       "bibcode": "2025OJAp....851254K",
-      "citation_count": "10",
-      "checked_at": "2026-10-19T23:32:53.420295+00:00",
-      "source": "previous published CSV"
+      "citation_count": 13,
+      "checked_at": "2026-11-03T19:29:31.432453+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2025aas...24546502m": {
       "bibcode": "2025AAS...24546502M",
-      "citation_count": "0",
-      "checked_at": "2026-10-19T23:32:53.420346+00:00",
-      "source": "previous published CSV"
+      "citation_count": 0,
+      "checked_at": "2026-11-03T19:29:31.877955+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2024apj...962..102w": {
       "bibcode": "2024ApJ...962..102W",
-      "citation_count": "6",
-      "checked_at": "2026-10-19T23:32:53.420379+00:00",
-      "source": "previous published CSV"
+      "citation_count": 8,
+      "checked_at": "2026-11-03T19:29:32.311118+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4357/ad1b51": {
       "bibcode": "2024ApJ...962..102W",
-      "citation_count": "6",
-      "checked_at": "2026-10-19T23:32:53.420379+00:00",
-      "source": "previous published CSV"
+      "citation_count": 8,
+      "checked_at": "2026-11-03T19:29:32.311118+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2023jcap...07..046s": {
       "bibcode": "2023JCAP...07..046S",
-      "citation_count": "31",
-      "checked_at": "2026-10-19T23:32:53.420415+00:00",
-      "source": "previous published CSV"
+      "citation_count": 35,
+      "checked_at": "2026-11-03T19:29:32.736519+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1088/1475-7516/2023/07/046": {
       "bibcode": "2023JCAP...07..046S",
-      "citation_count": "31",
-      "checked_at": "2026-10-19T23:32:53.420415+00:00",
-      "source": "previous published CSV"
+      "citation_count": 35,
+      "checked_at": "2026-11-03T19:29:32.736519+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2023apj...943..177m": {
       "bibcode": "2023ApJ...943..177M",
-      "citation_count": "60",
-      "checked_at": "2026-10-19T23:32:53.420477+00:00",
-      "source": "previous published CSV"
+      "citation_count": 70,
+      "checked_at": "2026-11-03T19:29:33.051285+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4357/aca962": {
       "bibcode": "2023ApJ...943..177M",
-      "citation_count": "60",
-      "checked_at": "2026-10-19T23:32:53.420477+00:00",
-      "source": "previous published CSV"
+      "citation_count": 70,
+      "checked_at": "2026-11-03T19:29:33.051285+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2022arxiv221209136h": {
       "bibcode": "2022arXiv221209136H",
-      "citation_count": "9",
-      "checked_at": "2026-10-19T23:32:53.420508+00:00",
-      "source": "previous published CSV"
+      "citation_count": 9,
+      "checked_at": "2026-11-03T19:29:33.463527+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.48550/arxiv.2212.09136": {
       "bibcode": "2022arXiv221209136H",
-      "citation_count": "9",
-      "checked_at": "2026-10-19T23:32:53.420508+00:00",
-      "source": "previous published CSV"
+      "citation_count": 9,
+      "checked_at": "2026-11-03T19:29:33.463527+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2022mnras.511.4333k": {
       "bibcode": "2022MNRAS.511.4333K",
-      "citation_count": "13",
-      "checked_at": "2026-10-19T23:32:53.420541+00:00",
-      "source": "previous published CSV"
+      "citation_count": 13,
+      "checked_at": "2026-11-03T19:29:33.861925+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1093/mnras/stac331": {
       "bibcode": "2022MNRAS.511.4333K",
-      "citation_count": "13",
-      "checked_at": "2026-10-19T23:32:53.420541+00:00",
-      "source": "previous published CSV"
+      "citation_count": 13,
+      "checked_at": "2026-11-03T19:29:33.861925+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2021jcap...03..023k": {
       "bibcode": "2021JCAP...03..023K",
-      "citation_count": "9",
-      "checked_at": "2026-10-19T23:32:53.420572+00:00",
-      "source": "previous published CSV"
+      "citation_count": 11,
+      "checked_at": "2026-11-03T19:29:34.276783+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1088/1475-7516/2021/03/023": {
       "bibcode": "2021JCAP...03..023K",
-      "citation_count": "9",
-      "checked_at": "2026-10-19T23:32:53.420572+00:00",
-      "source": "previous published CSV"
+      "citation_count": 11,
+      "checked_at": "2026-11-03T19:29:34.276783+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2020jcap...07..039k": {
       "bibcode": "2020JCAP...07..039K",
-      "citation_count": "9",
-      "checked_at": "2026-10-19T23:32:53.420602+00:00",
-      "source": "previous published CSV"
+      "citation_count": 9,
+      "checked_at": "2026-11-03T19:29:34.605010+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1088/1475-7516/2020/07/039": {
       "bibcode": "2020JCAP...07..039K",
-      "citation_count": "9",
-      "checked_at": "2026-10-19T23:32:53.420602+00:00",
-      "source": "previous published CSV"
+      "citation_count": 9,
+      "checked_at": "2026-11-03T19:29:34.605010+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2026arxiv260916134m": {
       "bibcode": "2026arXiv260916134M",
-      "citation_count": "0",
-      "checked_at": "2026-10-19T23:32:53.968062+00:00",
-      "source": "previous published CSV"
+      "citation_count": 1,
+      "checked_at": "2026-11-03T19:29:35.111650+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.48550/arxiv.2609.16134": {
       "bibcode": "2026arXiv260916134M",
-      "citation_count": "0",
-      "checked_at": "2026-10-19T23:32:53.968062+00:00",
-      "source": "previous published CSV"
+      "citation_count": 1,
+      "checked_at": "2026-11-03T19:29:35.111650+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2026arxiv260708453m": {
       "bibcode": "2026arXiv260708453M",
-      "citation_count": "0",
-      "checked_at": "2026-10-19T23:32:53.968133+00:00",
-      "source": "previous published CSV"
+      "citation_count": 2,
+      "checked_at": "2026-11-03T19:29:35.507751+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.48550/arxiv.2607.08453": {
       "bibcode": "2026arXiv260708453M",
-      "citation_count": "0",
-      "checked_at": "2026-10-19T23:32:53.968133+00:00",
-      "source": "previous published CSV"
+      "citation_count": 2,
+      "checked_at": "2026-11-03T19:29:35.507751+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2026arxiv260723062f": {
       "bibcode": "2026arXiv260723062F",
-      "citation_count": "1",
-      "checked_at": "2026-10-19T23:32:53.968171+00:00",
-      "source": "previous published CSV"
+      "citation_count": 1,
+      "checked_at": "2026-11-03T19:29:35.977024+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.48550/arxiv.2607.23062": {
       "bibcode": "2026arXiv260723062F",
-      "citation_count": "1",
-      "checked_at": "2026-10-19T23:32:53.968171+00:00",
-      "source": "previous published CSV"
+      "citation_count": 1,
+      "checked_at": "2026-11-03T19:29:35.977024+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2026arxiv260618581h": {
       "bibcode": "2026arXiv260618581H",
-      "citation_count": "0",
-      "checked_at": "2026-10-19T23:32:53.968202+00:00",
-      "source": "previous published CSV"
+      "citation_count": 0,
+      "checked_at": "2026-11-03T19:29:36.295396+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.48550/arxiv.2606.18581": {
       "bibcode": "2026arXiv260618581H",
-      "citation_count": "0",
-      "checked_at": "2026-10-19T23:32:53.968202+00:00",
-      "source": "previous published CSV"
+      "citation_count": 0,
+      "checked_at": "2026-11-03T19:29:36.295396+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2026apj..1003..122d": {
       "bibcode": "2026ApJ..1003..122D",
-      "citation_count": "4",
-      "checked_at": "2026-10-19T23:32:53.968236+00:00",
-      "source": "previous published CSV"
+      "citation_count": 6,
+      "checked_at": "2026-11-03T19:29:36.720335+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4357/ae6329": {
       "bibcode": "2026ApJ..1003..122D",
-      "citation_count": "4",
-      "checked_at": "2026-10-19T23:32:53.968236+00:00",
-      "source": "previous published CSV"
+      "citation_count": 6,
+      "checked_at": "2026-11-03T19:29:36.720335+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2026arxiv260604208m": {
       "bibcode": "2026arXiv260604208M",
-      "citation_count": "0",
-      "checked_at": "2026-10-19T23:32:53.968266+00:00",
-      "source": "previous published CSV"
+      "citation_count": 0,
+      "checked_at": "2026-11-03T19:29:37.130446+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.48550/arxiv.2606.04208": {
       "bibcode": "2026arXiv260604208M",
-      "citation_count": "0",
-      "checked_at": "2026-10-19T23:32:53.968266+00:00",
-      "source": "previous published CSV"
+      "citation_count": 0,
+      "checked_at": "2026-11-03T19:29:37.130446+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2026aj....171..318m": {
       "bibcode": "2026AJ....171..318M",
-      "citation_count": "1",
-      "checked_at": "2026-10-19T23:32:53.968346+00:00",
-      "source": "previous published CSV"
+      "citation_count": 3,
+      "checked_at": "2026-11-03T19:29:37.573404+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-3881/ae5baf": {
       "bibcode": "2026AJ....171..318M",
-      "citation_count": "1",
-      "checked_at": "2026-10-19T23:32:53.968346+00:00",
-      "source": "previous published CSV"
+      "citation_count": 3,
+      "checked_at": "2026-11-03T19:29:37.573404+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2026jcap...05..002f": {
       "bibcode": "2026JCAP...05..002F",
-      "citation_count": "3",
-      "checked_at": "2026-10-19T23:32:53.968377+00:00",
-      "source": "previous published CSV"
+      "citation_count": 5,
+      "checked_at": "2026-11-03T19:29:37.900924+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1088/1475-7516/2026/05/002": {
       "bibcode": "2026JCAP...05..002F",
-      "citation_count": "3",
-      "checked_at": "2026-10-19T23:32:53.968377+00:00",
-      "source": "previous published CSV"
+      "citation_count": 5,
+      "checked_at": "2026-11-03T19:29:37.900924+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2026arxiv260513546d": {
       "bibcode": "2026arXiv260513546D",
-      "citation_count": "3",
-      "checked_at": "2026-10-19T23:32:53.968408+00:00",
-      "source": "previous published CSV"
+      "citation_count": 9,
+      "checked_at": "2026-11-03T19:29:38.333283+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.48550/arxiv.2605.13546": {
       "bibcode": "2026arXiv260513546D",
-      "citation_count": "3",
-      "checked_at": "2026-10-19T23:32:53.968408+00:00",
-      "source": "previous published CSV"
+      "citation_count": 9,
+      "checked_at": "2026-11-03T19:29:38.333283+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2026arxiv260512503c": {
       "bibcode": "2026arXiv260512503C",
@@ -237,183 +237,183 @@
     },
     "bibcode:2026apj...999..177l": {
       "bibcode": "2026ApJ...999..177L",
-      "citation_count": "5",
-      "checked_at": "2026-10-19T23:32:53.968482+00:00",
-      "source": "previous published CSV"
+      "citation_count": 8,
+      "checked_at": "2026-11-03T19:29:38.747533+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4357/ae3a98": {
       "bibcode": "2026ApJ...999..177L",
-      "citation_count": "5",
-      "checked_at": "2026-10-19T23:32:53.968482+00:00",
-      "source": "previous published CSV"
+      "citation_count": 8,
+      "checked_at": "2026-11-03T19:29:38.747533+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2026arxiv260116761b": {
       "bibcode": "2026arXiv260116761B",
-      "citation_count": "0",
-      "checked_at": "2026-10-19T23:32:53.968515+00:00",
-      "source": "previous published CSV"
+      "citation_count": 0,
+      "checked_at": "2026-11-03T19:29:39.174408+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.48550/arxiv.2601.16761": {
       "bibcode": "2026arXiv260116761B",
-      "citation_count": "0",
-      "checked_at": "2026-10-19T23:32:53.968515+00:00",
-      "source": "previous published CSV"
+      "citation_count": 0,
+      "checked_at": "2026-11-03T19:29:39.174408+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2025apj...995..220l": {
       "bibcode": "2025ApJ...995..220L",
-      "citation_count": "7",
-      "checked_at": "2026-10-19T23:32:53.968545+00:00",
-      "source": "previous published CSV"
+      "citation_count": 9,
+      "checked_at": "2026-11-03T19:29:39.513721+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4357/ae1ae6": {
       "bibcode": "2025ApJ...995..220L",
-      "citation_count": "7",
-      "checked_at": "2026-10-19T23:32:53.968545+00:00",
-      "source": "previous published CSV"
+      "citation_count": 9,
+      "checked_at": "2026-11-03T19:29:39.513721+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2025jcap...11..049z": {
       "bibcode": "2025JCAP...11..049Z",
-      "citation_count": "20",
-      "checked_at": "2026-10-19T23:32:53.968605+00:00",
-      "source": "previous published CSV"
+      "citation_count": 25,
+      "checked_at": "2026-11-03T19:29:39.930434+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1088/1475-7516/2025/11/049": {
       "bibcode": "2025JCAP...11..049Z",
-      "citation_count": "20",
-      "checked_at": "2026-10-19T23:32:53.968605+00:00",
-      "source": "previous published CSV"
+      "citation_count": 25,
+      "checked_at": "2026-11-03T19:29:39.930434+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2025apj...992..121h": {
       "bibcode": "2025ApJ...992..121H",
-      "citation_count": "2",
-      "checked_at": "2026-10-19T23:32:53.968633+00:00",
-      "source": "previous published CSV"
+      "citation_count": 2,
+      "checked_at": "2026-11-03T19:29:40.388996+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4357/ae0036": {
       "bibcode": "2025ApJ...992..121H",
-      "citation_count": "2",
-      "checked_at": "2026-10-19T23:32:53.968633+00:00",
-      "source": "previous published CSV"
+      "citation_count": 2,
+      "checked_at": "2026-11-03T19:29:40.388996+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2025jcap...08..018d": {
       "bibcode": "2025JCAP...08..018D",
-      "citation_count": "28",
-      "checked_at": "2026-10-19T23:32:53.968663+00:00",
-      "source": "previous published CSV"
+      "citation_count": 30,
+      "checked_at": "2026-11-03T19:29:40.843296+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1088/1475-7516/2025/08/018": {
       "bibcode": "2025JCAP...08..018D",
-      "citation_count": "28",
-      "checked_at": "2026-10-19T23:32:53.968663+00:00",
-      "source": "previous published CSV"
+      "citation_count": 30,
+      "checked_at": "2026-11-03T19:29:40.843296+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2025jcap...08..029k": {
       "bibcode": "2025JCAP...08..029K",
-      "citation_count": "4",
-      "checked_at": "2026-10-19T23:32:53.968695+00:00",
-      "source": "previous published CSV"
+      "citation_count": 4,
+      "checked_at": "2026-11-03T19:29:41.105317+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1088/1475-7516/2025/08/029": {
       "bibcode": "2025JCAP...08..029K",
-      "citation_count": "4",
-      "checked_at": "2026-10-19T23:32:53.968695+00:00",
-      "source": "previous published CSV"
+      "citation_count": 4,
+      "checked_at": "2026-11-03T19:29:41.105317+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2025apjs..277...37u": {
       "bibcode": "2025ApJS..277...37U",
-      "citation_count": "37",
-      "checked_at": "2026-10-19T23:32:53.968770+00:00",
-      "source": "previous published CSV"
+      "citation_count": 43,
+      "checked_at": "2026-11-03T19:29:41.622695+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4365/adb1c0": {
       "bibcode": "2025ApJS..277...37U",
-      "citation_count": "37",
-      "checked_at": "2026-10-19T23:32:53.968770+00:00",
-      "source": "previous published CSV"
+      "citation_count": 43,
+      "checked_at": "2026-11-03T19:29:41.622695+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2024spie13092e..0zc": {
       "bibcode": "2024SPIE13092E..0ZC",
-      "citation_count": "1",
-      "checked_at": "2026-10-19T23:32:53.968838+00:00",
-      "source": "previous published CSV"
+      "citation_count": 1,
+      "checked_at": "2026-11-03T19:29:41.967765+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1117/12.3017865": {
       "bibcode": "2024SPIE13092E..0ZC",
-      "citation_count": "1",
-      "checked_at": "2026-10-19T23:32:53.968838+00:00",
-      "source": "previous published CSV"
+      "citation_count": 1,
+      "checked_at": "2026-11-03T19:29:41.967765+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2023mnras.524.1651s": {
       "bibcode": "2023MNRAS.524.1651S",
-      "citation_count": "12",
-      "checked_at": "2026-10-19T23:32:53.968901+00:00",
-      "source": "previous published CSV"
+      "citation_count": 12,
+      "checked_at": "2026-11-03T19:29:42.379958+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1093/mnras/stad1935": {
       "bibcode": "2023MNRAS.524.1651S",
-      "citation_count": "12",
-      "checked_at": "2026-10-19T23:32:53.968901+00:00",
-      "source": "previous published CSV"
+      "citation_count": 12,
+      "checked_at": "2026-11-03T19:29:42.379958+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2023apj...954..209d": {
       "bibcode": "2023ApJ...954..209D",
-      "citation_count": "12",
-      "checked_at": "2026-10-19T23:32:53.968930+00:00",
-      "source": "previous published CSV"
+      "citation_count": 15,
+      "checked_at": "2026-11-03T19:29:42.758628+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4357/ace4c2": {
       "bibcode": "2023ApJ...954..209D",
-      "citation_count": "12",
-      "checked_at": "2026-10-19T23:32:53.968930+00:00",
-      "source": "previous published CSV"
+      "citation_count": 15,
+      "checked_at": "2026-11-03T19:29:42.758628+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2023mnras.523.3133s": {
       "bibcode": "2023MNRAS.523.3133S",
-      "citation_count": "30",
-      "checked_at": "2026-10-19T23:32:53.968960+00:00",
-      "source": "previous published CSV"
+      "citation_count": 31,
+      "checked_at": "2026-11-03T19:29:43.224084+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1093/mnras/stad1505": {
       "bibcode": "2023MNRAS.523.3133S",
-      "citation_count": "30",
-      "checked_at": "2026-10-19T23:32:53.968960+00:00",
-      "source": "previous published CSV"
+      "citation_count": 31,
+      "checked_at": "2026-11-03T19:29:43.224084+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2023apj...952...80k": {
       "bibcode": "2023ApJ...952...80K",
-      "citation_count": "17",
-      "checked_at": "2026-10-19T23:32:53.969018+00:00",
-      "source": "previous published CSV"
+      "citation_count": 19,
+      "checked_at": "2026-11-03T19:29:43.533539+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4357/acd92f": {
       "bibcode": "2023ApJ...952...80K",
-      "citation_count": "17",
-      "checked_at": "2026-10-19T23:32:53.969018+00:00",
-      "source": "previous published CSV"
+      "citation_count": 19,
+      "checked_at": "2026-11-03T19:29:43.533539+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2023phrvd.107l3523o": {
       "bibcode": "2023PhRvD.107l3523O",
-      "citation_count": "4",
-      "checked_at": "2026-10-19T23:32:53.969045+00:00",
-      "source": "previous published CSV"
+      "citation_count": 5,
+      "checked_at": "2026-11-03T19:29:43.945304+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1103/physrevd.107.123523": {
       "bibcode": "2023PhRvD.107l3523O",
-      "citation_count": "4",
-      "checked_at": "2026-10-19T23:32:53.969045+00:00",
-      "source": "previous published CSV"
+      "citation_count": 5,
+      "checked_at": "2026-11-03T19:29:43.945304+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2023apj...946...86d": {
       "bibcode": "2023ApJ...946...86D",
-      "citation_count": "31",
-      "checked_at": "2026-10-19T23:32:53.969072+00:00",
-      "source": "previous published CSV"
+      "citation_count": 34,
+      "checked_at": "2026-11-03T19:29:44.321071+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4357/acb0ca": {
       "bibcode": "2023ApJ...946...86D",
-      "citation_count": "31",
-      "checked_at": "2026-10-19T23:32:53.969072+00:00",
-      "source": "previous published CSV"
+      "citation_count": 34,
+      "checked_at": "2026-11-03T19:29:44.321071+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2022arxiv221107960o": {
       "bibcode": "2022arXiv221107960O",
@@ -423,63 +423,63 @@
     },
     "bibcode:2022apj...931...97k": {
       "bibcode": "2022ApJ...931...97K",
-      "citation_count": "22",
-      "checked_at": "2026-10-19T23:32:53.969161+00:00",
-      "source": "previous published CSV"
+      "citation_count": 25,
+      "checked_at": "2026-11-03T19:29:45.099709+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4357/ac69de": {
       "bibcode": "2022ApJ...931...97K",
-      "citation_count": "22",
-      "checked_at": "2026-10-19T23:32:53.969161+00:00",
-      "source": "previous published CSV"
+      "citation_count": 25,
+      "checked_at": "2026-11-03T19:29:45.099709+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2022mnras.511.1557s": {
       "bibcode": "2022MNRAS.511.1557S",
-      "citation_count": "15",
-      "checked_at": "2026-10-19T23:32:53.969188+00:00",
-      "source": "previous published CSV"
+      "citation_count": 17,
+      "checked_at": "2026-11-03T19:29:45.509737+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1093/mnras/stac082": {
       "bibcode": "2022MNRAS.511.1557S",
-      "citation_count": "15",
-      "checked_at": "2026-10-19T23:32:53.969188+00:00",
-      "source": "previous published CSV"
+      "citation_count": 17,
+      "checked_at": "2026-11-03T19:29:45.509737+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2022mnras.510.4525g": {
       "bibcode": "2022MNRAS.510.4525G",
-      "citation_count": "31",
-      "checked_at": "2026-10-19T23:32:53.969217+00:00",
-      "source": "previous published CSV"
+      "citation_count": 34,
+      "checked_at": "2026-11-03T19:29:46.113246+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1093/mnras/stab3554": {
       "bibcode": "2022MNRAS.510.4525G",
-      "citation_count": "31",
-      "checked_at": "2026-10-19T23:32:53.969217+00:00",
-      "source": "previous published CSV"
+      "citation_count": 34,
+      "checked_at": "2026-11-03T19:29:46.113246+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2021phrvd.104l3508o": {
       "bibcode": "2021PhRvD.104l3508O",
-      "citation_count": "10",
-      "checked_at": "2026-10-19T23:32:53.969246+00:00",
-      "source": "previous published CSV"
+      "citation_count": 11,
+      "checked_at": "2026-11-03T19:29:46.457324+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.1103/physrevd.104.123508": {
       "bibcode": "2021PhRvD.104l3508O",
-      "citation_count": "10",
-      "checked_at": "2026-10-19T23:32:53.969246+00:00",
-      "source": "previous published CSV"
+      "citation_count": 11,
+      "checked_at": "2026-11-03T19:29:46.457324+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2021apj...923..217g": {
       "bibcode": "2021ApJ...923..217G",
-      "citation_count": "141",
-      "checked_at": "2026-10-19T23:32:53.969276+00:00",
-      "source": "previous published CSV"
+      "citation_count": 153,
+      "checked_at": "2026-11-03T19:29:46.732075+00:00",
+      "source": "NASA ADS"
     },
     "doi:10.3847/1538-4357/ac2e03": {
       "bibcode": "2021ApJ...923..217G",
-      "citation_count": "141",
-      "checked_at": "2026-10-19T23:32:53.969276+00:00",
-      "source": "previous published CSV"
+      "citation_count": 153,
+      "checked_at": "2026-11-03T19:29:46.732075+00:00",
+      "source": "NASA ADS"
     },
     "bibcode:2021mnras.507.3187f": {
       "bibcode": "2021MNRAS.507.3187F",
