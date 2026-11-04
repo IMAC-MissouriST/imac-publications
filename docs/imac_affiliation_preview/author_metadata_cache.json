@@ -762,7 +762,7 @@
   "ads:2026arXiv260707765T": {
     "et_al": true,
     "first_author": "The LIGO Scientific Collaboration",
-    "source": "NASA ADS"
+    "source": "historic IMAC CSV"
   },
   "ads:2026arXiv260708453M": {
     "et_al": true,
@@ -1572,7 +1572,7 @@
   "doi:10.48550/arxiv.2607.07765": {
     "et_al": true,
     "first_author": "The LIGO Scientific Collaboration",
-    "source": "NASA ADS"
+    "source": "historic IMAC CSV"
   },
   "doi:10.48550/arxiv.2607.08453": {
     "et_al": true,
@@ -2447,7 +2447,7 @@
   "title:subtorquebalanceupperlimitsoncontinuousgravitationalwavesfromscorpiusx1": {
     "et_al": true,
     "first_author": "The LIGO Scientific Collaboration",
-    "source": "NASA ADS"
+    "source": "historic IMAC CSV"
   },
   "title:swiftbatguanofollowupofgravitationalwavetriggersinthethirdligovirgokagraobservingrun": {
     "et_al": true,
