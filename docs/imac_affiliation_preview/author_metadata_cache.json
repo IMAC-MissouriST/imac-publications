@@ -546,12 +546,12 @@
   },
   "ads:2025arXiv250907352T": {
     "et_al": true,
-    "first_author": "The LIGO Scientific Collaboration",
+    "first_author": "Abac",
     "source": "NASA ADS"
   },
   "ads:2025arXiv251026848T": {
     "et_al": true,
-    "first_author": "The LIGO Scientific Collaboration",
+    "first_author": "Abac",
     "source": "NASA ADS"
   },
   "ads:2025arXiv251027022T": {
@@ -761,8 +761,8 @@
   },
   "ads:2026arXiv260707765T": {
     "et_al": true,
-    "first_author": "The LIGO Scientific Collaboration",
-    "source": "historic IMAC CSV"
+    "first_author": "Abac",
+    "source": "NASA ADS"
   },
   "ads:2026arXiv260708453M": {
     "et_al": true,
@@ -1466,12 +1466,12 @@
   },
   "doi:10.48550/arxiv.2509.07352": {
     "et_al": true,
-    "first_author": "The LIGO Scientific Collaboration",
+    "first_author": "Abac",
     "source": "NASA ADS"
   },
   "doi:10.48550/arxiv.2510.26848": {
     "et_al": true,
-    "first_author": "The LIGO Scientific Collaboration",
+    "first_author": "Abac",
     "source": "NASA ADS"
   },
   "doi:10.48550/arxiv.2510.27022": {
@@ -1571,8 +1571,8 @@
   },
   "doi:10.48550/arxiv.2607.07765": {
     "et_al": true,
-    "first_author": "The LIGO Scientific Collaboration",
-    "source": "historic IMAC CSV"
+    "first_author": "Abac",
+    "source": "NASA ADS"
   },
   "doi:10.48550/arxiv.2607.08453": {
     "et_al": true,
@@ -1796,7 +1796,7 @@
   },
   "title:cosmologicalandhighenergyphysicsimplicationsfromgravitationalwavebackgroundsearchesinligovirgokagraso1o4aruns": {
     "et_al": true,
-    "first_author": "The LIGO Scientific Collaboration",
+    "first_author": "Abac",
     "source": "NASA ADS"
   },
   "title:cosmologicalvlasovpoissonsimulationsofstructureformationwithrelicneutrinosnonlinearclusteringandtheneutrinomass": {
@@ -1851,7 +1851,7 @@
   },
   "title:directedsearchesforgravitationalwavesfromultralightvectorbosoncloudsaroundmergerremnantandgalacticblackholesduringthefirstpartofthefourthligovirgokagraobservingrun": {
     "et_al": true,
-    "first_author": "The LIGO Scientific Collaboration",
+    "first_author": "Abac",
     "source": "NASA ADS"
   },
   "title:directionalsearchforpersistentgravitationalwavesresultsfromthefirstpartofligovirgokagrasfourthobservingrun": {
@@ -2446,8 +2446,8 @@
   },
   "title:subtorquebalanceupperlimitsoncontinuousgravitationalwavesfromscorpiusx1": {
     "et_al": true,
-    "first_author": "The LIGO Scientific Collaboration",
-    "source": "historic IMAC CSV"
+    "first_author": "Abac",
+    "source": "NASA ADS"
   },
   "title:swiftbatguanofollowupofgravitationalwavetriggersinthethirdligovirgokagraobservingrun": {
     "et_al": true,
