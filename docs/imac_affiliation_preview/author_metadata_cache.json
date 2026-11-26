@@ -579,6 +579,11 @@
     "first_author": "Mukae",
     "source": "NASA ADS"
   },
+  "ads:2026AJ....172..303M": {
+    "et_al": true,
+    "first_author": "Mentuch Cooper",
+    "source": "NASA ADS"
+  },
   "ads:2026ApJ...999..177L": {
     "et_al": true,
     "first_author": "Lujan Niemeyer",
@@ -1197,6 +1202,11 @@
   "doi:10.3847/1538-3881/ae5baf": {
     "et_al": true,
     "first_author": "Mukae",
+    "source": "NASA ADS"
+  },
+  "doi:10.3847/1538-3881/aeb0a7": {
+    "et_al": true,
+    "first_author": "Mentuch Cooper",
     "source": "NASA ADS"
   },
   "doi:10.3847/1538-4357/ab1f76": {
@@ -2287,6 +2297,11 @@
   "title:radiativetransferdistortionsoflymanalphaemittersanewfingersofgoddampingintheclusteringinredshiftspace": {
     "et_al": true,
     "first_author": "Byrohl",
+    "source": "NASA ADS"
+  },
+  "title:satellitestreaksinhetdexspectraorbitalidentificationandsurveyimpact": {
+    "et_al": true,
+    "first_author": "Mentuch Cooper",
     "source": "NASA ADS"
   },
   "title:scrutinizingearlydarkenergymodelsthroughcmblensing": {
